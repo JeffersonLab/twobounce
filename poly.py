@@ -1,7 +1,9 @@
 from math import sqrt
 
-polyres = 0.02
+#polyres = 0.01
+#polyres = 0.02
 #polyres = 0.20
+polyres = 0.05
 
 class polyError(Exception):
     def __init__( self, value = None ):
@@ -10,7 +12,7 @@ class polyError(Exception):
 	return repr(self.value)
 
 class face:
-    def __init__(self, pt1, pt2, isDetector = False, parent = None):
+    def __init__(self, pt1, pt2, isDetector = False, isEthereal = False, notSource=False, parent = None):
 	self.v1 = pt1
 	self.v2 = pt2
 	self.parent = parent
@@ -22,6 +24,9 @@ class face:
 	self.prob = []  # pairs between 0,1 which is lit
 	                # and sees detector
 	self.isDetector = isDetector
+	self.isEthereal = isEthereal
+	self.notSource =notSource 
+	self.length = sqrt( (pt2[0]-pt1[0])**2 + (pt2[1]-pt1[1])**2 )
 
     def getlitfaces(self, order = 1):
 	if order == 1:
@@ -42,17 +47,20 @@ class face:
 	    stopx  = self.v1[0]*(1.0-span[1]) + span[1]*self.v2[0]
 	    stopy  = self.v1[1]*(1.0-span[1]) + span[1]*self.v2[1]
 
-	    litfaces.append( face( [startx, starty], [stopx, stopy], isDetector=self.isDetector, parent=self) )
+	    litfaces.append( face( [startx, starty], [stopx, stopy], isDetector=self.isDetector, notSource=self.notSource, isEthereal=self.isEthereal, parent=self) )
 
 	return litfaces
 
     def getpoint(self, z):
+	if self.length==0:
+	    return (self.v1[0], self.v2[0])
+
 	#  Nudge these guys JUST a little to make corners
 	#  better behaved
 	if z == 0.0:
-	    z += polyres*1e-9
+	    z += polyres*1e-6/self.length
 	if z == 1.0:
-	    z -= polyres*1e-9
+	    z -= polyres*1e-6/self.length
 
 	x = self.v1[0]*(1.0-z) + z*self.v2[0]
 	y = self.v1[1]*(1.0-z) + z*self.v2[1]
@@ -101,19 +109,19 @@ class face:
 	return [dx, dy]
 
     def light( self, source, blocking, order ):
-	print "lighting ", self.v1, " -> ", self.v2, " with source ", source.v1, " -> ", source.v2 
+#	print "lighting ", self.v1, " -> ", self.v2, " with source ", source.v1, " -> ", source.v2 
 
-	idxmax = int(1.0/polyres+1)
+	idxmax = int(self.length/polyres)+1
 
 	currlit = False
 
 	for fidx in range(idxmax):
-	    fz = fidx*polyres
+	    fz = fidx*polyres/self.length
 	    blocked = True 
 
 	    curseesDet = False
 	    for sidx in range(idxmax):
-		sz = sidx*polyres
+		sz = sidx*polyres/self.length
 
 		anyBlockage = False
 
@@ -133,40 +141,33 @@ class face:
 
 		if not anyBlockage:
 		    for block in blocking:
-			if block.intersects( startpt, stoppt ):
+			if block.intersects( startpt, stoppt ) and not block.isEthereal:
 			    anyBlockage = True
 			    break
 
 		if not anyBlockage:
 		    if not curseesDet:
-			if self.isDetector:
-			    print "Start see!"
-			startsee = sz
-		        curseesDet = True
+		         if self.isDetector:
+			     startsee = sz
+			     curseesDet = True
 		    blocked = False
-#		    break
 		elif curseesDet:
-		    curseesDet = False
-		    if self.isDetector:
-			print "see!"
-			source.addlight( startsee, sz, 3 )  #Flag this region as problematic
+		     curseesDet = False
+		     if self.isDetector:
+			 source.addlight( startsee, sz, 3 )  #Flag this region as problematic
 
 	    if curseesDet:
 		    if self.isDetector:
-			print "see!"
 			source.addlight( startsee, sz, 3 )  #Flag this region as problematic
 
 	    if not blocked and not currlit:
-		currlit = True
+	        currlit = True
 		startlight = fz
-		print "\tstartlight"
 
 	    if blocked and currlit:
 		currlit = False
-		print "Light!"
 		self.addlight( startlight, fz, order )
 	if currlit:
-	    print "Light!"
 	    self.addlight( startlight, fz, order )
 
     def addlight( self, z1, z2, order = 1 ):
@@ -180,21 +181,26 @@ class face:
 	if order == 3:
 	    span = self.prob
 
-	print "Adding light ", z1, z2, " to ", span, "!"
+	if self.isEthereal:
+	    print "Adding light ", z1, z2, " to ", span, "!"
 	added = False
 	for s in span:
 	    if s[0] <= z1 and z1 <= s[1]:
 		if s[1] <= z2:
 		    s[1] = z2
-		    added = True
+		added = True
 	    elif s[0] <= z2 and z2 <= s[1]:
 		if  z1 <= s[0]:
 		    s[0] = z1
-		    added = True
+		added = True
+	    elif s[0] <= z1 and z2 <= s[1]:
+		# envelopes the whole thing
+		s[0] = z1
+		s[1] = z2
+		added = True
 
 	if not added:
 	    span.append([z1,z2])
-	print span
 
 
     def islit( self, z, order = 1 ):
@@ -219,15 +225,15 @@ class face:
 
 
 class polygon:
-    def __init__(self, pts, isDetector = False):
+    def __init__(self, pts, isDetector = False, isEthereal = False, notSource=False):
 	self.pts  = pts 
-	self.faces = self.makefaces(pts, isDetector)
+	self.faces = self.makefaces(pts, isDetector, isEthereal, notSource)
 	self.ispoly()
 
-    def makefaces(self, pt, isDetector = False):
+    def makefaces(self, pt, isDetector = False, isEthereal=False, notSource=False):
 	faces = []
 	for i in range(len(self.pts)):
-	    faces.append( face(self.pts[i-1], self.pts[i], isDetector) )
+	    faces.append( face(self.pts[i-1], self.pts[i], isDetector, isEthereal, notSource) )
 	return faces
 
     def intersects(self, l1, l2):
@@ -286,20 +292,11 @@ class polygon:
 
     def light(self, sourcepolys, polys, order = 1):
 	sourcefaces = []
-
-	print sourcepolys
-	for apoly in sourcepolys:
-	    if order == 1:
-		sourcefaces += apoly.faces
-	    if order == 2:
-		for aface in apoly.faces:
-		    sourcefaces += aface.getlitfaces(1)
-
-	print "Source faces"
-	for sf in sourcefaces:
-	    print sf.v1, " -> ", sf.v2
-
 	polyfaces = []
+
+	for apoly in sourcepolys:
+	    sourcefaces += apoly.faces
+
 	for apoly in polys:
 	    polyfaces += apoly.faces
 	
@@ -311,8 +308,12 @@ class polygon:
 		othersources = list(sourcefaces)
 		thissource = othersources.pop(sidx)
 
-		if thissource:
-		    thisface.light(thissource, otherfaces+othersources+polyfaces, order)
+		if thissource and not thissource.isEthereal and not thissource.isDetector and not thissource.notSource:
+		    if order==1:
+			thisface.light(thissource, otherfaces+othersources+polyfaces, order)
+		    if order==2:
+			for litface in thissource.getlitfaces(1):
+			    thisface.light(litface, otherfaces+othersources+polyfaces, order)
 
 
 

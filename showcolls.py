@@ -14,16 +14,16 @@ target = polygon( ([0,0.0], [1.0 ,0.0] , [1.0 ,0.01], [0 ,0.01]) )
 
 mypoly2 = polygon( ([2,0], [3, 0], [3,1], [2,1]), isDetector=True )
 
-mypoly3 = polygon( ([1.7, 0.1], [1.8,  0.1], [1.8,0.2], [1.7,0.2]) )
-mypoly4 = polygon( ([1.7, 0.4], [1.8,  0.4], [1.8,0.5], [1.7,0.5]) )
+mypoly3 = polygon( ([1.7, 0.1], [1.85,  0.1], [1.85,0.2], [1.7,0.2]) )
+mypoly4 = polygon( ([1.7, 0.4], [1.8,  0.4], [1.8,1.0], [1.7,1.0]) )
 
-mirror = polygon( ([1.7, -0.5], [1.8,  -0.5], [1.8,-0.4], [1.7,-0.4]) )
+mirror = polygon( ([1.5, -0.5], [1.6,  -0.5], [1.6,-0.4], [1.5,-0.4]) )
 
 sources.append(target)
 allpolys.append(mypoly2)
-#allpolys.append(mypoly3)
+allpolys.append(mypoly3)
 
-#allpolys.append(mypoly4)
+allpolys.append(mypoly4)
 allpolys.append(mirror)
 
 print sources

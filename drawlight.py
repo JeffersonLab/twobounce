@@ -1,5 +1,4 @@
-#!/usr/bin/python
-
+#!/usr/bin/python 
 from gi.repository import Gtk
 import cairo
 import math
@@ -12,14 +11,18 @@ class drawlight(Gtk.Window):
     def __init__(self, polys):
         super(drawlight, self).__init__()
 
-	self.winw = 1024.0
-	self.winh = 768.0
+#	self.winw = 1024.0
+#	self.winh = 768.0
+	self.winw = 800.0
+	self.winh = 600.0
 
        	self.zmin = -2.0
 #	self.zmax =  6.0
 	self.zmax = 30.0
+#	self.zmax = 10.0
 
 	self.yscale = 8.0
+	#self.yscale = 1.0
         
         self.init_ui()
 	self.polys = polys
@@ -39,64 +42,68 @@ class drawlight(Gtk.Window):
         
     
     def on_draw(self, wid, cr):
-#	cr.set_antialias(cairo.ANTIALIAS_NONE)
+	cr.set_antialias(cairo.ANTIALIAS_NONE)
 
 
-	print "*******************************************"
-	cr.set_source_rgb(1.0, 1.0, 1.0)
+	cr.set_source_rgb(0.0, 0.0, 0.0)
 	cr.paint()
         w, h = self.get_size()      
 
 	scaleval = self.winw/(self.zmax-self.zmin)
 
-	cr.save()
-	cr.set_line_width(2.0)
+	cr.scale(scaleval,  -scaleval)
+	cr.translate( -self.zmin, -self.winh/scaleval/2)
 
-	cr.scale(scaleval,  -scaleval*self.yscale)
-	cr.translate( -self.zmin, -self.winh/(scaleval*self.yscale)/2)
-
-	cr.set_line_width(2.0/(scaleval*self.yscale))
 	for apoly in self.polys:
 	    for aface in apoly.faces:
-		print "drawing ", aface.v1[0], aface.v1[1], " -> ", aface.v2[0], aface.v2[1]
-		cr.move_to( aface.v1[0], aface.v1[1] )
-		cr.line_to( aface.v2[0], aface.v2[1] )
-		cr.restore()
-		print cr.path_extents()
-		cr.set_source_rgb(0.0, 0.0, 0.0)
-		cr.stroke()
-		cr.save()
-
-
-		cr.set_line_width(3.0/(scaleval*self.yscale))
-	        for lface in aface.getlitfaces(2):
-		    cr.move_to( lface.v1[0], lface.v1[1] )
-		    cr.line_to( lface.v2[0], lface.v2[1] )
-		    cr.restore()
-		    cr.set_source_rgb(0.8, 0.6, 0.0)
+#		print "drawing ", aface.v1[0], aface.v1[1], " -> ", aface.v2[0], aface.v2[1]
+		if not aface.isEthereal:
+		    cr.move_to( aface.v1[0], aface.v1[1]*self.yscale )
+		    cr.line_to( aface.v2[0], aface.v2[1]*self.yscale )
+		    cr.set_line_width(1.0/scaleval)
+		    cr.set_source_rgb(0.5, 0.5, 0.5)
 		    cr.stroke()
-		    cr.save()
 
+		# Lit by secondaries
+	            for lface in aface.getlitfaces(2):
+			cr.move_to( lface.v1[0], lface.v1[1]*self.yscale )
+		        cr.line_to( lface.v2[0], lface.v2[1]*self.yscale )
+		        if lface.isDetector:
+		  	     cr.set_line_width(4.0/scaleval)
+		        else:
+		 	     cr.set_line_width(2.0/scaleval)
+#		    cr.set_source_rgb(0.7, 0.5, 0.1)
+		        cr.set_source_rgb(0.1, 0.5, 0.1)
+		        cr.stroke()
 
-		cr.set_line_width(3.0/(scaleval*self.yscale))
+		# Lit by primaries
 	        for lface in aface.getlitfaces():
-		    cr.move_to( lface.v1[0], lface.v1[1] )
-		    cr.line_to( lface.v2[0], lface.v2[1] )
-#		    cr.restore()
+		    cr.move_to( lface.v1[0], lface.v1[1]*self.yscale )
+		    cr.line_to( lface.v2[0], lface.v2[1]*self.yscale )
+		    if lface.isDetector:
+			cr.set_line_width(4.0/scaleval)
+		    else:
+			cr.set_line_width(2.0/scaleval)
 		    cr.set_source_rgb(1.0, 0.0, 0.0)
 		    cr.stroke()
-#		    cr.save()
 
-		cr.set_line_width(3.0/(scaleval*self.yscale))
 	        for lface in aface.getlitfaces(3):
-		    cr.move_to( lface.v1[0], lface.v1[1] )
-		    cr.line_to( lface.v2[0], lface.v2[1] )
-#		    cr.restore()
+		    cr.move_to( lface.v1[0], lface.v1[1]*self.yscale )
+		    cr.line_to( lface.v2[0], lface.v2[1]*self.yscale )
+		    cr.set_line_width(3.0/scaleval)
 		    cr.set_source_rgb(1.0, 0.0, 1.0)
 		    cr.stroke()
-#		    cr.save()
+	#self.get_picture()
+
+    def get_picture(self):
+	drawable = self.movie_window.window
+	colormap = drawable.get_colormap()
+        pixbuf = Gtk.gdk.Pixbuf(gtk.gdk.COLORSPACE_RGB, 0, 8, *drawable.get_size())
+	pixbuf = pixbuf.get_from_drawable(drawable, colormap, 0,0,0,0, *drawable.get_size())
+        pixbuf.save(r'somefile.png', 'png')
 
 """
+
 
 	# Pixel by pixel stuff
 	cr.set_line_width(1.0/scaleval)
@@ -114,13 +121,11 @@ class drawlight(Gtk.Window):
 		    cr.stroke()
 """
 
-        
     
+
 def main():
-    
     app = drawlight()
     Gtk.main()
-        
         
 if __name__ == "__main__":    
     main()
