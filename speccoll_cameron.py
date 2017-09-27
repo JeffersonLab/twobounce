@@ -113,19 +113,22 @@ coll_inner_pipe_2   = polygon( ([z2_inner_pipe, -x2_inner_pipe], [z3_inner_pipe,
 
 ################# collimator 4, 3 segmentations
 
+downstream_col4_shift=-1.5
+dss=downstream_col4_shift ### This shift is largely arbitrary FIXME (doesn't include the lead photon collimator Rakitha added)
+
 #seg 1
 
-x1_coll_4_1=-0.254
-z1_coll_4_1=9.775
+x1_coll_4_1=-0.300#Was -0.254
+z1_coll_4_1=9.775+dss
 
-x2_coll_4_1=-0.23495
-z2_coll_4_1=9.775
+x2_coll_4_1=-0.1655#Was -0.23495
+z2_coll_4_1=9.775+dss
 
-x3_coll_4_1=-0.23495
-z3_coll_4_1=9.875
+x3_coll_4_1=-0.1655#Was -0.23495
+z3_coll_4_1=9.875+dss
 
-x4_coll_4_1=-0.254
-z4_coll_4_1=9.875
+x4_coll_4_1=-0.300#Was -0.254
+z4_coll_4_1=9.875+dss
 
 
 coll_4_1   = polygon( ([z1_coll_4_1, x1_coll_4_1], [z4_coll_4_1, x4_coll_4_1], [z3_coll_4_1, x3_coll_4_1], [z2_coll_4_1, x2_coll_4_1] ))
@@ -133,17 +136,17 @@ coll_4_1   = polygon( ([z1_coll_4_1, x1_coll_4_1], [z4_coll_4_1, x4_coll_4_1], [
 
 #seg 2
 
-x1_coll_4_2=-0.06377
-z1_coll_4_2=9.775
+x1_coll_4_2=-0.0525#Was -0.06377
+z1_coll_4_2=9.775+dss
 
 x2_coll_4_2=-0.030
-z2_coll_4_2=9.775
+z2_coll_4_2=9.775+dss
 
 x3_coll_4_2=-0.030
-z3_coll_4_2=9.875
+z3_coll_4_2=9.875+dss
 
-x4_coll_4_2=-0.06377
-z4_coll_4_2=9.875
+x4_coll_4_2=-0.0525#Was -0.06377
+z4_coll_4_2=9.875+dss
 
 
 coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [z3_coll_4_2, x3_coll_4_2], [z2_coll_4_2, x2_coll_4_2] ))
@@ -151,16 +154,16 @@ coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [
 #seg 3
 
 x1_coll_4_3=0.030
-z1_coll_4_3=9.775
+z1_coll_4_3=9.775+dss
 
-x2_coll_4_3=0.254
-z2_coll_4_3=9.775
+x2_coll_4_3=0.300#Was 0.254
+z2_coll_4_3=9.775+dss
 
-x3_coll_4_3=0.254
-z3_coll_4_3=9.875
+x3_coll_4_3=0.300#Was 0.254
+z3_coll_4_3=9.875+dss
 
 x4_coll_4_3=0.030
-z4_coll_4_3=9.875
+z4_coll_4_3=9.875+dss
 
 
 coll_4_3   = polygon( ([z1_coll_4_3, x1_coll_4_3], [z4_coll_4_3, x4_coll_4_3], [z3_coll_4_3, x3_coll_4_3], [z2_coll_4_3, x2_coll_4_3] ))
@@ -168,16 +171,17 @@ coll_4_3   = polygon( ([z1_coll_4_3, x1_coll_4_3], [z4_coll_4_3, x4_coll_4_3], [
 #############inner_pipe_2
 
 x1_inner_pipe_2=0.033
-z1_inner_pipe_2=9.875
+z1_inner_pipe_2=9.875+dss
 
 x2_inner_pipe_2=0.036
-z2_inner_pipe_2=9.875 
+z2_inner_pipe_2=9.875+dss 
 
 x3_inner_pipe_2_tmp=0.0396
-z3_inner_pipe_2_tmp=11.450
+z3_inner_pipe_2_tmp=11.450+dss
 
 x4_inner_pipe_2_tmp=0.0366
-z4_inner_pipe_2_tmp=11.450
+z4_inner_pipe_2_tmp=11.450+dss
+## extend forward only the first bit of the pipe (ARBITRARILY FIXME)
 
 z3=11.45+0.4
 x3_inner_pipe_2=(x3_inner_pipe_2_tmp-x2_inner_pipe_2)/(z3_inner_pipe_2_tmp-z2_inner_pipe_2)*(z3-z2_inner_pipe_2)+x2_inner_pipe_2
