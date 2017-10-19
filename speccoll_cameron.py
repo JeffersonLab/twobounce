@@ -42,7 +42,7 @@ coll_inner_photon_2 = polygon( ([z2_inner_photon, -x2_inner_photon], [z3_inner_p
 #########collimator 2,  three segments
 
 #seg 1
-x1_coll_2_1=-0.15+ (-0.5)
+x1_coll_2_1=-0.15#+ (-0.5)
 z1_coll_2_1=5.875
 
 x2_coll_2_1=-0.098
@@ -51,7 +51,7 @@ z2_coll_2_1=5.875
 x3_coll_2_1=-0.098
 z3_coll_2_1=5.975
 
-x4_coll_2_1=-0.15+(-0.5)
+x4_coll_2_1=-0.15#+(-0.5)
 z4_coll_2_1=5.975
 
 
@@ -80,10 +80,10 @@ coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [
 x1_coll_2_3=0.026
 z1_coll_2_3=5.875
 
-x2_coll_2_3=0.15+0.5
+x2_coll_2_3=0.15#+0.5
 z2_coll_2_3=5.875
 
-x3_coll_2_3=0.15+0.5
+x3_coll_2_3=0.15#+0.5
 z3_coll_2_3=5.975
 
 x4_coll_2_3=0.026
@@ -118,7 +118,7 @@ dss=downstream_col4_shift ### This shift is largely arbitrary FIXME (doesn't inc
 
 #seg 1
 
-x1_coll_4_1=-0.300#Was -0.254
+x1_coll_4_1=-0.254#Was simulation -0.300 # Was CAD -0.254
 z1_coll_4_1=9.775+dss
 
 x2_coll_4_1=-0.1655#Was -0.23495
@@ -127,7 +127,7 @@ z2_coll_4_1=9.775+dss
 x3_coll_4_1=-0.1655#Was -0.23495
 z3_coll_4_1=9.875+dss
 
-x4_coll_4_1=-0.300#Was -0.254
+x4_coll_4_1=-0.254#Was simulation -0.300 # Was CAD -0.254
 z4_coll_4_1=9.875+dss
 
 
@@ -156,10 +156,10 @@ coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [
 x1_coll_4_3=0.030
 z1_coll_4_3=9.775+dss
 
-x2_coll_4_3=0.300#Was 0.254
+x2_coll_4_3=-0.254#Was simulation -0.300 # Was CAD -0.254
 z2_coll_4_3=9.775+dss
 
-x3_coll_4_3=0.300#Was 0.254
+x3_coll_4_3=-0.254#Was simulation -0.300 # Was CAD -0.254
 z3_coll_4_3=9.875+dss
 
 x4_coll_4_3=0.030
