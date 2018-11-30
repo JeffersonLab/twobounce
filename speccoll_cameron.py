@@ -60,7 +60,6 @@ z4_coll_2_1=5.975
 coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [z3_coll_2_1, x3_coll_2_1], [z2_coll_2_1, x2_coll_2_1] ), notSource=False)
 
 
-
 #seg 2
 
 x1_coll_2_2=-0.0353
@@ -160,10 +159,10 @@ coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [
 x1_coll_4_3=0.030
 z1_coll_4_3=9.775+dss
 
-x2_coll_4_3=-0.254#Was simulation -0.300 # Was CAD -0.254
+x2_coll_4_3=0.254#Was simulation -0.300 # Was CAD -0.254
 z2_coll_4_3=9.775+dss
 
-x3_coll_4_3=-0.254#Was simulation -0.300 # Was CAD -0.254
+x3_coll_4_3=0.254#Was simulation -0.300 # Was CAD -0.254
 z3_coll_4_3=9.875+dss
 
 x4_coll_4_3=0.030
