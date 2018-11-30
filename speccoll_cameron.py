@@ -41,8 +41,10 @@ coll_inner_photon_2 = polygon( ([z2_inner_photon, -x2_inner_photon], [z3_inner_p
 
 #########collimator 2,  three segments
 
+bigger=0*0.1515
+
 #seg 1
-x1_coll_2_1=-0.15#+ (-0.5)
+x1_coll_2_1=-0.15 -bigger+ (-0.5)
 z1_coll_2_1=5.875
 
 x2_coll_2_1=-0.098
@@ -51,11 +53,12 @@ z2_coll_2_1=5.875
 x3_coll_2_1=-0.098
 z3_coll_2_1=5.975
 
-x4_coll_2_1=-0.15#+(-0.5)
+x4_coll_2_1=-0.15 -bigger+(-0.5)
 z4_coll_2_1=5.975
 
 
 coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [z3_coll_2_1, x3_coll_2_1], [z2_coll_2_1, x2_coll_2_1] ), notSource=False)
+
 
 
 #seg 2
@@ -80,10 +83,10 @@ coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [
 x1_coll_2_3=0.026
 z1_coll_2_3=5.875
 
-x2_coll_2_3=0.15#+0.5
+x2_coll_2_3=0.15 +bigger+0.5
 z2_coll_2_3=5.875
 
-x3_coll_2_3=0.15#+0.5
+x3_coll_2_3=0.15 +bigger+0.5
 z3_coll_2_3=5.975
 
 x4_coll_2_3=0.026
@@ -108,13 +111,14 @@ x4_inner_pipe=0.031
 z4_inner_pipe=7.92
 
 
-coll_inner_pipe_1   = polygon( ([z1_inner_pipe, x1_inner_pipe], [z4_inner_pipe, x4_inner_pipe], [z3_inner_pipe, x3_inner_pipe], [z2_inner_pipe, x2_inner_pipe] ))
-coll_inner_pipe_2   = polygon( ([z2_inner_pipe, -x2_inner_pipe], [z3_inner_pipe, -x3_inner_pipe], [z4_inner_pipe, -x4_inner_pipe], [z1_inner_pipe, -x1_inner_pipe] ))
+coll_inner_pipe_1   = polygon( ([z1_inner_pipe, x1_inner_pipe], [z4_inner_pipe, x4_inner_pipe], [z3_inner_pipe, x3_inner_pipe], [z2_inner_pipe, x2_inner_pipe] ), notSource=False)
+coll_inner_pipe_2   = polygon( ([z2_inner_pipe, -x2_inner_pipe], [z3_inner_pipe, -x3_inner_pipe], [z4_inner_pipe, -x4_inner_pipe], [z1_inner_pipe, -x1_inner_pipe] ), notSource=False)
 
 ################# collimator 4, 3 segmentations
 
 downstream_col4_shift=-1.5
 dss=downstream_col4_shift ### This shift is largely arbitrary FIXME (doesn't include the lead photon collimator Rakitha added)
+
 
 #seg 1
 
@@ -131,7 +135,7 @@ x4_coll_4_1=-0.254#Was simulation -0.300 # Was CAD -0.254
 z4_coll_4_1=9.875+dss
 
 
-coll_4_1   = polygon( ([z1_coll_4_1, x1_coll_4_1], [z4_coll_4_1, x4_coll_4_1], [z3_coll_4_1, x3_coll_4_1], [z2_coll_4_1, x2_coll_4_1] ))
+coll_4_1   = polygon( ([z1_coll_4_1, x1_coll_4_1], [z4_coll_4_1, x4_coll_4_1], [z3_coll_4_1, x3_coll_4_1], [z2_coll_4_1, x2_coll_4_1]), notSource=False)
 
 
 #seg 2
@@ -149,7 +153,7 @@ x4_coll_4_2=-0.0525#Was -0.06377
 z4_coll_4_2=9.875+dss
 
 
-coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [z3_coll_4_2, x3_coll_4_2], [z2_coll_4_2, x2_coll_4_2] ))
+coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [z3_coll_4_2, x3_coll_4_2], [z2_coll_4_2, x2_coll_4_2]), notSource=False)
 
 #seg 3
 
@@ -166,7 +170,7 @@ x4_coll_4_3=0.030
 z4_coll_4_3=9.875+dss
 
 
-coll_4_3   = polygon( ([z1_coll_4_3, x1_coll_4_3], [z4_coll_4_3, x4_coll_4_3], [z3_coll_4_3, x3_coll_4_3], [z2_coll_4_3, x2_coll_4_3] ))
+coll_4_3   = polygon( ([z1_coll_4_3, x1_coll_4_3], [z4_coll_4_3, x4_coll_4_3], [z3_coll_4_3, x3_coll_4_3], [z2_coll_4_3, x2_coll_4_3]), notSource=False)
 
 #############inner_pipe_2
 
@@ -192,9 +196,8 @@ x4_inner_pipe_2=(x4_inner_pipe_2_tmp-x1_inner_pipe_2)/(z4_inner_pipe_2_tmp-z1_in
 z4_inner_pipe_2=z4
 
 
-
-coll_inner_pipe_2_1   = polygon( ([z1_inner_pipe_2, x1_inner_pipe_2], [z4_inner_pipe_2, x4_inner_pipe_2], [z3_inner_pipe_2, x3_inner_pipe_2], [z2_inner_pipe_2, x2_inner_pipe_2] ))
-coll_inner_pipe_2_2   = polygon( ([z2_inner_pipe_2, -x2_inner_pipe_2], [z3_inner_pipe_2, -x3_inner_pipe_2], [z4_inner_pipe_2, -x4_inner_pipe_2], [z1_inner_pipe_2, -x1_inner_pipe_2] ))
+coll_inner_pipe_2_1   = polygon( ([z1_inner_pipe_2, x1_inner_pipe_2], [z4_inner_pipe_2, x4_inner_pipe_2], [z3_inner_pipe_2, x3_inner_pipe_2], [z2_inner_pipe_2, x2_inner_pipe_2]), notSource=False)
+coll_inner_pipe_2_2   = polygon( ([z2_inner_pipe_2, -x2_inner_pipe_2], [z3_inner_pipe_2, -x3_inner_pipe_2], [z4_inner_pipe_2, -x4_inner_pipe_2], [z1_inner_pipe_2, -x1_inner_pipe_2]), notSource=False)
 
 
 #########collimator 5, 1 seg
@@ -211,7 +214,7 @@ x4_coll_5=-0.1055
 z4_coll_5=12.87
 
 
-coll_5   = polygon( ([z1_coll_5, x1_coll_5], [z4_coll_5, x4_coll_5], [z3_coll_5, x3_coll_5], [z2_coll_5, x2_coll_5] ))
+coll_5   = polygon( ([z1_coll_5, x1_coll_5], [z4_coll_5, x4_coll_5], [z3_coll_5, x3_coll_5], [z2_coll_5, x2_coll_5]), notSource=False)
 
 
 #### quartz
