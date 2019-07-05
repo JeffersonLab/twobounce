@@ -128,7 +128,7 @@ coll_inner_photon_bottom_5 = polygon( ([z2_inner_photon_5, -x2_inner_photon_5], 
 
 #########collimator 2,  three segments
 increasecolth = 0.05
-coll2offset = 0.001
+coll2offset = 0.000
 #seg 1
 x1_coll_2_1=-0.035
 z1_coll_2_1=5.825-tgtoffset
@@ -196,22 +196,38 @@ coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [
 
 ############# Col2 photon collimating inner_pipe
 ##pipe
-x1_pipe0=0.026
+x1_pipe0=0.023
 z1_pipe0=5.675-tgtoffset
 
-x2_pipe0=0.029
+x2_pipe0=0.026
 z2_pipe0=5.675-tgtoffset
 
-x3_pipe0=0.029
+x3_pipe0=0.030
 z3_pipe0=5.825-tgtoffset
 
-x4_pipe0=0.026
+x4_pipe0=0.027
 z4_pipe0=5.825-tgtoffset
 
 
 coll_pipe01   = polygon( ([z1_pipe0, x1_pipe0], [z4_pipe0, x4_pipe0], [z3_pipe0, x3_pipe0], [z2_pipe0, x2_pipe0] ), notSource=False)
 coll_pipe02   = polygon( ([z2_pipe0, -x2_pipe0], [z3_pipe0, -x3_pipe0], [z4_pipe0, -x4_pipe0], [z1_pipe0, -x1_pipe0] ), notSource=False)
 
+##pipe to aviod open space between Col2 and beam pipe desigened by Dave
+x1_pipe1_1=0.022225
+z1_pipe1_1=5.475-coll2offset
+
+x2_pipe1_1=0.027
+z2_pipe1_1=5.475-coll2offset
+
+x3_pipe1_1=0.027
+z3_pipe1_1=5.50
+
+x4_pipe1_1=0.022225
+z4_pipe1_1=5.50
+
+
+coll_pipe11_1   = polygon( ([z1_pipe1_1, x1_pipe1_1], [z4_pipe1_1, x4_pipe1_1], [z3_pipe1_1, x3_pipe1_1], [z2_pipe1_1, x2_pipe1_1] ), notSource=False)
+coll_pipe12_1   = polygon( ([z2_pipe1_1, -x2_pipe1_1], [z3_pipe1_1, -x3_pipe1_1], [z4_pipe1_1, -x4_pipe1_1], [z1_pipe1_1, -x1_pipe1_1] ), notSource=False)
 ##pipe
 x1_pipe1=0.021336
 z1_pipe1=5.475-coll2offset
@@ -1048,14 +1064,14 @@ quartz2 = polygon( ([det_z_pos, -det_outer_radius], [det_z_pos+det_z_extent, -de
 
 #### sub-quartz array detector to give an idea about the available space before photons become an issue again
 
-# `sub_det_inner_radius=0.6 # was 0.55, probably fine at 0.6, ring 1 quartz actually begins at 0.69
-# `sub_det_outer_radius=0.689 # ring 6 quartz ends at 1.2, PMTs begin at 1.3
-# `sub_det_z_pos=26.5
-# `sub_det_z_extent=1.0 # was = .02 for ideal detector
-sub_det_inner_radius=0.06 # was 0.55, probably fine at 0.6, ring 1 quartz actually begins at 0.69
+sub_det_inner_radius=0.6 # was 0.55, probably fine at 0.6, ring 1 quartz actually begins at 0.69
 sub_det_outer_radius=0.689 # ring 6 quartz ends at 1.2, PMTs begin at 1.3
-sub_det_z_pos=6.0
+sub_det_z_pos=26.5
 sub_det_z_extent=1.0 # was = .02 for ideal detector
+#sub_det_inner_radius=0.06 # was 0.55, probably fine at 0.6, ring 1 quartz actually begins at 0.69
+#sub_det_outer_radius=0.689 # ring 6 quartz ends at 1.2, PMTs begin at 1.3
+#sub_det_z_pos=6.0
+#sub_det_z_extent=1.0 # was = .02 for ideal detector
 
 sub_quartz1 = polygon( ([sub_det_z_pos, sub_det_inner_radius], [sub_det_z_pos+sub_det_z_extent, sub_det_inner_radius], [sub_det_z_pos+sub_det_z_extent, sub_det_outer_radius], [sub_det_z_pos, sub_det_outer_radius]), isDetector=True )
 sub_quartz2 = polygon( ([sub_det_z_pos, -sub_det_outer_radius], [sub_det_z_pos+sub_det_z_extent, -sub_det_outer_radius], [sub_det_z_pos+sub_det_z_extent, -sub_det_inner_radius], [sub_det_z_pos, -sub_det_inner_radius]), isDetector=True )
@@ -1088,6 +1104,9 @@ allpolys.append(coll_2_3)
 
 allpolys.append(coll_pipe01)
 allpolys.append(coll_pipe02)
+
+allpolys.append(coll_pipe11_1)
+allpolys.append(coll_pipe12_1)
 
 allpolys.append(coll_pipe11)
 allpolys.append(coll_pipe12)
