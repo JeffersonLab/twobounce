@@ -155,11 +155,11 @@ x1_coll_2_2=-0.150
 #x1_coll_2_2=-0.300
 z1_coll_2_2=5.825-tgtoffset
 
-x2_coll_2_2=-0.098
+x2_coll_2_2=-0.108
 #x2_coll_2_2=-0.108
 z2_coll_2_2=5.825-tgtoffset
 
-x3_coll_2_2=-0.098
+x3_coll_2_2=-0.108
 #x3_coll_2_2=-0.108
 z3_coll_2_2=5.975-tgtoffset
 
