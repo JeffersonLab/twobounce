@@ -128,21 +128,21 @@ coll_inner_photon_bottom_5 = polygon( ([z2_inner_photon_5, -x2_inner_photon_5], 
 
 #########collimator 2,  three segments
 increasecolth = 0.05
-coll2offset = 0.000
+coll2move = 0.075 # col2 is decided to move 75 mm upstream
 #seg 1
-x1_coll_2_1=-0.035
-z1_coll_2_1=5.825-tgtoffset
+x1_coll_2_1=-0.030
+z1_coll_2_1=5.825-tgtoffset-coll2move
 
 x2_coll_2_1=-0.026
 #x2_coll_2_1=-0.02955
-z2_coll_2_1=5.825-tgtoffset
+z2_coll_2_1=5.825-tgtoffset-coll2move
 
 x3_coll_2_1=-0.026
 #x3_coll_2_1=-0.02955
-z3_coll_2_1=5.975-tgtoffset
+z3_coll_2_1=5.975-tgtoffset-coll2move
 
-x4_coll_2_1=-0.035
-z4_coll_2_1=5.975-tgtoffset
+x4_coll_2_1=-0.030
+z4_coll_2_1=5.975-tgtoffset-coll2move
 
 
 coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [z3_coll_2_1, x3_coll_2_1], [z2_coll_2_1, x2_coll_2_1] ), notSource=False)
@@ -153,19 +153,19 @@ coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [
 
 x1_coll_2_2=-0.150
 #x1_coll_2_2=-0.300
-z1_coll_2_2=5.825-tgtoffset
+z1_coll_2_2=5.825-tgtoffset-coll2move
 
-x2_coll_2_2=-0.108
+x2_coll_2_2=-0.103
 #x2_coll_2_2=-0.108
-z2_coll_2_2=5.825-tgtoffset
+z2_coll_2_2=5.825-tgtoffset-coll2move
 
-x3_coll_2_2=-0.108
+x3_coll_2_2=-0.103
 #x3_coll_2_2=-0.108
-z3_coll_2_2=5.975-tgtoffset
+z3_coll_2_2=5.975-tgtoffset-coll2move
 
 x4_coll_2_2=-0.150
 #x4_coll_2_2=-0.300
-z4_coll_2_2=5.975-tgtoffset
+z4_coll_2_2=5.975-tgtoffset-coll2move
 
 
 coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [z3_coll_2_2, x3_coll_2_2], [z2_coll_2_2, x2_coll_2_2] ), notSource=False)
@@ -175,19 +175,19 @@ coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [
 
 x1_coll_2_3=0.026
 #x1_coll_2_3=0.02955
-z1_coll_2_3=5.825-tgtoffset
+z1_coll_2_3=5.825-tgtoffset-coll2move
 
 x2_coll_2_3= 0.150
 #x2_coll_2_3= 0.300
-z2_coll_2_3=5.825-tgtoffset
+z2_coll_2_3=5.825-tgtoffset-coll2move
 
 x3_coll_2_3= 0.150
 #x3_coll_2_3= 0.300
-z3_coll_2_3=5.975-tgtoffset
+z3_coll_2_3=5.975-tgtoffset-coll2move
 
 x4_coll_2_3=0.026
 #x4_coll_2_3=0.02955
-z4_coll_2_3=5.975-tgtoffset
+z4_coll_2_3=5.975-tgtoffset-coll2move
 
 
 coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [z3_coll_2_3, x3_coll_2_3], [z2_coll_2_3, x2_coll_2_3] ), notSource=False)
@@ -203,10 +203,10 @@ x2_pipe0=0.026
 z2_pipe0=5.675-tgtoffset
 
 x3_pipe0=0.030
-z3_pipe0=5.825-tgtoffset
+z3_pipe0=5.825-tgtoffset-coll2move
 
 x4_pipe0=0.027
-z4_pipe0=5.825-tgtoffset
+z4_pipe0=5.825-tgtoffset-coll2move
 
 
 coll_pipe01   = polygon( ([z1_pipe0, x1_pipe0], [z4_pipe0, x4_pipe0], [z3_pipe0, x3_pipe0], [z2_pipe0, x2_pipe0] ), notSource=False)
@@ -214,26 +214,26 @@ coll_pipe02   = polygon( ([z2_pipe0, -x2_pipe0], [z3_pipe0, -x3_pipe0], [z4_pipe
 
 ##pipe to aviod open space between Col2 and beam pipe desigened by Dave
 x1_pipe1_1=0.022225
-z1_pipe1_1=5.475-coll2offset
+z1_pipe1_1=5.475-coll2move
 
 x2_pipe1_1=0.027
-z2_pipe1_1=5.475-coll2offset
+z2_pipe1_1=5.475-coll2move
 
 x3_pipe1_1=0.027
-z3_pipe1_1=5.50
+z3_pipe1_1=5.425
 
 x4_pipe1_1=0.022225
-z4_pipe1_1=5.50
+z4_pipe1_1=5.425
 
 
 coll_pipe11_1   = polygon( ([z1_pipe1_1, x1_pipe1_1], [z4_pipe1_1, x4_pipe1_1], [z3_pipe1_1, x3_pipe1_1], [z2_pipe1_1, x2_pipe1_1] ), notSource=False)
 coll_pipe12_1   = polygon( ([z2_pipe1_1, -x2_pipe1_1], [z3_pipe1_1, -x3_pipe1_1], [z4_pipe1_1, -x4_pipe1_1], [z1_pipe1_1, -x1_pipe1_1] ), notSource=False)
 ##pipe
 x1_pipe1=0.021336
-z1_pipe1=5.475-coll2offset
+z1_pipe1=5.475-coll2move
 
 x2_pipe1=0.022225
-z2_pipe1=5.475-coll2offset
+z2_pipe1=5.475-coll2move
 
 x3_pipe1=0.022225
 z3_pipe1=5.750
@@ -972,19 +972,19 @@ dss=downstream_col4_shift ### This shift is largely arbitrary
 
 #seg 1
 
-x1_coll_4_1=-0.254 #Was simulation -0.300 # Was CAD -0.254
+x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 #x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 z1_coll_4_1=9.775+dss-tgtoffset
 
-x2_coll_4_1=-0.16787 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
+x2_coll_4_1=-0.1965 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
 #x2_coll_4_1=-0.1714 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
 z2_coll_4_1=9.775+dss-tgtoffset
 
-x3_coll_4_1=-0.16787 # -0.1714 #Was -0.23495, then was -0.1655
+x3_coll_4_1=-0.1965 # -0.1714 #Was -0.23495, then was -0.1655
 #x3_coll_4_1=-0.1714 # -0.1714 #Was -0.23495, then was -0.1655
 z3_coll_4_1=9.875+dss-tgtoffset
 
-x4_coll_4_1=-0.254 #Was simulation -0.300 # Was CAD -0.254
+x4_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 #x4_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 z4_coll_4_1=9.875+dss-tgtoffset
 
@@ -994,7 +994,7 @@ coll_4_1   = polygon( ([z1_coll_4_1, x1_coll_4_1], [z4_coll_4_1, x4_coll_4_1], [
 
 #seg 2
 
-x1_coll_4_2=-0.0525 #0.05 #Was -0.06377, then was -0.0525
+x1_coll_4_2=-0.0535 #0.05 #Was -0.06377, then was -0.0525
 #x1_coll_4_2=-0.05 #0.05 #Was -0.06377, then was -0.0525
 z1_coll_4_2=9.775+dss-tgtoffset
 
@@ -1004,7 +1004,7 @@ z2_coll_4_2=9.775+dss-tgtoffset
 x3_coll_4_2=-0.030
 z3_coll_4_2=9.875+dss-tgtoffset
 
-x4_coll_4_2=-0.0525 #0.05 #Was -0.06377, then was -0.0525
+x4_coll_4_2=-0.0535 #0.05 #Was -0.06377, then was -0.0525
 #x4_coll_4_2=-0.05 #0.05 #Was -0.06377, then was -0.0525
 z4_coll_4_2=9.875+dss-tgtoffset
 
@@ -1016,11 +1016,11 @@ coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [
 x1_coll_4_3=0.030
 z1_coll_4_3=9.775+dss-tgtoffset
 
-x2_coll_4_3=0.254 #Was simulation -0.300 # Was CAD -0.254
+x2_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
 #x2_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
 z2_coll_4_3=9.775+dss-tgtoffset
 
-x3_coll_4_3=0.254 #Was simulation -0.300 # Was CAD -0.254
+x3_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
 #x3_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
 z3_coll_4_3=9.875+dss-tgtoffset
 
@@ -1034,16 +1034,16 @@ coll_4_3   = polygon( ([z1_coll_4_3, x1_coll_4_3], [z4_coll_4_3, x4_coll_4_3], [
 ######### collimator 5 (shaped like a tuning fork), 1 seg
 
 
-x1_coll_5=-0.1055 # use this if you just want the exact y=0 slice
+x1_coll_5=-0.11638 # use this if you just want the exact y=0 slice
 z1_coll_5=12.8-tgtoffset
 
-x2_coll_5=-0.07316 #from GDML
+x2_coll_5=-0.07422 #from GDML
 z2_coll_5=12.8-tgtoffset  #thickness of collimator 5 = 35 mm
 
-x3_coll_5=-0.07316 #from GDML
+x3_coll_5=-0.07422 #from GDML
 z3_coll_5=12.87-tgtoffset
 
-x4_coll_5=-0.1055 # use this if you just want the exact y=0 slice
+x4_coll_5=-0.11638 # use this if you just want the exact y=0 slice
 z4_coll_5=12.87-tgtoffset
 
 coll_5   = polygon( ([z1_coll_5, x1_coll_5], [z4_coll_5, x4_coll_5], [z3_coll_5, x3_coll_5], [z2_coll_5, x2_coll_5]), notSource=False)
