@@ -974,11 +974,11 @@ dss=downstream_col4_shift ### This shift is largely arbitrary
 
 x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 #x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
-z1_coll_4_1=9.775+dss-tgtoffset
+z1_coll_4_1=9.725+dss-tgtoffset
 
 x2_coll_4_1=-0.1965 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
 #x2_coll_4_1=-0.1714 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
-z2_coll_4_1=9.775+dss-tgtoffset
+z2_coll_4_1=9.725+dss-tgtoffset
 
 x3_coll_4_1=-0.1965 # -0.1714 #Was -0.23495, then was -0.1655
 #x3_coll_4_1=-0.1714 # -0.1714 #Was -0.23495, then was -0.1655
