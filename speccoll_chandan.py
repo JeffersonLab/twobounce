@@ -130,18 +130,18 @@ coll_inner_photon_bottom_5 = polygon( ([z2_inner_photon_5, -x2_inner_photon_5], 
 increasecolth = 0.05
 coll2move = 0.075 # col2 is decided to move 75 mm upstream
 #seg 1
-x1_coll_2_1=-0.030
+x1_coll_2_1=-0.035
 z1_coll_2_1=5.825-tgtoffset-coll2move
 
-x2_coll_2_1=-0.026
+x2_coll_2_1=-0.02955
 #x2_coll_2_1=-0.02955
 z2_coll_2_1=5.825-tgtoffset-coll2move
 
-x3_coll_2_1=-0.026
+x3_coll_2_1=-0.02955
 #x3_coll_2_1=-0.02955
 z3_coll_2_1=5.975-tgtoffset-coll2move
 
-x4_coll_2_1=-0.030
+x4_coll_2_1=-0.035
 z4_coll_2_1=5.975-tgtoffset-coll2move
 
 
@@ -173,7 +173,7 @@ coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [
 
 #seg 3
 
-x1_coll_2_3=0.026
+x1_coll_2_3=0.02955
 #x1_coll_2_3=0.02955
 z1_coll_2_3=5.825-tgtoffset-coll2move
 
@@ -185,7 +185,7 @@ x3_coll_2_3= 0.150
 #x3_coll_2_3= 0.300
 z3_coll_2_3=5.975-tgtoffset-coll2move
 
-x4_coll_2_3=0.026
+x4_coll_2_3=0.02955
 #x4_coll_2_3=0.02955
 z4_coll_2_3=5.975-tgtoffset-coll2move
 
@@ -199,13 +199,13 @@ coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [
 x1_pipe0=0.023
 z1_pipe0=5.675-tgtoffset
 
-x2_pipe0=0.026
+x2_pipe0=0.030
 z2_pipe0=5.675-tgtoffset
 
-x3_pipe0=0.030
+x3_pipe0=0.033
 z3_pipe0=5.825-tgtoffset-coll2move
 
-x4_pipe0=0.027
+x4_pipe0=0.030
 z4_pipe0=5.825-tgtoffset-coll2move
 
 
@@ -216,10 +216,10 @@ coll_pipe02   = polygon( ([z2_pipe0, -x2_pipe0], [z3_pipe0, -x3_pipe0], [z4_pipe
 x1_pipe1_1=0.022225
 z1_pipe1_1=5.475-coll2move
 
-x2_pipe1_1=0.027
+x2_pipe1_1=0.031
 z2_pipe1_1=5.475-coll2move
 
-x3_pipe1_1=0.027
+x3_pipe1_1=0.031
 z3_pipe1_1=5.425
 
 x4_pipe1_1=0.022225
