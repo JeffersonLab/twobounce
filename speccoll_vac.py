@@ -10,7 +10,7 @@ from drawlight import drawlight
 sources = []
 allpolys = []
 
-OffSet1 = 0.001
+OffSet1 = 0.0017
 
 tgtoffset = 0.5
 tgtlen = 1.25
@@ -21,6 +21,29 @@ tgtrad = 1.4142*0.0025
 target = polygon( ([-tgtlen/2,-tgtrad], [tgtlen/2, -tgtrad], [tgtlen/2,tgtrad], [-tgtlen/2,tgtrad]) )
 
 ################################################################
+
+###### Lead shield in the target region (for collimating photons)
+
+#seg 1
+x1_shield_top=0.400
+x1_shield_bottom=-1.150
+z1_shield=1.200
+
+x2_shield_top=1.400 #*1.414 The shield is a rectangle (in CAD), but the narrow dimension is the one relevant for here
+x2_shield_bottom=-0.400
+z2_shield=1.200
+
+x3_shield_top=1.400
+x3_shield_bottom=-0.400
+z3_shield=1.600
+
+x4_shield_top=0.400
+x4_shield_bottom=-1.150
+z4_shield=1.600
+
+
+shield_top  = polygon( ([z1_shield,  x1_shield_top], [z4_shield,  x4_shield_top], [z3_shield,  x3_shield_top], [z2_shield,  x2_shield_top] ), notSource=False)
+shield_bottom = polygon( ([z1_shield, x1_shield_bottom], [z4_shield, x4_shield_bottom], [z3_shield, x3_shield_bottom], [z2_shield, x2_shield_bottom] ), notSource=False)
 
 ###### Lead collar (for collimating photons)
 
@@ -40,6 +63,62 @@ z4_collar=3.051#+1.5
 
 collar_top    = polygon( ([z1_collar,  x1_collar], [z4_collar,  x4_collar], [z3_collar,  x3_collar], [z2_collar,  x2_collar] ), notSource=False)
 collar_bottom = polygon( ([z2_collar, -x2_collar], [z3_collar, -x3_collar], [z4_collar, -x4_collar], [z1_collar, -x1_collar] ), notSource=False)
+
+###### Hybrid upstream Lead collar (for ep scattering)
+
+x1_collar3=0.335
+z1_collar3=4.4305+4.5
+
+x2_collar3=2.000
+z2_collar3=4.4305+4.5
+
+x3_collar3=2.000
+z3_collar3=4.6805+4.5
+
+x4_collar3=0.335
+z4_collar3=4.6805+4.5
+
+
+collar3_top    = polygon( ([z1_collar3,  x1_collar3], [z4_collar3,  x4_collar3], [z3_collar3,  x3_collar3], [z2_collar3,  x2_collar3] ), notSource=False)
+collar3_bottom = polygon( ([z2_collar3, -x2_collar3], [z3_collar3, -x3_collar3], [z4_collar3, -x4_collar3], [z1_collar3, -x1_collar3] ), notSource=False)
+
+#################################################################
+
+###### First downstream Lead collar (for ep scattering)
+
+x1_collar1=0.600
+z1_collar1=12.300+4.5
+
+x2_collar1=0.750 
+z2_collar1=12.300+4.5
+
+x3_collar1=0.750
+z3_collar1=12.400+4.5
+
+x4_collar1=0.600
+z4_collar1=12.400+4.5
+
+
+collar_top1    = polygon( ([z1_collar1,  x1_collar1], [z4_collar1,  x4_collar1], [z3_collar1,  x3_collar1], [z2_collar1,  x2_collar1] ), notSource=False)
+collar_bottom1 = polygon( ([z2_collar1, -x2_collar1], [z3_collar1, -x3_collar1], [z4_collar1, -x4_collar1], [z1_collar1, -x1_collar1] ), notSource=False)
+
+###### Second downstream Lead collar (for ep scattering)
+
+x1_collar2=0.952
+z1_collar2=18.900+4.5
+
+x2_collar2=1.200
+z2_collar2=18.900+4.5
+
+x3_collar2=1.200
+z3_collar2=19.000+4.5
+
+x4_collar2=0.952
+z4_collar2=19.000+4.5
+
+
+collar_top2    = polygon( ([z1_collar2,  x1_collar2], [z4_collar2,  x4_collar2], [z3_collar2,  x3_collar2], [z2_collar2,  x2_collar2] ), notSource=False)
+collar_bottom2 = polygon( ([z2_collar2, -x2_collar2], [z3_collar2, -x3_collar2], [z4_collar2, -x4_collar2], [z1_collar2, -x1_collar2] ), notSource=False)
 
 #################################################################
 
@@ -203,28 +282,28 @@ z1_pipe0=5.4
 x2_pipe0=0.0285
 z2_pipe0=5.4
 
-x3_pipe0=0.034
+x3_pipe0=0.0315
 z3_pipe0=7.345
 
-x4_pipe0=0.031
+x4_pipe0=0.0285
 z4_pipe0=7.345
 
 
 coll_pipe01   = polygon( ([z1_pipe0, x1_pipe0], [z4_pipe0, x4_pipe0], [z3_pipe0, x3_pipe0], [z2_pipe0, x2_pipe0] ), notSource=False)
 coll_pipe02   = polygon( ([z2_pipe0, -x2_pipe0], [z3_pipe0, -x3_pipe0], [z4_pipe0, -x4_pipe0], [z1_pipe0, -x1_pipe0] ), notSource=False)
 
-##pipe to aviod open space between Col2 and beam pipe desigened by Dave
-x1_pipe1_1=0.033
+##pipe
+x1_pipe1_1=0.0355
 z1_pipe1_1=7.875
 
-x2_pipe1_1=0.036
+x2_pipe1_1=0.0385
 z2_pipe1_1=7.875
 
-x3_pipe1_1=0.036
-z3_pipe1_1=9.50
+x3_pipe1_1=0.0385
+z3_pipe1_1=9.875
 
-x4_pipe1_1=0.033
-z4_pipe1_1=9.50
+x4_pipe1_1=0.0355
+z4_pipe1_1=9.875
 
 
 coll_pipe11_1   = polygon( ([z1_pipe1_1, x1_pipe1_1], [z4_pipe1_1, x4_pipe1_1], [z3_pipe1_1, x3_pipe1_1], [z2_pipe1_1, x2_pipe1_1] ), notSource=False)
@@ -459,6 +538,56 @@ z4_pipe13=26.5176+4.5
 coll_pipe131   = polygon( ([z1_pipe13, x1_pipe13], [z4_pipe13, x4_pipe13], [z3_pipe13, x3_pipe13], [z2_pipe13, x2_pipe13] ), notSource=False)
 coll_pipe132   = polygon( ([z2_pipe13, -x2_pipe13], [z3_pipe13, -x3_pipe13], [z4_pipe13, -x4_pipe13], [z1_pipe13, -x1_pipe13] ), notSource=False)
 
+
+##pipe after Vaccum chamber after hybrid
+##Step
+x1_pipe14=0.600
+z1_pipe14=12.405+4.5
+
+x2_pipe14=1.2627
+z2_pipe14=12.405+4.5
+
+x3_pipe14=1.2627
+z3_pipe14=12.4431+4.5
+
+x4_pipe14=0.600
+z4_pipe14=12.4431+4.5
+
+coll_pipe141   = polygon( ([z1_pipe14, x1_pipe14], [z4_pipe14, x4_pipe14], [z3_pipe14, x3_pipe14], [z2_pipe14, x2_pipe14] ), notSource=False)
+coll_pipe142   = polygon( ([z2_pipe14, -x2_pipe14], [z3_pipe14, -x3_pipe14], [z4_pipe14, -x4_pipe14], [z1_pipe14, -x1_pipe14] ), notSource=False)
+
+##pipe
+x1_pipe15=1.250
+z1_pipe15=12.4431+4.5
+
+x2_pipe15=1.2627
+z2_pipe15=12.4431+4.5
+
+x3_pipe15=1.2627
+z3_pipe15=18.8569+4.5
+
+x4_pipe15=1.250
+z4_pipe15=18.8569+4.5
+
+coll_pipe151   = polygon( ([z1_pipe15, x1_pipe15], [z4_pipe15, x4_pipe15], [z3_pipe15, x3_pipe15], [z2_pipe15, x2_pipe15] ), notSource=False)
+coll_pipe152   = polygon( ([z2_pipe15, -x2_pipe15], [z3_pipe15, -x3_pipe15], [z4_pipe15, -x4_pipe15], [z1_pipe15, -x1_pipe15] ), notSource=False)
+
+##Step
+x1_pipe16=0.952
+z1_pipe16=18.8569+4.5
+
+x2_pipe16=1.2627
+z2_pipe16=18.8569+4.5
+
+x3_pipe16=1.2627
+z3_pipe16=18.895+4.5
+
+x4_pipe16=0.952
+z4_pipe16=18.895+4.5
+
+coll_pipe161   = polygon( ([z1_pipe16, x1_pipe16], [z4_pipe16, x4_pipe16], [z3_pipe16, x3_pipe16], [z2_pipe16, x2_pipe16] ), notSource=False)
+coll_pipe162   = polygon( ([z2_pipe16, -x2_pipe16], [z3_pipe16, -x3_pipe16], [z4_pipe16, -x4_pipe16], [z1_pipe16, -x1_pipe16] ), notSource=False)
+
 ################# collimator 4, 3 segmentations
 
 downstream_col4_shift=-1.5
@@ -542,6 +671,25 @@ z4_coll_5=12.87-tgtoffset
 
 coll_5   = polygon( ([z1_coll_5, x1_coll_5], [z4_coll_5, x4_coll_5], [z3_coll_5, x3_coll_5], [z2_coll_5, x2_coll_5]), notSource=False)
 
+###### Lintel (for ep scattering)
+
+x1_lintel=0.435
+z1_lintel=7.785+4.5
+
+x2_lintel=0.650
+z2_lintel=7.785+4.5
+
+x3_lintel=0.650
+z3_lintel=7.885+4.5
+
+x4_lintel=0.435
+z4_lintel=7.885+4.5
+
+
+#collar_top2    = polygon( ([z1_lintel,  x1_lintel], [z4_lintel,  x4_lintel], [z3_lintel,  x3_lintel], [z2_lintel,  x2_lintel] ), notSource=False)
+lintel = polygon( ([z2_lintel, -x2_lintel], [z3_lintel, -x3_lintel], [z4_lintel, -x4_lintel], [z1_lintel, -x1_lintel] ), notSource=False)
+
+#################################################################
 
 #### quartz
 
@@ -578,8 +726,20 @@ sub_quartz2 = polygon( ([sub_det_z_pos, -sub_det_outer_radius], [sub_det_z_pos+s
 
 sources.append(target)
 
+allpolys.append(shield_top)
+allpolys.append(shield_bottom)
+
 allpolys.append(collar_top)
 allpolys.append(collar_bottom)
+
+allpolys.append(collar_top1)
+allpolys.append(collar_bottom1)
+
+allpolys.append(collar_top2)
+allpolys.append(collar_bottom2)
+
+allpolys.append(collar3_top)
+allpolys.append(collar3_bottom)
 
 allpolys.append(coll_inner_photon_top_1)
 allpolys.append(coll_inner_photon_bottom_1)
@@ -602,8 +762,8 @@ allpolys.append(coll_pipe02)
 allpolys.append(coll_pipe11_1)
 allpolys.append(coll_pipe12_1)
 
-allpolys.append(coll_pipe11)
-allpolys.append(coll_pipe12)
+#allpolys.append(coll_pipe11)
+#allpolys.append(coll_pipe12)
 
 #allpolys.append(coll_pipe21)
 #allpolys.append(coll_pipe22)
@@ -641,12 +801,22 @@ allpolys.append(coll_pipe122)
 allpolys.append(coll_pipe131)
 allpolys.append(coll_pipe132)
 
+allpolys.append(coll_pipe141)
+allpolys.append(coll_pipe142)
+
+allpolys.append(coll_pipe151)
+allpolys.append(coll_pipe152)
+
+allpolys.append(coll_pipe161)
+allpolys.append(coll_pipe162)
+
 allpolys.append(coll_4_1)
 allpolys.append(coll_4_2)
 allpolys.append(coll_4_3)
 
 
 allpolys.append(coll_5)
+allpolys.append(lintel)
 
 allpolys.append(quartz1)
 allpolys.append(quartz2)
