@@ -29,7 +29,7 @@ x1_shield_top=0.400
 x1_shield_bottom=-1.150
 z1_shield=1.200
 
-x2_shield_top=1.400 #*1.414 The shield is a rectangle (in CAD), but the narrow dimension is the one relevant for here
+x2_shield_top=1.400 
 x2_shield_bottom=-0.400
 z2_shield=1.200
 
@@ -64,6 +64,130 @@ z4_collar=3.051#+1.5
 collar_top    = polygon( ([z1_collar,  x1_collar], [z4_collar,  x4_collar], [z3_collar,  x3_collar], [z2_collar,  x2_collar] ), notSource=False)
 collar_bottom = polygon( ([z2_collar, -x2_collar], [z3_collar, -x3_collar], [z4_collar, -x4_collar], [z1_collar, -x1_collar] ), notSource=False)
 
+
+###### Beam pipe after lead collar and collimator 2
+x1_pipe17=0.096825
+z1_pipe17=1.600
+
+x2_pipe17=0.1016
+z2_pipe17=1.600
+
+x3_pipe17=0.1016
+z3_pipe17=2.49123
+
+x4_pipe17=0.096825
+z4_pipe17=2.49123
+
+coll_pipe171   = polygon( ([z1_pipe17, x1_pipe17], [z4_pipe17, x4_pipe17], [z3_pipe17, x3_pipe17], [z2_pipe17, x2_pipe17] ), notSource=False)
+coll_pipe172   = polygon( ([z2_pipe17, -x2_pipe17], [z3_pipe17, -x3_pipe17], [z4_pipe17, -x4_pipe17], [z1_pipe17, -x1_pipe17] ), notSource=False)
+
+#flange
+x1_pipe18=0.1016
+z1_pipe18=2.49123
+
+x2_pipe18=0.20955
+z2_pipe18=2.49123
+
+x3_pipe18=0.20955
+z3_pipe18=2.49123+0.05715
+
+x4_pipe18=0.1016
+z4_pipe18=2.49123+0.05715
+
+coll_pipe181   = polygon( ([z1_pipe18, x1_pipe18], [z4_pipe18, x4_pipe18], [z3_pipe18, x3_pipe18], [z2_pipe18, x2_pipe18] ), notSource=False)
+coll_pipe182   = polygon( ([z2_pipe18, -x2_pipe18], [z3_pipe18, -x3_pipe18], [z4_pipe18, -x4_pipe18], [z1_pipe18, -x1_pipe18] ), notSource=False)
+
+x1_pipe19=0.17145
+z1_pipe19=2.49123+0.05715
+
+x2_pipe19=0.1778
+z2_pipe19=2.49123+0.05715
+
+x3_pipe19=0.1778
+z3_pipe19=5.975
+
+x4_pipe19=0.17145
+z4_pipe19=5.975
+
+coll_pipe191   = polygon( ([z1_pipe19, x1_pipe19], [z4_pipe19, x4_pipe19], [z3_pipe19, x3_pipe19], [z2_pipe19, x2_pipe19] ), notSource=False)
+coll_pipe192   = polygon( ([z2_pipe19, -x2_pipe19], [z3_pipe19, -x3_pipe19], [z4_pipe19, -x4_pipe19], [z1_pipe19, -x1_pipe19] ), notSource=False)
+
+#flange
+x1_pipe20=0.1778
+z1_pipe20=5.975
+
+x2_pipe20=0.34449
+z2_pipe20=5.975
+
+x3_pipe20=0.34449
+z3_pipe20=5.975+0.08255
+
+x4_pipe20=0.1778
+z4_pipe20=5.975+0.08255
+
+coll_pipe201   = polygon( ([z1_pipe20, x1_pipe20], [z4_pipe20, x4_pipe20], [z3_pipe20, x3_pipe20], [z2_pipe20, x2_pipe20] ), notSource=False)
+coll_pipe202   = polygon( ([z2_pipe20, -x2_pipe20], [z3_pipe20, -x3_pipe20], [z4_pipe20, -x4_pipe20], [z1_pipe20, -x1_pipe20] ), notSource=False)
+
+x1_pipe21=0.295275
+z1_pipe21=5.975+0.08255
+
+x2_pipe21=0.3048
+z2_pipe21=5.975+0.08255
+
+x3_pipe21=0.3048
+z3_pipe21=8.250682
+
+x4_pipe21=0.295275
+z4_pipe21=8.250682
+
+coll_pipe211   = polygon( ([z1_pipe21, x1_pipe21], [z4_pipe21, x4_pipe21], [z3_pipe21, x3_pipe21], [z2_pipe21, x2_pipe21] ), notSource=False)
+coll_pipe212   = polygon( ([z2_pipe21, -x2_pipe21], [z3_pipe21, -x3_pipe21], [z4_pipe21, -x4_pipe21], [z1_pipe21, -x1_pipe21] ), notSource=False)
+
+#front plate for vacuum vessels
+x1_pipe22=0.250063
+z1_pipe22=8.250682
+
+x2_pipe22=1.36525
+z2_pipe22=8.250682
+
+x3_pipe22=1.36525
+z3_pipe22=8.250682+0.068326
+
+x4_pipe22=0.250063
+z4_pipe22=8.250682+0.068326
+
+coll_pipe221   = polygon( ([z1_pipe22, x1_pipe22], [z4_pipe22, x4_pipe22], [z3_pipe22, x3_pipe22], [z2_pipe22, x2_pipe22] ), notSource=False)
+coll_pipe222   = polygon( ([z2_pipe22, -x2_pipe22], [z3_pipe22, -x3_pipe22], [z4_pipe22, -x4_pipe22], [z1_pipe22, -x1_pipe22] ), notSource=False)
+
+x1_pipe23=1.250188
+z1_pipe23=8.250682+0.068326
+
+x2_pipe23=1275.588
+z2_pipe23=8.250682+0.068326
+
+x3_pipe23=1275.588
+z3_pipe23=12.300+4.5-0.068326
+
+x4_pipe23=1.250188
+z4_pipe23=12.300+4.5-0.068326
+
+coll_pipe231   = polygon( ([z1_pipe23, x1_pipe23], [z4_pipe23, x4_pipe23], [z3_pipe23, x3_pipe23], [z2_pipe23, x2_pipe23] ), notSource=False)
+coll_pipe232   = polygon( ([z2_pipe23, -x2_pipe23], [z3_pipe23, -x3_pipe23], [z4_pipe23, -x4_pipe23], [z1_pipe23, -x1_pipe23] ), notSource=False)
+
+x1_pipe24=0.595
+z1_pipe24=12.300+4.5-0.068326
+
+x2_pipe24=1.36525
+z2_pipe24=12.300+4.5-0.068326
+
+x3_pipe24=1.36525
+z3_pipe24=12.300+4.5
+
+x4_pipe24=0.595
+z4_pipe24=12.300+4.5
+
+coll_pipe241   = polygon( ([z1_pipe24, x1_pipe24], [z4_pipe24, x4_pipe24], [z3_pipe24, x3_pipe24], [z2_pipe24, x2_pipe24] ), notSource=False)
+coll_pipe242   = polygon( ([z2_pipe24, -x2_pipe24], [z3_pipe24, -x3_pipe24], [z4_pipe24, -x4_pipe24], [z1_pipe24, -x1_pipe24] ), notSource=False)
 ###### Hybrid upstream Lead collar (for ep scattering)
 
 x1_collar3=0.335
@@ -809,6 +933,30 @@ allpolys.append(coll_pipe152)
 
 allpolys.append(coll_pipe161)
 allpolys.append(coll_pipe162)
+
+allpolys.append(coll_pipe171)
+allpolys.append(coll_pipe172)
+
+allpolys.append(coll_pipe181)
+allpolys.append(coll_pipe182)
+
+allpolys.append(coll_pipe191)
+allpolys.append(coll_pipe192)
+
+allpolys.append(coll_pipe201)
+allpolys.append(coll_pipe202)
+
+allpolys.append(coll_pipe211)
+allpolys.append(coll_pipe212)
+
+allpolys.append(coll_pipe221)
+allpolys.append(coll_pipe222)
+
+allpolys.append(coll_pipe231)
+allpolys.append(coll_pipe232)
+
+allpolys.append(coll_pipe241)
+allpolys.append(coll_pipe242)
 
 allpolys.append(coll_4_1)
 allpolys.append(coll_4_2)
