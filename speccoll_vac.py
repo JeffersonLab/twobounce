@@ -25,19 +25,19 @@ target = polygon( ([-tgtlen/2,-tgtrad], [tgtlen/2, -tgtrad], [tgtlen/2,tgtrad], 
 ###### Lead shield in the target region (for collimating photons)
 
 #seg 1
-x1_shield_top=0.400
+x1_shield_top=0.140
 x1_shield_bottom=-1.150
 z1_shield=1.200
 
 x2_shield_top=1.400 
-x2_shield_bottom=-0.400
+x2_shield_bottom=-0.140
 z2_shield=1.200
 
 x3_shield_top=1.400
-x3_shield_bottom=-0.400
+x3_shield_bottom=-0.140
 z3_shield=1.600
 
-x4_shield_top=0.400
+x4_shield_top=0.140
 x4_shield_bottom=-1.150
 z4_shield=1.600
 
@@ -51,10 +51,10 @@ shield_bottom = polygon( ([z1_shield, x1_shield_bottom], [z4_shield, x4_shield_b
 x1_collar=0.074#+0.05
 z1_collar=2.851#+1.5
 
-x2_collar=0.185 #*1.414 The collar is a rectangle (in CAD), but the narrow dimension is the one relevant for here
+x2_collar=0.330 #*1.414 The collar is a rectangle (in CAD), but the narrow dimension is the one relevant for here
 z2_collar=2.851#+1.5
 
-x3_collar=0.185 #*1.414
+x3_collar=0.330 #*1.414
 z3_collar=3.051#+1.5
 
 x4_collar=0.074#+0.05
@@ -190,16 +190,16 @@ coll_pipe241   = polygon( ([z1_pipe24, x1_pipe24], [z4_pipe24, x4_pipe24], [z3_p
 coll_pipe242   = polygon( ([z2_pipe24, -x2_pipe24], [z3_pipe24, -x3_pipe24], [z4_pipe24, -x4_pipe24], [z1_pipe24, -x1_pipe24] ), notSource=False)
 ###### Hybrid upstream Lead collar (for ep scattering)
 
-x1_collar3=0.335
+x1_collar3=0.265
 z1_collar3=4.4305+4.5
 
-x2_collar3=2.000
+x2_collar3=1.2
 z2_collar3=4.4305+4.5
 
-x3_collar3=2.000
+x3_collar3=1.2
 z3_collar3=4.6805+4.5
 
-x4_collar3=0.335
+x4_collar3=0.265
 z4_collar3=4.6805+4.5
 
 
@@ -211,10 +211,10 @@ collar3_bottom = polygon( ([z2_collar3, -x2_collar3], [z3_collar3, -x3_collar3],
 ###### First downstream Lead collar (for ep scattering)
 
 x1_collar1=0.600
-z1_collar1=12.300+4.5
+z1_collar1=12.250+4.5
 
 x2_collar1=0.750 
-z2_collar1=12.300+4.5
+z2_collar1=12.250+4.5
 
 x3_collar1=0.750
 z3_collar1=12.400+4.5
@@ -229,10 +229,10 @@ collar_bottom1 = polygon( ([z2_collar1, -x2_collar1], [z3_collar1, -x3_collar1],
 ###### Second downstream Lead collar (for ep scattering)
 
 x1_collar2=0.952
-z1_collar2=18.900+4.5
+z1_collar2=18.850+4.5
 
 x2_collar2=1.200
-z2_collar2=18.900+4.5
+z2_collar2=18.850+4.5
 
 x3_collar2=1.200
 z3_collar2=19.000+4.5
@@ -355,7 +355,7 @@ coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [
 
 #seg 2
 
-x1_coll_2_2=-0.300
+x1_coll_2_2=-0.150
 #x1_coll_2_2=-0.300
 z1_coll_2_2=5.825-tgtoffset-coll2move
 
@@ -367,7 +367,7 @@ x3_coll_2_2=-0.101
 #x3_coll_2_2=-0.108
 z3_coll_2_2=5.975-tgtoffset-coll2move
 
-x4_coll_2_2=-0.300
+x4_coll_2_2=-0.15
 #x4_coll_2_2=-0.300
 z4_coll_2_2=5.975-tgtoffset-coll2move
 
@@ -381,11 +381,11 @@ x1_coll_2_3=0.021336
 #x1_coll_2_3=0.02955
 z1_coll_2_3=5.825-tgtoffset-coll2move
 
-x2_coll_2_3= 0.300
+x2_coll_2_3= 0.1500
 #x2_coll_2_3= 0.300
 z2_coll_2_3=5.825-tgtoffset-coll2move
 
-x3_coll_2_3= 0.300
+x3_coll_2_3= 0.1500
 #x3_coll_2_3= 0.300
 z3_coll_2_3=5.975-tgtoffset-coll2move
 
@@ -478,189 +478,105 @@ coll_pipe21   = polygon( ([z1_pipe2, x1_pipe2], [z4_pipe2, x4_pipe2], [z3_pipe2,
 coll_pipe22   = polygon( ([z2_pipe2, -x2_pipe2], [z3_pipe2, -x3_pipe2], [z4_pipe2, -x4_pipe2], [z1_pipe2, -x1_pipe2] ), notSource=False)
 
 #Downstream beampipe outside the vacuum enclosure
-##pipe
-x1_pipe3=0.522
-z1_pipe3=19.0+4.5
+##Downstream window
+x1_pipe3=0.50476
+z1_pipe3=23.01512
 
-x2_pipe3=0.525
-z2_pipe3=19.0+4.5
+x2_pipe3=0.50714125
+z2_pipe3=23.01512
 
-x3_pipe3=0.525
-z3_pipe3=19.5+4.5
+x3_pipe3=0.988+0.00238125
+z3_pipe3=23.01512+0.2804
 
-x4_pipe3=0.522
-z4_pipe3=19.5+4.5
+x4_pipe3=0.988
+z4_pipe3=23.01512+0.2804
 
 
 coll_pipe31   = polygon( ([z1_pipe3, x1_pipe3], [z4_pipe3, x4_pipe3], [z3_pipe3, x3_pipe3], [z2_pipe3, x2_pipe3] ), notSource=False)
 coll_pipe32   = polygon( ([z2_pipe3, -x2_pipe3], [z3_pipe3, -x3_pipe3], [z4_pipe3, -x4_pipe3], [z1_pipe3, -x1_pipe3] ), notSource=False)
 
-##step
-x1_pipe4=0.522
-z1_pipe4=19.5+4.5
+##cylindrical sections
+x1_pipe4=0.50476
+z1_pipe4=23.010
 
-x2_pipe4=0.553
-z2_pipe4=19.5+4.5
+x2_pipe4=0.50476+0.0047625
+z2_pipe4=23.010
 
-x3_pipe4=0.553
-z3_pipe4=19.503+4.5
+x3_pipe4=0.50476+0.0047625
+z3_pipe4=23.010+0.454
 
-x4_pipe4=0.522
-z4_pipe4=19.503+4.5
+x4_pipe4=0.50476
+z4_pipe4=23.010+0.454
 
 coll_pipe41   = polygon( ([z1_pipe4, x1_pipe4], [z4_pipe4, x4_pipe4], [z3_pipe4, x3_pipe4], [z2_pipe4, x2_pipe4] ), notSource=False)
 coll_pipe42   = polygon( ([z2_pipe4, -x2_pipe4], [z3_pipe4, -x3_pipe4], [z4_pipe4, -x4_pipe4], [z1_pipe4, -x1_pipe4] ), notSource=False)
 
-##pipe
-x1_pipe5=0.550
-z1_pipe5=19.503+4.5
+##conical pipe
+x1_pipe5=0.504775
+z1_pipe5=23.464
 
-x2_pipe5=0.553
-z2_pipe5=19.503+4.5
+x2_pipe5=0.504775+0.0047625
+z2_pipe5=23.464
 
-x3_pipe5=0.553
-z3_pipe5=20.5+4.5
+x3_pipe5=0.52833+0.0047625
+z3_pipe5=23.464+0.6304
 
-x4_pipe5=0.550
-z4_pipe5=20.5+4.5
+x4_pipe5=0.52833
+z4_pipe5=23.464+0.6304
 
 
 coll_pipe51   = polygon( ([z1_pipe5, x1_pipe5], [z4_pipe5, x4_pipe5], [z3_pipe5, x3_pipe5], [z2_pipe5, x2_pipe5] ), notSource=False)
 coll_pipe52   = polygon( ([z2_pipe5, -x2_pipe5], [z3_pipe5, -x3_pipe5], [z4_pipe5, -x4_pipe5], [z1_pipe5, -x1_pipe5] ), notSource=False)
 
-##step
-x1_pipe6=0.550
-z1_pipe6=20.5+4.5
+##flange+bellow
+x1_pipe6=0.5235
+z1_pipe6=24.0944
 
-x2_pipe6=0.587
-z2_pipe6=20.5+4.5
+x2_pipe6=0.55335
+z2_pipe6=24.0944
 
-x3_pipe6=0.587
-z3_pipe6=20.503+4.5
+x3_pipe6=0.5536
+z3_pipe6=24.3067
 
-x4_pipe6=0.584
-z4_pipe6=20.503+4.5
+x4_pipe6=0.525
+z4_pipe6=24.3067
 
 coll_pipe61   = polygon( ([z1_pipe6, x1_pipe6], [z4_pipe6, x4_pipe6], [z3_pipe6, x3_pipe6], [z2_pipe6, x2_pipe6] ), notSource=False)
 coll_pipe62   = polygon( ([z2_pipe6, -x2_pipe6], [z3_pipe6, -x3_pipe6], [z4_pipe6, -x4_pipe6], [z1_pipe6, -x1_pipe6] ), notSource=False)
 
-##pipe
-x1_pipe7=0.584
-z1_pipe7=20.503+4.5
+##conical pipe
+x1_pipe7=0.5266
+z1_pipe7=24.3067
 
-x2_pipe7=0.587
-z2_pipe7=20.503+4.5
+x2_pipe7=0.5266+0.00635
+z2_pipe7=24.3067
 
-x3_pipe7=0.587
-z3_pipe7=21.5+4.5
+x3_pipe7=0.550+0.00635
+z3_pipe7=24.3067+0.1873
 
-x4_pipe7=0.584
-z4_pipe7=21.5+4.5
+x4_pipe7=0.550
+z4_pipe7=24.3067+0.1873
 
 
 coll_pipe71   = polygon( ([z1_pipe7, x1_pipe7], [z4_pipe7, x4_pipe7], [z3_pipe7, x3_pipe7], [z2_pipe7, x2_pipe7] ), notSource=False)
 coll_pipe72   = polygon( ([z2_pipe7, -x2_pipe7], [z3_pipe7, -x3_pipe7], [z4_pipe7, -x4_pipe7], [z1_pipe7, -x1_pipe7] ), notSource=False)
 
 
-##step
-x1_pipe8=0.584
-z1_pipe8=21.5+4.5
+##conical pipe
+x1_pipe8=0.550
+z1_pipe8=24.494
 
-x2_pipe8=0.618
-z2_pipe8=21.5+4.5
+x2_pipe8=0.550+0.01905
+z2_pipe8=24.494
 
-x3_pipe8=0.618
-z3_pipe8=21.503+4.5
+x3_pipe8=0.74645+0.01905
+z3_pipe8=24.494+6.506
 
-x4_pipe8=0.584
-z4_pipe8=21.503+4.5
+x4_pipe8=0.74645
+z4_pipe8=24.494+6.506
 
 coll_pipe81   = polygon( ([z1_pipe8, x1_pipe8], [z4_pipe8, x4_pipe8], [z3_pipe8, x3_pipe8], [z2_pipe8, x2_pipe8] ), notSource=False)
 coll_pipe82   = polygon( ([z2_pipe8, -x2_pipe8], [z3_pipe8, -x3_pipe8], [z4_pipe8, -x4_pipe8], [z1_pipe8, -x1_pipe8] ), notSource=False)
-
-
-##pipe
-x1_pipe9=0.615
-z1_pipe9=21.503+4.5
-
-x2_pipe9=0.618
-z2_pipe9=21.503+4.5
-
-x3_pipe9=0.618
-z3_pipe9=23.0+4.5
-
-x4_pipe9=0.615
-z4_pipe9=23.0+4.5
-
-
-coll_pipe91   = polygon( ([z1_pipe9, x1_pipe9], [z4_pipe9, x4_pipe9], [z3_pipe9, x3_pipe9], [z2_pipe9, x2_pipe9] ), notSource=False)
-coll_pipe92   = polygon( ([z2_pipe9, -x2_pipe9], [z3_pipe9, -x3_pipe9], [z4_pipe9, -x4_pipe9], [z1_pipe9, -x1_pipe9] ), notSource=False)
-
-
-##step
-x1_pipe10=0.615
-z1_pipe10=23.0+4.5
-
-x2_pipe10=0.663
-z2_pipe10=23.0+4.5
-
-x3_pipe10=0.663
-z3_pipe10=23.003+4.5
-
-x4_pipe10=0.615
-z4_pipe10=23.003+4.5
-
-coll_pipe101   = polygon( ([z1_pipe10, x1_pipe10], [z4_pipe10, x4_pipe10], [z3_pipe10, x3_pipe10], [z2_pipe10, x2_pipe10] ), notSource=False)
-coll_pipe102   = polygon( ([z2_pipe10, -x2_pipe10], [z3_pipe10, -x3_pipe10], [z4_pipe10, -x4_pipe10], [z1_pipe10, -x1_pipe10] ), notSource=False)
-
-##pipe
-x1_pipe11=0.660
-z1_pipe11=23.003+4.5
-
-x2_pipe11=0.663
-z2_pipe11=23.003+4.5
-
-x3_pipe11=0.663
-z3_pipe11=25.0+4.5
-
-x4_pipe11=0.660
-z4_pipe11=25.0+4.5
-
-coll_pipe111   = polygon( ([z1_pipe11, x1_pipe11], [z4_pipe11, x4_pipe11], [z3_pipe11, x3_pipe11], [z2_pipe11, x2_pipe11] ), notSource=False)
-coll_pipe112   = polygon( ([z2_pipe11, -x2_pipe11], [z3_pipe11, -x3_pipe11], [z4_pipe11, -x4_pipe11], [z1_pipe11, -x1_pipe11] ), notSource=False)
-
-
-##step
-x1_pipe12=0.660
-z1_pipe12=25.0+4.5
-
-x2_pipe12=0.713
-z2_pipe12=25.0+4.5
-
-x3_pipe12=0.713
-z3_pipe12=25.003+4.5
-
-x4_pipe12=0.660
-z4_pipe12=25.003+4.5
-
-coll_pipe121   = polygon( ([z1_pipe12, x1_pipe12], [z4_pipe12, x4_pipe12], [z3_pipe12, x3_pipe12], [z2_pipe12, x2_pipe12] ), notSource=False)
-coll_pipe122   = polygon( ([z2_pipe12, -x2_pipe12], [z3_pipe12, -x3_pipe12], [z4_pipe12, -x4_pipe12], [z1_pipe12, -x1_pipe12] ), notSource=False)
-
-##pipe
-x1_pipe13=0.710
-z1_pipe13=25.003+4.5
-
-x2_pipe13=0.713
-z2_pipe13=25.003+4.5
-
-x3_pipe13=0.713
-z3_pipe13=26.5176+4.5
-
-x4_pipe13=0.710
-z4_pipe13=26.5176+4.5
-
-coll_pipe131   = polygon( ([z1_pipe13, x1_pipe13], [z4_pipe13, x4_pipe13], [z3_pipe13, x3_pipe13], [z2_pipe13, x2_pipe13] ), notSource=False)
-coll_pipe132   = polygon( ([z2_pipe13, -x2_pipe13], [z3_pipe13, -x3_pipe13], [z4_pipe13, -x4_pipe13], [z1_pipe13, -x1_pipe13] ), notSource=False)
 
 
 ##pipe after Vaccum chamber after hybrid
@@ -709,8 +625,10 @@ z3_pipe16=18.895+4.5
 x4_pipe16=0.952
 z4_pipe16=18.895+4.5
 
+
 coll_pipe161   = polygon( ([z1_pipe16, x1_pipe16], [z4_pipe16, x4_pipe16], [z3_pipe16, x3_pipe16], [z2_pipe16, x2_pipe16] ), notSource=False)
 coll_pipe162   = polygon( ([z2_pipe16, -x2_pipe16], [z3_pipe16, -x3_pipe16], [z4_pipe16, -x4_pipe16], [z1_pipe16, -x1_pipe16] ), notSource=False)
+
 
 ################# collimator 4, 3 segmentations
 
@@ -719,7 +637,7 @@ dss=downstream_col4_shift ### This shift is largely arbitrary
 
 #seg 1
 
-x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
+x1_coll_4_1=-0.250 #Was simulation -0.300 # Was CAD -0.254
 #x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 z1_coll_4_1=9.725+dss-tgtoffset
 
@@ -731,7 +649,7 @@ x3_coll_4_1=-0.1965 # -0.1714 #Was -0.23495, then was -0.1655
 #x3_coll_4_1=-0.1714 # -0.1714 #Was -0.23495, then was -0.1655
 z3_coll_4_1=9.875+dss-tgtoffset
 
-x4_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
+x4_coll_4_1=-0.250 #Was simulation -0.300 # Was CAD -0.254
 #x4_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 z4_coll_4_1=9.875+dss-tgtoffset
 
@@ -763,11 +681,11 @@ coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [
 x1_coll_4_3=0.030861
 z1_coll_4_3=9.775+dss-tgtoffset
 
-x2_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
+x2_coll_4_3=0.250 #Was simulation -0.300 # Was CAD -0.254
 #x2_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
 z2_coll_4_3=9.775+dss-tgtoffset
 
-x3_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
+x3_coll_4_3=0.250 #Was simulation -0.300 # Was CAD -0.254
 #x3_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
 z3_coll_4_3=9.875+dss-tgtoffset
 
@@ -910,21 +828,6 @@ allpolys.append(coll_pipe72)
 allpolys.append(coll_pipe81)
 allpolys.append(coll_pipe82)
 
-allpolys.append(coll_pipe91)
-allpolys.append(coll_pipe92)
-
-allpolys.append(coll_pipe101)
-allpolys.append(coll_pipe102)
-
-allpolys.append(coll_pipe111)
-allpolys.append(coll_pipe112)
-
-allpolys.append(coll_pipe121)
-allpolys.append(coll_pipe122)
-
-allpolys.append(coll_pipe131)
-allpolys.append(coll_pipe132)
-
 allpolys.append(coll_pipe141)
 allpolys.append(coll_pipe142)
 
@@ -934,29 +837,29 @@ allpolys.append(coll_pipe152)
 allpolys.append(coll_pipe161)
 allpolys.append(coll_pipe162)
 
-allpolys.append(coll_pipe171)
-allpolys.append(coll_pipe172)
-
-allpolys.append(coll_pipe181)
-allpolys.append(coll_pipe182)
-
-allpolys.append(coll_pipe191)
-allpolys.append(coll_pipe192)
-
-allpolys.append(coll_pipe201)
-allpolys.append(coll_pipe202)
-
-allpolys.append(coll_pipe211)
-allpolys.append(coll_pipe212)
-
-allpolys.append(coll_pipe221)
-allpolys.append(coll_pipe222)
-
-allpolys.append(coll_pipe231)
-allpolys.append(coll_pipe232)
-
-allpolys.append(coll_pipe241)
-allpolys.append(coll_pipe242)
+#allpolys.append(coll_pipe171)
+#allpolys.append(coll_pipe172)
+#
+#allpolys.append(coll_pipe181)
+#allpolys.append(coll_pipe182)
+#
+#allpolys.append(coll_pipe191)
+#allpolys.append(coll_pipe192)
+#
+#allpolys.append(coll_pipe201)
+#allpolys.append(coll_pipe202)
+#
+#allpolys.append(coll_pipe211)
+#allpolys.append(coll_pipe212)
+#
+#allpolys.append(coll_pipe221)
+#allpolys.append(coll_pipe222)
+#
+#allpolys.append(coll_pipe231)
+#allpolys.append(coll_pipe232)
+#
+#allpolys.append(coll_pipe241)
+#allpolys.append(coll_pipe242)
 
 allpolys.append(coll_4_1)
 allpolys.append(coll_4_2)
