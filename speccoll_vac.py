@@ -25,7 +25,7 @@ target = polygon( ([-tgtlen/2,-tgtrad], [tgtlen/2, -tgtrad], [tgtlen/2,tgtrad], 
 ###### Lead shield in the target region (for collimating photons)
 
 #seg 1
-x1_shield_top=0.140
+x1_shield_top=0.145
 x1_shield_bottom=-1.150
 z1_shield=1.200
 
@@ -37,7 +37,7 @@ x3_shield_top=1.400
 x3_shield_bottom=-0.140
 z3_shield=1.600
 
-x4_shield_top=0.140
+x4_shield_top=0.145
 x4_shield_bottom=-1.150
 z4_shield=1.600
 
@@ -251,67 +251,78 @@ collar_bottom2 = polygon( ([z2_collar2, -x2_collar2], [z3_collar2, -x3_collar2],
 # but this neglects the fact that it tapers inwards a lot in the first 30cm and then 
 # untapers in the last 10cm - updating by splitting into 5 segments
 
-col1_inner_offset = 0.0019
 
-x1_inner_photon_1=0.024-col1_inner_offset
-z1_inner_photon_1=5.175-tgtoffset
+x1_inner_photon_1=0.022 
+z1_inner_photon_1=4.890
 
-x2_inner_photon_1=0.031703 # 0.05670 is the outer radius of the Col1 cooling fans, 0.031703 is the outer radius of Col1 otherwise
-z2_inner_photon_1=5.175-tgtoffset
+x2_inner_photon_1=0.027 
+z2_inner_photon_1=4.890
 
-x3_inner_photon_1=0.031703
-z3_inner_photon_1=5.275-tgtoffset
+x3_inner_photon_1=0.027
+z3_inner_photon_1=4.990
 
-x4_inner_photon_1=0.024-col1_inner_offset
-z4_inner_photon_1=5.275-tgtoffset
+x4_inner_photon_1=0.01625 
+z4_inner_photon_1=4.990
 
-x1_inner_photon_2=0.020386-col1_inner_offset
-z1_inner_photon_2=5.275-tgtoffset
+x1_inner_photon_2=0.01625 
+z1_inner_photon_2=4.990
 
-x2_inner_photon_2=0.028703
-z2_inner_photon_2=5.275-tgtoffset
+x2_inner_photon_2=0.027
+z2_inner_photon_2=4.990
 
-x3_inner_photon_2=0.028703
-z3_inner_photon_2=5.375-tgtoffset
+x3_inner_photon_2=0.027
+z3_inner_photon_2=5.000
 
-x4_inner_photon_2=0.020386-col1_inner_offset
-z4_inner_photon_2=5.375-tgtoffset
+x4_inner_photon_2=0.01612
+z4_inner_photon_2=5.000
 
-x1_inner_photon_3=0.018696-col1_inner_offset
-z1_inner_photon_3=5.375-tgtoffset
+x1_inner_photon_3=0.01612
+z1_inner_photon_3=5.000
 
-x2_inner_photon_3=0.026703
-z2_inner_photon_3=5.375-tgtoffset
+x2_inner_photon_3=0.0275
+z2_inner_photon_3=5.000
 
-x3_inner_photon_3=0.026703
-z3_inner_photon_3=5.475-tgtoffset
+x3_inner_photon_3=0.0275
+z3_inner_photon_3=5.080
 
-x4_inner_photon_3=0.018696-col1_inner_offset
-z4_inner_photon_3=5.475-tgtoffset
+x4_inner_photon_3=0.0151 
+z4_inner_photon_3=5.080
 
-x1_inner_photon_4=0.015529-col1_inner_offset
-z1_inner_photon_4=5.475-tgtoffset
+x1_inner_photon_4=0.0151
+z1_inner_photon_4=5.080
 
-x2_inner_photon_4=0.026703
-z2_inner_photon_4=5.475-tgtoffset
+x2_inner_photon_4=0.0275
+z2_inner_photon_4=5.080
 
-x3_inner_photon_4=0.026703
-z3_inner_photon_4=5.575-tgtoffset
+x3_inner_photon_4=0.0275
+z3_inner_photon_4=5.200
 
-x4_inner_photon_4=0.015529-col1_inner_offset
-z4_inner_photon_4=5.575-tgtoffset
+x4_inner_photon_4=0.0141 
+z4_inner_photon_4=5.200
 
-x1_inner_photon_5=0.015529-col1_inner_offset
-z1_inner_photon_5=5.575-tgtoffset
+x1_inner_photon_5=0.0141
+z1_inner_photon_5=5.200
 
-x2_inner_photon_5=0.026703
-z2_inner_photon_5=5.575-tgtoffset
+x2_inner_photon_5=0.0275
+z2_inner_photon_5=5.200
 
-x3_inner_photon_5=0.026703
-z3_inner_photon_5=5.675-tgtoffset
+x3_inner_photon_5=0.0275
+z3_inner_photon_5=5.290
 
-x4_inner_photon_5=0.015808-col1_inner_offset
-z4_inner_photon_5=5.675-tgtoffset
+x4_inner_photon_5=0.013629 
+z4_inner_photon_5=5.290
+
+x1_inner_photon_6=0.013629
+z1_inner_photon_6=5.290
+
+x2_inner_photon_6=0.0275
+z2_inner_photon_6=5.290
+
+x3_inner_photon_6=0.0275
+z3_inner_photon_6=5.390
+
+x4_inner_photon_6=0.013908 
+z4_inner_photon_6=5.390
 
 # one has to assign the coordinates in anti-clock sequence
 coll_inner_photon_top_1    = polygon( ([z1_inner_photon_1,  x1_inner_photon_1], [z4_inner_photon_1,  x4_inner_photon_1], [z3_inner_photon_1,  x3_inner_photon_1], [z2_inner_photon_1,  x2_inner_photon_1] ), notSource=False)
@@ -329,24 +340,23 @@ coll_inner_photon_bottom_4 = polygon( ([z2_inner_photon_4, -x2_inner_photon_4], 
 coll_inner_photon_top_5    = polygon( ([z1_inner_photon_5,  x1_inner_photon_5], [z4_inner_photon_5,  x4_inner_photon_5], [z3_inner_photon_5,  x3_inner_photon_5], [z2_inner_photon_5,  x2_inner_photon_5] ), notSource=False)
 coll_inner_photon_bottom_5 = polygon( ([z2_inner_photon_5, -x2_inner_photon_5], [z3_inner_photon_5, -x3_inner_photon_5], [z4_inner_photon_5, -x4_inner_photon_5], [z1_inner_photon_5, -x1_inner_photon_5] ), notSource=False)
 
+coll_inner_photon_top_6    = polygon( ([z1_inner_photon_6,  x1_inner_photon_6], [z4_inner_photon_6,  x4_inner_photon_6], [z3_inner_photon_6,  x3_inner_photon_6], [z2_inner_photon_6,  x2_inner_photon_6] ), notSource=False)
+coll_inner_photon_bottom_6 = polygon( ([z2_inner_photon_6, -x2_inner_photon_6], [z3_inner_photon_6, -x3_inner_photon_6], [z4_inner_photon_6, -x4_inner_photon_6], [z1_inner_photon_6, -x1_inner_photon_6] ), notSource=False)
+
 
 #########collimator 2,  three segments
-increasecolth = 0.05
-coll2move = 0.075 # col2 is decided to move 75 mm upstream
 #seg 1
 x1_coll_2_1=-0.035
-z1_coll_2_1=5.825-tgtoffset-coll2move
+z1_coll_2_1=5.25
 
-x2_coll_2_1=-0.021336
-#x2_coll_2_1=-0.02955
-z2_coll_2_1=5.825-tgtoffset-coll2move
+x2_coll_2_1=-0.0275
+z2_coll_2_1=5.25
 
-x3_coll_2_1=-0.021336
-#x3_coll_2_1=-0.02955
-z3_coll_2_1=5.975-tgtoffset-coll2move
+x3_coll_2_1=-0.0275
+z3_coll_2_1=5.4
 
 x4_coll_2_1=-0.035
-z4_coll_2_1=5.975-tgtoffset-coll2move
+z4_coll_2_1=5.4
 
 
 coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [z3_coll_2_1, x3_coll_2_1], [z2_coll_2_1, x2_coll_2_1] ), notSource=False)
@@ -356,42 +366,33 @@ coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [
 #seg 2
 
 x1_coll_2_2=-0.150
-#x1_coll_2_2=-0.300
-z1_coll_2_2=5.825-tgtoffset-coll2move
+z1_coll_2_2=5.25
 
 x2_coll_2_2=-0.101
-#x2_coll_2_2=-0.108
-z2_coll_2_2=5.825-tgtoffset-coll2move
+z2_coll_2_2=5.25
 
 x3_coll_2_2=-0.101
-#x3_coll_2_2=-0.108
-z3_coll_2_2=5.975-tgtoffset-coll2move
+z3_coll_2_2=5.4
 
 x4_coll_2_2=-0.15
-#x4_coll_2_2=-0.300
-z4_coll_2_2=5.975-tgtoffset-coll2move
-
+z4_coll_2_2=5.4
 
 coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [z3_coll_2_2, x3_coll_2_2], [z2_coll_2_2, x2_coll_2_2] ), notSource=False)
 #coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [z3_coll_2_2, x3_coll_2_2], [z2_coll_2_2, x2_coll_2_2] ), isDetector=True)
 
 #seg 3
 
-x1_coll_2_3=0.021336
-#x1_coll_2_3=0.02955
-z1_coll_2_3=5.825-tgtoffset-coll2move
+x1_coll_2_3=0.0275
+z1_coll_2_3=5.25
 
-x2_coll_2_3= 0.1500
-#x2_coll_2_3= 0.300
-z2_coll_2_3=5.825-tgtoffset-coll2move
+x2_coll_2_3= 0.150
+z2_coll_2_3=5.25
 
 x3_coll_2_3= 0.1500
-#x3_coll_2_3= 0.300
-z3_coll_2_3=5.975-tgtoffset-coll2move
+z3_coll_2_3=5.4
 
-x4_coll_2_3=0.021336
-#x4_coll_2_3=0.02955
-z4_coll_2_3=5.975-tgtoffset-coll2move
+x4_coll_2_3=0.0275
+z4_coll_2_3=5.4
 
 
 coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [z3_coll_2_3, x3_coll_2_3], [z2_coll_2_3, x2_coll_2_3] ), notSource=False)
