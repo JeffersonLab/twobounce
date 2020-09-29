@@ -417,7 +417,7 @@ z4_pipe0=7.345
 coll_pipe01   = polygon( ([z1_pipe0, x1_pipe0], [z4_pipe0, x4_pipe0], [z3_pipe0, x3_pipe0], [z2_pipe0, x2_pipe0] ), notSource=False)
 coll_pipe02   = polygon( ([z2_pipe0, -x2_pipe0], [z3_pipe0, -x3_pipe0], [z4_pipe0, -x4_pipe0], [z1_pipe0, -x1_pipe0] ), notSource=False)
 
-##pipe
+##pipe  the downstream twobounce shield
 x1_pipe1_1=0.0355
 z1_pipe1_1=7.875
 
