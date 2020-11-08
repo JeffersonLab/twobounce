@@ -247,70 +247,67 @@ collar_bottom2 = polygon( ([z2_collar2, -x2_collar2], [z3_collar2, -x3_collar2],
 #################################################################
 
 ######inner photon collimator (Col 1)
-# Previous implementation assumed it was a solid shape from front face to back face, 
-# but this neglects the fact that it tapers inwards a lot in the first 30cm and then 
-# untapers in the last 10cm - updating by splitting into 5 segments
+# Updated on Nov 8 2020 with merged extended collimator
 
-
-x1_inner_photon_1=0.022 
-z1_inner_photon_1=4.890
+x1_inner_photon_1=0.020 
+z1_inner_photon_1=4.675
 
 x2_inner_photon_1=0.027 
-z2_inner_photon_1=4.890
+z2_inner_photon_1=4.675
 
 x3_inner_photon_1=0.027
-z3_inner_photon_1=4.990
+z3_inner_photon_1=4.775
 
 x4_inner_photon_1=0.01625 
-z4_inner_photon_1=4.990
+z4_inner_photon_1=4.775
 
 x1_inner_photon_2=0.01625 
-z1_inner_photon_2=4.990
+z1_inner_photon_2=4.775
 
-x2_inner_photon_2=0.027
-z2_inner_photon_2=4.990
+x2_inner_photon_2=0.0275
+z2_inner_photon_2=4.775
 
-x3_inner_photon_2=0.027
-z3_inner_photon_2=5.000
+x3_inner_photon_2=0.0275
+z3_inner_photon_2=4.865
 
-x4_inner_photon_2=0.01612
-z4_inner_photon_2=5.000
+x4_inner_photon_2=0.0151
+z4_inner_photon_2=4.865
 
-x1_inner_photon_3=0.01612
-z1_inner_photon_3=5.000
+x1_inner_photon_3=0.0151
+z1_inner_photon_3=4.865
 
 x2_inner_photon_3=0.0275
-z2_inner_photon_3=5.000
+z2_inner_photon_3=4.865
 
 x3_inner_photon_3=0.0275
-z3_inner_photon_3=5.080
+z3_inner_photon_3=4.985
 
-x4_inner_photon_3=0.0151 
-z4_inner_photon_3=5.080
+x4_inner_photon_3=0.0141 
+z4_inner_photon_3=4.985
 
-x1_inner_photon_4=0.0151
-z1_inner_photon_4=5.080
+x1_inner_photon_4=0.0141
+z1_inner_photon_4=4.985
 
 x2_inner_photon_4=0.0275
-z2_inner_photon_4=5.080
+z2_inner_photon_4=4.985
 
 x3_inner_photon_4=0.0275
-z3_inner_photon_4=5.200
+z3_inner_photon_4=5.075
 
-x4_inner_photon_4=0.0141 
-z4_inner_photon_4=5.200
+x4_inner_photon_4=0.013629 
+z4_inner_photon_4=5.075
 
-x1_inner_photon_5=0.0141
-z1_inner_photon_5=5.200
+x1_inner_photon_5=0.013629
+z1_inner_photon_5=5.075
 
 x2_inner_photon_5=0.0275
-z2_inner_photon_5=5.200
+z2_inner_photon_5=5.075
 
 x3_inner_photon_5=0.0275
-z3_inner_photon_5=5.290
+z3_inner_photon_5=5.40
 
-x4_inner_photon_5=0.013629 
-z4_inner_photon_5=5.290
+x4_inner_photon_5=0.014536 
+z4_inner_photon_5=5.40
 
 x1_inner_photon_6=0.013629
 z1_inner_photon_6=5.290
@@ -340,8 +337,8 @@ coll_inner_photon_bottom_4 = polygon( ([z2_inner_photon_4, -x2_inner_photon_4], 
 coll_inner_photon_top_5    = polygon( ([z1_inner_photon_5,  x1_inner_photon_5], [z4_inner_photon_5,  x4_inner_photon_5], [z3_inner_photon_5,  x3_inner_photon_5], [z2_inner_photon_5,  x2_inner_photon_5] ), notSource=False)
 coll_inner_photon_bottom_5 = polygon( ([z2_inner_photon_5, -x2_inner_photon_5], [z3_inner_photon_5, -x3_inner_photon_5], [z4_inner_photon_5, -x4_inner_photon_5], [z1_inner_photon_5, -x1_inner_photon_5] ), notSource=False)
 
-coll_inner_photon_top_6    = polygon( ([z1_inner_photon_6,  x1_inner_photon_6], [z4_inner_photon_6,  x4_inner_photon_6], [z3_inner_photon_6,  x3_inner_photon_6], [z2_inner_photon_6,  x2_inner_photon_6] ), notSource=False)
-coll_inner_photon_bottom_6 = polygon( ([z2_inner_photon_6, -x2_inner_photon_6], [z3_inner_photon_6, -x3_inner_photon_6], [z4_inner_photon_6, -x4_inner_photon_6], [z1_inner_photon_6, -x1_inner_photon_6] ), notSource=False)
+# coll_inner_photon_top_6    = polygon( ([z1_inner_photon_6,  x1_inner_photon_6], [z4_inner_photon_6,  x4_inner_photon_6], [z3_inner_photon_6,  x3_inner_photon_6], [z2_inner_photon_6,  x2_inner_photon_6] ), notSource=False)
+# coll_inner_photon_bottom_6 = polygon( ([z2_inner_photon_6, -x2_inner_photon_6], [z3_inner_photon_6, -x3_inner_photon_6], [z4_inner_photon_6, -x4_inner_photon_6], [z1_inner_photon_6, -x1_inner_photon_6] ), notSource=False)
 
 
 #########collimator 2,  three segments
