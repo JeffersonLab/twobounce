@@ -941,14 +941,14 @@ allpolys.append(quartz2)
 #print sources
 #print allpolys
 
-print "Starting"
+print("Starting")
 
 for apoly in allpolys:
     otherpolys = list(allpolys)
     otherpolys.remove(apoly)
     apoly.light( sources, otherpolys )
 
-print "Doing once bounce lighting"
+print("Doing once bounce lighting")
 
 # One bounce
 for apoly in allpolys:
