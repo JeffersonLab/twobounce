@@ -398,17 +398,17 @@ coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [
 
 ############# Col2 photon collimating inner_pipe
 ##pipe
-x1_pipe0=0.0255
+x1_pipe0=0.0205
 z1_pipe0=5.4
 
-x2_pipe0=0.0285
+x2_pipe0=0.0235
 z2_pipe0=5.4
 
-x3_pipe0=0.0315
-z3_pipe0=7.345
+x3_pipe0=0.0275
+z3_pipe0=7.5
 
-x4_pipe0=0.0285
-z4_pipe0=7.345
+x4_pipe0=0.0305
+z4_pipe0=7.5
 
 
 coll_pipe01   = polygon( ([z1_pipe0, x1_pipe0], [z4_pipe0, x4_pipe0], [z3_pipe0, x3_pipe0], [z2_pipe0, x2_pipe0] ), notSource=False)
