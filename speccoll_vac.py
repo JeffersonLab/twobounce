@@ -395,6 +395,21 @@ z4_coll_2_3=5.4
 coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [z3_coll_2_3, x3_coll_2_3], [z2_coll_2_3, x2_coll_2_3] ), notSource=False)
 #coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [z3_coll_2_3, x3_coll_2_3], [z2_coll_2_3, x2_coll_2_3] ), isDetector=True)
 
+##############Upstream coil#######################
+
+x1_US_coil=0.03016
+z1_US_coil=5.60882
+
+x2_US_coil=0.03016+0.21793
+z2_US_coil=5.60882
+
+x3_US_coil=0.034767+0.22758
+z3_US_coil=7.38632
+
+x4_US_coil=0.034767
+z4_US_coil=7.38632
+
+US_Coil = polygon( ([z1_US_coil, x1_US_coil], [z4_US_coil, x4_US_coil], [z3_US_coil, x3_US_coil], [z2_US_coil, x2_US_coil] ), notSource=False)
 
 ############# Col2 photon collimating inner_pipe
 ##pipe
@@ -414,7 +429,7 @@ z4_pipe0=7.5
 coll_pipe01   = polygon( ([z1_pipe0, x1_pipe0], [z4_pipe0, x4_pipe0], [z3_pipe0, x3_pipe0], [z2_pipe0, x2_pipe0] ), notSource=False)
 coll_pipe02   = polygon( ([z2_pipe0, -x2_pipe0], [z3_pipe0, -x3_pipe0], [z4_pipe0, -x4_pipe0], [z1_pipe0, -x1_pipe0] ), notSource=False)
 
-##pipe  the downstream twobounce shield
+##pipe1  the downstream twobounce shield
 x1_pipe1_1=0.0355
 z1_pipe1_1=7.875
 
@@ -422,58 +437,79 @@ x2_pipe1_1=0.0385
 z2_pipe1_1=7.875
 
 x3_pipe1_1=0.0385
-z3_pipe1_1=9.875
+z3_pipe1_1=8.275
 
 x4_pipe1_1=0.0355
-z4_pipe1_1=9.875
+z4_pipe1_1=8.275
 
 
 coll_pipe11_1   = polygon( ([z1_pipe1_1, x1_pipe1_1], [z4_pipe1_1, x4_pipe1_1], [z3_pipe1_1, x3_pipe1_1], [z2_pipe1_1, x2_pipe1_1] ), notSource=False)
 coll_pipe12_1   = polygon( ([z2_pipe1_1, -x2_pipe1_1], [z3_pipe1_1, -x3_pipe1_1], [z4_pipe1_1, -x4_pipe1_1], [z1_pipe1_1, -x1_pipe1_1] ), notSource=False)
-##pipe
-x1_pipe1=0.033*1.03
-#x1_pipe1=0.035
-z1_pipe1=9.50
+##pipe2  the downstream twobounce shield
+x1_pipe1_2=0.0355
+z1_pipe1_2=8.275
 
-x2_pipe1=0.036*1.03
-#x2_pipe1=0.038
-z2_pipe1=9.5
+x2_pipe1_2=0.0385
+z2_pipe1_2=8.275
 
-x3_pipe1=0.0396*1.03
-#x3_pipe1=0.0419
-#z3_pipe1=11.3
-z3_pipe1=9.875
+x3_pipe1_2=0.0385
+z3_pipe1_2=8.675
 
-x4_pipe1=0.0366*1.03
-#x4_pipe1=0.0389
-#z4_pipe1=11.3
-z4_pipe1=9.875
+x4_pipe1_2=0.0355
+z4_pipe1_2=8.675
 
 
-coll_pipe11   = polygon( ([z1_pipe1, x1_pipe1], [z4_pipe1, x4_pipe1], [z3_pipe1, x3_pipe1], [z2_pipe1, x2_pipe1] ), notSource=False)
-coll_pipe12   = polygon( ([z2_pipe1, -x2_pipe1], [z3_pipe1, -x3_pipe1], [z4_pipe1, -x4_pipe1], [z1_pipe1, -x1_pipe1] ), notSource=False)
+coll_pipe11_2   = polygon( ([z1_pipe1_2, x1_pipe1_2], [z4_pipe1_2, x4_pipe1_2], [z3_pipe1_2, x3_pipe1_2], [z2_pipe1_2, x2_pipe1_2] ), notSource=False)
+coll_pipe12_2   = polygon( ([z2_pipe1_2, -x2_pipe1_2], [z3_pipe1_2, -x3_pipe1_2], [z4_pipe1_2, -x4_pipe1_2], [z1_pipe1_2, -x1_pipe1_2] ), notSource=False)
 
-##step
-x1_pipe2=0.0366*1.03
-#x1_pipe2=0.0389
-z1_pipe2=11.3
+##pipe3  the downstream twobounce shield
+x1_pipe1_3=0.0355
+z1_pipe1_3=8.675
 
-x2_pipe2=0.0396*1.03
-#x2_pipe2=0.0419
-z2_pipe2=11.3
+x2_pipe1_3=0.0385
+z2_pipe1_3=8.675
 
-x3_pipe2=0.0396*1.03
-#x3_pipe2=0.0419
-z3_pipe2=11.35
-#z3_pipe2=12.37
+x3_pipe1_3=0.0385
+z3_pipe1_3=9.075
 
-x4_pipe2=0.0366*1.03
-#x4_pipe2=0.0389
-z4_pipe2=11.35
-#z4_pipe2=12.37
+x4_pipe1_3=0.0355
+z4_pipe1_3=9.075
 
-coll_pipe21   = polygon( ([z1_pipe2, x1_pipe2], [z4_pipe2, x4_pipe2], [z3_pipe2, x3_pipe2], [z2_pipe2, x2_pipe2] ), notSource=False)
-coll_pipe22   = polygon( ([z2_pipe2, -x2_pipe2], [z3_pipe2, -x3_pipe2], [z4_pipe2, -x4_pipe2], [z1_pipe2, -x1_pipe2] ), notSource=False)
+coll_pipe11_3   = polygon( ([z1_pipe1_3, x1_pipe1_3], [z4_pipe1_3, x4_pipe1_3], [z3_pipe1_3, x3_pipe1_3], [z2_pipe1_3, x2_pipe1_3] ), notSource=False)
+coll_pipe12_3   = polygon( ([z2_pipe1_3, -x2_pipe1_3], [z3_pipe1_3, -x3_pipe1_3], [z4_pipe1_3, -x4_pipe1_3], [z1_pipe1_3, -x1_pipe1_3] ), notSource=False)
+
+##pipe4  the downstream twobounce shield
+x1_pipe1_4=0.0355
+z1_pipe1_4=9.075
+
+x2_pipe1_4=0.0385
+z2_pipe1_4=9.075
+
+x3_pipe1_4=0.0385
+z3_pipe1_4=9.475
+
+x4_pipe1_4=0.0355
+z4_pipe1_4=9.475
+
+coll_pipe11_4   = polygon( ([z1_pipe1_4, x1_pipe1_4], [z4_pipe1_4, x4_pipe1_4], [z3_pipe1_4, x3_pipe1_4], [z2_pipe1_4, x2_pipe1_4] ), notSource=False)
+coll_pipe12_4   = polygon( ([z2_pipe1_4, -x2_pipe1_4], [z3_pipe1_4, -x3_pipe1_4], [z4_pipe1_4, -x4_pipe1_4], [z1_pipe1_4, -x1_pipe1_4] ), notSource=False)
+
+##pipe5  the downstream twobounce shield
+x1_pipe1_5=0.0355
+z1_pipe1_5=9.475
+
+x2_pipe1_5=0.0385
+z2_pipe1_5=9.475
+
+x3_pipe1_5=0.0385
+z3_pipe1_5=9.875
+
+x4_pipe1_5=0.0355
+z4_pipe1_5=9.875
+
+coll_pipe11_5   = polygon( ([z1_pipe1_5, x1_pipe1_5], [z4_pipe1_5, x4_pipe1_5], [z3_pipe1_5, x3_pipe1_5], [z2_pipe1_5, x2_pipe1_5] ), notSource=False)
+coll_pipe12_5   = polygon( ([z2_pipe1_5, -x2_pipe1_5], [z3_pipe1_5, -x3_pipe1_5], [z4_pipe1_5, -x4_pipe1_5], [z1_pipe1_5, -x1_pipe1_5] ), notSource=False)
+
 
 #Downstream beampipe outside the vacuum enclosure
 ##Downstream window
@@ -729,6 +765,93 @@ z4_lintel=7.885+4.5
 #collar_top2    = polygon( ([z1_lintel,  x1_lintel], [z4_lintel,  x4_lintel], [z3_lintel,  x3_lintel], [z2_lintel,  x2_lintel] ), notSource=False)
 lintel = polygon( ([z2_lintel, -x2_lintel], [z3_lintel, -x3_lintel], [z4_lintel, -x4_lintel], [z1_lintel, -x1_lintel] ), notSource=False)
 
+
+#################DS coil  ###########################
+x1_DS_coil1=0.04064
+z1_DS_coil1=9.448
+
+x2_DS_coil1=0.173228
+z2_DS_coil1=9.448
+
+x3_DS_coil1=0.19812
+z3_DS_coil1=10.3599
+
+x4_DS_coil1=0.042926
+z4_DS_coil1=10.3599
+
+DS_Coil1 = polygon( ([z1_DS_coil1, x1_DS_coil1], [z4_DS_coil1, x4_DS_coil1], [z3_DS_coil1, x3_DS_coil1], [z2_DS_coil1, x2_DS_coil1] ), notSource=False)
+
+x1_DS_coil2=0.04343
+z1_DS_coil2=10.5359
+
+x2_DS_coil2=0.2141
+z2_DS_coil2=10.5359
+
+x3_DS_coil2=0.23825
+z3_DS_coil2=11.3759
+
+x4_DS_coil2=0.04547
+z4_DS_coil2=11.3759
+
+DS_Coil2 = polygon( ([z1_DS_coil2, x1_DS_coil2], [z4_DS_coil2, x4_DS_coil2], [z3_DS_coil2, x3_DS_coil2], [z2_DS_coil2, x2_DS_coil2] ), notSource=False)
+
+x1_DS_coil3=0.04597
+z1_DS_coil3=11.5974
+
+x2_DS_coil3=0.26035
+z2_DS_coil3=11.5974
+
+x3_DS_coil3=0.27739
+z3_DS_coil3=12.3495
+
+x4_DS_coil3=0.04801
+z4_DS_coil3=12.3495
+
+DS_Coil3 = polygon( ([z1_DS_coil3, x1_DS_coil3], [z4_DS_coil3, x4_DS_coil3], [z3_DS_coil3, x3_DS_coil3], [z2_DS_coil3, x2_DS_coil3] ), notSource=False)
+
+x1_DS_coil4_1=0.05055
+z1_DS_coil4_1=12.6225
+
+x2_DS_coil4_1=0.34341
+z2_DS_coil4_1=12.662
+
+x3_DS_coil4_1=0.41377
+z3_DS_coil4_1=14.291
+
+x4_DS_coil4_1=0.07976
+z4_DS_coil4_1=14.291
+
+DS_Coil4_1 = polygon( ([z1_DS_coil4_1, x1_DS_coil4_1], [z4_DS_coil4_1, x4_DS_coil4_1], [z3_DS_coil4_1, x3_DS_coil4_1], [z2_DS_coil4_1, x2_DS_coil4_1] ), notSource=False)
+
+x1_DS_coil4_2=0.07976
+z1_DS_coil4_2=14.2913
+
+x2_DS_coil4_2=0.29108
+z2_DS_coil4_2=14.2913
+
+x3_DS_coil4_2=0.39700
+z3_DS_coil4_2=15.9498
+
+x4_DS_coil4_2=0.18237
+z4_DS_coil4_2=15.9498
+
+DS_Coil4_2 = polygon( ([z1_DS_coil4_2, x1_DS_coil4_2], [z4_DS_coil4_2, x4_DS_coil4_2], [z3_DS_coil4_2, x3_DS_coil4_2], [z2_DS_coil4_2, x2_DS_coil4_2] ), notSource=False)
+
+x1_DS_coil4_3=0.18237
+z1_DS_coil4_3=15.9499
+
+x2_DS_coil4_3=0.39700
+z2_DS_coil4_3=15.9499
+
+x3_DS_coil4_3=0.41097
+z3_DS_coil4_3=16.1704
+
+x4_DS_coil4_3=0.14935
+z4_DS_coil4_3=16.1704
+
+DS_Coil4_3 = polygon( ([z1_DS_coil4_3, x1_DS_coil4_3], [z4_DS_coil4_3, x4_DS_coil4_3], [z3_DS_coil4_3, x3_DS_coil4_3], [z2_DS_coil4_3, x2_DS_coil4_3] ), notSource=False)
+
+
 #################################################################
 
 #### quartz
@@ -796,17 +919,25 @@ allpolys.append(coll_2_1)
 allpolys.append(coll_2_2)
 allpolys.append(coll_2_3)
 
+allpolys.append(US_Coil)
+
 allpolys.append(coll_pipe01)
 allpolys.append(coll_pipe02)
 
-allpolys.append(coll_pipe11_1)
-allpolys.append(coll_pipe12_1)
-
-#allpolys.append(coll_pipe11)
-#allpolys.append(coll_pipe12)
-
-#allpolys.append(coll_pipe21)
-#allpolys.append(coll_pipe22)
+#allpolys.append(coll_pipe11_1)
+#allpolys.append(coll_pipe12_1)
+#
+#allpolys.append(coll_pipe11_2)
+#allpolys.append(coll_pipe12_2)
+#
+#allpolys.append(coll_pipe11_3)
+#allpolys.append(coll_pipe12_3)
+#
+#allpolys.append(coll_pipe11_4)
+#allpolys.append(coll_pipe12_4)
+#
+#allpolys.append(coll_pipe11_5)
+#allpolys.append(coll_pipe12_5)
 
 allpolys.append(coll_pipe31)
 allpolys.append(coll_pipe32)
@@ -866,6 +997,13 @@ allpolys.append(coll_4_3)
 
 allpolys.append(coll_5)
 allpolys.append(lintel)
+
+allpolys.append(DS_Coil1)
+allpolys.append(DS_Coil2)
+allpolys.append(DS_Coil3)
+allpolys.append(DS_Coil4_1)
+allpolys.append(DS_Coil4_2)
+allpolys.append(DS_Coil4_3)
 
 allpolys.append(quartz1)
 allpolys.append(quartz2)
