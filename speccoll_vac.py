@@ -20,6 +20,619 @@ tgtrad = 1.4142*0.0025
 
 target = polygon( ([-tgtlen/2,-tgtrad], [tgtlen/2, -tgtrad], [tgtlen/2,tgtrad], [-tgtlen/2,tgtrad]) )
 
+####Target chamber upstream end
+x1_tgt_us=0.0508
+z1_tgt_us=-0.9906
+
+x2_tgt_us=0.9144
+z2_tgt_us=-0.9906
+
+x3_tgt_us=0.9144
+z3_tgt_us=-0.889
+
+x4_tgt_us=0.0508
+z4_tgt_us=-0.889
+
+tgt_US_1   = polygon( ([z1_tgt_us, x1_tgt_us], [z4_tgt_us, x4_tgt_us], [z3_tgt_us, x3_tgt_us], [z2_tgt_us, x2_tgt_us] ), notSource=False)
+tgt_US_2   = polygon( ([z2_tgt_us, -x2_tgt_us], [z3_tgt_us, -x3_tgt_us], [z4_tgt_us, -x4_tgt_us], [z1_tgt_us, -x1_tgt_us] ), notSource=False)
+
+x1_tgt_ds=0.1016
+z1_tgt_ds=0.889
+
+x2_tgt_ds=0.9144
+z2_tgt_ds=0.889
+
+x3_tgt_ds=0.9144
+z3_tgt_ds=0.9906
+
+x4_tgt_ds=0.1016
+z4_tgt_ds=0.9906
+
+tgt_DS_1   = polygon( ([z1_tgt_ds, x1_tgt_ds], [z4_tgt_ds, x4_tgt_ds], [z3_tgt_ds, x3_tgt_ds], [z2_tgt_ds, x2_tgt_ds] ), notSource=False)
+tgt_DS_2   = polygon( ([z2_tgt_ds, -x2_tgt_ds], [z3_tgt_ds, -x3_tgt_ds], [z4_tgt_ds, -x4_tgt_ds], [z1_tgt_ds, -x1_tgt_ds] ), notSource=False)
+
+### Pipe after target chamber
+x1_tgt_pipe1=0.09525
+z1_tgt_pipe1=0.90094
+
+x2_tgt_pipe1=0.1016
+z2_tgt_pipe1=0.90094
+
+x3_tgt_pipe1=0.1016
+z3_tgt_pipe1=0.90094+0.2032
+
+x4_tgt_pipe1=0.09525
+z4_tgt_pipe1=0.90094+0.2032
+
+tgt_pipe1_up   = polygon( ([z1_tgt_pipe1, x1_tgt_pipe1], [z4_tgt_pipe1, x4_tgt_pipe1], [z3_tgt_pipe1, x3_tgt_pipe1], [z2_tgt_pipe1, x2_tgt_pipe1] ), notSource=False)
+tgt_pipe1_lo   = polygon( ([z2_tgt_pipe1, -x2_tgt_pipe1], [z3_tgt_pipe1, -x3_tgt_pipe1], [z4_tgt_pipe1, -x4_tgt_pipe1], [z1_tgt_pipe1, -x1_tgt_pipe1] ), notSource=False)
+
+####Flange 1
+###Part1
+##section1
+x1_tgt_flange1_1_1=0.101855
+z1_tgt_flange1_1_1=1.09220
+
+x2_tgt_flange1_1_1=0.12662
+z2_tgt_flange1_1_1=1.09220
+
+x3_tgt_flange1_1_1=0.12662
+z3_tgt_flange1_1_1=1.09220+0.01194
+
+x4_tgt_flange1_1_1=0.101855
+z4_tgt_flange1_1_1=1.09220+0.01194
+
+tgt_flange1_1_1_up   = polygon( ([z1_tgt_flange1_1_1, x1_tgt_flange1_1_1], [z4_tgt_flange1_1_1, x4_tgt_flange1_1_1], [z3_tgt_flange1_1_1, x3_tgt_flange1_1_1], [z2_tgt_flange1_1_1, x2_tgt_flange1_1_1] ), notSource=False)
+tgt_flange1_1_1_lo   = polygon( ([z2_tgt_flange1_1_1, -x2_tgt_flange1_1_1], [z3_tgt_flange1_1_1, -x3_tgt_flange1_1_1], [z4_tgt_flange1_1_1, -x4_tgt_flange1_1_1], [z1_tgt_flange1_1_1, -x1_tgt_flange1_1_1] ), notSource=False)
+
+##section2
+x2_tgt_flange1_1_2=0.12662
+z2_tgt_flange1_1_2=1.09220+0.01194
+
+x1_tgt_flange1_1_2=0.09921
+z1_tgt_flange1_1_2=1.09220+0.01194
+
+x4_tgt_flange1_1_2=0.09921
+z4_tgt_flange1_1_2=1.09220+0.01194+0.0127
+
+x3_tgt_flange1_1_2=0.12662
+z3_tgt_flange1_1_2=1.09220+0.01194+0.0127
+
+tgt_flange1_1_2_up   = polygon( ([z1_tgt_flange1_1_2, x1_tgt_flange1_1_2], [z4_tgt_flange1_1_2, x4_tgt_flange1_1_2], [z3_tgt_flange1_1_2, x3_tgt_flange1_1_2], [z2_tgt_flange1_1_2, x2_tgt_flange1_1_2] ), notSource=False)
+tgt_flange1_1_2_lo   = polygon( ([z2_tgt_flange1_1_2, -x2_tgt_flange1_1_2], [z3_tgt_flange1_1_2, -x3_tgt_flange1_1_2], [z4_tgt_flange1_1_2, -x4_tgt_flange1_1_2], [z1_tgt_flange1_1_2, -x1_tgt_flange1_1_2] ), notSource=False)
+
+###Part2
+##section1
+x2_tgt_flange1_2_1=0.12662
+z2_tgt_flange1_2_1=1.11684
+
+x1_tgt_flange1_2_1=0.10285
+z1_tgt_flange1_2_1=1.11684
+
+x4_tgt_flange1_2_1=0.10285
+z4_tgt_flange1_2_1=1.11684+0.0127
+
+x3_tgt_flange1_2_1=0.12662
+z3_tgt_flange1_2_1=1.11684+0.0127
+
+tgt_flange1_2_1_up   = polygon( ([z1_tgt_flange1_2_1, x1_tgt_flange1_2_1], [z4_tgt_flange1_2_1, x4_tgt_flange1_2_1], [z3_tgt_flange1_2_1, x3_tgt_flange1_2_1], [z2_tgt_flange1_2_1, x2_tgt_flange1_2_1] ), notSource=False)
+tgt_flange1_2_1_lo   = polygon( ([z2_tgt_flange1_2_1, -x2_tgt_flange1_2_1], [z3_tgt_flange1_2_1, -x3_tgt_flange1_2_1], [z4_tgt_flange1_2_1, -x4_tgt_flange1_2_1], [z1_tgt_flange1_2_1, -x1_tgt_flange1_2_1] ), notSource=False)
+
+##section2
+x2_tgt_flange1_2_2=0.12662
+z2_tgt_flange1_2_2=1.11684+0.0127
+
+x1_tgt_flange1_2_2=0.10541
+z1_tgt_flange1_2_2=1.11684+0.0127
+
+x4_tgt_flange1_2_2=0.10541
+z4_tgt_flange1_2_2=1.11684+0.01194+0.0127
+
+x3_tgt_flange1_2_2=0.12662
+z3_tgt_flange1_2_2=1.11684+0.01194+0.0127
+
+tgt_flange1_2_2_up   = polygon( ([z1_tgt_flange1_2_2, x1_tgt_flange1_2_2], [z4_tgt_flange1_2_2, x4_tgt_flange1_2_2], [z3_tgt_flange1_2_2, x3_tgt_flange1_2_2], [z2_tgt_flange1_2_2, x2_tgt_flange1_2_2] ), notSource=False)
+tgt_flange1_2_2_lo   = polygon( ([z2_tgt_flange1_2_2, -x2_tgt_flange1_2_2], [z3_tgt_flange1_2_2, -x3_tgt_flange1_2_2], [z4_tgt_flange1_2_2, -x4_tgt_flange1_2_2], [z1_tgt_flange1_2_2, -x1_tgt_flange1_2_2] ), notSource=False)
+
+###Next pipe
+x2_tgt_pipe2=0.1016
+z2_tgt_pipe2=1.12954
+
+x1_tgt_pipe2=0.09855
+z1_tgt_pipe2=1.12954
+
+x4_tgt_pipe2=0.09855
+z4_tgt_pipe2=1.12954+0.3579
+
+x3_tgt_pipe2=0.1016
+z3_tgt_pipe2=1.12954+0.3579
+
+tgt_pipe2_up   = polygon( ([z1_tgt_pipe2, x1_tgt_pipe2], [z4_tgt_pipe2, x4_tgt_pipe2], [z3_tgt_pipe2, x3_tgt_pipe2], [z2_tgt_pipe2, x2_tgt_pipe2] ), notSource=False)
+tgt_pipe2_lo   = polygon( ([z2_tgt_pipe2, -x2_tgt_pipe2], [z3_tgt_pipe2, -x3_tgt_pipe2], [z4_tgt_pipe2, -x4_tgt_pipe2], [z1_tgt_pipe2, -x1_tgt_pipe2] ), notSource=False)
+
+####Flange 2
+###Part1
+##section1
+x2_tgt_flange2_1_1=0.12662
+z2_tgt_flange2_1_1=1.4755
+
+x1_tgt_flange2_1_1=0.10541
+z1_tgt_flange2_1_1=1.4755
+
+x4_tgt_flange2_1_1=0.10541
+z4_tgt_flange2_1_1=1.4755+0.01194
+
+x3_tgt_flange2_1_1=0.12662
+z3_tgt_flange2_1_1=1.4755+0.01194
+
+tgt_flange2_1_1_up   = polygon( ([z1_tgt_flange2_1_1, x1_tgt_flange2_1_1], [z4_tgt_flange2_1_1, x4_tgt_flange2_1_1], [z3_tgt_flange2_1_1, x3_tgt_flange2_1_1], [z2_tgt_flange2_1_1, x2_tgt_flange2_1_1] ), notSource=False)
+tgt_flange2_1_1_lo   = polygon( ([z2_tgt_flange2_1_1, -x2_tgt_flange2_1_1], [z3_tgt_flange2_1_1, -x3_tgt_flange2_1_1], [z4_tgt_flange2_1_1, -x4_tgt_flange2_1_1], [z1_tgt_flange2_1_1, -x1_tgt_flange2_1_1] ), notSource=False)
+
+##section2
+x2_tgt_flange2_1_2=0.12662
+z2_tgt_flange2_1_2=1.4755+0.01194
+
+x1_tgt_flange2_1_2=0.10285
+z1_tgt_flange2_1_2=1.4755+0.01194
+
+x4_tgt_flange2_1_2=0.10285
+z4_tgt_flange2_1_2=1.4755+0.01194+0.0127
+
+x3_tgt_flange2_1_2=0.12662
+z3_tgt_flange2_1_2=1.4755+0.01194+0.0127
+
+tgt_flange2_1_2_up   = polygon( ([z1_tgt_flange2_1_2, x1_tgt_flange2_1_2], [z4_tgt_flange2_1_2, x4_tgt_flange2_1_2], [z3_tgt_flange2_1_2, x3_tgt_flange2_1_2], [z2_tgt_flange2_1_2, x2_tgt_flange2_1_2] ), notSource=False)
+tgt_flange2_1_2_lo   = polygon( ([z2_tgt_flange2_1_2, -x2_tgt_flange2_1_2], [z3_tgt_flange2_1_2, -x3_tgt_flange2_1_2], [z4_tgt_flange2_1_2, -x4_tgt_flange2_1_2], [z1_tgt_flange2_1_2, -x1_tgt_flange2_1_2] ), notSource=False)
+
+###Part2
+##section1
+x2_tgt_flange2_2_1=0.126595
+z2_tgt_flange2_2_1=1.50014
+
+x1_tgt_flange2_2_1=0.1016
+z1_tgt_flange2_2_1=1.50014
+
+x4_tgt_flange2_2_1=0.1016
+z4_tgt_flange2_2_1=1.50014+0.02459
+
+x3_tgt_flange2_2_1=0.126595
+z3_tgt_flange2_2_1=1.50014+0.02459
+
+tgt_flange2_2_1_up   = polygon( ([z1_tgt_flange2_2_1, x1_tgt_flange2_2_1], [z4_tgt_flange2_2_1, x4_tgt_flange2_2_1], [z3_tgt_flange2_2_1, x3_tgt_flange2_2_1], [z2_tgt_flange2_2_1, x2_tgt_flange2_2_1] ), notSource=False)
+tgt_flange2_2_1_lo   = polygon( ([z2_tgt_flange2_2_1, -x2_tgt_flange2_2_1], [z3_tgt_flange2_2_1, -x3_tgt_flange2_2_1], [z4_tgt_flange2_2_1, -x4_tgt_flange2_2_1], [z1_tgt_flange2_2_1, -x1_tgt_flange2_2_1] ), notSource=False)
+
+
+###Part3
+##section1
+x2_tgt_flange2_3_1=0.126595
+z2_tgt_flange2_3_1=1.52473
+
+x1_tgt_flange2_3_1=0.10285
+z1_tgt_flange2_3_1=1.52473
+
+x4_tgt_flange2_3_1=0.10285
+z4_tgt_flange2_3_1=1.52473+0.0127
+
+x3_tgt_flange2_3_1=0.126595
+z3_tgt_flange2_3_1=1.52473+0.0127
+
+tgt_flange2_3_1_up   = polygon( ([z1_tgt_flange2_3_1, x1_tgt_flange2_3_1], [z4_tgt_flange2_3_1, x4_tgt_flange2_3_1], [z3_tgt_flange2_3_1, x3_tgt_flange2_3_1], [z2_tgt_flange2_3_1, x2_tgt_flange2_3_1] ), notSource=False)
+tgt_flange2_3_1_lo   = polygon( ([z2_tgt_flange2_3_1, -x2_tgt_flange2_3_1], [z3_tgt_flange2_3_1, -x3_tgt_flange2_3_1], [z4_tgt_flange2_3_1, -x4_tgt_flange2_3_1], [z1_tgt_flange2_3_1, -x1_tgt_flange2_3_1] ), notSource=False)
+
+##section2
+x2_tgt_flange2_3_2=0.126595
+z2_tgt_flange2_3_2=1.52473+0.0127
+
+x1_tgt_flange2_3_2=0.10541
+z1_tgt_flange2_3_2=1.52473+0.0127
+
+x4_tgt_flange2_3_2=0.10541
+z4_tgt_flange2_3_2=1.52473+0.01194+0.0127
+
+x3_tgt_flange2_3_2=0.126595
+z3_tgt_flange2_3_2=1.52473+0.01194+0.0127
+
+tgt_flange2_3_2_up   = polygon( ([z1_tgt_flange2_3_2, x1_tgt_flange2_3_2], [z4_tgt_flange2_3_2, x4_tgt_flange2_3_2], [z3_tgt_flange2_3_2, x3_tgt_flange2_3_2], [z2_tgt_flange2_3_2, x2_tgt_flange2_3_2] ), notSource=False)
+tgt_flange2_3_2_lo   = polygon( ([z2_tgt_flange2_3_2, -x2_tgt_flange2_3_2], [z3_tgt_flange2_3_2, -x3_tgt_flange2_3_2], [z4_tgt_flange2_3_2, -x4_tgt_flange2_3_2], [z1_tgt_flange2_3_2, -x1_tgt_flange2_3_2] ), notSource=False)
+
+###Next pipe - it has three parts
+##part1
+x2_tgt_pipe3_1=0.10179
+z2_tgt_pipe3_1=1.53826
+
+x1_tgt_pipe3_1=0.101025
+z1_tgt_pipe3_1=1.53826
+
+x4_tgt_pipe3_1=0.101025
+z4_tgt_pipe3_1=1.53826+0.0508
+
+x3_tgt_pipe3_1=0.10179
+z3_tgt_pipe3_1=1.53826+0.0508
+
+tgt_pipe3_1_up   = polygon( ([z1_tgt_pipe3_1, x1_tgt_pipe3_1], [z4_tgt_pipe3_1, x4_tgt_pipe3_1], [z3_tgt_pipe3_1, x3_tgt_pipe3_1], [z2_tgt_pipe3_1, x2_tgt_pipe3_1] ), notSource=False)
+tgt_pipe3_1_lo   = polygon( ([z2_tgt_pipe3_1, -x2_tgt_pipe3_1], [z3_tgt_pipe3_1, -x3_tgt_pipe3_1], [z4_tgt_pipe3_1, -x4_tgt_pipe3_1], [z1_tgt_pipe3_1, -x1_tgt_pipe3_1] ), notSource=False)
+
+##part2
+x2_tgt_pipe3_2=0.11449
+z2_tgt_pipe3_2=1.53826+0.0508
+
+x1_tgt_pipe3_2=0.101025
+z1_tgt_pipe3_2=1.53826+0.0508
+
+x4_tgt_pipe3_2=0.101025
+z4_tgt_pipe3_2=1.53826+0.0508+0.2032
+
+x3_tgt_pipe3_2=0.11449
+z3_tgt_pipe3_2=1.53826+0.0508+0.2032
+
+tgt_pipe3_2_up   = polygon( ([z1_tgt_pipe3_2, x1_tgt_pipe3_2], [z4_tgt_pipe3_2, x4_tgt_pipe3_2], [z3_tgt_pipe3_2, x3_tgt_pipe3_2], [z2_tgt_pipe3_2, x2_tgt_pipe3_2] ), notSource=False)
+tgt_pipe3_2_lo   = polygon( ([z2_tgt_pipe3_2, -x2_tgt_pipe3_2], [z3_tgt_pipe3_2, -x3_tgt_pipe3_2], [z4_tgt_pipe3_2, -x4_tgt_pipe3_2], [z1_tgt_pipe3_2, -x1_tgt_pipe3_2] ), notSource=False)
+
+##part3
+x2_tgt_pipe3_3=0.10179
+z2_tgt_pipe3_3=1.53826+0.0508+0.2032
+
+x3_tgt_pipe3_3=0.101025
+z3_tgt_pipe3_3=1.53826+0.0508+0.2032
+
+x4_tgt_pipe3_3=0.101025
+z4_tgt_pipe3_3=1.53826+0.0508+0.2032+0.0508
+
+x1_tgt_pipe3_3=0.10179
+z1_tgt_pipe3_3=1.53826+0.0508+0.2032+0.0508
+
+tgt_pipe3_3_up   = polygon( ([z1_tgt_pipe3_3, x1_tgt_pipe3_3], [z4_tgt_pipe3_3, x4_tgt_pipe3_3], [z3_tgt_pipe3_3, x3_tgt_pipe3_3], [z2_tgt_pipe3_3, x2_tgt_pipe3_3] ), notSource=False)
+tgt_pipe3_3_lo   = polygon( ([z2_tgt_pipe3_3, -x2_tgt_pipe3_3], [z3_tgt_pipe3_3, -x3_tgt_pipe3_3], [z4_tgt_pipe3_3, -x4_tgt_pipe3_3], [z1_tgt_pipe3_3, -x1_tgt_pipe3_3] ), notSource=False)
+
+####Flange 3
+###Part1
+##section1
+x2_tgt_flange3_1_1=0.12662
+z2_tgt_flange3_1_1=1.83029
+
+x1_tgt_flange3_1_1=0.10541
+z1_tgt_flange3_1_1=1.83029
+
+x4_tgt_flange3_1_1=0.10541
+z4_tgt_flange3_1_1=1.83029+0.01194
+
+x3_tgt_flange3_1_1=0.12662
+z3_tgt_flange3_1_1=1.83029+0.01194
+
+tgt_flange3_1_1_up   = polygon( ([z1_tgt_flange3_1_1, x1_tgt_flange3_1_1], [z4_tgt_flange3_1_1, x4_tgt_flange3_1_1], [z3_tgt_flange3_1_1, x3_tgt_flange3_1_1], [z2_tgt_flange3_1_1, x2_tgt_flange3_1_1] ), notSource=False)
+tgt_flange3_1_1_lo   = polygon( ([z2_tgt_flange3_1_1, -x2_tgt_flange3_1_1], [z3_tgt_flange3_1_1, -x3_tgt_flange3_1_1], [z4_tgt_flange3_1_1, -x4_tgt_flange3_1_1], [z1_tgt_flange3_1_1, -x1_tgt_flange3_1_1] ), notSource=False)
+
+##section2
+x2_tgt_flange3_1_2=0.12662
+z2_tgt_flange3_1_2=1.83029+0.01194
+
+x1_tgt_flange3_1_2=0.10285
+z1_tgt_flange3_1_2=1.83029+0.01194
+
+x4_tgt_flange3_1_2=0.10285
+z4_tgt_flange3_1_2=1.83029+0.01194+0.0127
+
+x3_tgt_flange3_1_2=0.12662
+z3_tgt_flange3_1_2=1.83029+0.01194+0.0127
+
+tgt_flange3_1_2_up   = polygon( ([z1_tgt_flange3_1_2, x1_tgt_flange3_1_2], [z4_tgt_flange3_1_2, x4_tgt_flange3_1_2], [z3_tgt_flange3_1_2, x3_tgt_flange3_1_2], [z2_tgt_flange3_1_2, x2_tgt_flange3_1_2] ), notSource=False)
+tgt_flange3_1_2_lo   = polygon( ([z2_tgt_flange3_1_2, -x2_tgt_flange3_1_2], [z3_tgt_flange3_1_2, -x3_tgt_flange3_1_2], [z4_tgt_flange3_1_2, -x4_tgt_flange3_1_2], [z1_tgt_flange3_1_2, -x1_tgt_flange3_1_2] ), notSource=False)
+
+###Part2
+##section1
+x2_tgt_flange3_2_1=0.12662
+z2_tgt_flange3_2_1=1.85493
+
+x1_tgt_flange3_2_1=0.10285
+z1_tgt_flange3_2_1=1.85493
+
+x4_tgt_flange3_2_1=0.10285
+z4_tgt_flange3_2_1=1.85493+0.0127
+
+x3_tgt_flange3_2_1=0.12662
+z3_tgt_flange3_2_1=1.85493+0.0127
+
+tgt_flange3_2_1_up   = polygon( ([z1_tgt_flange3_2_1, x1_tgt_flange3_2_1], [z4_tgt_flange3_2_1, x4_tgt_flange3_2_1], [z3_tgt_flange3_2_1, x3_tgt_flange3_2_1], [z2_tgt_flange3_2_1, x2_tgt_flange3_2_1] ), notSource=False)
+tgt_flange3_2_1_lo   = polygon( ([z2_tgt_flange3_2_1, -x2_tgt_flange3_2_1], [z3_tgt_flange3_2_1, -x3_tgt_flange3_2_1], [z4_tgt_flange3_2_1, -x4_tgt_flange3_2_1], [z1_tgt_flange3_2_1, -x1_tgt_flange3_2_1] ), notSource=False)
+
+##section2
+x2_tgt_flange3_2_2=0.12662
+z2_tgt_flange3_2_2=1.85493+0.0127
+
+x1_tgt_flange3_2_2=0.10541
+z1_tgt_flange3_2_2=1.85493+0.0127
+
+x4_tgt_flange3_2_2=0.10541
+z4_tgt_flange3_2_2=1.85493+0.01194+0.0127
+
+x3_tgt_flange3_2_2=0.12662
+z3_tgt_flange3_2_2=1.85493+0.01194+0.0127
+
+tgt_flange3_2_2_up   = polygon( ([z1_tgt_flange3_2_2, x1_tgt_flange3_2_2], [z4_tgt_flange3_2_2, x4_tgt_flange3_2_2], [z3_tgt_flange3_2_2, x3_tgt_flange3_2_2], [z2_tgt_flange3_2_2, x2_tgt_flange3_2_2] ), notSource=False)
+tgt_flange3_2_2_lo   = polygon( ([z2_tgt_flange3_2_2, -x2_tgt_flange3_2_2], [z3_tgt_flange3_2_2, -x3_tgt_flange3_2_2], [z4_tgt_flange3_2_2, -x4_tgt_flange3_2_2], [z1_tgt_flange3_2_2, -x1_tgt_flange3_2_2] ), notSource=False)
+
+###Next pipe - it has five parts
+##part1
+x2_tgt_pipe4_1=0.1016
+z2_tgt_pipe4_1=1.86763
+
+x1_tgt_pipe4_1=0.096825
+z1_tgt_pipe4_1=1.86763
+
+x4_tgt_pipe4_1=0.096825
+z4_tgt_pipe4_1=1.86763+1.16549
+
+x3_tgt_pipe4_1=0.1016
+z3_tgt_pipe4_1=1.86763+1.16549
+
+tgt_pipe4_1_up   = polygon( ([z1_tgt_pipe4_1, x1_tgt_pipe4_1], [z4_tgt_pipe4_1, x4_tgt_pipe4_1], [z3_tgt_pipe4_1, x3_tgt_pipe4_1], [z2_tgt_pipe4_1, x2_tgt_pipe4_1] ), notSource=False)
+tgt_pipe4_1_lo   = polygon( ([z2_tgt_pipe4_1, -x2_tgt_pipe4_1], [z3_tgt_pipe4_1, -x3_tgt_pipe4_1], [z4_tgt_pipe4_1, -x4_tgt_pipe4_1], [z1_tgt_pipe4_1, -x1_tgt_pipe4_1] ), notSource=False)
+
+##part2
+x2_tgt_pipe4_2=0.1016
+z2_tgt_pipe4_2=3.03312
+
+x1_tgt_pipe4_2=0.067245
+z1_tgt_pipe4_2=3.03312
+
+x4_tgt_pipe4_2=0.067245
+z4_tgt_pipe4_2=3.03312+0.0127
+
+x3_tgt_pipe4_2=0.1016
+z3_tgt_pipe4_2=3.03312+0.0127
+
+tgt_pipe4_2_up   = polygon( ([z1_tgt_pipe4_2, x1_tgt_pipe4_2], [z4_tgt_pipe4_2, x4_tgt_pipe4_2], [z3_tgt_pipe4_2, x3_tgt_pipe4_2], [z2_tgt_pipe4_2, x2_tgt_pipe4_2] ), notSource=False)
+tgt_pipe4_2_lo   = polygon( ([z2_tgt_pipe4_2, -x2_tgt_pipe4_2], [z3_tgt_pipe4_2, -x3_tgt_pipe4_2], [z4_tgt_pipe4_2, -x4_tgt_pipe4_2], [z1_tgt_pipe4_2, -x1_tgt_pipe4_2] ), notSource=False)
+
+##part3
+x2_tgt_pipe4_3=0.07065
+z2_tgt_pipe4_3=3.04582
+
+x1_tgt_pipe4_3=0.067245
+z1_tgt_pipe4_3=3.04582
+
+x4_tgt_pipe4_3=0.067245
+z4_tgt_pipe4_3=3.04582+0.35194
+
+x3_tgt_pipe4_3=0.07065
+z3_tgt_pipe4_3=3.04582+0.35194
+
+tgt_pipe4_3_up   = polygon( ([z1_tgt_pipe4_3, x1_tgt_pipe4_3], [z4_tgt_pipe4_3, x4_tgt_pipe4_3], [z3_tgt_pipe4_3, x3_tgt_pipe4_3], [z2_tgt_pipe4_3, x2_tgt_pipe4_3] ), notSource=False)
+tgt_pipe4_3_lo   = polygon( ([z2_tgt_pipe4_3, -x2_tgt_pipe4_3], [z3_tgt_pipe4_3, -x3_tgt_pipe4_3], [z4_tgt_pipe4_3, -x4_tgt_pipe4_3], [z1_tgt_pipe4_3, -x1_tgt_pipe4_3] ), notSource=False)
+
+##part4
+x2_tgt_pipe4_4=0.127
+z2_tgt_pipe4_4=3.39776
+
+x1_tgt_pipe4_4=0.067245
+z1_tgt_pipe4_4=3.39776
+
+x4_tgt_pipe4_4=0.067245
+z4_tgt_pipe4_4=3.39776+0.0127
+
+x3_tgt_pipe4_4=0.127
+z3_tgt_pipe4_4=3.39776+0.0127
+
+tgt_pipe4_4_up   = polygon( ([z1_tgt_pipe4_4, x1_tgt_pipe4_4], [z4_tgt_pipe4_4, x4_tgt_pipe4_4], [z3_tgt_pipe4_4, x3_tgt_pipe4_4], [z2_tgt_pipe4_4, x2_tgt_pipe4_4] ), notSource=False)
+tgt_pipe4_4_lo   = polygon( ([z2_tgt_pipe4_4, -x2_tgt_pipe4_4], [z3_tgt_pipe4_4, -x3_tgt_pipe4_4], [z4_tgt_pipe4_4, -x4_tgt_pipe4_4], [z1_tgt_pipe4_4, -x1_tgt_pipe4_4] ), notSource=False)
+
+##part5
+x2_tgt_pipe4_5=0.127
+z2_tgt_pipe4_5=3.41046
+
+x1_tgt_pipe4_5=0.122225
+z1_tgt_pipe4_5=3.41046
+
+x4_tgt_pipe4_5=0.122225
+z4_tgt_pipe4_5=3.41046+0.47374
+
+x3_tgt_pipe4_5=0.127
+z3_tgt_pipe4_5=3.41046+0.47374
+
+tgt_pipe4_5_up   = polygon( ([z1_tgt_pipe4_5, x1_tgt_pipe4_5], [z4_tgt_pipe4_5, x4_tgt_pipe4_5], [z3_tgt_pipe4_5, x3_tgt_pipe4_5], [z2_tgt_pipe4_5, x2_tgt_pipe4_5] ), notSource=False)
+tgt_pipe4_5_lo   = polygon( ([z2_tgt_pipe4_5, -x2_tgt_pipe4_5], [z3_tgt_pipe4_5, -x3_tgt_pipe4_5], [z4_tgt_pipe4_5, -x4_tgt_pipe4_5], [z1_tgt_pipe4_5, -x1_tgt_pipe4_5] ), notSource=False)
+
+####Flange 4
+###Part1
+##section1
+x2_tgt_flange4_1_1=0.152995
+z2_tgt_flange4_1_1=3.86845
+
+x1_tgt_flange4_1_1=0.127255
+z1_tgt_flange4_1_1=3.86845
+
+x4_tgt_flange4_1_1=0.127255
+z4_tgt_flange4_1_1=3.86845+0.01575
+
+x3_tgt_flange4_1_1=0.152995
+z3_tgt_flange4_1_1=3.86845+0.01575
+
+tgt_flange4_1_1_up   = polygon( ([z1_tgt_flange4_1_1, x1_tgt_flange4_1_1], [z4_tgt_flange4_1_1, x4_tgt_flange4_1_1], [z3_tgt_flange4_1_1, x3_tgt_flange4_1_1], [z2_tgt_flange4_1_1, x2_tgt_flange4_1_1] ), notSource=False)
+tgt_flange4_1_1_lo   = polygon( ([z2_tgt_flange4_1_1, -x2_tgt_flange4_1_1], [z3_tgt_flange4_1_1, -x3_tgt_flange4_1_1], [z4_tgt_flange4_1_1, -x4_tgt_flange4_1_1], [z1_tgt_flange4_1_1, -x1_tgt_flange4_1_1] ), notSource=False)
+
+##section2
+x2_tgt_flange4_1_2=0.152995
+z2_tgt_flange4_1_2=3.86845+0.01575
+
+x1_tgt_flange4_1_2=0.123825
+z1_tgt_flange4_1_2=3.86845+0.01575
+
+x4_tgt_flange4_1_2=0.123825
+z4_tgt_flange4_1_2=3.86845+0.01575+0.0127
+
+x3_tgt_flange4_1_2=0.152995
+z3_tgt_flange4_1_2=3.86845+0.01575+0.0127
+
+tgt_flange4_1_2_up   = polygon( ([z1_tgt_flange4_1_2, x1_tgt_flange4_1_2], [z4_tgt_flange4_1_2, x4_tgt_flange4_1_2], [z3_tgt_flange4_1_2, x3_tgt_flange4_1_2], [z2_tgt_flange4_1_2, x2_tgt_flange4_1_2] ), notSource=False)
+tgt_flange4_1_2_lo   = polygon( ([z2_tgt_flange4_1_2, -x2_tgt_flange4_1_2], [z3_tgt_flange4_1_2, -x3_tgt_flange4_1_2], [z4_tgt_flange4_1_2, -x4_tgt_flange4_1_2], [z1_tgt_flange4_1_2, -x1_tgt_flange4_1_2] ), notSource=False)
+
+###Part2
+##section1
+x2_tgt_flange4_2_1=0.152995
+z2_tgt_flange4_2_1=3.8969
+
+x1_tgt_flange4_2_1=0.123825
+z1_tgt_flange4_2_1=3.8969
+
+x4_tgt_flange4_2_1=0.123825
+z4_tgt_flange4_2_1=3.8969+0.0127
+
+x3_tgt_flange4_2_1=0.152995
+z3_tgt_flange4_2_1=3.8969+0.0127
+
+tgt_flange4_2_1_up   = polygon( ([z1_tgt_flange4_2_1, x1_tgt_flange4_2_1], [z4_tgt_flange4_2_1, x4_tgt_flange4_2_1], [z3_tgt_flange4_2_1, x3_tgt_flange4_2_1], [z2_tgt_flange4_2_1, x2_tgt_flange4_2_1] ), notSource=False)
+tgt_flange4_2_1_lo   = polygon( ([z2_tgt_flange4_2_1, -x2_tgt_flange4_2_1], [z3_tgt_flange4_2_1, -x3_tgt_flange4_2_1], [z4_tgt_flange4_2_1, -x4_tgt_flange4_2_1], [z1_tgt_flange4_2_1, -x1_tgt_flange4_2_1] ), notSource=False)
+
+##section2
+x2_tgt_flange4_2_2=0.152995
+z2_tgt_flange4_2_2=3.8969+0.0127
+
+x1_tgt_flange4_2_2=0.127255
+z1_tgt_flange4_2_2=3.8969+0.0127
+
+x4_tgt_flange4_2_2=0.127255
+z4_tgt_flange4_2_2=3.8969+0.01575+0.0127
+
+x3_tgt_flange4_2_2=0.152995
+z3_tgt_flange4_2_2=3.8969+0.01575+0.0127
+
+tgt_flange4_2_2_up   = polygon( ([z1_tgt_flange4_2_2, x1_tgt_flange4_2_2], [z4_tgt_flange4_2_2, x4_tgt_flange4_2_2], [z3_tgt_flange4_2_2, x3_tgt_flange4_2_2], [z2_tgt_flange4_2_2, x2_tgt_flange4_2_2] ), notSource=False)
+tgt_flange4_2_2_lo   = polygon( ([z2_tgt_flange4_2_2, -x2_tgt_flange4_2_2], [z3_tgt_flange4_2_2, -x3_tgt_flange4_2_2], [z4_tgt_flange4_2_2, -x4_tgt_flange4_2_2], [z1_tgt_flange4_2_2, -x1_tgt_flange4_2_2] ), notSource=False)
+
+###Next pipe - it has three parts
+##part1
+x2_tgt_pipe5_1=0.127
+z2_tgt_pipe5_1=3.9096
+
+x1_tgt_pipe5_1=0.12624
+z1_tgt_pipe5_1=3.9096
+
+x4_tgt_pipe5_1=0.12624
+z4_tgt_pipe5_1=3.9096+0.0508
+
+x3_tgt_pipe5_1=0.127
+z3_tgt_pipe5_1=3.9096+0.0508
+
+tgt_pipe5_1_up   = polygon( ([z1_tgt_pipe5_1, x1_tgt_pipe5_1], [z4_tgt_pipe5_1, x4_tgt_pipe5_1], [z3_tgt_pipe5_1, x3_tgt_pipe5_1], [z2_tgt_pipe5_1, x2_tgt_pipe5_1] ), notSource=False)
+tgt_pipe5_1_lo   = polygon( ([z2_tgt_pipe5_1, -x2_tgt_pipe5_1], [z3_tgt_pipe5_1, -x3_tgt_pipe5_1], [z4_tgt_pipe5_1, -x4_tgt_pipe5_1], [z1_tgt_pipe5_1, -x1_tgt_pipe5_1] ), notSource=False)
+
+##part2
+x2_tgt_pipe5_2=0.13894
+z2_tgt_pipe5_2=3.9096+0.0508
+
+x1_tgt_pipe5_2=0.12624
+z1_tgt_pipe5_2=3.9096+0.0508
+
+x4_tgt_pipe5_2=0.12624
+z4_tgt_pipe5_2=3.9096+0.0508+0.22739
+
+x3_tgt_pipe5_2=0.13894
+z3_tgt_pipe5_2=3.9096+0.0508+0.22739
+
+tgt_pipe5_2_up   = polygon( ([z1_tgt_pipe5_2, x1_tgt_pipe5_2], [z4_tgt_pipe5_2, x4_tgt_pipe5_2], [z3_tgt_pipe5_2, x3_tgt_pipe5_2], [z2_tgt_pipe5_2, x2_tgt_pipe5_2] ), notSource=False)
+tgt_pipe5_2_lo   = polygon( ([z2_tgt_pipe5_2, -x2_tgt_pipe5_2], [z3_tgt_pipe5_2, -x3_tgt_pipe5_2], [z4_tgt_pipe5_2, -x4_tgt_pipe5_2], [z1_tgt_pipe5_2, -x1_tgt_pipe5_2] ), notSource=False)
+
+##part3
+x2_tgt_pipe5_3=0.127
+z2_tgt_pipe5_3=3.9096+0.0508+0.22739
+
+x1_tgt_pipe5_3=0.12624
+z1_tgt_pipe5_3=3.9096+0.0508+0.22739
+
+x4_tgt_pipe5_3=0.12624
+z4_tgt_pipe5_3=3.9096+0.0508+0.22739+0.0508
+
+x3_tgt_pipe5_3=0.127
+z3_tgt_pipe5_3=3.9096+0.0508+0.22739+0.0508
+
+tgt_pipe5_3_up   = polygon( ([z1_tgt_pipe5_3, x1_tgt_pipe5_3], [z4_tgt_pipe5_3, x4_tgt_pipe5_3], [z3_tgt_pipe5_3, x3_tgt_pipe5_3], [z2_tgt_pipe5_3, x2_tgt_pipe5_3] ), notSource=False)
+tgt_pipe5_3_lo   = polygon( ([z2_tgt_pipe5_3, -x2_tgt_pipe5_3], [z3_tgt_pipe5_3, -x3_tgt_pipe5_3], [z4_tgt_pipe5_3, -x4_tgt_pipe5_3], [z1_tgt_pipe5_3, -x1_tgt_pipe5_3] ), notSource=False)
+
+####Flange 5
+###Part1
+##section1
+x2_tgt_flange5_1_1=0.152995
+z2_tgt_flange5_1_1=4.24945
+
+x1_tgt_flange5_1_1=0.127255
+z1_tgt_flange5_1_1=4.24945
+
+x4_tgt_flange5_1_1=0.127255
+z4_tgt_flange5_1_1=4.24945+0.01575
+
+x3_tgt_flange5_1_1=0.152995
+z3_tgt_flange5_1_1=4.24945+0.01575
+
+tgt_flange5_1_1_up   = polygon( ([z1_tgt_flange5_1_1, x1_tgt_flange5_1_1], [z4_tgt_flange5_1_1, x4_tgt_flange5_1_1], [z3_tgt_flange5_1_1, x3_tgt_flange5_1_1], [z2_tgt_flange5_1_1, x2_tgt_flange5_1_1] ), notSource=False)
+tgt_flange5_1_1_lo   = polygon( ([z2_tgt_flange5_1_1, -x2_tgt_flange5_1_1], [z3_tgt_flange5_1_1, -x3_tgt_flange5_1_1], [z4_tgt_flange5_1_1, -x4_tgt_flange5_1_1], [z1_tgt_flange5_1_1, -x1_tgt_flange5_1_1] ), notSource=False)
+
+##section2
+x2_tgt_flange5_1_2=0.152995
+z2_tgt_flange5_1_2=4.24945+0.01575
+
+x1_tgt_flange5_1_2=0.123825
+z1_tgt_flange5_1_2=4.24945+0.01575
+
+x4_tgt_flange5_1_2=0.123825
+z4_tgt_flange5_1_2=4.24945+0.01575+0.0127
+
+x3_tgt_flange5_1_2=0.152995
+z3_tgt_flange5_1_2=4.24945+0.01575+0.0127
+
+tgt_flange5_1_2_up   = polygon( ([z1_tgt_flange5_1_2, x1_tgt_flange5_1_2], [z4_tgt_flange5_1_2, x4_tgt_flange5_1_2], [z3_tgt_flange5_1_2, x3_tgt_flange5_1_2], [z2_tgt_flange5_1_2, x2_tgt_flange5_1_2] ), notSource=False)
+tgt_flange5_1_2_lo   = polygon( ([z2_tgt_flange5_1_2, -x2_tgt_flange5_1_2], [z3_tgt_flange5_1_2, -x3_tgt_flange5_1_2], [z4_tgt_flange5_1_2, -x4_tgt_flange5_1_2], [z1_tgt_flange5_1_2, -x1_tgt_flange5_1_2] ), notSource=False)
+
+###Part2
+##section1
+x2_tgt_flange5_2_1=0.152995
+z2_tgt_flange5_2_1=4.2779
+
+x1_tgt_flange5_2_1=0.123825
+z1_tgt_flange5_2_1=4.2779
+
+x4_tgt_flange5_2_1=0.123825
+z4_tgt_flange5_2_1=4.2779+0.0127
+
+x3_tgt_flange5_2_1=0.152995
+z3_tgt_flange5_2_1=4.2779+0.0127
+
+tgt_flange5_2_1_up   = polygon( ([z1_tgt_flange5_2_1, x1_tgt_flange5_2_1], [z4_tgt_flange5_2_1, x4_tgt_flange5_2_1], [z3_tgt_flange5_2_1, x3_tgt_flange5_2_1], [z2_tgt_flange5_2_1, x2_tgt_flange5_2_1] ), notSource=False)
+tgt_flange5_2_1_lo   = polygon( ([z2_tgt_flange5_2_1, -x2_tgt_flange5_2_1], [z3_tgt_flange5_2_1, -x3_tgt_flange5_2_1], [z4_tgt_flange5_2_1, -x4_tgt_flange5_2_1], [z1_tgt_flange5_2_1, -x1_tgt_flange5_2_1] ), notSource=False)
+
+##section2
+x2_tgt_flange5_2_2=0.152995
+z2_tgt_flange5_2_2=4.2779+0.0127
+
+x1_tgt_flange5_2_2=0.127255
+z1_tgt_flange5_2_2=4.2779+0.0127
+
+x4_tgt_flange5_2_2=0.127255
+z4_tgt_flange5_2_2=4.2779+0.01575+0.0127
+
+x3_tgt_flange5_2_2=0.152995
+z3_tgt_flange5_2_2=4.2779+0.01575+0.0127
+
+tgt_flange5_2_2_up   = polygon( ([z1_tgt_flange5_2_2, x1_tgt_flange5_2_2], [z4_tgt_flange5_2_2, x4_tgt_flange5_2_2], [z3_tgt_flange5_2_2, x3_tgt_flange5_2_2], [z2_tgt_flange5_2_2, x2_tgt_flange5_2_2] ), notSource=False)
+tgt_flange5_2_2_lo   = polygon( ([z2_tgt_flange5_2_2, -x2_tgt_flange5_2_2], [z3_tgt_flange5_2_2, -x3_tgt_flange5_2_2], [z4_tgt_flange5_2_2, -x4_tgt_flange5_2_2], [z1_tgt_flange5_2_2, -x1_tgt_flange5_2_2] ), notSource=False)
+
+###Next pipe 
+##part1
+x2_tgt_pipe6_1=0.127
+z2_tgt_pipe6_1=4.2906
+
+x1_tgt_pipe6_1=0.12065
+z1_tgt_pipe6_1=4.2906
+
+x4_tgt_pipe6_1=0.12065
+z4_tgt_pipe6_1=4.2906+0.127
+
+x3_tgt_pipe6_1=0.127
+z3_tgt_pipe6_1=4.2906+0.127
+
+tgt_pipe6_1_up   = polygon( ([z1_tgt_pipe6_1, x1_tgt_pipe6_1], [z4_tgt_pipe6_1, x4_tgt_pipe6_1], [z3_tgt_pipe6_1, x3_tgt_pipe6_1], [z2_tgt_pipe6_1, x2_tgt_pipe6_1] ), notSource=False)
+tgt_pipe6_1_lo   = polygon( ([z2_tgt_pipe6_1, -x2_tgt_pipe6_1], [z3_tgt_pipe6_1, -x3_tgt_pipe6_1], [z4_tgt_pipe6_1, -x4_tgt_pipe6_1], [z1_tgt_pipe6_1, -x1_tgt_pipe6_1] ), notSource=False)
+
+
 ################################################################
 
 ###### Lead shield in the target region (for collimating photons)
@@ -49,16 +662,20 @@ shield_bottom = polygon( ([z1_shield, x1_shield_bottom], [z4_shield, x4_shield_b
 
 #seg 1
 x1_collar=0.074#+0.05
-z1_collar=2.851#+1.5
+#z1_collar=2.851#+1.5
+z1_collar=3.12202#+1.5
 
 x2_collar=0.330 #*1.414 The collar is a rectangle (in CAD), but the narrow dimension is the one relevant for here
-z2_collar=2.851#+1.5
+#z2_collar=2.851#+1.5
+z2_collar=3.12202#+1.5
 
 x3_collar=0.330 #*1.414
-z3_collar=3.051#+1.5
+#z3_collar=3.051#+1.5
+z3_collar=3.32202#+1.5
 
 x4_collar=0.074#+0.05
-z4_collar=3.051#+1.5
+#z4_collar=3.051#+1.5
+z4_collar=3.32202#+1.5
 
 
 collar_top    = polygon( ([z1_collar,  x1_collar], [z4_collar,  x4_collar], [z3_collar,  x3_collar], [z2_collar,  x2_collar] ), notSource=False)
@@ -191,16 +808,20 @@ coll_pipe242   = polygon( ([z2_pipe24, -x2_pipe24], [z3_pipe24, -x3_pipe24], [z4
 ###### Hybrid upstream Lead collar (for ep scattering)
 
 x1_collar3=0.265
-z1_collar3=4.4305+4.5
+#z1_collar3=4.4305+4.5
+z1_collar3=8.37925
 
 x2_collar3=1.2
-z2_collar3=4.4305+4.5
+#z2_collar3=4.4305+4.5
+z2_collar3=8.37925
 
 x3_collar3=1.2
-z3_collar3=4.6805+4.5
+#z3_collar3=4.6805+4.5
+z3_collar3=8.62925
 
 x4_collar3=0.265
-z4_collar3=4.6805+4.5
+#z4_collar3=4.6805+4.5
+z4_collar3=8.62925
 
 
 collar3_top    = polygon( ([z1_collar3,  x1_collar3], [z4_collar3,  x4_collar3], [z3_collar3,  x3_collar3], [z2_collar3,  x2_collar3] ), notSource=False)
@@ -429,86 +1050,499 @@ z4_pipe0=7.5
 coll_pipe01   = polygon( ([z1_pipe0, x1_pipe0], [z4_pipe0, x4_pipe0], [z3_pipe0, x3_pipe0], [z2_pipe0, x2_pipe0] ), notSource=False)
 coll_pipe02   = polygon( ([z2_pipe0, -x2_pipe0], [z3_pipe0, -x3_pipe0], [z4_pipe0, -x4_pipe0], [z1_pipe0, -x1_pipe0] ), notSource=False)
 
+##############Upstream vessel###############
+#Fornt Plate upper part 
+x1_USCAN_Front_up=0.127
+z1_USCAN_Front_up=4.36553
+
+x2_USCAN_Front_up=0.3302
+z2_USCAN_Front_up=4.36553
+
+x3_USCAN_Front_up=0.3302
+z3_USCAN_Front_up=4.36553+0.0508
+
+x4_USCAN_Front_up=0.127
+z4_USCAN_Front_up=4.36553+0.0508
+
+
+USCAN_Front_up   = polygon( ([z1_USCAN_Front_up, x1_USCAN_Front_up], [z4_USCAN_Front_up, x4_USCAN_Front_up], [z3_USCAN_Front_up, x3_USCAN_Front_up], [z2_USCAN_Front_up, x2_USCAN_Front_up] ), notSource=False)
+
+#Fornt Plate lower part 
+x1_USCAN_Front_low=-0.4826
+z1_USCAN_Front_low=4.36553
+
+x2_USCAN_Front_low=-0.127
+z2_USCAN_Front_low=4.36553
+
+x3_USCAN_Front_low=-0.127
+z3_USCAN_Front_low=4.36553+0.0508
+
+x4_USCAN_Front_low=-0.4826
+z4_USCAN_Front_low=4.36553+0.0508
+
+
+USCAN_Front_low   = polygon( ([z1_USCAN_Front_low, x1_USCAN_Front_low], [z4_USCAN_Front_low, x4_USCAN_Front_low], [z3_USCAN_Front_low, x3_USCAN_Front_low], [z2_USCAN_Front_low, x2_USCAN_Front_low] ), notSource=False)
+
+#Base plate
+x1_USCAN_Bot=-0.4826-0.09525
+z1_USCAN_Bot=4.28933
+
+x2_USCAN_Bot=-0.4826
+z2_USCAN_Bot=4.28933
+
+x3_USCAN_Bot=-0.4826
+z3_USCAN_Bot=4.28933+4.0521
+
+x4_USCAN_Bot=-0.4826-0.09525
+z4_USCAN_Bot=4.28933+4.0521
+
+
+USCAN_Bot   = polygon( ([z1_USCAN_Bot, x1_USCAN_Bot], [z4_USCAN_Bot, x4_USCAN_Bot], [z3_USCAN_Bot, x3_USCAN_Bot], [z2_USCAN_Bot, x2_USCAN_Bot] ), notSource=False)
+
+#Top plate
+x1_USCAN_Top=0.33020
+z1_USCAN_Top=4.39093
+
+x2_USCAN_Top=0.33020+0.0254
+z2_USCAN_Top=4.39093
+
+x3_USCAN_Top=0.33020+0.0254
+z3_USCAN_Top=4.39093+3.8489
+
+x4_USCAN_Top=0.33020
+z4_USCAN_Top=4.39093+3.8489
+
+
+USCAN_Top   = polygon( ([z1_USCAN_Top, x1_USCAN_Top], [z4_USCAN_Top, x4_USCAN_Top], [z3_USCAN_Top, x3_USCAN_Top], [z2_USCAN_Top, x2_USCAN_Top] ), notSource=False)
+
+#Back Plate upper part 
+x1_USCAN_Back_up=0.254
+z1_USCAN_Back_up=8.21443
+
+x2_USCAN_Back_up=0.3302
+z2_USCAN_Back_up=8.21443
+
+x3_USCAN_Back_up=0.3302
+z3_USCAN_Back_up=8.21443+0.0508
+
+x4_USCAN_Back_up=0.254
+z4_USCAN_Back_up=8.21443+0.0508
+
+
+USCAN_Back_up   = polygon( ([z1_USCAN_Back_up, x1_USCAN_Back_up], [z4_USCAN_Back_up, x4_USCAN_Back_up], [z3_USCAN_Back_up, x3_USCAN_Back_up], [z2_USCAN_Back_up, x2_USCAN_Back_up] ), notSource=False)
+
+#Back Plate lower part 
+x1_USCAN_Back_low=-0.4826
+z1_USCAN_Back_low=8.21443
+
+x2_USCAN_Back_low=-0.254
+z2_USCAN_Back_low=8.21443
+
+x3_USCAN_Back_low=-0.254
+z3_USCAN_Back_low=8.21443+0.0508
+
+x4_USCAN_Back_low=-0.4826
+z4_USCAN_Back_low=8.21443+0.0508
+
+
+USCAN_Back_low   = polygon( ([z1_USCAN_Back_low, x1_USCAN_Back_low], [z4_USCAN_Back_low, x4_USCAN_Back_low], [z3_USCAN_Back_low, x3_USCAN_Back_low], [z2_USCAN_Back_low, x2_USCAN_Back_low] ), notSource=False)
+
+### Pipe after US vessel
+x1_US_pipe1=0.24765
+z1_US_pipe1=8.23438
+
+x2_US_pipe1=0.254
+z2_US_pipe1=8.23438
+
+x3_US_pipe1=0.254
+z3_US_pipe1=8.23438+0.44133
+
+x4_US_pipe1=0.24765
+z4_US_pipe1=8.23438+0.44133
+
+US_pipe1_up   = polygon( ([z1_US_pipe1, x1_US_pipe1], [z4_US_pipe1, x4_US_pipe1], [z3_US_pipe1, x3_US_pipe1], [z2_US_pipe1, x2_US_pipe1] ), notSource=False)
+US_pipe1_lo   = polygon( ([z2_US_pipe1, -x2_US_pipe1], [z3_US_pipe1, -x3_US_pipe1], [z4_US_pipe1, -x4_US_pipe1], [z1_US_pipe1, -x1_US_pipe1] ), notSource=False)
+
+####US CAN exit Flange 1
+###Part1
+##section1
+x1_US_flange1_1_1=0.254
+z1_US_flange1_1_1=8.65666
+
+x2_US_flange1_1_1=0.4191
+z2_US_flange1_1_1=8.65666
+
+x3_US_flange1_1_1=0.4191
+z3_US_flange1_1_1=8.65666+0.01905
+
+x4_US_flange1_1_1=0.254
+z4_US_flange1_1_1=8.65666+0.01905
+
+US_flange1_1_1_up   = polygon( ([z1_US_flange1_1_1, x1_US_flange1_1_1], [z4_US_flange1_1_1, x4_US_flange1_1_1], [z3_US_flange1_1_1, x3_US_flange1_1_1], [z2_US_flange1_1_1, x2_US_flange1_1_1] ), notSource=False)
+US_flange1_1_1_lo   = polygon( ([z2_US_flange1_1_1, -x2_US_flange1_1_1], [z3_US_flange1_1_1, -x3_US_flange1_1_1], [z4_US_flange1_1_1, -x4_US_flange1_1_1], [z1_US_flange1_1_1, -x1_US_flange1_1_1] ), notSource=False)
+
+##section2
+x2_US_flange1_1_2=0.24765
+z2_US_flange1_1_2=8.65666+0.01905
+
+x1_US_flange1_1_2=0.4191
+z1_US_flange1_1_2=8.65666+0.01905
+
+x4_US_flange1_1_2=0.4191
+z4_US_flange1_1_2=8.65666+0.01905+0.01588
+
+x3_US_flange1_1_2=0.24765
+z3_US_flange1_1_2=8.65666+0.01905+0.01588
+
+US_flange1_1_2_up   = polygon( ([z1_US_flange1_1_2, x1_US_flange1_1_2], [z4_US_flange1_1_2, x4_US_flange1_1_2], [z3_US_flange1_1_2, x3_US_flange1_1_2], [z2_US_flange1_1_2, x2_US_flange1_1_2] ), notSource=False)
+US_flange1_1_2_lo   = polygon( ([z2_US_flange1_1_2, -x2_US_flange1_1_2], [z3_US_flange1_1_2, -x3_US_flange1_1_2], [z4_US_flange1_1_2, -x4_US_flange1_1_2], [z1_US_flange1_1_2, -x1_US_flange1_1_2] ), notSource=False)
+
+###Part2
+##section1
+x2_US_flange1_2_1=0.3302
+z2_US_flange1_2_1=8.69158
+
+x1_US_flange1_2_1=0.4191
+z1_US_flange1_2_1=8.69158
+
+x4_US_flange1_2_1=0.4191
+z4_US_flange1_2_1=8.69158+0.0254
+
+x3_US_flange1_2_1=0.3302
+z3_US_flange1_2_1=8.69158+0.0254
+
+US_flange1_2_1_up   = polygon( ([z1_US_flange1_2_1, x1_US_flange1_2_1], [z4_US_flange1_2_1, x4_US_flange1_2_1], [z3_US_flange1_2_1, x3_US_flange1_2_1], [z2_US_flange1_2_1, x2_US_flange1_2_1] ), notSource=False)
+US_flange1_2_1_lo   = polygon( ([z2_US_flange1_2_1, -x2_US_flange1_2_1], [z3_US_flange1_2_1, -x3_US_flange1_2_1], [z4_US_flange1_2_1, -x4_US_flange1_2_1], [z1_US_flange1_2_1, -x1_US_flange1_2_1] ), notSource=False)
+
+##section2
+x2_US_flange1_2_2=0.33095
+z2_US_flange1_2_2=8.69158+0.0254
+
+x1_US_flange1_2_2=0.4191
+z1_US_flange1_2_2=8.69158+0.0254
+
+x4_US_flange1_2_2=0.4191
+z4_US_flange1_2_2=8.69158+0.0254+0.01905
+
+x3_US_flange1_2_2=0.33095
+z3_US_flange1_2_2=8.69158+0.0254+0.01905
+
+US_flange1_2_2_up   = polygon( ([z1_US_flange1_2_2, x1_US_flange1_2_2], [z4_US_flange1_2_2, x4_US_flange1_2_2], [z3_US_flange1_2_2, x3_US_flange1_2_2], [z2_US_flange1_2_2, x2_US_flange1_2_2] ), notSource=False)
+US_flange1_2_2_lo   = polygon( ([z2_US_flange1_2_2, -x2_US_flange1_2_2], [z3_US_flange1_2_2, -x3_US_flange1_2_2], [z4_US_flange1_2_2, -x4_US_flange1_2_2], [z1_US_flange1_2_2, -x1_US_flange1_2_2] ), notSource=False)
+
+
+###Next pipe - it has three parts
+##part1
+x2_US_pipe2_1=0.3302
+z2_US_pipe2_1=8.71698
+
+x1_US_pipe2_1=0.33095
+z1_US_pipe2_1=8.71698
+
+x4_US_pipe2_1=0.33095
+z4_US_pipe2_1=8.71698+0.06106
+
+x3_US_pipe2_1=0.3302
+z3_US_pipe2_1=8.71698+0.06106
+
+US_pipe2_1_up   = polygon( ([z1_US_pipe2_1, x1_US_pipe2_1], [z4_US_pipe2_1, x4_US_pipe2_1], [z3_US_pipe2_1, x3_US_pipe2_1], [z2_US_pipe2_1, x2_US_pipe2_1] ), notSource=False)
+US_pipe2_1_lo   = polygon( ([z2_US_pipe2_1, -x2_US_pipe2_1], [z3_US_pipe2_1, -x3_US_pipe2_1], [z4_US_pipe2_1, -x4_US_pipe2_1], [z1_US_pipe2_1, -x1_US_pipe2_1] ), notSource=False)
+
+##part2
+x2_US_pipe2_2=0.3302
+z2_US_pipe2_2=8.71698+0.06106
+
+x1_US_pipe2_2=0.361175
+z1_US_pipe2_2=8.71698+0.06106
+
+x4_US_pipe2_2=0.361175
+z4_US_pipe2_2=8.71698+0.06106+0.33222
+
+x3_US_pipe2_2=0.3302
+z3_US_pipe2_2=8.71698+0.06106+0.33222
+
+US_pipe2_2_up   = polygon( ([z1_US_pipe2_2, x1_US_pipe2_2], [z4_US_pipe2_2, x4_US_pipe2_2], [z3_US_pipe2_2, x3_US_pipe2_2], [z2_US_pipe2_2, x2_US_pipe2_2] ), notSource=False)
+US_pipe2_2_lo   = polygon( ([z2_US_pipe2_2, -x2_US_pipe2_2], [z3_US_pipe2_2, -x3_US_pipe2_2], [z4_US_pipe2_2, -x4_US_pipe2_2], [z1_US_pipe2_2, -x1_US_pipe2_2] ), notSource=False)
+
+##part3
+x2_US_pipe2_3=0.3302
+z2_US_pipe2_3=8.71698+0.06106+0.33222
+
+x3_US_pipe2_3=0.33095
+z3_US_pipe2_3=8.71698+0.06106+0.33222
+
+x4_US_pipe2_3=0.33095
+z4_US_pipe2_3=8.71698+0.06106+0.33222+0.06146
+
+x1_US_pipe2_3=0.3302
+z1_US_pipe2_3=8.71698+0.06106+0.33222+0.06146
+
+US_pipe2_3_up   = polygon( ([z1_US_pipe2_3, x1_US_pipe2_3], [z4_US_pipe2_3, x4_US_pipe2_3], [z3_US_pipe2_3, x3_US_pipe2_3], [z2_US_pipe2_3, x2_US_pipe2_3] ), notSource=False)
+US_pipe2_3_lo   = polygon( ([z2_US_pipe2_3, -x2_US_pipe2_3], [z3_US_pipe2_3, -x3_US_pipe2_3], [z4_US_pipe2_3, -x4_US_pipe2_3], [z1_US_pipe2_3, -x1_US_pipe2_3] ), notSource=False)
+
+
+##############Downstream vessel###############
+#Fornt Plate upper part 
+x1_DSCAN_Front_up=0.3302
+z1_DSCAN_Front_up=9.19671
+
+x2_DSCAN_Front_up=1.20015
+z2_DSCAN_Front_up=9.19671
+
+x3_DSCAN_Front_up=1.20015
+z3_DSCAN_Front_up=9.19671+0.127
+
+x4_DSCAN_Front_up=0.3302
+z4_DSCAN_Front_up=9.19671+0.127
+
+
+DSCAN_Front_up   = polygon( ([z1_DSCAN_Front_up, x1_DSCAN_Front_up], [z4_DSCAN_Front_up, x4_DSCAN_Front_up], [z3_DSCAN_Front_up, x3_DSCAN_Front_up], [z2_DSCAN_Front_up, x2_DSCAN_Front_up] ), notSource=False)
+
+#Fornt Plate lower part 
+x1_DSCAN_Front_low=-1.4224
+z1_DSCAN_Front_low=9.19671
+
+x2_DSCAN_Front_low=-0.3302
+z2_DSCAN_Front_low=9.19671
+
+x3_DSCAN_Front_low=-0.3302
+z3_DSCAN_Front_low=9.19671+0.127
+
+x4_DSCAN_Front_low=-1.4224
+z4_DSCAN_Front_low=9.19671+0.127
+
+
+DSCAN_Front_low   = polygon( ([z1_DSCAN_Front_low, x1_DSCAN_Front_low], [z4_DSCAN_Front_low, x4_DSCAN_Front_low], [z3_DSCAN_Front_low, x3_DSCAN_Front_low], [z2_DSCAN_Front_low, x2_DSCAN_Front_low] ), notSource=False)
+
+#Base plate
+x1_DSCAN_Bot=-1.3843-0.07925
+z1_DSCAN_Bot=9.19671
+
+x2_DSCAN_Bot=-1.3843
+z2_DSCAN_Bot=9.19671
+
+x3_DSCAN_Bot=-1.3843
+z3_DSCAN_Bot=9.19671+7.45537
+
+x4_DSCAN_Bot=-1.3843-0.07925
+z4_DSCAN_Bot=9.19671+7.45537
+
+
+DSCAN_Bot   = polygon( ([z1_DSCAN_Bot, x1_DSCAN_Bot], [z4_DSCAN_Bot, x4_DSCAN_Bot], [z3_DSCAN_Bot, x3_DSCAN_Bot], [z2_DSCAN_Bot, x2_DSCAN_Bot] ), notSource=False)
+
+#Top plate
+x1_DSCAN_Top=1.20015
+z1_DSCAN_Top=9.24751
+
+x2_DSCAN_Top=1.22555
+z2_DSCAN_Top=9.24751
+
+x3_DSCAN_Top=1.22555
+z3_DSCAN_Top=9.24751+7.35377
+
+x4_DSCAN_Top=1.20015
+z4_DSCAN_Top=9.24751+7.35377
+
+
+DSCAN_Top   = polygon( ([z1_DSCAN_Top, x1_DSCAN_Top], [z4_DSCAN_Top, x4_DSCAN_Top], [z3_DSCAN_Top, x3_DSCAN_Top], [z2_DSCAN_Top, x2_DSCAN_Top] ), notSource=False)
+
+#Back Plate upper part - it has two parts 
+x1_DSCAN_Back_up_1=0.6475
+z1_DSCAN_Back_up_1=16.52509
+
+x2_DSCAN_Back_up_1=1.20015
+z2_DSCAN_Back_up_1=16.52509
+
+x3_DSCAN_Back_up_1=1.20015
+z3_DSCAN_Back_up_1=16.52509+0.1016
+
+x4_DSCAN_Back_up_1=0.6475
+z4_DSCAN_Back_up_1=16.52509+0.1016
+
+
+DSCAN_Back_up_1   = polygon( ([z1_DSCAN_Back_up_1, x1_DSCAN_Back_up_1], [z4_DSCAN_Back_up_1, x4_DSCAN_Back_up_1], [z3_DSCAN_Back_up_1, x3_DSCAN_Back_up_1], [z2_DSCAN_Back_up_1, x2_DSCAN_Back_up_1] ), notSource=False)
+
+x1_DSCAN_Back_up_2=0.6604
+z1_DSCAN_Back_up_2=16.52509+0.1016
+
+x2_DSCAN_Back_up_2=1.20015
+z2_DSCAN_Back_up_2=16.52509+0.1016
+
+x3_DSCAN_Back_up_2=1.20015
+z3_DSCAN_Back_up_2=16.52509+0.1016+0.0254
+
+x4_DSCAN_Back_up_2=0.6604
+z4_DSCAN_Back_up_2=16.52509+0.1016+0.0254
+
+
+DSCAN_Back_up_2   = polygon( ([z1_DSCAN_Back_up_2, x1_DSCAN_Back_up_2], [z4_DSCAN_Back_up_2, x4_DSCAN_Back_up_2], [z3_DSCAN_Back_up_2, x3_DSCAN_Back_up_2], [z2_DSCAN_Back_up_2, x2_DSCAN_Back_up_2] ), notSource=False)
+
+#Back Plate lower part - lt has two parts 
+x1_DSCAN_Back_low_1=-1.4224
+z1_DSCAN_Back_low_1=16.52509
+
+x2_DSCAN_Back_low_1=-0.6475
+z2_DSCAN_Back_low_1=16.52509
+
+x3_DSCAN_Back_low_1=-0.6475
+z3_DSCAN_Back_low_1=16.52509+0.1016
+
+x4_DSCAN_Back_low_1=-1.4224
+z4_DSCAN_Back_low_1=16.52509+0.1016
+
+
+DSCAN_Back_low_1   = polygon( ([z1_DSCAN_Back_low_1, x1_DSCAN_Back_low_1], [z4_DSCAN_Back_low_1, x4_DSCAN_Back_low_1], [z3_DSCAN_Back_low_1, x3_DSCAN_Back_low_1], [z2_DSCAN_Back_low_1, x2_DSCAN_Back_low_1] ), notSource=False)
+
+x1_DSCAN_Back_low_2=-1.4224
+z1_DSCAN_Back_low_2=16.52509+0.1016
+
+x2_DSCAN_Back_low_2=-0.6604
+z2_DSCAN_Back_low_2=16.52509+0.1016
+
+x3_DSCAN_Back_low_2=-0.6604
+z3_DSCAN_Back_low_2=16.52509+0.1016+0.0254
+
+x4_DSCAN_Back_low_2=-1.4224
+z4_DSCAN_Back_low_2=16.52509+0.1016+0.0254
+
+
+DSCAN_Back_low_2   = polygon( ([z1_DSCAN_Back_low_2, x1_DSCAN_Back_low_2], [z4_DSCAN_Back_low_2, x4_DSCAN_Back_low_2], [z3_DSCAN_Back_low_2, x3_DSCAN_Back_low_2], [z2_DSCAN_Back_low_2, x2_DSCAN_Back_low_2] ), notSource=False)
+
+
+
 ##pipe1  the downstream twobounce shield
-x1_pipe1_1=0.0355
-z1_pipe1_1=7.875
 
-x2_pipe1_1=0.0385
-z2_pipe1_1=7.875
+#epoxy shield pipe1
+x1_DSShield_1=0.033
+z1_DSShield_1=9.4
 
-x3_pipe1_1=0.0385
-z3_pipe1_1=8.275
+x2_DSShield_1=0.039
+z2_DSShield_1=9.4
 
-x4_pipe1_1=0.0355
-z4_pipe1_1=8.275
+x3_DSShield_1=0.0395
+z3_DSShield_1=9.6
+
+x4_DSShield_1=0.0345
+z4_DSShield_1=9.6
+
+
+DSShield_11   = polygon( ([z1_DSShield_1, x1_DSShield_1], [z4_DSShield_1, x4_DSShield_1], [z3_DSShield_1, x3_DSShield_1], [z2_DSShield_1, x2_DSShield_1] ), notSource=False)
+DSShield_12   = polygon( ([z2_DSShield_1, -x2_DSShield_1], [z3_DSShield_1, -x3_DSShield_1], [z4_DSShield_1, -x4_DSShield_1], [z1_DSShield_1, -x1_DSShield_1] ), notSource=False)
+
+
+#epoxy shield pipe2
+x1_DSShield_2=0.042
+z1_DSShield_2=11.5
+
+x2_DSShield_2=0.045
+z2_DSShield_2=11.5
+
+x3_DSShield_2=0.045
+z3_DSShield_2=11.67
+
+x4_DSShield_2=0.042
+z4_DSShield_2=11.67
+
+
+DSShield_21   = polygon( ([z1_DSShield_2, x1_DSShield_2], [z4_DSShield_2, x4_DSShield_2], [z3_DSShield_2, x3_DSShield_2], [z2_DSShield_2, x2_DSShield_2] ), notSource=False)
+DSShield_22   = polygon( ([z2_DSShield_2, -x2_DSShield_2], [z3_DSShield_2, -x3_DSShield_2], [z4_DSShield_2, -x4_DSShield_2], [z1_DSShield_2, -x1_DSShield_2] ), notSource=False)
+
+x1_pipe1_1=0.0305
+z1_pipe1_1=7.88
+
+x2_pipe1_1=0.031
+z2_pipe1_1=7.88
+
+x3_pipe1_1=0.035
+z3_pipe1_1=9.4
+
+x4_pipe1_1=0.0345
+z4_pipe1_1=9.4
 
 
 coll_pipe11_1   = polygon( ([z1_pipe1_1, x1_pipe1_1], [z4_pipe1_1, x4_pipe1_1], [z3_pipe1_1, x3_pipe1_1], [z2_pipe1_1, x2_pipe1_1] ), notSource=False)
 coll_pipe12_1   = polygon( ([z2_pipe1_1, -x2_pipe1_1], [z3_pipe1_1, -x3_pipe1_1], [z4_pipe1_1, -x4_pipe1_1], [z1_pipe1_1, -x1_pipe1_1] ), notSource=False)
 ##pipe2  the downstream twobounce shield
-x1_pipe1_2=0.0355
-z1_pipe1_2=8.275
+x1_pipe1_2=0.0345
+z1_pipe1_2=9.405
 
-x2_pipe1_2=0.0385
-z2_pipe1_2=8.275
+x2_pipe1_2=0.035
+z2_pipe1_2=9.405
 
 x3_pipe1_2=0.0385
-z3_pipe1_2=8.675
+z3_pipe1_2=10.530
 
-x4_pipe1_2=0.0355
-z4_pipe1_2=8.675
+x4_pipe1_2=0.038
+z4_pipe1_2=10.530
 
 
 coll_pipe11_2   = polygon( ([z1_pipe1_2, x1_pipe1_2], [z4_pipe1_2, x4_pipe1_2], [z3_pipe1_2, x3_pipe1_2], [z2_pipe1_2, x2_pipe1_2] ), notSource=False)
 coll_pipe12_2   = polygon( ([z2_pipe1_2, -x2_pipe1_2], [z3_pipe1_2, -x3_pipe1_2], [z4_pipe1_2, -x4_pipe1_2], [z1_pipe1_2, -x1_pipe1_2] ), notSource=False)
 
 ##pipe3  the downstream twobounce shield
-x1_pipe1_3=0.0355
-z1_pipe1_3=8.675
+x1_pipe1_3=0.038
+z1_pipe1_3=10.535
 
 x2_pipe1_3=0.0385
-z2_pipe1_3=8.675
+z2_pipe1_3=10.535
 
-x3_pipe1_3=0.0385
-z3_pipe1_3=9.075
+x3_pipe1_3=0.043
+z3_pipe1_3=11.590
 
-x4_pipe1_3=0.0355
-z4_pipe1_3=9.075
+x4_pipe1_3=0.0425
+z4_pipe1_3=11.590
 
 coll_pipe11_3   = polygon( ([z1_pipe1_3, x1_pipe1_3], [z4_pipe1_3, x4_pipe1_3], [z3_pipe1_3, x3_pipe1_3], [z2_pipe1_3, x2_pipe1_3] ), notSource=False)
 coll_pipe12_3   = polygon( ([z2_pipe1_3, -x2_pipe1_3], [z3_pipe1_3, -x3_pipe1_3], [z4_pipe1_3, -x4_pipe1_3], [z1_pipe1_3, -x1_pipe1_3] ), notSource=False)
 
 ##pipe4  the downstream twobounce shield
-x1_pipe1_4=0.0355
-z1_pipe1_4=9.075
+x1_pipe1_4=0.0425
+z1_pipe1_4=11.595
 
-x2_pipe1_4=0.0385
-z2_pipe1_4=9.075
+x2_pipe1_4=0.043
+z2_pipe1_4=11.595
 
-x3_pipe1_4=0.0385
-z3_pipe1_4=9.475
+x3_pipe1_4=0.0475
+z3_pipe1_4=12.615
 
-x4_pipe1_4=0.0355
-z4_pipe1_4=9.475
+x4_pipe1_4=0.047
+z4_pipe1_4=12.615
 
 coll_pipe11_4   = polygon( ([z1_pipe1_4, x1_pipe1_4], [z4_pipe1_4, x4_pipe1_4], [z3_pipe1_4, x3_pipe1_4], [z2_pipe1_4, x2_pipe1_4] ), notSource=False)
 coll_pipe12_4   = polygon( ([z2_pipe1_4, -x2_pipe1_4], [z3_pipe1_4, -x3_pipe1_4], [z4_pipe1_4, -x4_pipe1_4], [z1_pipe1_4, -x1_pipe1_4] ), notSource=False)
 
 ##pipe5  the downstream twobounce shield
-x1_pipe1_5=0.0355
-z1_pipe1_5=9.475
+x1_pipe1_5=0.047
+z1_pipe1_5=12.620
 
-x2_pipe1_5=0.0385
-z2_pipe1_5=9.475
+x2_pipe1_5=0.0475
+z2_pipe1_5=12.620
 
-x3_pipe1_5=0.0385
-z3_pipe1_5=9.875
+x3_pipe1_5=0.062
+z3_pipe1_5=16.748
 
-x4_pipe1_5=0.0355
-z4_pipe1_5=9.875
+x4_pipe1_5=0.0615
+z4_pipe1_5=16.748
 
 coll_pipe11_5   = polygon( ([z1_pipe1_5, x1_pipe1_5], [z4_pipe1_5, x4_pipe1_5], [z3_pipe1_5, x3_pipe1_5], [z2_pipe1_5, x2_pipe1_5] ), notSource=False)
 coll_pipe12_5   = polygon( ([z2_pipe1_5, -x2_pipe1_5], [z3_pipe1_5, -x3_pipe1_5], [z4_pipe1_5, -x4_pipe1_5], [z1_pipe1_5, -x1_pipe1_5] ), notSource=False)
+
+##pipe6  the downstream twobounce shield
+x1_pipe1_6=0.0615
+z1_pipe1_6=16.752
+
+x2_pipe1_6=0.062
+z2_pipe1_6=16.752
+
+x3_pipe1_6=0.0765
+z3_pipe1_6=19.995
+
+x4_pipe1_6=0.076
+z4_pipe1_6=19.995
+
+coll_pipe11_6   = polygon( ([z1_pipe1_6, x1_pipe1_6], [z4_pipe1_6, x4_pipe1_6], [z3_pipe1_6, x3_pipe1_6], [z2_pipe1_6, x2_pipe1_6] ), notSource=False)
+coll_pipe12_6   = polygon( ([z2_pipe1_6, -x2_pipe1_6], [z3_pipe1_6, -x3_pipe1_6], [z4_pipe1_6, -x4_pipe1_6], [z1_pipe1_6, -x1_pipe1_6] ), notSource=False)
+
 
 
 #Downstream beampipe outside the vacuum enclosure
@@ -747,6 +1781,21 @@ z4_coll_5=12.87-tgtoffset
 
 coll_5   = polygon( ([z1_coll_5, x1_coll_5], [z4_coll_5, x4_coll_5], [z3_coll_5, x3_coll_5], [z2_coll_5, x2_coll_5]), notSource=False)
 
+
+x1_coll_51=-0.07422 # use this if you just want the exact y=0 slice
+z1_coll_51=12.8-tgtoffset
+
+x2_coll_51=-0.044 #from GDML
+z2_coll_51=12.8-tgtoffset  #thickness of collimator 5 = 35 mm
+
+x3_coll_51=-0.044 #from GDML
+z3_coll_51=12.87-tgtoffset
+
+x4_coll_51=-0.07422 # use this if you just want the exact y=0 slice
+z4_coll_51=12.87-tgtoffset
+
+coll_51   = polygon( ([z1_coll_51, x1_coll_51], [z4_coll_51, x4_coll_51], [z3_coll_51, x3_coll_51], [z2_coll_51, x2_coll_51]), notSource=False)
+
 ###### Lintel (for ep scattering)
 
 x1_lintel=0.435
@@ -851,6 +1900,21 @@ z4_DS_coil4_3=16.1704
 
 DS_Coil4_3 = polygon( ([z1_DS_coil4_3, x1_DS_coil4_3], [z4_DS_coil4_3, x4_DS_coil4_3], [z3_DS_coil4_3, x3_DS_coil4_3], [z2_DS_coil4_3, x2_DS_coil4_3] ), notSource=False)
 
+# EP blocker
+x1_epblocker=-0.132 # use this if you just want the exact y=0 slice
+z1_epblocker=14.5
+
+x2_epblocker=-0.052 #from GDML
+z2_epblocker=14.5
+
+x3_epblocker=-0.052 #from GDML
+z3_epblocker=14.6
+
+x4_epblocker=-0.132 # use this if you just want the exact y=0 slice
+z4_epblocker=14.6
+
+epblocker   = polygon( ([z1_epblocker, x1_epblocker], [z4_epblocker, x4_epblocker], [z3_epblocker, x3_epblocker], [z2_epblocker, x2_epblocker]), notSource=False)
+
 
 #################################################################
 
@@ -889,6 +1953,92 @@ sub_quartz2 = polygon( ([sub_det_z_pos, -sub_det_outer_radius], [sub_det_z_pos+s
 
 sources.append(target)
 
+#allpolys.append(tgt_US_1)
+#allpolys.append(tgt_US_2)
+#allpolys.append(tgt_DS_1)
+#allpolys.append(tgt_DS_2)
+#
+#allpolys.append(tgt_pipe1_up)
+#allpolys.append(tgt_pipe1_lo)
+#
+#allpolys.append(tgt_flange1_1_1_up)
+#allpolys.append(tgt_flange1_1_1_lo)
+#allpolys.append(tgt_flange1_1_2_up)
+#allpolys.append(tgt_flange1_1_2_lo)
+#allpolys.append(tgt_flange1_2_1_up)
+#allpolys.append(tgt_flange1_2_1_lo)
+#allpolys.append(tgt_flange1_2_2_up)
+#allpolys.append(tgt_flange1_2_2_lo)
+#
+#allpolys.append(tgt_pipe2_up)
+#allpolys.append(tgt_pipe2_lo)
+#
+#allpolys.append(tgt_flange2_1_1_up)
+#allpolys.append(tgt_flange2_1_1_lo)
+#allpolys.append(tgt_flange2_1_2_up)
+#allpolys.append(tgt_flange2_1_2_lo)
+#allpolys.append(tgt_flange2_2_1_up)
+#allpolys.append(tgt_flange2_2_1_lo)
+#allpolys.append(tgt_flange2_3_1_up)
+#allpolys.append(tgt_flange2_3_1_lo)
+#allpolys.append(tgt_flange2_3_2_up)
+#allpolys.append(tgt_flange2_3_2_lo)
+#
+#allpolys.append(tgt_pipe3_1_up)
+#allpolys.append(tgt_pipe3_1_lo)
+#allpolys.append(tgt_pipe3_2_up)
+#allpolys.append(tgt_pipe3_2_lo)
+#allpolys.append(tgt_pipe3_3_up)
+#allpolys.append(tgt_pipe3_3_lo)
+#
+#allpolys.append(tgt_flange3_1_1_up)
+#allpolys.append(tgt_flange3_1_1_lo)
+#allpolys.append(tgt_flange3_1_2_up)
+#allpolys.append(tgt_flange3_1_2_lo)
+#allpolys.append(tgt_flange3_2_1_up)
+#allpolys.append(tgt_flange3_2_1_lo)
+#allpolys.append(tgt_flange3_2_2_up)
+#allpolys.append(tgt_flange3_2_2_lo)
+#
+#allpolys.append(tgt_pipe4_1_up)
+#allpolys.append(tgt_pipe4_1_lo)
+allpolys.append(tgt_pipe4_2_up)
+allpolys.append(tgt_pipe4_2_lo)
+allpolys.append(tgt_pipe4_3_up)
+allpolys.append(tgt_pipe4_3_lo)
+allpolys.append(tgt_pipe4_4_up)
+allpolys.append(tgt_pipe4_4_lo)
+allpolys.append(tgt_pipe4_5_up)
+allpolys.append(tgt_pipe4_5_lo)
+
+allpolys.append(tgt_flange4_1_1_up)
+allpolys.append(tgt_flange4_1_1_lo)
+allpolys.append(tgt_flange4_1_2_up)
+allpolys.append(tgt_flange4_1_2_lo)
+allpolys.append(tgt_flange4_2_1_up)
+allpolys.append(tgt_flange4_2_1_lo)
+allpolys.append(tgt_flange4_2_2_up)
+allpolys.append(tgt_flange4_2_2_lo)
+
+allpolys.append(tgt_pipe5_1_up)
+allpolys.append(tgt_pipe5_1_lo)
+allpolys.append(tgt_pipe5_2_up)
+allpolys.append(tgt_pipe5_2_lo)
+allpolys.append(tgt_pipe5_3_up)
+allpolys.append(tgt_pipe5_3_lo)
+
+allpolys.append(tgt_flange5_1_1_up)
+allpolys.append(tgt_flange5_1_1_lo)
+allpolys.append(tgt_flange5_1_2_up)
+allpolys.append(tgt_flange5_1_2_lo)
+allpolys.append(tgt_flange5_2_1_up)
+allpolys.append(tgt_flange5_2_1_lo)
+allpolys.append(tgt_flange5_2_2_up)
+allpolys.append(tgt_flange5_2_2_lo)
+
+allpolys.append(tgt_pipe6_1_up)
+allpolys.append(tgt_pipe6_1_lo)
+
 allpolys.append(shield_top)
 allpolys.append(shield_bottom)
 
@@ -924,6 +2074,51 @@ allpolys.append(US_Coil)
 allpolys.append(coll_pipe01)
 allpolys.append(coll_pipe02)
 
+allpolys.append(USCAN_Front_up)
+allpolys.append(USCAN_Front_low)
+
+allpolys.append(USCAN_Bot)
+allpolys.append(USCAN_Top)
+
+allpolys.append(USCAN_Back_up)
+allpolys.append(USCAN_Back_low)
+
+allpolys.append(US_pipe1_lo)
+allpolys.append(US_pipe1_up)
+
+allpolys.append(US_flange1_1_1_up)
+allpolys.append(US_flange1_1_1_lo)
+allpolys.append(US_flange1_1_2_up)
+allpolys.append(US_flange1_1_2_lo)
+allpolys.append(US_flange1_2_1_up)
+allpolys.append(US_flange1_2_1_lo)
+allpolys.append(US_flange1_2_2_up)
+allpolys.append(US_flange1_2_2_lo)
+
+allpolys.append(US_pipe2_1_up)
+allpolys.append(US_pipe2_1_lo)
+allpolys.append(US_pipe2_2_up)
+allpolys.append(US_pipe2_2_lo)
+allpolys.append(US_pipe2_3_up)
+allpolys.append(US_pipe2_3_lo)
+
+allpolys.append(DSCAN_Front_up)
+allpolys.append(DSCAN_Front_low)
+
+allpolys.append(DSCAN_Top)
+allpolys.append(DSCAN_Bot)
+
+allpolys.append(DSCAN_Back_up_1)
+allpolys.append(DSCAN_Back_up_2)
+allpolys.append(DSCAN_Back_low_1)
+allpolys.append(DSCAN_Back_low_2)
+
+allpolys.append(DSShield_11)
+allpolys.append(DSShield_12)
+
+allpolys.append(DSShield_21)
+allpolys.append(DSShield_22)
+
 #allpolys.append(coll_pipe11_1)
 #allpolys.append(coll_pipe12_1)
 #
@@ -938,6 +2133,9 @@ allpolys.append(coll_pipe02)
 #
 #allpolys.append(coll_pipe11_5)
 #allpolys.append(coll_pipe12_5)
+#
+#allpolys.append(coll_pipe11_6)
+#allpolys.append(coll_pipe12_6)
 
 allpolys.append(coll_pipe31)
 allpolys.append(coll_pipe32)
@@ -996,7 +2194,11 @@ allpolys.append(coll_4_3)
 
 
 allpolys.append(coll_5)
+allpolys.append(coll_51)
 allpolys.append(lintel)
+
+
+allpolys.append(epblocker)
 
 allpolys.append(DS_Coil1)
 allpolys.append(DS_Coil2)
