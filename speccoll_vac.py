@@ -807,7 +807,7 @@ coll_pipe241   = polygon( ([z1_pipe24, x1_pipe24], [z4_pipe24, x4_pipe24], [z3_p
 coll_pipe242   = polygon( ([z2_pipe24, -x2_pipe24], [z3_pipe24, -x3_pipe24], [z4_pipe24, -x4_pipe24], [z1_pipe24, -x1_pipe24] ), notSource=False)
 ###### Hybrid upstream Lead collar (for ep scattering)
 
-x1_collar3=0.265
+x1_collar3=0.230
 #z1_collar3=4.4305+4.5
 z1_collar3=8.37925
 
@@ -819,7 +819,7 @@ x3_collar3=1.2
 #z3_collar3=4.6805+4.5
 z3_collar3=8.62925
 
-x4_collar3=0.265
+x4_collar3=0.230
 #z4_collar3=4.6805+4.5
 z4_collar3=8.62925
 
@@ -1034,16 +1034,16 @@ US_Coil = polygon( ([z1_US_coil, x1_US_coil], [z4_US_coil, x4_US_coil], [z3_US_c
 
 ############# Col2 photon collimating inner_pipe
 ##pipe
-x1_pipe0=0.0205
+x1_pipe0=0.027#0.0205
 z1_pipe0=5.4
 
-x2_pipe0=0.0235
+x2_pipe0=0.030#0.0235
 z2_pipe0=5.4
 
-x3_pipe0=0.0305
+x3_pipe0=0.030#0.0305
 z3_pipe0=7.5
 
-x4_pipe0=0.0275
+x4_pipe0=0.027#0.0275
 z4_pipe0=7.5
 
 
@@ -1709,12 +1709,10 @@ x1_coll_4_1=-0.250 #Was simulation -0.300 # Was CAD -0.254
 #x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 z1_coll_4_1=9.725+dss-tgtoffset
 
-x2_coll_4_1=-0.1965 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
-#x2_coll_4_1=-0.1714 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
+x2_coll_4_1=-0.185 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
 z2_coll_4_1=9.725+dss-tgtoffset
 
-x3_coll_4_1=-0.1965 # -0.1714 #Was -0.23495, then was -0.1655
-#x3_coll_4_1=-0.1714 # -0.1714 #Was -0.23495, then was -0.1655
+x3_coll_4_1=-0.185 # -0.1714 #Was -0.23495, then was -0.1655
 z3_coll_4_1=9.875+dss-tgtoffset
 
 x4_coll_4_1=-0.250 #Was simulation -0.300 # Was CAD -0.254
@@ -1731,10 +1729,10 @@ x1_coll_4_2=-0.0535 #0.05 #Was -0.06377, then was -0.0525
 #x1_coll_4_2=-0.05 #0.05 #Was -0.06377, then was -0.0525
 z1_coll_4_2=9.775+dss-tgtoffset
 
-x2_coll_4_2=-0.030861
+x2_coll_4_2=-0.035
 z2_coll_4_2=9.775+dss-tgtoffset
 
-x3_coll_4_2=-0.030861
+x3_coll_4_2=-0.035
 z3_coll_4_2=9.875+dss-tgtoffset
 
 x4_coll_4_2=-0.0535 #0.05 #Was -0.06377, then was -0.0525
@@ -2069,7 +2067,7 @@ allpolys.append(coll_2_1)
 allpolys.append(coll_2_2)
 allpolys.append(coll_2_3)
 
-allpolys.append(US_Coil)
+#allpolys.append(US_Coil)
 
 allpolys.append(coll_pipe01)
 allpolys.append(coll_pipe02)
@@ -2083,8 +2081,8 @@ allpolys.append(USCAN_Top)
 allpolys.append(USCAN_Back_up)
 allpolys.append(USCAN_Back_low)
 
-allpolys.append(US_pipe1_lo)
-allpolys.append(US_pipe1_up)
+#allpolys.append(US_pipe1_lo)
+#allpolys.append(US_pipe1_up)
 
 allpolys.append(US_flange1_1_1_up)
 allpolys.append(US_flange1_1_1_lo)
