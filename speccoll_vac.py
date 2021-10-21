@@ -51,6 +51,83 @@ z4_tgt_ds=0.9906
 tgt_DS_1   = polygon( ([z1_tgt_ds, x1_tgt_ds], [z4_tgt_ds, x4_tgt_ds], [z3_tgt_ds, x3_tgt_ds], [z2_tgt_ds, x2_tgt_ds] ), notSource=False)
 tgt_DS_2   = polygon( ([z2_tgt_ds, -x2_tgt_ds], [z3_tgt_ds, -x3_tgt_ds], [z4_tgt_ds, -x4_tgt_ds], [z1_tgt_ds, -x1_tgt_ds] ), notSource=False)
 
+### Target chamber top shielding
+x1_tgt_TopShield=1.085
+z1_tgt_TopShield=-3.175
+
+x2_tgt_TopShield=1.485
+z2_tgt_TopShield=-3.175
+
+x3_tgt_TopShield=1.485
+z3_tgt_TopShield=3.175
+
+x4_tgt_TopShield=1.085
+z4_tgt_TopShield=3.175
+
+tgt_TopShield_top   = polygon( ([z1_tgt_TopShield, x1_tgt_TopShield], [z4_tgt_TopShield, x4_tgt_TopShield], [z3_tgt_TopShield, x3_tgt_TopShield], [z2_tgt_TopShield, x2_tgt_TopShield] ), notSource=False)
+
+### Target chamber DS shielding top piece
+x1_tgt_DSShield1=0.453
+z1_tgt_DSShield1=3.175-1.4
+
+x2_tgt_DSShield1=1.085
+z2_tgt_DSShield1=3.175-1.4
+
+x3_tgt_DSShield1=1.085
+z3_tgt_DSShield1=3.175
+
+x4_tgt_DSShield1=0.453
+z4_tgt_DSShield1=3.175
+
+tgt_DSShield_top   = polygon( ([z1_tgt_DSShield1, x1_tgt_DSShield1], [z4_tgt_DSShield1, x4_tgt_DSShield1], [z3_tgt_DSShield1, x3_tgt_DSShield1], [z2_tgt_DSShield1, x2_tgt_DSShield1] ), notSource=False)
+
+### Target chamber DS shielding bottom piece
+x1_tgt_DSShield2=0.453
+z1_tgt_DSShield2=3.175-1.4
+
+x2_tgt_DSShield2=2.969
+z2_tgt_DSShield2=3.175-1.4
+
+x3_tgt_DSShield2=2.969
+z3_tgt_DSShield2=3.175
+
+x4_tgt_DSShield2=0.453
+z4_tgt_DSShield2=3.175
+
+tgt_DSShield_bottom   = polygon( ([z2_tgt_DSShield2, -x2_tgt_DSShield2], [z3_tgt_DSShield2, -x3_tgt_DSShield2], [z4_tgt_DSShield2,-x4_tgt_DSShield2], [z1_tgt_DSShield2, -x1_tgt_DSShield2] ), notSource=False)
+
+### Target Region Barite outer
+x1_tgt_barite1=0.331
+z1_tgt_barite1=1.975
+
+x2_tgt_barite1=0.450
+z2_tgt_barite1=1.975
+
+x3_tgt_barite1=0.450
+z3_tgt_barite1=3.175
+
+x4_tgt_barite1=0.331
+z4_tgt_barite1=3.175
+
+tgt_barite1_top   = polygon( ([z1_tgt_barite1, x1_tgt_barite1], [z4_tgt_barite1, x4_tgt_barite1], [z3_tgt_barite1, x3_tgt_barite1], [z2_tgt_barite1, x2_tgt_barite1] ), notSource=False)
+tgt_barite1_bottom   = polygon( ([z2_tgt_barite1, -x2_tgt_barite1], [z3_tgt_barite1, -x3_tgt_barite1], [z4_tgt_barite1, -x4_tgt_barite1], [z1_tgt_barite1, -x1_tgt_barite1] ), notSource=False)
+
+### Target Region Barite inner
+x1_tgt_barite2=0.150
+z1_tgt_barite2=2.225
+
+x2_tgt_barite2=0.330
+z2_tgt_barite2=2.225
+
+x3_tgt_barite2=0.330
+z3_tgt_barite2=2.725
+
+x4_tgt_barite2=0.150
+z4_tgt_barite2=2.725
+
+tgt_barite2_top   = polygon( ([z1_tgt_barite2, x1_tgt_barite2], [z4_tgt_barite2, x4_tgt_barite2], [z3_tgt_barite2, x3_tgt_barite2], [z2_tgt_barite2, x2_tgt_barite2] ), notSource=False)
+tgt_barite2_bottom   = polygon( ([z2_tgt_barite2, -x2_tgt_barite2], [z3_tgt_barite2, -x3_tgt_barite2], [z4_tgt_barite2, -x4_tgt_barite2], [z1_tgt_barite2, -x1_tgt_barite2] ), notSource=False)
+
 ### Pipe after target chamber
 x1_tgt_pipe1=0.09525
 z1_tgt_pipe1=0.90094
@@ -662,20 +739,20 @@ shield_bottom = polygon( ([z1_shield, x1_shield_bottom], [z4_shield, x4_shield_b
 
 #seg 1
 x1_collar=0.074#+0.05
-#z1_collar=2.851#+1.5
-z1_collar=3.12202#+1.5
+z1_collar=2.851#+1.5
+#z1_collar=3.12202#+1.5
 
 x2_collar=0.330 #*1.414 The collar is a rectangle (in CAD), but the narrow dimension is the one relevant for here
-#z2_collar=2.851#+1.5
-z2_collar=3.12202#+1.5
+z2_collar=2.851#+1.5
+#z2_collar=3.12202#+1.5
 
 x3_collar=0.330 #*1.414
-#z3_collar=3.051#+1.5
-z3_collar=3.32202#+1.5
+z3_collar=3.051#+1.5
+#z3_collar=3.32202#+1.5
 
 x4_collar=0.074#+0.05
-#z4_collar=3.051#+1.5
-z4_collar=3.32202#+1.5
+z4_collar=3.051#+1.5
+#z4_collar=3.32202#+1.5
 
 
 collar_top    = polygon( ([z1_collar,  x1_collar], [z4_collar,  x4_collar], [z3_collar,  x3_collar], [z2_collar,  x2_collar] ), notSource=False)
@@ -807,7 +884,7 @@ coll_pipe241   = polygon( ([z1_pipe24, x1_pipe24], [z4_pipe24, x4_pipe24], [z3_p
 coll_pipe242   = polygon( ([z2_pipe24, -x2_pipe24], [z3_pipe24, -x3_pipe24], [z4_pipe24, -x4_pipe24], [z1_pipe24, -x1_pipe24] ), notSource=False)
 ###### Hybrid upstream Lead collar (for ep scattering)
 
-x1_collar3=0.230
+x1_collar3=0.23835
 #z1_collar3=4.4305+4.5
 z1_collar3=8.37925
 
@@ -819,7 +896,7 @@ x3_collar3=1.2
 #z3_collar3=4.6805+4.5
 z3_collar3=8.62925
 
-x4_collar3=0.230
+x4_collar3=0.23835
 #z4_collar3=4.6805+4.5
 z4_collar3=8.62925
 
@@ -1116,7 +1193,7 @@ z4_USCAN_Top=4.39093+3.8489
 USCAN_Top   = polygon( ([z1_USCAN_Top, x1_USCAN_Top], [z4_USCAN_Top, x4_USCAN_Top], [z3_USCAN_Top, x3_USCAN_Top], [z2_USCAN_Top, x2_USCAN_Top] ), notSource=False)
 
 #Back Plate upper part 
-x1_USCAN_Back_up=0.254
+x1_USCAN_Back_up=0.23635
 z1_USCAN_Back_up=8.21443
 
 x2_USCAN_Back_up=0.3302
@@ -1125,7 +1202,7 @@ z2_USCAN_Back_up=8.21443
 x3_USCAN_Back_up=0.3302
 z3_USCAN_Back_up=8.21443+0.0508
 
-x4_USCAN_Back_up=0.254
+x4_USCAN_Back_up=0.23635
 z4_USCAN_Back_up=8.21443+0.0508
 
 
@@ -1135,10 +1212,10 @@ USCAN_Back_up   = polygon( ([z1_USCAN_Back_up, x1_USCAN_Back_up], [z4_USCAN_Back
 x1_USCAN_Back_low=-0.4826
 z1_USCAN_Back_low=8.21443
 
-x2_USCAN_Back_low=-0.254
+x2_USCAN_Back_low=-0.23635
 z2_USCAN_Back_low=8.21443
 
-x3_USCAN_Back_low=-0.254
+x3_USCAN_Back_low=-0.23635
 z3_USCAN_Back_low=8.21443+0.0508
 
 x4_USCAN_Back_low=-0.4826
@@ -1148,16 +1225,16 @@ z4_USCAN_Back_low=8.21443+0.0508
 USCAN_Back_low   = polygon( ([z1_USCAN_Back_low, x1_USCAN_Back_low], [z4_USCAN_Back_low, x4_USCAN_Back_low], [z3_USCAN_Back_low, x3_USCAN_Back_low], [z2_USCAN_Back_low, x2_USCAN_Back_low] ), notSource=False)
 
 ### Pipe after US vessel
-x1_US_pipe1=0.24765
+x1_US_pipe1=0.230
 z1_US_pipe1=8.23438
 
-x2_US_pipe1=0.254
+x2_US_pipe1=0.23635
 z2_US_pipe1=8.23438
 
-x3_US_pipe1=0.254
+x3_US_pipe1=0.23635
 z3_US_pipe1=8.23438+0.44133
 
-x4_US_pipe1=0.24765
+x4_US_pipe1=0.230
 z4_US_pipe1=8.23438+0.44133
 
 US_pipe1_up   = polygon( ([z1_US_pipe1, x1_US_pipe1], [z4_US_pipe1, x4_US_pipe1], [z3_US_pipe1, x3_US_pipe1], [z2_US_pipe1, x2_US_pipe1] ), notSource=False)
@@ -1166,7 +1243,7 @@ US_pipe1_lo   = polygon( ([z2_US_pipe1, -x2_US_pipe1], [z3_US_pipe1, -x3_US_pipe
 ####US CAN exit Flange 1
 ###Part1
 ##section1
-x1_US_flange1_1_1=0.254
+x1_US_flange1_1_1=0.23635
 z1_US_flange1_1_1=8.65666
 
 x2_US_flange1_1_1=0.4191
@@ -1175,7 +1252,7 @@ z2_US_flange1_1_1=8.65666
 x3_US_flange1_1_1=0.4191
 z3_US_flange1_1_1=8.65666+0.01905
 
-x4_US_flange1_1_1=0.254
+x4_US_flange1_1_1=0.23635
 z4_US_flange1_1_1=8.65666+0.01905
 
 US_flange1_1_1_up   = polygon( ([z1_US_flange1_1_1, x1_US_flange1_1_1], [z4_US_flange1_1_1, x4_US_flange1_1_1], [z3_US_flange1_1_1, x3_US_flange1_1_1], [z2_US_flange1_1_1, x2_US_flange1_1_1] ), notSource=False)
@@ -1956,6 +2033,17 @@ sources.append(target)
 #allpolys.append(tgt_DS_1)
 #allpolys.append(tgt_DS_2)
 #
+allpolys.append(tgt_TopShield_top)
+
+allpolys.append(tgt_DSShield_top)
+allpolys.append(tgt_DSShield_bottom)
+
+allpolys.append(tgt_barite1_top)
+allpolys.append(tgt_barite1_bottom)
+
+allpolys.append(tgt_barite2_top)
+allpolys.append(tgt_barite2_bottom)
+
 #allpolys.append(tgt_pipe1_up)
 #allpolys.append(tgt_pipe1_lo)
 #
@@ -2037,8 +2125,8 @@ allpolys.append(tgt_flange5_2_2_lo)
 allpolys.append(tgt_pipe6_1_up)
 allpolys.append(tgt_pipe6_1_lo)
 
-allpolys.append(shield_top)
-allpolys.append(shield_bottom)
+#allpolys.append(shield_top)
+#allpolys.append(shield_bottom)
 
 allpolys.append(collar_top)
 allpolys.append(collar_bottom)
@@ -2067,7 +2155,7 @@ allpolys.append(coll_2_1)
 allpolys.append(coll_2_2)
 allpolys.append(coll_2_3)
 
-#allpolys.append(US_Coil)
+allpolys.append(US_Coil)
 
 allpolys.append(coll_pipe01)
 allpolys.append(coll_pipe02)
@@ -2081,8 +2169,8 @@ allpolys.append(USCAN_Top)
 allpolys.append(USCAN_Back_up)
 allpolys.append(USCAN_Back_low)
 
-#allpolys.append(US_pipe1_lo)
-#allpolys.append(US_pipe1_up)
+allpolys.append(US_pipe1_lo)
+allpolys.append(US_pipe1_up)
 
 allpolys.append(US_flange1_1_1_up)
 allpolys.append(US_flange1_1_1_lo)
