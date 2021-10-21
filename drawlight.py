@@ -13,15 +13,15 @@ class drawlight(Gtk.Window):
 
 #	self.winw = 1024.0
 #	self.winh = 768.0
-        self.winw = 800.0
-        self.winh = 600.0
+        self.winw = 1000.0
+        self.winh = 800.0
 
-        self.zmin = -2.0
+        self.zmin = -4.0
 #        self.zmax =  6.0
         self.zmax = 30.0
 #        self.zmax = 10.0
 
-        self.yscale = 8.0
+        self.yscale = 4.0
         #self.yscale = 1.0
         
         self.init_ui()
