@@ -884,19 +884,21 @@ coll_pipe241   = polygon( ([z1_pipe24, x1_pipe24], [z4_pipe24, x4_pipe24], [z3_p
 coll_pipe242   = polygon( ([z2_pipe24, -x2_pipe24], [z3_pipe24, -x3_pipe24], [z4_pipe24, -x4_pipe24], [z1_pipe24, -x1_pipe24] ), notSource=False)
 ###### Hybrid upstream Lead collar (for ep scattering)
 
-x1_collar3=0.23835
+x1_collar3=0.230 #This is including the beampipe
+#x1_collar3=0.23835
 #z1_collar3=4.4305+4.5
 z1_collar3=8.37925
 
-x2_collar3=1.2
+x2_collar3=0.540
 #z2_collar3=4.4305+4.5
 z2_collar3=8.37925
 
-x3_collar3=1.2
+x3_collar3=0.540
 #z3_collar3=4.6805+4.5
 z3_collar3=8.62925
 
-x4_collar3=0.23835
+x4_collar3=0.230
+#x4_collar3=0.23835
 #z4_collar3=4.6805+4.5
 z4_collar3=8.62925
 
@@ -908,17 +910,17 @@ collar3_bottom = polygon( ([z2_collar3, -x2_collar3], [z3_collar3, -x3_collar3],
 
 ###### First downstream Lead collar (for ep scattering)
 
-x1_collar1=0.600
-z1_collar1=12.250+4.5
+x1_collar1=0.612
+z1_collar1=11.87509+4.5
 
 x2_collar1=0.750 
-z2_collar1=12.250+4.5
+z2_collar1=11.87509+4.5
 
 x3_collar1=0.750
-z3_collar1=12.400+4.5
+z3_collar1=11.87509+4.5+0.150
 
-x4_collar1=0.600
-z4_collar1=12.400+4.5
+x4_collar1=0.621
+z4_collar1=11.87509+4.5+0.150
 
 
 collar_top1    = polygon( ([z1_collar1,  x1_collar1], [z4_collar1,  x4_collar1], [z3_collar1,  x3_collar1], [z2_collar1,  x2_collar1] ), notSource=False)
@@ -926,17 +928,17 @@ collar_bottom1 = polygon( ([z2_collar1, -x2_collar1], [z3_collar1, -x3_collar1],
 
 ###### Second downstream Lead collar (for ep scattering)
 
-x1_collar2=0.952
-z1_collar2=18.850+4.5
+x1_collar2=1.010
+z1_collar2=19.13269+4.5
 
-x2_collar2=1.200
-z2_collar2=18.850+4.5
+x2_collar2=1.315
+z2_collar2=19.13269+4.5
 
-x3_collar2=1.200
-z3_collar2=19.000+4.5
+x3_collar2=1.315
+z3_collar2=19.13269+4.5+0.150
 
-x4_collar2=0.952
-z4_collar2=19.000+4.5
+x4_collar2=1.019
+z4_collar2=19.13269+4.5+0.150
 
 
 collar_top2    = polygon( ([z1_collar2,  x1_collar2], [z4_collar2,  x4_collar2], [z3_collar2,  x3_collar2], [z2_collar2,  x2_collar2] ), notSource=False)
@@ -1486,6 +1488,38 @@ z4_DSCAN_Back_low_2=16.52509+0.1016+0.0254
 DSCAN_Back_low_2   = polygon( ([z1_DSCAN_Back_low_2, x1_DSCAN_Back_low_2], [z4_DSCAN_Back_low_2, x4_DSCAN_Back_low_2], [z3_DSCAN_Back_low_2, x3_DSCAN_Back_low_2], [z2_DSCAN_Back_low_2, x2_DSCAN_Back_low_2] ), notSource=False)
 
 
+##Photon Scaper
+##+ve y-direction
+x1_Scaper_1=0.040
+z1_Scaper_1=9.2075
+
+x2_Scaper_1=0.140
+z2_Scaper_1=9.2075
+
+x3_Scaper_1=0.140
+z3_Scaper_1=9.3091
+
+x4_Scaper_1=0.040
+z4_Scaper_1=9.3091
+
+
+Scaper_11   = polygon( ([z1_Scaper_1, x1_Scaper_1], [z4_Scaper_1, x4_Scaper_1], [z3_Scaper_1, x3_Scaper_1], [z2_Scaper_1, x2_Scaper_1] ), notSource=False)
+
+##-ve y-direction
+x1_Scaper_2=0.040
+z1_Scaper_2=9.2075
+
+x2_Scaper_2=0.0608
+z2_Scaper_2=9.2075
+
+x3_Scaper_2=0.0608
+z3_Scaper_2=9.3091
+
+x4_Scaper_2=0.040
+z4_Scaper_2=9.3091
+
+
+Scaper_12   = polygon( ([z2_Scaper_2, -x2_Scaper_2], [z3_Scaper_2, -x3_Scaper_2], [z4_Scaper_2, -x4_Scaper_2], [z1_Scaper_2, -x1_Scaper_2] ), notSource=False)
 
 ##pipe1  the downstream twobounce shield
 
@@ -1842,52 +1876,52 @@ coll_4_3   = polygon( ([z1_coll_4_3, x1_coll_4_3], [z4_coll_4_3, x4_coll_4_3], [
 ######### collimator 5 (shaped like a tuning fork), 1 seg
 
 
-x1_coll_5=-0.11638 # use this if you just want the exact y=0 slice
-z1_coll_5=12.8-tgtoffset
+x1_coll_5=-0.100 # use this if you just want the exact y=0 slice
+z1_coll_5=12.04793
 
-x2_coll_5=-0.07422 #from GDML
-z2_coll_5=12.8-tgtoffset  #thickness of collimator 5 = 35 mm
+x2_coll_5=-0.045 #from GDML
+z2_coll_5=12.04793  #thickness of collimator 5 = 35 mm
 
-x3_coll_5=-0.07422 #from GDML
-z3_coll_5=12.87-tgtoffset
+x3_coll_5=-0.045 #from GDML
+z3_coll_5=12.14793
 
-x4_coll_5=-0.11638 # use this if you just want the exact y=0 slice
-z4_coll_5=12.87-tgtoffset
+x4_coll_5=-0.100 # use this if you just want the exact y=0 slice
+z4_coll_5=12.14793
 
 coll_5   = polygon( ([z1_coll_5, x1_coll_5], [z4_coll_5, x4_coll_5], [z3_coll_5, x3_coll_5], [z2_coll_5, x2_coll_5]), notSource=False)
 
 
-x1_coll_51=-0.07422 # use this if you just want the exact y=0 slice
-z1_coll_51=12.8-tgtoffset
+x1_coll_51=-0.1026 # use this if you just want the exact y=0 slice
+z1_coll_51=12.16063
 
-x2_coll_51=-0.044 #from GDML
-z2_coll_51=12.8-tgtoffset  #thickness of collimator 5 = 35 mm
+x2_coll_51=-0.046 #from GDML
+z2_coll_51=12.16063  #thickness of collimator 5 = 35 mm
 
-x3_coll_51=-0.044 #from GDML
-z3_coll_51=12.87-tgtoffset
+x3_coll_51=-0.046 #from GDML
+z3_coll_51=12.26063
 
-x4_coll_51=-0.07422 # use this if you just want the exact y=0 slice
-z4_coll_51=12.87-tgtoffset
+x4_coll_51=-0.1026 # use this if you just want the exact y=0 slice
+z4_coll_51=12.26063
 
 coll_51   = polygon( ([z1_coll_51, x1_coll_51], [z4_coll_51, x4_coll_51], [z3_coll_51, x3_coll_51], [z2_coll_51, x2_coll_51]), notSource=False)
 
 ###### Lintel (for ep scattering)
 
-x1_lintel=0.435
-z1_lintel=7.785+4.5
+x1_lintel=-0.478
+z1_lintel=9.5073+4.5
 
-x2_lintel=0.650
-z2_lintel=7.785+4.5
+x2_lintel=-0.800
+z2_lintel=9.5073+4.5
 
-x3_lintel=0.650
-z3_lintel=7.885+4.5
+x3_lintel=-0.800
+z3_lintel=9.6073+4.5
 
-x4_lintel=0.435
-z4_lintel=7.885+4.5
+x4_lintel=-0.478
+z4_lintel=9.6073+4.5
 
 
 #collar_top2    = polygon( ([z1_lintel,  x1_lintel], [z4_lintel,  x4_lintel], [z3_lintel,  x3_lintel], [z2_lintel,  x2_lintel] ), notSource=False)
-lintel = polygon( ([z2_lintel, -x2_lintel], [z3_lintel, -x3_lintel], [z4_lintel, -x4_lintel], [z1_lintel, -x1_lintel] ), notSource=False)
+lintel = polygon( ([z1_lintel, x1_lintel], [z4_lintel, x4_lintel], [z3_lintel, x3_lintel], [z2_lintel, x2_lintel] ), notSource=False)
 
 
 #################DS coil  ###########################
@@ -1975,20 +2009,35 @@ z4_DS_coil4_3=16.1704
 
 DS_Coil4_3 = polygon( ([z1_DS_coil4_3, x1_DS_coil4_3], [z4_DS_coil4_3, x4_DS_coil4_3], [z3_DS_coil4_3, x3_DS_coil4_3], [z2_DS_coil4_3, x2_DS_coil4_3] ), notSource=False)
 
-# EP blocker
-x1_epblocker=-0.132 # use this if you just want the exact y=0 slice
-z1_epblocker=14.5
+# Col6A 
+x1_Col6A=-0.090 # use this if you just want the exact y=0 slice
+z1_Col6A=9.5073+4.5
 
-x2_epblocker=-0.052 #from GDML
-z2_epblocker=14.5
+x2_Col6A=-0.055 #from GDML
+z2_Col6A=9.5073+4.5
 
-x3_epblocker=-0.052 #from GDML
-z3_epblocker=14.6
+x3_Col6A=-0.0588 #from GDML
+z3_Col6A=9.6073+4.5
 
-x4_epblocker=-0.132 # use this if you just want the exact y=0 slice
-z4_epblocker=14.6
+x4_Col6A=-0.090 # use this if you just want the exact y=0 slice
+z4_Col6A=9.6073+4.5
 
-epblocker   = polygon( ([z1_epblocker, x1_epblocker], [z4_epblocker, x4_epblocker], [z3_epblocker, x3_epblocker], [z2_epblocker, x2_epblocker]), notSource=False)
+Col6A   = polygon( ([z1_Col6A, x1_Col6A], [z4_Col6A, x4_Col6A], [z3_Col6A, x3_Col6A], [z2_Col6A, x2_Col6A]), notSource=False)
+
+# Col6B 
+x1_Col6B=-0.125 # use this if you just want the exact y=0 slice
+z1_Col6B=11.01225+4.5
+
+x2_Col6B=-0.062 #from GDML
+z2_Col6B=11.01225+4.5
+
+x3_Col6B=-0.0699 #from GDML
+z3_Col6B=11.11225+4.5
+
+x4_Col6B=-0.125 # use this if you just want the exact y=0 slice
+z4_Col6B=11.11225+4.5
+
+Col6B   = polygon( ([z1_Col6B, x1_Col6B], [z4_Col6B, x4_Col6B], [z3_Col6B, x3_Col6B], [z2_Col6B, x2_Col6B]), notSource=False)
 
 
 #################################################################
@@ -2033,61 +2082,62 @@ sources.append(target)
 #allpolys.append(tgt_DS_1)
 #allpolys.append(tgt_DS_2)
 #
-allpolys.append(tgt_TopShield_top)
+#allpolys.append(tgt_TopShield_top)
 
-allpolys.append(tgt_DSShield_top)
-allpolys.append(tgt_DSShield_bottom)
+#allpolys.append(tgt_DSShield_top)
+#allpolys.append(tgt_DSShield_bottom)
 
-allpolys.append(tgt_barite1_top)
-allpolys.append(tgt_barite1_bottom)
+#allpolys.append(tgt_barite1_top)
+#allpolys.append(tgt_barite1_bottom)
 
-allpolys.append(tgt_barite2_top)
-allpolys.append(tgt_barite2_bottom)
+#allpolys.append(tgt_barite2_top)
+#allpolys.append(tgt_barite2_bottom)
 
-#allpolys.append(tgt_pipe1_up)
-#allpolys.append(tgt_pipe1_lo)
-#
-#allpolys.append(tgt_flange1_1_1_up)
-#allpolys.append(tgt_flange1_1_1_lo)
-#allpolys.append(tgt_flange1_1_2_up)
-#allpolys.append(tgt_flange1_1_2_lo)
-#allpolys.append(tgt_flange1_2_1_up)
-#allpolys.append(tgt_flange1_2_1_lo)
-#allpolys.append(tgt_flange1_2_2_up)
-#allpolys.append(tgt_flange1_2_2_lo)
-#
-#allpolys.append(tgt_pipe2_up)
-#allpolys.append(tgt_pipe2_lo)
-#
-#allpolys.append(tgt_flange2_1_1_up)
-#allpolys.append(tgt_flange2_1_1_lo)
-#allpolys.append(tgt_flange2_1_2_up)
-#allpolys.append(tgt_flange2_1_2_lo)
-#allpolys.append(tgt_flange2_2_1_up)
-#allpolys.append(tgt_flange2_2_1_lo)
-#allpolys.append(tgt_flange2_3_1_up)
-#allpolys.append(tgt_flange2_3_1_lo)
-#allpolys.append(tgt_flange2_3_2_up)
-#allpolys.append(tgt_flange2_3_2_lo)
-#
-#allpolys.append(tgt_pipe3_1_up)
-#allpolys.append(tgt_pipe3_1_lo)
-#allpolys.append(tgt_pipe3_2_up)
-#allpolys.append(tgt_pipe3_2_lo)
-#allpolys.append(tgt_pipe3_3_up)
-#allpolys.append(tgt_pipe3_3_lo)
-#
-#allpolys.append(tgt_flange3_1_1_up)
-#allpolys.append(tgt_flange3_1_1_lo)
-#allpolys.append(tgt_flange3_1_2_up)
-#allpolys.append(tgt_flange3_1_2_lo)
-#allpolys.append(tgt_flange3_2_1_up)
-#allpolys.append(tgt_flange3_2_1_lo)
-#allpolys.append(tgt_flange3_2_2_up)
-#allpolys.append(tgt_flange3_2_2_lo)
-#
-#allpolys.append(tgt_pipe4_1_up)
-#allpolys.append(tgt_pipe4_1_lo)
+allpolys.append(tgt_pipe1_up)
+allpolys.append(tgt_pipe1_lo)
+
+allpolys.append(tgt_flange1_1_1_up)
+allpolys.append(tgt_flange1_1_1_lo)
+allpolys.append(tgt_flange1_1_2_up)
+allpolys.append(tgt_flange1_1_2_lo)
+allpolys.append(tgt_flange1_2_1_up)
+allpolys.append(tgt_flange1_2_1_lo)
+allpolys.append(tgt_flange1_2_2_up)
+allpolys.append(tgt_flange1_2_2_lo)
+
+allpolys.append(tgt_pipe2_up)
+allpolys.append(tgt_pipe2_lo)
+
+allpolys.append(tgt_flange2_1_1_up)
+allpolys.append(tgt_flange2_1_1_lo)
+allpolys.append(tgt_flange2_1_2_up)
+allpolys.append(tgt_flange2_1_2_lo)
+allpolys.append(tgt_flange2_2_1_up)
+allpolys.append(tgt_flange2_2_1_lo)
+allpolys.append(tgt_flange2_3_1_up)
+allpolys.append(tgt_flange2_3_1_lo)
+allpolys.append(tgt_flange2_3_2_up)
+allpolys.append(tgt_flange2_3_2_lo)
+
+allpolys.append(tgt_pipe3_1_up)
+allpolys.append(tgt_pipe3_1_lo)
+allpolys.append(tgt_pipe3_2_up)
+allpolys.append(tgt_pipe3_2_lo)
+allpolys.append(tgt_pipe3_3_up)
+allpolys.append(tgt_pipe3_3_lo)
+
+allpolys.append(tgt_flange3_1_1_up)
+allpolys.append(tgt_flange3_1_1_lo)
+allpolys.append(tgt_flange3_1_2_up)
+allpolys.append(tgt_flange3_1_2_lo)
+allpolys.append(tgt_flange3_2_1_up)
+allpolys.append(tgt_flange3_2_1_lo)
+allpolys.append(tgt_flange3_2_2_up)
+allpolys.append(tgt_flange3_2_2_lo)
+
+allpolys.append(tgt_pipe4_1_up)
+allpolys.append(tgt_pipe4_1_lo)
+
 allpolys.append(tgt_pipe4_2_up)
 allpolys.append(tgt_pipe4_2_lo)
 allpolys.append(tgt_pipe4_3_up)
@@ -2199,8 +2249,11 @@ allpolys.append(DSCAN_Back_up_2)
 allpolys.append(DSCAN_Back_low_1)
 allpolys.append(DSCAN_Back_low_2)
 
-allpolys.append(DSShield_11)
-allpolys.append(DSShield_12)
+allpolys.append(Scaper_11)
+allpolys.append(Scaper_12)
+
+#allpolys.append(DSShield_11)
+#allpolys.append(DSShield_12)
 
 allpolys.append(DSShield_21)
 allpolys.append(DSShield_22)
@@ -2284,7 +2337,8 @@ allpolys.append(coll_51)
 allpolys.append(lintel)
 
 
-allpolys.append(epblocker)
+allpolys.append(Col6A)
+allpolys.append(Col6B)
 
 allpolys.append(DS_Coil1)
 allpolys.append(DS_Coil2)
