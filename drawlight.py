@@ -21,7 +21,7 @@ class drawlight(Gtk.Window):
         self.zmax = 30.0
 #        self.zmax = 10.0
 
-        self.yscale = 4.0
+        self.yscale = 8.0
         #self.yscale = 1.0
         
         self.init_ui()
