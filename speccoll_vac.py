@@ -1925,87 +1925,87 @@ lintel = polygon( ([z1_lintel, x1_lintel], [z4_lintel, x4_lintel], [z3_lintel, x
 
 
 #################DS coil  ###########################
-x1_DS_coil1=0.04064
-z1_DS_coil1=9.448
+x1_DS_coil1=0.04103
+z1_DS_coil1=4.93010+4.5
 
-x2_DS_coil1=0.173228
-z2_DS_coil1=9.448
+x2_DS_coil1=0.17520
+z2_DS_coil1=4.93010+4.5
 
-x3_DS_coil1=0.19812
-z3_DS_coil1=10.3599
+x3_DS_coil1=0.19825
+z3_DS_coil1=5.93616+4.5
 
-x4_DS_coil1=0.042926
-z4_DS_coil1=10.3599
+x4_DS_coil1=0.04103
+z4_DS_coil1=5.93616+4.5
 
 DS_Coil1 = polygon( ([z1_DS_coil1, x1_DS_coil1], [z4_DS_coil1, x4_DS_coil1], [z3_DS_coil1, x3_DS_coil1], [z2_DS_coil1, x2_DS_coil1] ), notSource=False)
 
-x1_DS_coil2=0.04343
-z1_DS_coil2=10.5359
+x1_DS_coil2=0.04353
+z1_DS_coil2=5.94774+4.5
 
-x2_DS_coil2=0.2141
-z2_DS_coil2=10.5359
+x2_DS_coil2=0.21424
+z2_DS_coil2=5.94774+4.5
 
-x3_DS_coil2=0.23825
-z3_DS_coil2=11.3759
+x3_DS_coil2=0.238
+z3_DS_coil2=6.97179+4.5
 
-x4_DS_coil2=0.04547
-z4_DS_coil2=11.3759
+x4_DS_coil2=0.04353
+z4_DS_coil2=6.97179+4.5
 
 DS_Coil2 = polygon( ([z1_DS_coil2, x1_DS_coil2], [z4_DS_coil2, x4_DS_coil2], [z3_DS_coil2, x3_DS_coil2], [z2_DS_coil2, x2_DS_coil2] ), notSource=False)
 
-x1_DS_coil3=0.04597
-z1_DS_coil3=11.5974
+x1_DS_coil3=0.04642
+z1_DS_coil3=6.98652+4.5
 
-x2_DS_coil3=0.26035
-z2_DS_coil3=11.5974
+x2_DS_coil3=0.26058
+z2_DS_coil3=6.98652+4.5
 
-x3_DS_coil3=0.27739
-z3_DS_coil3=12.3495
+x3_DS_coil3=0.27708
+z3_DS_coil3=7.96320+4.5
 
-x4_DS_coil3=0.04801
-z4_DS_coil3=12.3495
+x4_DS_coil3=0.04642
+z4_DS_coil3=7.96320+4.5
 
 DS_Coil3 = polygon( ([z1_DS_coil3, x1_DS_coil3], [z4_DS_coil3, x4_DS_coil3], [z3_DS_coil3, x3_DS_coil3], [z2_DS_coil3, x2_DS_coil3] ), notSource=False)
 
-x1_DS_coil4_1=0.05055
-z1_DS_coil4_1=12.6225
+x1_DS_coil4_1=0.05681
+z1_DS_coil4_1=7.97874+4.5
 
-x2_DS_coil4_1=0.34341
-z2_DS_coil4_1=12.662
+x2_DS_coil4_1=0.34382
+z2_DS_coil4_1=7.97874+4.5
 
-x3_DS_coil4_1=0.41377
-z3_DS_coil4_1=14.291
+x3_DS_coil4_1=0.42368
+z3_DS_coil4_1=9.76061+4.5
 
-x4_DS_coil4_1=0.07976
-z4_DS_coil4_1=14.291
+x4_DS_coil4_1=0.07865
+z4_DS_coil4_1=9.76061+4.5
 
 DS_Coil4_1 = polygon( ([z1_DS_coil4_1, x1_DS_coil4_1], [z4_DS_coil4_1, x4_DS_coil4_1], [z3_DS_coil4_1, x3_DS_coil4_1], [z2_DS_coil4_1, x2_DS_coil4_1] ), notSource=False)
 
-x1_DS_coil4_2=0.07976
-z1_DS_coil4_2=14.2913
+x1_DS_coil4_2=0.07865
+z1_DS_coil4_2=9.76061+4.5
 
-x2_DS_coil4_2=0.29108
-z2_DS_coil4_2=14.2913
+x2_DS_coil4_2=0.29841
+z2_DS_coil4_2=9.76061+4.5
 
-x3_DS_coil4_2=0.39700
-z3_DS_coil4_2=15.9498
+x3_DS_coil4_2=0.38464
+z3_DS_coil4_2=11.11293+4.5
 
-x4_DS_coil4_2=0.18237
-z4_DS_coil4_2=15.9498
+x4_DS_coil4_2=0.16008
+z4_DS_coil4_2=11.11293+4.5
 
 DS_Coil4_2 = polygon( ([z1_DS_coil4_2, x1_DS_coil4_2], [z4_DS_coil4_2, x4_DS_coil4_2], [z3_DS_coil4_2, x3_DS_coil4_2], [z2_DS_coil4_2, x2_DS_coil4_2] ), notSource=False)
 
-x1_DS_coil4_3=0.18237
-z1_DS_coil4_3=15.9499
+x1_DS_coil4_3=0.16008
+z1_DS_coil4_3=11.11293+4.5
 
-x2_DS_coil4_3=0.39700
-z2_DS_coil4_3=15.9499
+x2_DS_coil4_3=0.38464
+z2_DS_coil4_3=11.11293+4.5
 
-x3_DS_coil4_3=0.41097
-z3_DS_coil4_3=16.1704
+x3_DS_coil4_3=0.39290
+z3_DS_coil4_3=11.79868+4.5
 
-x4_DS_coil4_3=0.14935
-z4_DS_coil4_3=16.1704
+x4_DS_coil4_3=0.12692
+z4_DS_coil4_3=11.79868+4.5
 
 DS_Coil4_3 = polygon( ([z1_DS_coil4_3, x1_DS_coil4_3], [z4_DS_coil4_3, x4_DS_coil4_3], [z3_DS_coil4_3, x3_DS_coil4_3], [z2_DS_coil4_3, x2_DS_coil4_3] ), notSource=False)
 
