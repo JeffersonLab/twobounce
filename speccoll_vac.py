@@ -20,6 +20,25 @@ tgtrad = 1.4142*0.0025
 
 target = polygon( ([-tgtlen/2,-tgtrad], [tgtlen/2, -tgtrad], [tgtlen/2,tgtrad], [-tgtlen/2,tgtrad]) )
 
+### Target tube 
+x1_tgt_tube=0.0360045
+z1_tgt_tube=-0.625
+
+x2_tgt_tube=0.045
+z2_tgt_tube=-0.625
+
+x3_tgt_tube=0.045
+z3_tgt_tube=0.625
+
+x4_tgt_tube=0.0360045
+z4_tgt_tube=0.625
+
+#tgt_tube_top   = polygon( ([z1_tgt_tube, x1_tgt_tube], [z4_tgt_tube, x4_tgt_tube], [z3_tgt_tube, x3_tgt_tube], [z2_tgt_tube, x2_tgt_tube] ), notSource=False)
+#tgt_tube_bottom   = polygon( ([z2_tgt_tube, -x2_tgt_tube], [z3_tgt_tube, -x3_tgt_tube], [z4_tgt_tube, -x4_tgt_tube], [z1_tgt_tube, -x1_tgt_tube] ), notSource=False)
+
+tgt_tube_top   = polygon( ([z1_tgt_tube, x1_tgt_tube], [z4_tgt_tube, x4_tgt_tube], [z3_tgt_tube, x3_tgt_tube], [z2_tgt_tube, x2_tgt_tube] ), isEthereal=True)
+tgt_tube_bottom   = polygon( ([z2_tgt_tube, -x2_tgt_tube], [z3_tgt_tube, -x3_tgt_tube], [z4_tgt_tube, -x4_tgt_tube], [z1_tgt_tube, -x1_tgt_tube] ), isEthereal=True)
+
 ####Target chamber upstream end
 x1_tgt_us=0.0508
 z1_tgt_us=-0.9906
@@ -128,21 +147,88 @@ z4_tgt_barite2=2.725
 tgt_barite2_top   = polygon( ([z1_tgt_barite2, x1_tgt_barite2], [z4_tgt_barite2, x4_tgt_barite2], [z3_tgt_barite2, x3_tgt_barite2], [z2_tgt_barite2, x2_tgt_barite2] ), notSource=False)
 tgt_barite2_bottom   = polygon( ([z2_tgt_barite2, -x2_tgt_barite2], [z3_tgt_barite2, -x3_tgt_barite2], [z4_tgt_barite2, -x4_tgt_barite2], [z1_tgt_barite2, -x1_tgt_barite2] ), notSource=False)
 
+###W-ring after the target chamber
+x1_tgt_W_Ring1=0.1016
+z1_tgt_W_Ring1=1.050
+
+x2_tgt_W_Ring1=0.1850
+z2_tgt_W_Ring1=1.050
+
+x3_tgt_W_Ring1=0.1850
+z3_tgt_W_Ring1=1.150
+
+x4_tgt_W_Ring1=0.1016
+z4_tgt_W_Ring1=1.150
+
+tgt_W_Ring1_up   = polygon( ([z1_tgt_W_Ring1, x1_tgt_W_Ring1], [z4_tgt_W_Ring1, x4_tgt_W_Ring1], [z3_tgt_W_Ring1, x3_tgt_W_Ring1], [z2_tgt_W_Ring1, x2_tgt_W_Ring1] ), notSource=False)
+tgt_W_Ring1_lo   = polygon( ([z2_tgt_W_Ring1, -x2_tgt_W_Ring1], [z3_tgt_W_Ring1, -x3_tgt_W_Ring1], [z4_tgt_W_Ring1, -x4_tgt_W_Ring1], [z1_tgt_W_Ring1, -x1_tgt_W_Ring1] ), notSource=False)
+
+
+
+
 ### Pipe after target chamber
-x1_tgt_pipe1=0.09525
-z1_tgt_pipe1=0.90094
+#
+#x1_tgt_pipe0=0.1397
+#z1_tgt_pipe0=0.83185
+#
+#x2_tgt_pipe0=0.1450
+#z2_tgt_pipe0=0.83185
+#
+#x3_tgt_pipe0=0.1450
+#z3_tgt_pipe0=1.050
+#
+#x4_tgt_pipe0=0.1397
+#z4_tgt_pipe0=1.050
 
-x2_tgt_pipe1=0.1016
-z2_tgt_pipe1=0.90094
+x1_tgt_pipe0=0.1016
+z1_tgt_pipe0=0.83185
 
-x3_tgt_pipe1=0.1016
-z3_tgt_pipe1=0.90094+0.2032
+x2_tgt_pipe0=0.110
+z2_tgt_pipe0=0.83185
 
-x4_tgt_pipe1=0.09525
-z4_tgt_pipe1=0.90094+0.2032
+x3_tgt_pipe0=0.110
+z3_tgt_pipe0=0.8763+0.1016
+
+x4_tgt_pipe0=0.1016
+z4_tgt_pipe0=0.8763+0.1016
+
+tgt_pipe0_up   = polygon( ([z1_tgt_pipe0, x1_tgt_pipe0], [z4_tgt_pipe0, x4_tgt_pipe0], [z3_tgt_pipe0, x3_tgt_pipe0], [z2_tgt_pipe0, x2_tgt_pipe0] ),  isEthereal=True)
+tgt_pipe0_lo   = polygon( ([z2_tgt_pipe0, -x2_tgt_pipe0], [z3_tgt_pipe0, -x3_tgt_pipe0], [z4_tgt_pipe0, -x4_tgt_pipe0], [z1_tgt_pipe0, -x1_tgt_pipe0] ), isEthereal=True)
+
+#tgt_pipe0_up   = polygon( ([z1_tgt_pipe0, x1_tgt_pipe0], [z4_tgt_pipe0, x4_tgt_pipe0], [z3_tgt_pipe0, x3_tgt_pipe0], [z2_tgt_pipe0, x2_tgt_pipe0] ), notSource=False)
+#tgt_pipe0_lo   = polygon( ([z2_tgt_pipe0, -x2_tgt_pipe0], [z3_tgt_pipe0, -x3_tgt_pipe0], [z4_tgt_pipe0, -x4_tgt_pipe0], [z1_tgt_pipe0, -x1_tgt_pipe0] ), notSource=False)
+
+#x1_tgt_pipe1=0.09525
+#z1_tgt_pipe1=0.90094
+#
+#x2_tgt_pipe1=0.1016
+#z2_tgt_pipe1=0.90094
+#
+#x3_tgt_pipe1=0.1016
+#z3_tgt_pipe1=0.90094+0.2032
+#
+#x4_tgt_pipe1=0.09525
+#z4_tgt_pipe1=0.90094+0.2032
+
+x1_tgt_pipe1=0.1600
+#z1_tgt_pipe1=1.150
+z1_tgt_pipe1=0.8763+0.1016
+
+x2_tgt_pipe1=0.167
+#z2_tgt_pipe1=1.150
+z2_tgt_pipe1=0.8763+0.1016
+
+x3_tgt_pipe1=0.167
+z3_tgt_pipe1=2.851
+
+x4_tgt_pipe1=0.1600
+z4_tgt_pipe1=2.851
 
 tgt_pipe1_up   = polygon( ([z1_tgt_pipe1, x1_tgt_pipe1], [z4_tgt_pipe1, x4_tgt_pipe1], [z3_tgt_pipe1, x3_tgt_pipe1], [z2_tgt_pipe1, x2_tgt_pipe1] ), notSource=False)
 tgt_pipe1_lo   = polygon( ([z2_tgt_pipe1, -x2_tgt_pipe1], [z3_tgt_pipe1, -x3_tgt_pipe1], [z4_tgt_pipe1, -x4_tgt_pipe1], [z1_tgt_pipe1, -x1_tgt_pipe1] ), notSource=False)
+
+#tgt_pipe1_up   = polygon( ([z1_tgt_pipe1, x1_tgt_pipe1], [z4_tgt_pipe1, x4_tgt_pipe1], [z3_tgt_pipe1, x3_tgt_pipe1], [z2_tgt_pipe1, x2_tgt_pipe1] ), isEthereal=True)
+#tgt_pipe1_lo   = polygon( ([z2_tgt_pipe1, -x2_tgt_pipe1], [z3_tgt_pipe1, -x3_tgt_pipe1], [z4_tgt_pipe1, -x4_tgt_pipe1], [z1_tgt_pipe1, -x1_tgt_pipe1] ), isEthereal=True)
 
 ####Flange 1
 ###Part1
@@ -494,11 +580,23 @@ tgt_pipe4_4_up   = polygon( ([z1_tgt_pipe4_4, x1_tgt_pipe4_4], [z4_tgt_pipe4_4, 
 tgt_pipe4_4_lo   = polygon( ([z2_tgt_pipe4_4, -x2_tgt_pipe4_4], [z3_tgt_pipe4_4, -x3_tgt_pipe4_4], [z4_tgt_pipe4_4, -x4_tgt_pipe4_4], [z1_tgt_pipe4_4, -x1_tgt_pipe4_4] ), notSource=False)
 
 ##part5
+#x2_tgt_pipe4_5=0.127
+#z2_tgt_pipe4_5=3.41046
+#
+#x1_tgt_pipe4_5=0.122225
+#z1_tgt_pipe4_5=3.41046
+#
+#x4_tgt_pipe4_5=0.122225
+#z4_tgt_pipe4_5=3.41046+0.47374
+#
+#x3_tgt_pipe4_5=0.127
+#z3_tgt_pipe4_5=3.41046+0.47374
+
 x2_tgt_pipe4_5=0.127
-z2_tgt_pipe4_5=3.41046
+z2_tgt_pipe4_5=3.051
 
 x1_tgt_pipe4_5=0.122225
-z1_tgt_pipe4_5=3.41046
+z1_tgt_pipe4_5=3.051
 
 x4_tgt_pipe4_5=0.122225
 z4_tgt_pipe4_5=3.41046+0.47374
@@ -884,23 +982,23 @@ coll_pipe241   = polygon( ([z1_pipe24, x1_pipe24], [z4_pipe24, x4_pipe24], [z3_p
 coll_pipe242   = polygon( ([z2_pipe24, -x2_pipe24], [z3_pipe24, -x3_pipe24], [z4_pipe24, -x4_pipe24], [z1_pipe24, -x1_pipe24] ), notSource=False)
 ###### Hybrid upstream Lead collar (for ep scattering)
 
-x1_collar3=0.230 #This is including the beampipe
+x1_collar3=0.240 #This is including the beampipe
 #x1_collar3=0.23835
 #z1_collar3=4.4305+4.5
-z1_collar3=8.37925
+z1_collar3=8.066
 
 x2_collar3=0.540
 #z2_collar3=4.4305+4.5
-z2_collar3=8.37925
+z2_collar3=8.066
 
 x3_collar3=0.540
 #z3_collar3=4.6805+4.5
-z3_collar3=8.62925
+z3_collar3=8.216
 
-x4_collar3=0.230
+x4_collar3=0.240
 #x4_collar3=0.23835
 #z4_collar3=4.6805+4.5
-z4_collar3=8.62925
+z4_collar3=8.216
 
 
 collar3_top    = polygon( ([z1_collar3,  x1_collar3], [z4_collar3,  x4_collar3], [z3_collar3,  x3_collar3], [z2_collar3,  x2_collar3] ), notSource=False)
@@ -949,59 +1047,59 @@ collar_bottom2 = polygon( ([z2_collar2, -x2_collar2], [z3_collar2, -x3_collar2],
 ######inner photon collimator (Col 1)
 # Updated on Nov 8 2020 with merged extended collimator
 
-x1_inner_photon_1=0.020 
-z1_inner_photon_1=4.675
+x1_inner_photon_1=0.020+0.0003 
+z1_inner_photon_1=4.675+0.15
 
-x2_inner_photon_1=0.027 
-z2_inner_photon_1=4.675
+x2_inner_photon_1=0.0295 
+z2_inner_photon_1=4.675+0.15
 
-x3_inner_photon_1=0.027
-z3_inner_photon_1=4.775
+x3_inner_photon_1=0.02974
+z3_inner_photon_1=4.775+0.15
 
-x4_inner_photon_1=0.01625 
-z4_inner_photon_1=4.775
+x4_inner_photon_1=0.01625+0.0003 
+z4_inner_photon_1=4.775+0.15
 
-x1_inner_photon_2=0.01625 
-z1_inner_photon_2=4.775
+x1_inner_photon_2=0.01625+0.0003 
+z1_inner_photon_2=4.775+0.15
 
-x2_inner_photon_2=0.0275
-z2_inner_photon_2=4.775
+x2_inner_photon_2=0.02974
+z2_inner_photon_2=4.775+0.15
 
-x3_inner_photon_2=0.0275
-z3_inner_photon_2=4.865
+x3_inner_photon_2=0.02995
+z3_inner_photon_2=4.865+0.15
 
-x4_inner_photon_2=0.0151
-z4_inner_photon_2=4.865
+x4_inner_photon_2=0.0151+0.0003
+z4_inner_photon_2=4.865+0.15
 
-x1_inner_photon_3=0.0151
-z1_inner_photon_3=4.865
+x1_inner_photon_3=0.0151+0.0003
+z1_inner_photon_3=4.865+0.15
 
-x2_inner_photon_3=0.0275
-z2_inner_photon_3=4.865
+x2_inner_photon_3=0.02995
+z2_inner_photon_3=4.865+0.15
 
-x3_inner_photon_3=0.0275
-z3_inner_photon_3=4.985
+x3_inner_photon_3=0.03023
+z3_inner_photon_3=4.985+0.15
 
-x4_inner_photon_3=0.0141 
-z4_inner_photon_3=4.985
+x4_inner_photon_3=0.0141+0.0003 
+z4_inner_photon_3=4.985+0.15
 
-x1_inner_photon_4=0.0141
-z1_inner_photon_4=4.985
+x1_inner_photon_4=0.0141+0.0003
+z1_inner_photon_4=4.985+0.15
 
-x2_inner_photon_4=0.0275
-z2_inner_photon_4=4.985
+x2_inner_photon_4=0.03023
+z2_inner_photon_4=4.985+0.15
 
-x3_inner_photon_4=0.0275
-z3_inner_photon_4=5.075
+x3_inner_photon_4=0.0305
+z3_inner_photon_4=5.075+0.15
 
-x4_inner_photon_4=0.013629 
-z4_inner_photon_4=5.075
+x4_inner_photon_4=0.0139 
+z4_inner_photon_4=5.075+0.15
 
-x1_inner_photon_5=0.013629
-z1_inner_photon_5=5.075
+x1_inner_photon_5=0.0139
+z1_inner_photon_5=5.075+0.15
 
-x2_inner_photon_5=0.0275
-z2_inner_photon_5=5.075
+x2_inner_photon_5=0.0305
+z2_inner_photon_5=5.075+0.15
 
 x3_inner_photon_5=0.0275
 z3_inner_photon_5=5.40
@@ -1009,7 +1107,7 @@ z3_inner_photon_5=5.40
 x4_inner_photon_5=0.014536 
 z4_inner_photon_5=5.40
 
-x1_inner_photon_6=0.013629
+x1_inner_photon_6=0.0139 #not used now 12/01/2021
 z1_inner_photon_6=5.290
 
 x2_inner_photon_6=0.0275
@@ -1120,10 +1218,10 @@ x2_pipe0=0.030#0.0235
 z2_pipe0=5.4
 
 x3_pipe0=0.030#0.0305
-z3_pipe0=7.5
+z3_pipe0=7.2
 
 x4_pipe0=0.027#0.0275
-z4_pipe0=7.5
+z4_pipe0=7.2
 
 
 coll_pipe01   = polygon( ([z1_pipe0, x1_pipe0], [z4_pipe0, x4_pipe0], [z3_pipe0, x3_pipe0], [z2_pipe0, x2_pipe0] ), notSource=False)
@@ -1820,10 +1918,10 @@ x1_coll_4_1=-0.250 #Was simulation -0.300 # Was CAD -0.254
 #x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
 z1_coll_4_1=9.725+dss-tgtoffset
 
-x2_coll_4_1=-0.185 #-0.1714 #Was -0.23495, then was -0.1655, current sculpt values reflect updated moller envelopes at this upstream z position
+x2_coll_4_1=-0.185 
 z2_coll_4_1=9.725+dss-tgtoffset
 
-x3_coll_4_1=-0.185 # -0.1714 #Was -0.23495, then was -0.1655
+x3_coll_4_1=-0.1983  #185+100*tan(7.6 deg)
 z3_coll_4_1=9.875+dss-tgtoffset
 
 x4_coll_4_1=-0.250 #Was simulation -0.300 # Was CAD -0.254
@@ -1836,17 +1934,17 @@ coll_4_1   = polygon( ([z1_coll_4_1, x1_coll_4_1], [z4_coll_4_1, x4_coll_4_1], [
 
 #seg 2
 
-x1_coll_4_2=-0.0535 #0.05 #Was -0.06377, then was -0.0525
+x1_coll_4_2=-0.0515 #0.05 #Was -0.06377, then was -0.0525
 #x1_coll_4_2=-0.05 #0.05 #Was -0.06377, then was -0.0525
 z1_coll_4_2=9.775+dss-tgtoffset
 
-x2_coll_4_2=-0.035
+x2_coll_4_2=-0.040
 z2_coll_4_2=9.775+dss-tgtoffset
 
-x3_coll_4_2=-0.035
+x3_coll_4_2=-0.040
 z3_coll_4_2=9.875+dss-tgtoffset
 
-x4_coll_4_2=-0.0535 #0.05 #Was -0.06377, then was -0.0525
+x4_coll_4_2=-0.0515 #0.05 #Was -0.06377, then was -0.0525
 #x4_coll_4_2=-0.05 #0.05 #Was -0.06377, then was -0.0525
 z4_coll_4_2=9.875+dss-tgtoffset
 
@@ -1855,7 +1953,7 @@ coll_4_2   = polygon( ([z1_coll_4_2, x1_coll_4_2], [z4_coll_4_2, x4_coll_4_2], [
 
 #seg 3
 
-x1_coll_4_3=0.030861
+x1_coll_4_3=0.040
 z1_coll_4_3=9.775+dss-tgtoffset
 
 x2_coll_4_3=0.250 #Was simulation -0.300 # Was CAD -0.254
@@ -1866,7 +1964,7 @@ x3_coll_4_3=0.250 #Was simulation -0.300 # Was CAD -0.254
 #x3_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
 z3_coll_4_3=9.875+dss-tgtoffset
 
-x4_coll_4_3=0.030861
+x4_coll_4_3=0.040
 z4_coll_4_3=9.875+dss-tgtoffset
 
 
@@ -2077,11 +2175,14 @@ sub_quartz2 = polygon( ([sub_det_z_pos, -sub_det_outer_radius], [sub_det_z_pos+s
 
 sources.append(target)
 
+#allpolys.append(tgt_tube_top)
+#allpolys.append(tgt_tube_bottom)
+
 #allpolys.append(tgt_US_1)
 #allpolys.append(tgt_US_2)
 #allpolys.append(tgt_DS_1)
 #allpolys.append(tgt_DS_2)
-#
+
 #allpolys.append(tgt_TopShield_top)
 
 #allpolys.append(tgt_DSShield_top)
@@ -2093,87 +2194,93 @@ sources.append(target)
 #allpolys.append(tgt_barite2_top)
 #allpolys.append(tgt_barite2_bottom)
 
-allpolys.append(tgt_pipe1_up)
-allpolys.append(tgt_pipe1_lo)
+#allpolys.append(tgt_pipe0_up)
+#allpolys.append(tgt_pipe0_lo)
+#
+#allpolys.append(tgt_pipe1_up)
+#allpolys.append(tgt_pipe1_lo)
 
-allpolys.append(tgt_flange1_1_1_up)
-allpolys.append(tgt_flange1_1_1_lo)
-allpolys.append(tgt_flange1_1_2_up)
-allpolys.append(tgt_flange1_1_2_lo)
-allpolys.append(tgt_flange1_2_1_up)
-allpolys.append(tgt_flange1_2_1_lo)
-allpolys.append(tgt_flange1_2_2_up)
-allpolys.append(tgt_flange1_2_2_lo)
-
-allpolys.append(tgt_pipe2_up)
-allpolys.append(tgt_pipe2_lo)
-
-allpolys.append(tgt_flange2_1_1_up)
-allpolys.append(tgt_flange2_1_1_lo)
-allpolys.append(tgt_flange2_1_2_up)
-allpolys.append(tgt_flange2_1_2_lo)
-allpolys.append(tgt_flange2_2_1_up)
-allpolys.append(tgt_flange2_2_1_lo)
-allpolys.append(tgt_flange2_3_1_up)
-allpolys.append(tgt_flange2_3_1_lo)
-allpolys.append(tgt_flange2_3_2_up)
-allpolys.append(tgt_flange2_3_2_lo)
-
-allpolys.append(tgt_pipe3_1_up)
-allpolys.append(tgt_pipe3_1_lo)
-allpolys.append(tgt_pipe3_2_up)
-allpolys.append(tgt_pipe3_2_lo)
-allpolys.append(tgt_pipe3_3_up)
-allpolys.append(tgt_pipe3_3_lo)
-
-allpolys.append(tgt_flange3_1_1_up)
-allpolys.append(tgt_flange3_1_1_lo)
-allpolys.append(tgt_flange3_1_2_up)
-allpolys.append(tgt_flange3_1_2_lo)
-allpolys.append(tgt_flange3_2_1_up)
-allpolys.append(tgt_flange3_2_1_lo)
-allpolys.append(tgt_flange3_2_2_up)
-allpolys.append(tgt_flange3_2_2_lo)
-
-allpolys.append(tgt_pipe4_1_up)
-allpolys.append(tgt_pipe4_1_lo)
-
-allpolys.append(tgt_pipe4_2_up)
-allpolys.append(tgt_pipe4_2_lo)
-allpolys.append(tgt_pipe4_3_up)
-allpolys.append(tgt_pipe4_3_lo)
-allpolys.append(tgt_pipe4_4_up)
-allpolys.append(tgt_pipe4_4_lo)
-allpolys.append(tgt_pipe4_5_up)
-allpolys.append(tgt_pipe4_5_lo)
-
-allpolys.append(tgt_flange4_1_1_up)
-allpolys.append(tgt_flange4_1_1_lo)
-allpolys.append(tgt_flange4_1_2_up)
-allpolys.append(tgt_flange4_1_2_lo)
-allpolys.append(tgt_flange4_2_1_up)
-allpolys.append(tgt_flange4_2_1_lo)
-allpolys.append(tgt_flange4_2_2_up)
-allpolys.append(tgt_flange4_2_2_lo)
-
-allpolys.append(tgt_pipe5_1_up)
-allpolys.append(tgt_pipe5_1_lo)
-allpolys.append(tgt_pipe5_2_up)
-allpolys.append(tgt_pipe5_2_lo)
-allpolys.append(tgt_pipe5_3_up)
-allpolys.append(tgt_pipe5_3_lo)
-
-allpolys.append(tgt_flange5_1_1_up)
-allpolys.append(tgt_flange5_1_1_lo)
-allpolys.append(tgt_flange5_1_2_up)
-allpolys.append(tgt_flange5_1_2_lo)
-allpolys.append(tgt_flange5_2_1_up)
-allpolys.append(tgt_flange5_2_1_lo)
-allpolys.append(tgt_flange5_2_2_up)
-allpolys.append(tgt_flange5_2_2_lo)
-
-allpolys.append(tgt_pipe6_1_up)
-allpolys.append(tgt_pipe6_1_lo)
+#allpolys.append(tgt_W_Ring1_up)
+#allpolys.append(tgt_W_Ring1_lo)
+#
+#allpolys.append(tgt_flange1_1_1_up)
+#allpolys.append(tgt_flange1_1_1_lo)
+#allpolys.append(tgt_flange1_1_2_up)
+#allpolys.append(tgt_flange1_1_2_lo)
+#allpolys.append(tgt_flange1_2_1_up)
+#allpolys.append(tgt_flange1_2_1_lo)
+#allpolys.append(tgt_flange1_2_2_up)
+#allpolys.append(tgt_flange1_2_2_lo)
+#
+#allpolys.append(tgt_pipe2_up)
+#allpolys.append(tgt_pipe2_lo)
+#
+#allpolys.append(tgt_flange2_1_1_up)
+#allpolys.append(tgt_flange2_1_1_lo)
+#allpolys.append(tgt_flange2_1_2_up)
+#allpolys.append(tgt_flange2_1_2_lo)
+#allpolys.append(tgt_flange2_2_1_up)
+#allpolys.append(tgt_flange2_2_1_lo)
+#allpolys.append(tgt_flange2_3_1_up)
+#allpolys.append(tgt_flange2_3_1_lo)
+#allpolys.append(tgt_flange2_3_2_up)
+#allpolys.append(tgt_flange2_3_2_lo)
+#
+#allpolys.append(tgt_pipe3_1_up)
+#allpolys.append(tgt_pipe3_1_lo)
+#allpolys.append(tgt_pipe3_2_up)
+#allpolys.append(tgt_pipe3_2_lo)
+#allpolys.append(tgt_pipe3_3_up)
+#allpolys.append(tgt_pipe3_3_lo)
+#
+#allpolys.append(tgt_flange3_1_1_up)
+#allpolys.append(tgt_flange3_1_1_lo)
+#allpolys.append(tgt_flange3_1_2_up)
+#allpolys.append(tgt_flange3_1_2_lo)
+#allpolys.append(tgt_flange3_2_1_up)
+#allpolys.append(tgt_flange3_2_1_lo)
+#allpolys.append(tgt_flange3_2_2_up)
+#allpolys.append(tgt_flange3_2_2_lo)
+#
+#allpolys.append(tgt_pipe4_1_up)
+#allpolys.append(tgt_pipe4_1_lo)
+#
+#allpolys.append(tgt_pipe4_2_up)
+#allpolys.append(tgt_pipe4_2_lo)
+#allpolys.append(tgt_pipe4_3_up)
+#allpolys.append(tgt_pipe4_3_lo)
+#allpolys.append(tgt_pipe4_4_up)
+#allpolys.append(tgt_pipe4_4_lo)
+#allpolys.append(tgt_pipe4_5_up)
+#allpolys.append(tgt_pipe4_5_lo)
+#
+#allpolys.append(tgt_flange4_1_1_up)
+#allpolys.append(tgt_flange4_1_1_lo)
+#allpolys.append(tgt_flange4_1_2_up)
+#allpolys.append(tgt_flange4_1_2_lo)
+#allpolys.append(tgt_flange4_2_1_up)
+#allpolys.append(tgt_flange4_2_1_lo)
+#allpolys.append(tgt_flange4_2_2_up)
+#allpolys.append(tgt_flange4_2_2_lo)
+#
+#allpolys.append(tgt_pipe5_1_up)
+#allpolys.append(tgt_pipe5_1_lo)
+#allpolys.append(tgt_pipe5_2_up)
+#allpolys.append(tgt_pipe5_2_lo)
+#allpolys.append(tgt_pipe5_3_up)
+#allpolys.append(tgt_pipe5_3_lo)
+#
+#allpolys.append(tgt_flange5_1_1_up)
+#allpolys.append(tgt_flange5_1_1_lo)
+#allpolys.append(tgt_flange5_1_2_up)
+#allpolys.append(tgt_flange5_1_2_lo)
+#allpolys.append(tgt_flange5_2_1_up)
+#allpolys.append(tgt_flange5_2_1_lo)
+#allpolys.append(tgt_flange5_2_2_up)
+#allpolys.append(tgt_flange5_2_2_lo)
+#
+#allpolys.append(tgt_pipe6_1_up)
+#allpolys.append(tgt_pipe6_1_lo)
 
 #allpolys.append(shield_top)
 #allpolys.append(shield_bottom)
@@ -2205,49 +2312,49 @@ allpolys.append(coll_2_1)
 allpolys.append(coll_2_2)
 allpolys.append(coll_2_3)
 
-allpolys.append(US_Coil)
-
+#allpolys.append(US_Coil)
+#
 allpolys.append(coll_pipe01)
 allpolys.append(coll_pipe02)
 
-allpolys.append(USCAN_Front_up)
-allpolys.append(USCAN_Front_low)
+#allpolys.append(USCAN_Front_up)
+#allpolys.append(USCAN_Front_low)
+#
+#allpolys.append(USCAN_Bot)
+#allpolys.append(USCAN_Top)
 
-allpolys.append(USCAN_Bot)
-allpolys.append(USCAN_Top)
+#allpolys.append(USCAN_Back_up)
+#allpolys.append(USCAN_Back_low)
+#
+#allpolys.append(US_pipe1_lo)
+#allpolys.append(US_pipe1_up)
+#
+#allpolys.append(US_flange1_1_1_up)
+#allpolys.append(US_flange1_1_1_lo)
+#allpolys.append(US_flange1_1_2_up)
+#allpolys.append(US_flange1_1_2_lo)
+#allpolys.append(US_flange1_2_1_up)
+#allpolys.append(US_flange1_2_1_lo)
+#allpolys.append(US_flange1_2_2_up)
+#allpolys.append(US_flange1_2_2_lo)
+#
+#allpolys.append(US_pipe2_1_up)
+#allpolys.append(US_pipe2_1_lo)
+#allpolys.append(US_pipe2_2_up)
+#allpolys.append(US_pipe2_2_lo)
+#allpolys.append(US_pipe2_3_up)
+#allpolys.append(US_pipe2_3_lo)
 
-allpolys.append(USCAN_Back_up)
-allpolys.append(USCAN_Back_low)
+#allpolys.append(DSCAN_Front_up)
+#allpolys.append(DSCAN_Front_low)
+#
+#allpolys.append(DSCAN_Top)
+#allpolys.append(DSCAN_Bot)
 
-allpolys.append(US_pipe1_lo)
-allpolys.append(US_pipe1_up)
-
-allpolys.append(US_flange1_1_1_up)
-allpolys.append(US_flange1_1_1_lo)
-allpolys.append(US_flange1_1_2_up)
-allpolys.append(US_flange1_1_2_lo)
-allpolys.append(US_flange1_2_1_up)
-allpolys.append(US_flange1_2_1_lo)
-allpolys.append(US_flange1_2_2_up)
-allpolys.append(US_flange1_2_2_lo)
-
-allpolys.append(US_pipe2_1_up)
-allpolys.append(US_pipe2_1_lo)
-allpolys.append(US_pipe2_2_up)
-allpolys.append(US_pipe2_2_lo)
-allpolys.append(US_pipe2_3_up)
-allpolys.append(US_pipe2_3_lo)
-
-allpolys.append(DSCAN_Front_up)
-allpolys.append(DSCAN_Front_low)
-
-allpolys.append(DSCAN_Top)
-allpolys.append(DSCAN_Bot)
-
-allpolys.append(DSCAN_Back_up_1)
-allpolys.append(DSCAN_Back_up_2)
-allpolys.append(DSCAN_Back_low_1)
-allpolys.append(DSCAN_Back_low_2)
+#allpolys.append(DSCAN_Back_up_1)
+#allpolys.append(DSCAN_Back_up_2)
+#allpolys.append(DSCAN_Back_low_1)
+#allpolys.append(DSCAN_Back_low_2)
 
 allpolys.append(Scaper_11)
 allpolys.append(Scaper_12)
@@ -2255,8 +2362,8 @@ allpolys.append(Scaper_12)
 #allpolys.append(DSShield_11)
 #allpolys.append(DSShield_12)
 
-allpolys.append(DSShield_21)
-allpolys.append(DSShield_22)
+#allpolys.append(DSShield_21)
+#allpolys.append(DSShield_22)
 
 #allpolys.append(coll_pipe11_1)
 #allpolys.append(coll_pipe12_1)
@@ -2276,32 +2383,32 @@ allpolys.append(DSShield_22)
 #allpolys.append(coll_pipe11_6)
 #allpolys.append(coll_pipe12_6)
 
-allpolys.append(coll_pipe31)
-allpolys.append(coll_pipe32)
+#allpolys.append(coll_pipe31)
+#allpolys.append(coll_pipe32)
+#
+#allpolys.append(coll_pipe41)
+#allpolys.append(coll_pipe42)
+#
+#allpolys.append(coll_pipe51)
+#allpolys.append(coll_pipe52)
+#
+#allpolys.append(coll_pipe61)
+#allpolys.append(coll_pipe62)
+#
+#allpolys.append(coll_pipe71)
+#allpolys.append(coll_pipe72)
+#
+#allpolys.append(coll_pipe81)
+#allpolys.append(coll_pipe82)
 
-allpolys.append(coll_pipe41)
-allpolys.append(coll_pipe42)
+#allpolys.append(coll_pipe141)
+#allpolys.append(coll_pipe142)
 
-allpolys.append(coll_pipe51)
-allpolys.append(coll_pipe52)
-
-allpolys.append(coll_pipe61)
-allpolys.append(coll_pipe62)
-
-allpolys.append(coll_pipe71)
-allpolys.append(coll_pipe72)
-
-allpolys.append(coll_pipe81)
-allpolys.append(coll_pipe82)
-
-allpolys.append(coll_pipe141)
-allpolys.append(coll_pipe142)
-
-allpolys.append(coll_pipe151)
-allpolys.append(coll_pipe152)
-
-allpolys.append(coll_pipe161)
-allpolys.append(coll_pipe162)
+#allpolys.append(coll_pipe151)
+#allpolys.append(coll_pipe152)
+#
+#allpolys.append(coll_pipe161)
+#allpolys.append(coll_pipe162)
 
 #allpolys.append(coll_pipe171)
 #allpolys.append(coll_pipe172)
@@ -2340,12 +2447,12 @@ allpolys.append(lintel)
 allpolys.append(Col6A)
 allpolys.append(Col6B)
 
-allpolys.append(DS_Coil1)
-allpolys.append(DS_Coil2)
-allpolys.append(DS_Coil3)
-allpolys.append(DS_Coil4_1)
-allpolys.append(DS_Coil4_2)
-allpolys.append(DS_Coil4_3)
+#allpolys.append(DS_Coil1)
+#allpolys.append(DS_Coil2)
+#allpolys.append(DS_Coil3)
+#allpolys.append(DS_Coil4_1)
+#allpolys.append(DS_Coil4_2)
+#allpolys.append(DS_Coil4_3)
 
 allpolys.append(quartz1)
 allpolys.append(quartz2)

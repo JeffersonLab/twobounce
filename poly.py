@@ -1,9 +1,9 @@
 from math import sqrt
 
 #polyres = 0.01
-#polyres = 0.02
-polyres = 0.20
-#polyres = 0.005
+#polyres = 0.15
+#polyres = 0.01
+polyres = 0.1
 
 class polyError(Exception):
     def __init__( self, value = None ):
