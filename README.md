@@ -1,8 +1,9 @@
 # Twobounce - MOLLER 
 
-# Required packages
+## Required packages
 python gtk3
 
+## Details
 A polygon is given by four array pairs of coordinates, polygons are pushed
 into an array of polygons and then poly::light is called on all combinations
 twice to determine the two bounce lighting
