@@ -1,21 +1,12 @@
-Code to check two bound conditions for MOLLER collimation
+# Twobounce - MOLLER 
 
-Seamus Riordan
-seamus.riordan@stonybrook.edu
-August 11, 2015
-
-Required packages:
-python gtk
-
-speccoll.py is an example executeable python script which defines the geometry
+# Required packages
+python gtk3
 
 A polygon is given by four array pairs of coordinates, polygons are pushed
 into an array of polygons and then poly::light is called on all combinations
 twice to determine the two bounce lighting
 
-speccoll_std is a representation of the "standard" MOLLER collimation
+speccoll_vac.py is the most up-to-date geometry available. Previous older versions are located in ./old.
 
-speccoll_merge is a representation of Rakitha's Collimator-1 Design-1 from
-ELOG 352
-
-showcolls.py is an example of drawing a representation
+Can be run on ifarm if x-forwarding is enabled. Currently can not be run in an interactive job.
