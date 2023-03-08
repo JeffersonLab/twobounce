@@ -2955,42 +2955,6 @@ quartz2 = polygon(
     isDetector=True,
 )
 
-#### sub-quartz array detector to give an idea about the available space before photons become an issue again
-
-sub_det_inner_radius = (
-    0.6  # was 0.55, probably fine at 0.6, ring 1 quartz actually begins at 0.69
-)
-sub_det_outer_radius = 0.689  # ring 6 quartz ends at 1.2, PMTs begin at 1.3
-sub_det_z_pos = 26.5
-sub_det_z_extent = 1.0  # was = .02 for ideal detector
-# sub_det_inner_radius=0.06 # was 0.55, probably fine at 0.6, ring 1 quartz actually begins at 0.69
-# sub_det_outer_radius=0.689 # ring 6 quartz ends at 1.2, PMTs begin at 1.3
-# sub_det_z_pos=6.0
-# sub_det_z_extent=1.0 # was = .02 for ideal detector
-
-sub_quartz1 = polygon(
-    (
-        [sub_det_z_pos, sub_det_inner_radius],
-        [sub_det_z_pos + sub_det_z_extent, sub_det_inner_radius],
-        [sub_det_z_pos + sub_det_z_extent, sub_det_outer_radius],
-        [sub_det_z_pos, sub_det_outer_radius],
-    ),
-    isDetector=True,
-)
-sub_quartz2 = polygon(
-    (
-        [sub_det_z_pos, -sub_det_outer_radius],
-        [sub_det_z_pos + sub_det_z_extent, -sub_det_outer_radius],
-        [sub_det_z_pos + sub_det_z_extent, -sub_det_inner_radius],
-        [sub_det_z_pos, -sub_det_inner_radius],
-    ),
-    isDetector=True,
-)
-
-
-# quartz1 = polygon( ([28.0, 0.55], [28.02, 0.55], [28.02, 1.3], [28, 1.3]), isDetector=True )
-# quartz2 = polygon( ([28.0, -1.3], [28.02, -1.3], [28.02, -0.55], [28, -0.55]), isDetector=True )
-
 ##################################################################################################################################
 
 sources.append(target)
@@ -3214,8 +3178,6 @@ allpolys.append(DS_Coil4_3)
 
 allpolys.append(quartz1)
 allpolys.append(quartz2)
-# allpolys.append(sub_quartz1)
-# allpolys.append(sub_quartz2)
 
 # print sources
 # print allpolys
