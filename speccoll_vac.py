@@ -1814,74 +1814,7 @@ Scaper_12 = polygon(
     notSource=False,
 )
 
-##pipe1  the downstream twobounce shield
-
-# epoxy shield pipe1
-x1_DSShield_1 = 0.033
-z1_DSShield_1 = 9.4
-
-x2_DSShield_1 = 0.039
-z2_DSShield_1 = 9.4
-
-x3_DSShield_1 = 0.0395
-z3_DSShield_1 = 9.6
-
-x4_DSShield_1 = 0.0345
-z4_DSShield_1 = 9.6
-
-
-DSShield_11 = polygon(
-    (
-        [z1_DSShield_1, x1_DSShield_1],
-        [z4_DSShield_1, x4_DSShield_1],
-        [z3_DSShield_1, x3_DSShield_1],
-        [z2_DSShield_1, x2_DSShield_1],
-    ),
-    notSource=False,
-)
-DSShield_12 = polygon(
-    (
-        [z2_DSShield_1, -x2_DSShield_1],
-        [z3_DSShield_1, -x3_DSShield_1],
-        [z4_DSShield_1, -x4_DSShield_1],
-        [z1_DSShield_1, -x1_DSShield_1],
-    ),
-    notSource=False,
-)
-
-
-# epoxy shield pipe2
-x1_DSShield_2 = 0.042
-z1_DSShield_2 = 11.5
-
-x2_DSShield_2 = 0.045
-z2_DSShield_2 = 11.5
-
-x3_DSShield_2 = 0.045
-z3_DSShield_2 = 11.67
-
-x4_DSShield_2 = 0.042
-z4_DSShield_2 = 11.67
-
-
-DSShield_21 = polygon(
-    (
-        [z1_DSShield_2, x1_DSShield_2],
-        [z4_DSShield_2, x4_DSShield_2],
-        [z3_DSShield_2, x3_DSShield_2],
-        [z2_DSShield_2, x2_DSShield_2],
-    ),
-    notSource=False,
-)
-DSShield_22 = polygon(
-    (
-        [z2_DSShield_2, -x2_DSShield_2],
-        [z3_DSShield_2, -x3_DSShield_2],
-        [z4_DSShield_2, -x4_DSShield_2],
-        [z1_DSShield_2, -x1_DSShield_2],
-    ),
-    notSource=False,
-)
+##pipe1  
 
 x1_pipe1_1 = 0.0305
 z1_pipe1_1 = 7.88
@@ -2847,12 +2780,6 @@ allpolys.append(DSCAN_Back_low_2)
 
 allpolys.append(Scaper_11)
 allpolys.append(Scaper_12)
-
-# allpolys.append(DSShield_11)
-# allpolys.append(DSShield_12)
-
-# allpolys.append(DSShield_21)
-# allpolys.append(DSShield_22)
 
 # allpolys.append(coll_pipe11_1)
 # allpolys.append(coll_pipe12_1)
