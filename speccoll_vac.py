@@ -15,8 +15,6 @@ OffSet1 = 0.0017
 
 tgtoffset = 0.5
 tgtlen = 1.25
-# tgtrad = 0.04
-# tgtrad = 0.002
 tgtrad = 1.4142 * 0.0025
 
 target = polygon(
