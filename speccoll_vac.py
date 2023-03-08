@@ -24,89 +24,6 @@ target = polygon(
 )
 
 ### Pipe after target chamber
-#
-x1_tgt_pipe0 = 0.1016
-z1_tgt_pipe0 = 0.83185
-
-x2_tgt_pipe0 = 0.110
-z2_tgt_pipe0 = 0.83185
-
-x3_tgt_pipe0 = 0.110
-z3_tgt_pipe0 = 0.8763 + 0.1016
-
-x4_tgt_pipe0 = 0.1016
-z4_tgt_pipe0 = 0.8763 + 0.1016
-
-# tgt_pipe0_up   = polygon( ([z1_tgt_pipe0, x1_tgt_pipe0], [z4_tgt_pipe0, x4_tgt_pipe0], [z3_tgt_pipe0, x3_tgt_pipe0], [z2_tgt_pipe0, x2_tgt_pipe0] ),  isEthereal=True)
-# tgt_pipe0_lo   = polygon( ([z2_tgt_pipe0, -x2_tgt_pipe0], [z3_tgt_pipe0, -x3_tgt_pipe0], [z4_tgt_pipe0, -x4_tgt_pipe0], [z1_tgt_pipe0, -x1_tgt_pipe0] ), isEthereal=True)
-
-tgt_pipe0_up = polygon(
-    (
-        [z1_tgt_pipe0, x1_tgt_pipe0],
-        [z4_tgt_pipe0, x4_tgt_pipe0],
-        [z3_tgt_pipe0, x3_tgt_pipe0],
-        [z2_tgt_pipe0, x2_tgt_pipe0],
-    ),
-    notSource=False,
-)
-tgt_pipe0_lo = polygon(
-    (
-        [z2_tgt_pipe0, -x2_tgt_pipe0],
-        [z3_tgt_pipe0, -x3_tgt_pipe0],
-        [z4_tgt_pipe0, -x4_tgt_pipe0],
-        [z1_tgt_pipe0, -x1_tgt_pipe0],
-    ),
-    notSource=False,
-)
-
-# x1_tgt_pipe1=0.09525
-# z1_tgt_pipe1=0.90094
-#
-# x2_tgt_pipe1=0.1016
-# z2_tgt_pipe1=0.90094
-#
-# x3_tgt_pipe1=0.1016
-# z3_tgt_pipe1=0.90094+0.2032
-#
-# x4_tgt_pipe1=0.09525
-# z4_tgt_pipe1=0.90094+0.2032
-
-x1_tgt_pipe1 = 0.1600
-# z1_tgt_pipe1=1.150
-z1_tgt_pipe1 = 0.8763 + 0.1016
-
-x2_tgt_pipe1 = 0.167
-# z2_tgt_pipe1=1.150
-z2_tgt_pipe1 = 0.8763 + 0.1016
-
-x3_tgt_pipe1 = 0.167
-z3_tgt_pipe1 = 3.300
-
-x4_tgt_pipe1 = 0.1600
-z4_tgt_pipe1 = 3.300
-
-tgt_pipe1_up = polygon(
-    (
-        [z1_tgt_pipe1, x1_tgt_pipe1],
-        [z4_tgt_pipe1, x4_tgt_pipe1],
-        [z3_tgt_pipe1, x3_tgt_pipe1],
-        [z2_tgt_pipe1, x2_tgt_pipe1],
-    ),
-    notSource=False,
-)
-tgt_pipe1_lo = polygon(
-    (
-        [z2_tgt_pipe1, -x2_tgt_pipe1],
-        [z3_tgt_pipe1, -x3_tgt_pipe1],
-        [z4_tgt_pipe1, -x4_tgt_pipe1],
-        [z1_tgt_pipe1, -x1_tgt_pipe1],
-    ),
-    notSource=False,
-)
-
-# tgt_pipe1_up   = polygon( ([z1_tgt_pipe1, x1_tgt_pipe1], [z4_tgt_pipe1, x4_tgt_pipe1], [z3_tgt_pipe1, x3_tgt_pipe1], [z2_tgt_pipe1, x2_tgt_pipe1] ), isEthereal=True)
-# tgt_pipe1_lo   = polygon( ([z2_tgt_pipe1, -x2_tgt_pipe1], [z3_tgt_pipe1, -x3_tgt_pipe1], [z4_tgt_pipe1, -x4_tgt_pipe1], [z1_tgt_pipe1, -x1_tgt_pipe1] ), isEthereal=True)
-
 
 x2_tgt_pipe4_5 = 0.127
 z2_tgt_pipe4_5 = 3.500
@@ -2825,12 +2742,6 @@ quartz2 = polygon(
 ##################################################################################################################################
 
 sources.append(target)
-
-# allpolys.append(tgt_pipe0_up)
-# allpolys.append(tgt_pipe0_lo)
-
-# allpolys.append(tgt_pipe1_up)
-# allpolys.append(tgt_pipe1_lo)
 
 allpolys.append(tgt_pipe4_5_up)
 allpolys.append(tgt_pipe4_5_lo)
