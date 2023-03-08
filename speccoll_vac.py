@@ -11,7 +11,6 @@ from drawlight import drawlight
 sources = []
 allpolys = []
 
-tgtoffset = 0.5
 tgtlen = 1.25
 tgtrad = 1.4142 * 0.0025
 
@@ -2669,24 +2668,19 @@ coll_pipe162 = polygon(
 
 ################# collimator 4, 3 segmentations
 
-downstream_col4_shift = -1.5
-dss = downstream_col4_shift  ### This shift is largely arbitrary
-
 # seg 1
 
-x1_coll_4_1 = -0.250  # Was simulation -0.300 # Was CAD -0.254
-# x1_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
-z1_coll_4_1 = 9.725 + dss - tgtoffset
+x1_coll_4_1 = -0.250  
+z1_coll_4_1 = 7.725 
 
 x2_coll_4_1 = -0.185
-z2_coll_4_1 = 9.725 + dss - tgtoffset
+z2_coll_4_1 = 7.725 
 
 x3_coll_4_1 = -0.1983  # 185+100*tan(7.6 deg)
-z3_coll_4_1 = 9.875 + dss - tgtoffset
+z3_coll_4_1 = 7.875 
 
-x4_coll_4_1 = -0.250  # Was simulation -0.300 # Was CAD -0.254
-# x4_coll_4_1=-0.300 #Was simulation -0.300 # Was CAD -0.254
-z4_coll_4_1 = 9.875 + dss - tgtoffset
+x4_coll_4_1 = -0.250 
+z4_coll_4_1 = 7.875 
 
 
 coll_4_1 = polygon(
@@ -2702,19 +2696,17 @@ coll_4_1 = polygon(
 
 # seg 2
 
-x1_coll_4_2 = -0.0515  # 0.05 #Was -0.06377, then was -0.0525
-# x1_coll_4_2=-0.05 #0.05 #Was -0.06377, then was -0.0525
-z1_coll_4_2 = 9.775 + dss - tgtoffset
+x1_coll_4_2 = -0.0515  
+z1_coll_4_2 = 7.775 
 
 x2_coll_4_2 = -0.040
-z2_coll_4_2 = 9.775 + dss - tgtoffset
+z2_coll_4_2 = 7.775 
 
 x3_coll_4_2 = -0.040
-z3_coll_4_2 = 9.875 + dss - tgtoffset
+z3_coll_4_2 = 7.875 
 
-x4_coll_4_2 = -0.0515  # 0.05 #Was -0.06377, then was -0.0525
-# x4_coll_4_2=-0.05 #0.05 #Was -0.06377, then was -0.0525
-z4_coll_4_2 = 9.875 + dss - tgtoffset
+x4_coll_4_2 = -0.0515  
+z4_coll_4_2 = 7.875 
 
 
 coll_4_2 = polygon(
@@ -2730,18 +2722,16 @@ coll_4_2 = polygon(
 # seg 3
 
 x1_coll_4_3 = 0.040
-z1_coll_4_3 = 9.775 + dss - tgtoffset
+z1_coll_4_3 = 7.775 
 
 x2_coll_4_3 = 0.250  # Was simulation -0.300 # Was CAD -0.254
-# x2_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
-z2_coll_4_3 = 9.775 + dss - tgtoffset
+z2_coll_4_3 = 7.775 
 
 x3_coll_4_3 = 0.250  # Was simulation -0.300 # Was CAD -0.254
-# x3_coll_4_3=0.300 #Was simulation -0.300 # Was CAD -0.254
-z3_coll_4_3 = 9.875 + dss - tgtoffset
+z3_coll_4_3 = 7.875 
 
 x4_coll_4_3 = 0.040
-z4_coll_4_3 = 9.875 + dss - tgtoffset
+z4_coll_4_3 = 7.875 
 
 
 coll_4_3 = polygon(
