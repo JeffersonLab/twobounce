@@ -23,69 +23,6 @@ target = polygon(
     )
 )
 
-####Target chamber upstream end
-x1_tgt_us = 0.0508
-z1_tgt_us = -0.9906
-
-x2_tgt_us = 0.9144
-z2_tgt_us = -0.9906
-
-x3_tgt_us = 0.9144
-z3_tgt_us = -0.889
-
-x4_tgt_us = 0.0508
-z4_tgt_us = -0.889
-
-tgt_US_1 = polygon(
-    (
-        [z1_tgt_us, x1_tgt_us],
-        [z4_tgt_us, x4_tgt_us],
-        [z3_tgt_us, x3_tgt_us],
-        [z2_tgt_us, x2_tgt_us],
-    ),
-    notSource=False,
-)
-tgt_US_2 = polygon(
-    (
-        [z2_tgt_us, -x2_tgt_us],
-        [z3_tgt_us, -x3_tgt_us],
-        [z4_tgt_us, -x4_tgt_us],
-        [z1_tgt_us, -x1_tgt_us],
-    ),
-    notSource=False,
-)
-
-x1_tgt_ds = 0.1016
-z1_tgt_ds = 0.889
-
-x2_tgt_ds = 0.9144
-z2_tgt_ds = 0.889
-
-x3_tgt_ds = 0.9144
-z3_tgt_ds = 0.9906
-
-x4_tgt_ds = 0.1016
-z4_tgt_ds = 0.9906
-
-tgt_DS_1 = polygon(
-    (
-        [z1_tgt_ds, x1_tgt_ds],
-        [z4_tgt_ds, x4_tgt_ds],
-        [z3_tgt_ds, x3_tgt_ds],
-        [z2_tgt_ds, x2_tgt_ds],
-    ),
-    notSource=False,
-)
-tgt_DS_2 = polygon(
-    (
-        [z2_tgt_ds, -x2_tgt_ds],
-        [z3_tgt_ds, -x3_tgt_ds],
-        [z4_tgt_ds, -x4_tgt_ds],
-        [z1_tgt_ds, -x1_tgt_ds],
-    ),
-    notSource=False,
-)
-
 ### Target chamber top shielding
 x1_tgt_TopShield = 1.085
 z1_tgt_TopShield = -3.175
@@ -3057,11 +2994,6 @@ sub_quartz2 = polygon(
 ##################################################################################################################################
 
 sources.append(target)
-
-# allpolys.append(tgt_US_1)
-# allpolys.append(tgt_US_2)
-# allpolys.append(tgt_DS_1)
-# allpolys.append(tgt_DS_2)
 
 # allpolys.append(tgt_TopShield_top)
 
