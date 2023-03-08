@@ -11,8 +11,6 @@ from drawlight import drawlight
 sources = []
 allpolys = []
 
-OffSet1 = 0.0017
-
 tgtoffset = 0.5
 tgtlen = 1.25
 tgtrad = 1.4142 * 0.0025
