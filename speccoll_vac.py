@@ -23,20 +23,6 @@ target = polygon(
     )
 )
 
-### Target tube
-x1_tgt_tube = 0.0360045
-z1_tgt_tube = -0.625
-
-x2_tgt_tube = 0.045
-z2_tgt_tube = -0.625
-
-x3_tgt_tube = 0.045
-z3_tgt_tube = 0.625
-
-x4_tgt_tube = 0.0360045
-z4_tgt_tube = 0.625
-
-
 ####Target chamber upstream end
 x1_tgt_us = 0.0508
 z1_tgt_us = -0.9906
