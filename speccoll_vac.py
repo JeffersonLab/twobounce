@@ -11,6 +11,7 @@ from drawlight import drawlight
 sources = []
 allpolys = []
 
+tgtpos = -4.5
 tgtlen = 1.25
 tgtrad = 1.4142 * 0.0025
 
@@ -22,6 +23,39 @@ target = polygon(
         [-tgtlen / 2, tgtrad],
     )
 )
+
+# Collar 0
+x1_collar = 0.0762  
+z1_collar = -1.2-tgtpos
+
+x2_collar = 0.330   
+z2_collar = -1.2-tgtpos
+
+x3_collar = 0.330  
+z3_collar = -1.0-tgtpos  
+
+x4_collar = 0.0762  
+z4_collar = -1.0-tgtpos  
+
+collar0_top = polygon(
+    (
+        [z1_collar, x1_collar],
+        [z4_collar, x4_collar],
+        [z3_collar, x3_collar],
+        [z2_collar, x2_collar],
+    ),
+    notSource=False,
+)
+collar0_bottom = polygon(
+    (
+        [z2_collar, -x2_collar],
+        [z3_collar, -x3_collar],
+        [z4_collar, -x4_collar],
+        [z1_collar, -x1_collar],
+    ),
+    notSource=False,
+)
+
 
 ### Pipe after target chamber
 
@@ -454,42 +488,7 @@ tgt_pipe6_1_lo = polygon(
 
 ###### Lead collar (for collimating photons)
 
-# seg 1
-x1_collar = 0.0762  # +0.05
-z1_collar = 3.300  # +1.5
-# z1_collar=3.12202#+1.5
 
-x2_collar = 0.330  # *1.414 The collar is a rectangle (in CAD), but the narrow dimension is the one relevant for here
-z2_collar = 3.300  # +1.5
-# z2_collar=3.12202#+1.5
-
-x3_collar = 0.330  # *1.414
-z3_collar = 3.500  # +1.5
-# z3_collar=3.32202#+1.5
-
-x4_collar = 0.0762  # +0.05
-z4_collar = 3.500  # +1.5
-# z4_collar=3.32202#+1.5
-
-
-collar_top = polygon(
-    (
-        [z1_collar, x1_collar],
-        [z4_collar, x4_collar],
-        [z3_collar, x3_collar],
-        [z2_collar, x2_collar],
-    ),
-    notSource=False,
-)
-collar_bottom = polygon(
-    (
-        [z2_collar, -x2_collar],
-        [z3_collar, -x3_collar],
-        [z4_collar, -x4_collar],
-        [z1_collar, -x1_collar],
-    ),
-    notSource=False,
-)
 
 ###### Hybrid upstream Lead collar (for ep scattering)
 
@@ -1963,8 +1962,8 @@ allpolys.append(tgt_flange5_2_2_lo)
 allpolys.append(tgt_pipe6_1_up)
 allpolys.append(tgt_pipe6_1_lo)
 
-allpolys.append(collar_top)
-allpolys.append(collar_bottom)
+allpolys.append(collar0_top)
+allpolys.append(collar0_bottom)
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
