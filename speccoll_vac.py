@@ -56,6 +56,167 @@ collar0_bottom = polygon(
     notSource=False,
 )
 
+### bellows 1 USflange
+x1 = 149.23e-3 
+z1 = -3427.73e-3-tgtpos
+
+x2 = 184.15e-3  
+z2 = -3427.73e-3-tgtpos
+
+x3 = 184.15e-3 
+z3 = -3399.15e-3-tgtpos  
+
+x4 = 149.23e-3 
+z4 = -3399.15e-3-tgtpos
+
+bellows1_USflange_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows1_USflange_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### bellows 1 seg 1
+x1 = 149.23e-3 
+z1 = -3399.15e-3-tgtpos
+
+x2 = 152.40e-3  
+z2 = -3399.15e-3-tgtpos
+
+x3 = 152.40e-3 
+z3 = -3343.58e-3-tgtpos  
+
+x4 = 149.23e-3 
+z4 = -3343.58e-3-tgtpos
+
+bellows1_seg1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows1_seg1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# bellows 1 seg 2
+
+### bellows 1 seg 1
+x1 = 149.23e-3 
+z1 = -3343.58e-3-tgtpos
+
+x2 = 190.50e-3  
+z2 = -3343.58e-3-tgtpos
+
+x3 = 190.50e-3 
+z3 = -3054.68e-3-tgtpos  
+
+x4 = 149.23e-3 
+z4 = -3054.68e-3-tgtpos
+
+bellows1_seg2_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows1_seg2_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### bellows 1 seg 3
+x1 = 149.23e-3 
+z1 = -3054.68e-3-tgtpos
+
+x2 = 152.4e-3  
+z2 = -3054.68e-3-tgtpos
+
+x3 = 152.4e-3 
+z3 = -2999.10e-3-tgtpos  
+
+x4 = 149.23e-3 
+z4 = -2999.10e-3-tgtpos
+
+bellows1_seg3_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows1_seg3_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### bellows 1 DSflange
+x1 = 149.23e-3 
+z1 = -2999.10e-3-tgtpos
+
+x2 = 184.15e-3  
+z2 = -2999.10e-3-tgtpos
+
+x3 = 184.15e-3 
+z3 = -2941.954e-3-tgtpos  
+
+x4 = 149.23e-3 
+z4 = -2941.954e-3-tgtpos
+
+bellows1_DSflange_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows1_DSflange_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
 
 ### Pipe after target chamber
 
@@ -1930,6 +2091,17 @@ quartz2 = polygon(
 ##################################################################################################################################
 
 sources.append(target)
+
+allpolys.append(bellows1_USflange_top)
+allpolys.append(bellows1_USflange_bottom)
+allpolys.append(bellows1_seg1_top)
+allpolys.append(bellows1_seg1_bottom)
+allpolys.append(bellows1_seg2_top)
+allpolys.append(bellows1_seg2_bottom)
+allpolys.append(bellows1_seg3_top)
+allpolys.append(bellows1_seg3_bottom)
+allpolys.append(bellows1_DSflange_top)
+allpolys.append(bellows1_DSflange_bottom)
 
 allpolys.append(tgt_pipe4_5_up)
 allpolys.append(tgt_pipe4_5_lo)
