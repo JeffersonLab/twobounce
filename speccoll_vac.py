@@ -254,10 +254,10 @@ bellows12_pipe_bottom = polygon(
 x1 = 149.23e-3 
 z1 = -1357.81e-3-tgtpos
 
-x2 = 152.40e-3  
+x2 = 184.15e-3  
 z2 = -1357.81e-3-tgtpos
 
-x3 = 152.40e-3 
+x3 = 184.15e-3 
 z3 = -1310e-3-tgtpos  
 
 x4 = 149.23e-3 
