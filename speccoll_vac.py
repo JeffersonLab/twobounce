@@ -346,398 +346,165 @@ pipe_DScollar0_bottom = polygon(
     notSource=False,
 )
 
-####Flange 4
-###Part1
-##section1
-x2_tgt_flange4_1_1 = 0.152995
-z2_tgt_flange4_1_1 = 3.86845
+### Flange upstream of bellows 2
+x1 = 149.23e-3 
+z1 = -885.648e-3-tgtpos
 
-x1_tgt_flange4_1_1 = 0.127255
-z1_tgt_flange4_1_1 = 3.86845
+x2 = 184.15e-3  
+z2 = -885.648e-3-tgtpos
 
-x4_tgt_flange4_1_1 = 0.127255
-z4_tgt_flange4_1_1 = 3.86845 + 0.01575
+x3 = 184.15e-3 
+z3 = -828.63e-3-tgtpos  
 
-x3_tgt_flange4_1_1 = 0.152995
-z3_tgt_flange4_1_1 = 3.86845 + 0.01575
+x4 = 149.23e-3 
+z4 = -828.63e-3-tgtpos
 
-tgt_flange4_1_1_up = polygon(
+flange_USbellows2_top = polygon(
     (
-        [z1_tgt_flange4_1_1, x1_tgt_flange4_1_1],
-        [z4_tgt_flange4_1_1, x4_tgt_flange4_1_1],
-        [z3_tgt_flange4_1_1, x3_tgt_flange4_1_1],
-        [z2_tgt_flange4_1_1, x2_tgt_flange4_1_1],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
-tgt_flange4_1_1_lo = polygon(
+flange_USbellows2_bottom = polygon(
     (
-        [z2_tgt_flange4_1_1, -x2_tgt_flange4_1_1],
-        [z3_tgt_flange4_1_1, -x3_tgt_flange4_1_1],
-        [z4_tgt_flange4_1_1, -x4_tgt_flange4_1_1],
-        [z1_tgt_flange4_1_1, -x1_tgt_flange4_1_1],
-    ),
-    notSource=False,
-)
-
-##section2
-x2_tgt_flange4_1_2 = 0.152995
-z2_tgt_flange4_1_2 = 3.86845 + 0.01575
-
-x1_tgt_flange4_1_2 = 0.123825
-z1_tgt_flange4_1_2 = 3.86845 + 0.01575
-
-x4_tgt_flange4_1_2 = 0.123825
-z4_tgt_flange4_1_2 = 3.86845 + 0.01575 + 0.0127
-
-x3_tgt_flange4_1_2 = 0.152995
-z3_tgt_flange4_1_2 = 3.86845 + 0.01575 + 0.0127
-
-tgt_flange4_1_2_up = polygon(
-    (
-        [z1_tgt_flange4_1_2, x1_tgt_flange4_1_2],
-        [z4_tgt_flange4_1_2, x4_tgt_flange4_1_2],
-        [z3_tgt_flange4_1_2, x3_tgt_flange4_1_2],
-        [z2_tgt_flange4_1_2, x2_tgt_flange4_1_2],
-    ),
-    notSource=False,
-)
-tgt_flange4_1_2_lo = polygon(
-    (
-        [z2_tgt_flange4_1_2, -x2_tgt_flange4_1_2],
-        [z3_tgt_flange4_1_2, -x3_tgt_flange4_1_2],
-        [z4_tgt_flange4_1_2, -x4_tgt_flange4_1_2],
-        [z1_tgt_flange4_1_2, -x1_tgt_flange4_1_2],
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
     ),
     notSource=False,
 )
 
-###Part2
-##section1
-x2_tgt_flange4_2_1 = 0.152995
-z2_tgt_flange4_2_1 = 3.8969
+### bellows 2 seg 1
+x1 = 149.23e-3 
+z1 = -828.63e-3-tgtpos
 
-x1_tgt_flange4_2_1 = 0.123825
-z1_tgt_flange4_2_1 = 3.8969
+x2 = 152.40e-3  
+z2 = -828.63e-3-tgtpos
 
-x4_tgt_flange4_2_1 = 0.123825
-z4_tgt_flange4_2_1 = 3.8969 + 0.0127
+x3 = 152.40e-3 
+z3 = -773.05e-3-tgtpos  
 
-x3_tgt_flange4_2_1 = 0.152995
-z3_tgt_flange4_2_1 = 3.8969 + 0.0127
+x4 = 149.23e-3 
+z4 = -773.05e-3-tgtpos
 
-tgt_flange4_2_1_up = polygon(
+bellows2_seg1_top = polygon(
     (
-        [z1_tgt_flange4_2_1, x1_tgt_flange4_2_1],
-        [z4_tgt_flange4_2_1, x4_tgt_flange4_2_1],
-        [z3_tgt_flange4_2_1, x3_tgt_flange4_2_1],
-        [z2_tgt_flange4_2_1, x2_tgt_flange4_2_1],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
-tgt_flange4_2_1_lo = polygon(
+bellows2_seg1_bottom = polygon(
     (
-        [z2_tgt_flange4_2_1, -x2_tgt_flange4_2_1],
-        [z3_tgt_flange4_2_1, -x3_tgt_flange4_2_1],
-        [z4_tgt_flange4_2_1, -x4_tgt_flange4_2_1],
-        [z1_tgt_flange4_2_1, -x1_tgt_flange4_2_1],
-    ),
-    notSource=False,
-)
-
-##section2
-x2_tgt_flange4_2_2 = 0.152995
-z2_tgt_flange4_2_2 = 3.8969 + 0.0127
-
-x1_tgt_flange4_2_2 = 0.127255
-z1_tgt_flange4_2_2 = 3.8969 + 0.0127
-
-x4_tgt_flange4_2_2 = 0.127255
-z4_tgt_flange4_2_2 = 3.8969 + 0.01575 + 0.0127
-
-x3_tgt_flange4_2_2 = 0.152995
-z3_tgt_flange4_2_2 = 3.8969 + 0.01575 + 0.0127
-
-tgt_flange4_2_2_up = polygon(
-    (
-        [z1_tgt_flange4_2_2, x1_tgt_flange4_2_2],
-        [z4_tgt_flange4_2_2, x4_tgt_flange4_2_2],
-        [z3_tgt_flange4_2_2, x3_tgt_flange4_2_2],
-        [z2_tgt_flange4_2_2, x2_tgt_flange4_2_2],
-    ),
-    notSource=False,
-)
-tgt_flange4_2_2_lo = polygon(
-    (
-        [z2_tgt_flange4_2_2, -x2_tgt_flange4_2_2],
-        [z3_tgt_flange4_2_2, -x3_tgt_flange4_2_2],
-        [z4_tgt_flange4_2_2, -x4_tgt_flange4_2_2],
-        [z1_tgt_flange4_2_2, -x1_tgt_flange4_2_2],
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
     ),
     notSource=False,
 )
 
-###Next pipe - it has three parts
-##part1
-x2_tgt_pipe5_1 = 0.127
-z2_tgt_pipe5_1 = 3.9096
+### bellows 2 seg 2
+x1 = 149.23e-3 
+z1 = -773.05e-3-tgtpos
 
-x1_tgt_pipe5_1 = 0.12624
-z1_tgt_pipe5_1 = 3.9096
+x2 = 190.50e-3  
+z2 = -773.05e-3-tgtpos
 
-x4_tgt_pipe5_1 = 0.12624
-z4_tgt_pipe5_1 = 3.9096 + 0.0508
+x3 = 190.50e-3 
+z3 = -484.15e-3-tgtpos  
 
-x3_tgt_pipe5_1 = 0.127
-z3_tgt_pipe5_1 = 3.9096 + 0.0508
+x4 = 149.23e-3 
+z4 = -484.15e-3-tgtpos
 
-tgt_pipe5_1_up = polygon(
+bellows2_seg2_top = polygon(
     (
-        [z1_tgt_pipe5_1, x1_tgt_pipe5_1],
-        [z4_tgt_pipe5_1, x4_tgt_pipe5_1],
-        [z3_tgt_pipe5_1, x3_tgt_pipe5_1],
-        [z2_tgt_pipe5_1, x2_tgt_pipe5_1],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
-tgt_pipe5_1_lo = polygon(
+bellows2_seg2_bottom = polygon(
     (
-        [z2_tgt_pipe5_1, -x2_tgt_pipe5_1],
-        [z3_tgt_pipe5_1, -x3_tgt_pipe5_1],
-        [z4_tgt_pipe5_1, -x4_tgt_pipe5_1],
-        [z1_tgt_pipe5_1, -x1_tgt_pipe5_1],
-    ),
-    notSource=False,
-)
-
-##part2
-x2_tgt_pipe5_2 = 0.13894
-z2_tgt_pipe5_2 = 3.9096 + 0.0508
-
-x1_tgt_pipe5_2 = 0.12624
-z1_tgt_pipe5_2 = 3.9096 + 0.0508
-
-x4_tgt_pipe5_2 = 0.12624
-z4_tgt_pipe5_2 = 3.9096 + 0.0508 + 0.22739
-
-x3_tgt_pipe5_2 = 0.13894
-z3_tgt_pipe5_2 = 3.9096 + 0.0508 + 0.22739
-
-tgt_pipe5_2_up = polygon(
-    (
-        [z1_tgt_pipe5_2, x1_tgt_pipe5_2],
-        [z4_tgt_pipe5_2, x4_tgt_pipe5_2],
-        [z3_tgt_pipe5_2, x3_tgt_pipe5_2],
-        [z2_tgt_pipe5_2, x2_tgt_pipe5_2],
-    ),
-    notSource=False,
-)
-tgt_pipe5_2_lo = polygon(
-    (
-        [z2_tgt_pipe5_2, -x2_tgt_pipe5_2],
-        [z3_tgt_pipe5_2, -x3_tgt_pipe5_2],
-        [z4_tgt_pipe5_2, -x4_tgt_pipe5_2],
-        [z1_tgt_pipe5_2, -x1_tgt_pipe5_2],
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
     ),
     notSource=False,
 )
 
-##part3
-x2_tgt_pipe5_3 = 0.127
-z2_tgt_pipe5_3 = 3.9096 + 0.0508 + 0.22739
+### bellows 2 seg 3
+x1 = 149.23e-3 
+z1 = -484.15e-3-tgtpos
 
-x1_tgt_pipe5_3 = 0.12624
-z1_tgt_pipe5_3 = 3.9096 + 0.0508 + 0.22739
+x2 = 152.4e-3  
+z2 = -484.15e-3-tgtpos
 
-x4_tgt_pipe5_3 = 0.12624
-z4_tgt_pipe5_3 = 3.9096 + 0.0508 + 0.22739 + 0.0508
+x3 = 152.4e-3 
+z3 = -428.58e-3-tgtpos  
 
-x3_tgt_pipe5_3 = 0.127
-z3_tgt_pipe5_3 = 3.9096 + 0.0508 + 0.22739 + 0.0508
+x4 = 149.23e-3 
+z4 = -428.58e-3-tgtpos
 
-tgt_pipe5_3_up = polygon(
+bellows2_seg3_top = polygon(
     (
-        [z1_tgt_pipe5_3, x1_tgt_pipe5_3],
-        [z4_tgt_pipe5_3, x4_tgt_pipe5_3],
-        [z3_tgt_pipe5_3, x3_tgt_pipe5_3],
-        [z2_tgt_pipe5_3, x2_tgt_pipe5_3],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
-tgt_pipe5_3_lo = polygon(
+bellows2_seg3_bottom = polygon(
     (
-        [z2_tgt_pipe5_3, -x2_tgt_pipe5_3],
-        [z3_tgt_pipe5_3, -x3_tgt_pipe5_3],
-        [z4_tgt_pipe5_3, -x4_tgt_pipe5_3],
-        [z1_tgt_pipe5_3, -x1_tgt_pipe5_3],
-    ),
-    notSource=False,
-)
-
-####Flange 5
-###Part1
-##section1
-x2_tgt_flange5_1_1 = 0.152995
-z2_tgt_flange5_1_1 = 4.24945
-
-x1_tgt_flange5_1_1 = 0.127255
-z1_tgt_flange5_1_1 = 4.24945
-
-x4_tgt_flange5_1_1 = 0.127255
-z4_tgt_flange5_1_1 = 4.24945 + 0.01575
-
-x3_tgt_flange5_1_1 = 0.152995
-z3_tgt_flange5_1_1 = 4.24945 + 0.01575
-
-tgt_flange5_1_1_up = polygon(
-    (
-        [z1_tgt_flange5_1_1, x1_tgt_flange5_1_1],
-        [z4_tgt_flange5_1_1, x4_tgt_flange5_1_1],
-        [z3_tgt_flange5_1_1, x3_tgt_flange5_1_1],
-        [z2_tgt_flange5_1_1, x2_tgt_flange5_1_1],
-    ),
-    notSource=False,
-)
-tgt_flange5_1_1_lo = polygon(
-    (
-        [z2_tgt_flange5_1_1, -x2_tgt_flange5_1_1],
-        [z3_tgt_flange5_1_1, -x3_tgt_flange5_1_1],
-        [z4_tgt_flange5_1_1, -x4_tgt_flange5_1_1],
-        [z1_tgt_flange5_1_1, -x1_tgt_flange5_1_1],
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
     ),
     notSource=False,
 )
 
-##section2
-x2_tgt_flange5_1_2 = 0.152995
-z2_tgt_flange5_1_2 = 4.24945 + 0.01575
+### bellows 2 DSflange
+x1 = 149.23e-3 
+z1 = -428.58e-3-tgtpos
 
-x1_tgt_flange5_1_2 = 0.123825
-z1_tgt_flange5_1_2 = 4.24945 + 0.01575
+x2 = 184.15e-3  
+z2 = -428.58e-3-tgtpos
 
-x4_tgt_flange5_1_2 = 0.123825
-z4_tgt_flange5_1_2 = 4.24945 + 0.01575 + 0.0127
+x3 = 184.15e-3 
+z3 = -371.475e-3-tgtpos  
 
-x3_tgt_flange5_1_2 = 0.152995
-z3_tgt_flange5_1_2 = 4.24945 + 0.01575 + 0.0127
+x4 = 149.23e-3 
+z4 = -371.475e-3-tgtpos
 
-tgt_flange5_1_2_up = polygon(
+bellows2_DSflange_top = polygon(
     (
-        [z1_tgt_flange5_1_2, x1_tgt_flange5_1_2],
-        [z4_tgt_flange5_1_2, x4_tgt_flange5_1_2],
-        [z3_tgt_flange5_1_2, x3_tgt_flange5_1_2],
-        [z2_tgt_flange5_1_2, x2_tgt_flange5_1_2],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
-tgt_flange5_1_2_lo = polygon(
+bellows2_DSflange_bottom = polygon(
     (
-        [z2_tgt_flange5_1_2, -x2_tgt_flange5_1_2],
-        [z3_tgt_flange5_1_2, -x3_tgt_flange5_1_2],
-        [z4_tgt_flange5_1_2, -x4_tgt_flange5_1_2],
-        [z1_tgt_flange5_1_2, -x1_tgt_flange5_1_2],
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
     ),
     notSource=False,
 )
-
-###Part2
-##section1
-x2_tgt_flange5_2_1 = 0.152995
-z2_tgt_flange5_2_1 = 4.2779
-
-x1_tgt_flange5_2_1 = 0.123825
-z1_tgt_flange5_2_1 = 4.2779
-
-x4_tgt_flange5_2_1 = 0.123825
-z4_tgt_flange5_2_1 = 4.2779 + 0.0127
-
-x3_tgt_flange5_2_1 = 0.152995
-z3_tgt_flange5_2_1 = 4.2779 + 0.0127
-
-tgt_flange5_2_1_up = polygon(
-    (
-        [z1_tgt_flange5_2_1, x1_tgt_flange5_2_1],
-        [z4_tgt_flange5_2_1, x4_tgt_flange5_2_1],
-        [z3_tgt_flange5_2_1, x3_tgt_flange5_2_1],
-        [z2_tgt_flange5_2_1, x2_tgt_flange5_2_1],
-    ),
-    notSource=False,
-)
-tgt_flange5_2_1_lo = polygon(
-    (
-        [z2_tgt_flange5_2_1, -x2_tgt_flange5_2_1],
-        [z3_tgt_flange5_2_1, -x3_tgt_flange5_2_1],
-        [z4_tgt_flange5_2_1, -x4_tgt_flange5_2_1],
-        [z1_tgt_flange5_2_1, -x1_tgt_flange5_2_1],
-    ),
-    notSource=False,
-)
-
-##section2
-x2_tgt_flange5_2_2 = 0.152995
-z2_tgt_flange5_2_2 = 4.2779 + 0.0127
-
-x1_tgt_flange5_2_2 = 0.127255
-z1_tgt_flange5_2_2 = 4.2779 + 0.0127
-
-x4_tgt_flange5_2_2 = 0.127255
-z4_tgt_flange5_2_2 = 4.2779 + 0.01575 + 0.0127
-
-x3_tgt_flange5_2_2 = 0.152995
-z3_tgt_flange5_2_2 = 4.2779 + 0.01575 + 0.0127
-
-tgt_flange5_2_2_up = polygon(
-    (
-        [z1_tgt_flange5_2_2, x1_tgt_flange5_2_2],
-        [z4_tgt_flange5_2_2, x4_tgt_flange5_2_2],
-        [z3_tgt_flange5_2_2, x3_tgt_flange5_2_2],
-        [z2_tgt_flange5_2_2, x2_tgt_flange5_2_2],
-    ),
-    notSource=False,
-)
-tgt_flange5_2_2_lo = polygon(
-    (
-        [z2_tgt_flange5_2_2, -x2_tgt_flange5_2_2],
-        [z3_tgt_flange5_2_2, -x3_tgt_flange5_2_2],
-        [z4_tgt_flange5_2_2, -x4_tgt_flange5_2_2],
-        [z1_tgt_flange5_2_2, -x1_tgt_flange5_2_2],
-    ),
-    notSource=False,
-)
-
-###Next pipe
-##part1
-x2_tgt_pipe6_1 = 0.127
-z2_tgt_pipe6_1 = 4.2906
-
-x1_tgt_pipe6_1 = 0.12065
-z1_tgt_pipe6_1 = 4.2906
-
-x4_tgt_pipe6_1 = 0.12065
-z4_tgt_pipe6_1 = 4.2906 + 0.127
-
-x3_tgt_pipe6_1 = 0.127
-z3_tgt_pipe6_1 = 4.2906 + 0.127
-
-tgt_pipe6_1_up = polygon(
-    (
-        [z1_tgt_pipe6_1, x1_tgt_pipe6_1],
-        [z4_tgt_pipe6_1, x4_tgt_pipe6_1],
-        [z3_tgt_pipe6_1, x3_tgt_pipe6_1],
-        [z2_tgt_pipe6_1, x2_tgt_pipe6_1],
-    ),
-    notSource=False,
-)
-tgt_pipe6_1_lo = polygon(
-    (
-        [z2_tgt_pipe6_1, -x2_tgt_pipe6_1],
-        [z3_tgt_pipe6_1, -x3_tgt_pipe6_1],
-        [z4_tgt_pipe6_1, -x4_tgt_pipe6_1],
-        [z1_tgt_pipe6_1, -x1_tgt_pipe6_1],
-    ),
-    notSource=False,
-)
-
 
 ################################################################
 
@@ -2205,40 +1972,21 @@ allpolys.append(bellows12_pipe_DSflange_bottom)
 
 allpolys.append(pipe_UScollar0_top)
 allpolys.append(pipe_UScollar0_bottom)
-
+allpolys.append(collar0_top)
+allpolys.append(collar0_bottom)
 allpolys.append(pipe_DScollar0_top)
 allpolys.append(pipe_DScollar0_bottom)
 
-allpolys.append(tgt_flange4_1_1_up)
-allpolys.append(tgt_flange4_1_1_lo)
-allpolys.append(tgt_flange4_1_2_up)
-allpolys.append(tgt_flange4_1_2_lo)
-allpolys.append(tgt_flange4_2_1_up)
-allpolys.append(tgt_flange4_2_1_lo)
-allpolys.append(tgt_flange4_2_2_up)
-allpolys.append(tgt_flange4_2_2_lo)
-
-allpolys.append(tgt_pipe5_1_up)
-allpolys.append(tgt_pipe5_1_lo)
-allpolys.append(tgt_pipe5_2_up)
-allpolys.append(tgt_pipe5_2_lo)
-allpolys.append(tgt_pipe5_3_up)
-allpolys.append(tgt_pipe5_3_lo)
-
-allpolys.append(tgt_flange5_1_1_up)
-allpolys.append(tgt_flange5_1_1_lo)
-allpolys.append(tgt_flange5_1_2_up)
-allpolys.append(tgt_flange5_1_2_lo)
-allpolys.append(tgt_flange5_2_1_up)
-allpolys.append(tgt_flange5_2_1_lo)
-allpolys.append(tgt_flange5_2_2_up)
-allpolys.append(tgt_flange5_2_2_lo)
-
-allpolys.append(tgt_pipe6_1_up)
-allpolys.append(tgt_pipe6_1_lo)
-
-allpolys.append(collar0_top)
-allpolys.append(collar0_bottom)
+allpolys.append(bellows2_USflange_top)
+allpolys.append(bellows2_USflange_bottom)
+allpolys.append(bellows2_seg1_top)
+allpolys.append(bellows2_seg1_bottom)
+allpolys.append(bellows2_seg2_top)
+allpolys.append(bellows2_seg2_bottom)
+allpolys.append(bellows2_seg3_top)
+allpolys.append(bellows2_seg3_bottom)
+allpolys.append(bellows2_DSflange_top)
+allpolys.append(bellows2_DSflange_bottom)
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
