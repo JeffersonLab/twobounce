@@ -24,38 +24,6 @@ target = polygon(
     )
 )
 
-# Collar 0
-x1_collar = 0.0762  
-z1_collar = -1.2-tgtpos
-
-x2_collar = 0.330   
-z2_collar = -1.2-tgtpos
-
-x3_collar = 0.330  
-z3_collar = -1.0-tgtpos  
-
-x4_collar = 0.0762  
-z4_collar = -1.0-tgtpos  
-
-collar0_top = polygon(
-    (
-        [z1_collar, x1_collar],
-        [z4_collar, x4_collar],
-        [z3_collar, x3_collar],
-        [z2_collar, x2_collar],
-    ),
-    notSource=False,
-)
-collar0_bottom = polygon(
-    (
-        [z2_collar, -x2_collar],
-        [z3_collar, -x3_collar],
-        [z4_collar, -x4_collar],
-        [z1_collar, -x1_collar],
-    ),
-    notSource=False,
-)
-
 ### bellows 1 USflange
 x1 = 149.23e-3 
 z1 = -3427.73e-3-tgtpos
@@ -281,6 +249,105 @@ bellows12_pipe_DSflange_bottom = polygon(
     ),
     notSource=False,
 )
+
+### Pipe segment upstream of collar 0
+x1 = 146.05e-3 
+z1 = -1300.66e-3-tgtpos
+
+x2 = 152.4e-3  
+z2 = -1300.66e-3-tgtpos
+
+x3 = 152.4e-3 
+z3 = -1200e-3-tgtpos  
+
+x4 = 146.05e-3 
+z4 = -1200e-3-tgtpos
+
+pipe_UScollar0_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+pipe_UScollar0_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Collar 0
+x1_collar = 0.0762  
+z1_collar = -1.2-tgtpos
+
+x2_collar = 0.330   
+z2_collar = -1.2-tgtpos
+
+x3_collar = 0.330  
+z3_collar = -1.0-tgtpos  
+
+x4_collar = 0.0762  
+z4_collar = -1.0-tgtpos  
+
+collar0_top = polygon(
+    (
+        [z1_collar, x1_collar],
+        [z4_collar, x4_collar],
+        [z3_collar, x3_collar],
+        [z2_collar, x2_collar],
+    ),
+    notSource=False,
+)
+collar0_bottom = polygon(
+    (
+        [z2_collar, -x2_collar],
+        [z3_collar, -x3_collar],
+        [z4_collar, -x4_collar],
+        [z1_collar, -x1_collar],
+    ),
+    notSource=False,
+)
+
+
+### Pipe segment downstream of collar 0
+x1 = 146.05e-3 
+z1 = -1000e-3-tgtpos
+
+x2 = 152.4e-3  
+z2 = -1000e-3-tgtpos
+
+x3 = 152.4e-3 
+z3 = -885.648e-3-tgtpos  
+
+x4 = 146.05e-3 
+z4 = -885.648e-3-tgtpos
+
+pipe_DScollar0_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+pipe_DScollar0_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+
 
 
 ### Pipe after target chamber
@@ -2173,6 +2240,12 @@ allpolys.append(bellows12_pipe_bottom)
 
 allpolys.append(bellows12_pipe_DSflange_top)
 allpolys.append(bellows12_pipe_DSflange_bottom)
+
+allpolys.append(pipe_UScollar0_top)
+allpolys.append(pipe_UScollar0_bottom)
+
+allpolys.append(pipe_DScollar0_top)
+allpolys.append(pipe_DScollar0_bottom)
 
 allpolys.append(tgt_pipe4_5_up)
 allpolys.append(tgt_pipe4_5_lo)
