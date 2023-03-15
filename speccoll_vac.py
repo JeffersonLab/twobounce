@@ -283,37 +283,36 @@ pipe_UScollar0_bottom = polygon(
 )
 
 # Collar 0
-x1_collar = 0.0762  
-z1_collar = -1.2-tgtpos
+x1 = 0.0762  
+z1 = -1.2-tgtpos
 
-x2_collar = 0.330   
-z2_collar = -1.2-tgtpos
+x2 = 0.330   
+z2 = -1.2-tgtpos
 
-x3_collar = 0.330  
-z3_collar = -1.0-tgtpos  
+x3 = 0.330  
+z3 = -1.0-tgtpos  
 
-x4_collar = 0.0762  
-z4_collar = -1.0-tgtpos  
+x4 = 0.0762  
+z4 = -1.0-tgtpos  
 
 collar0_top = polygon(
     (
-        [z1_collar, x1_collar],
-        [z4_collar, x4_collar],
-        [z3_collar, x3_collar],
-        [z2_collar, x2_collar],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
 collar0_bottom = polygon(
     (
-        [z2_collar, -x2_collar],
-        [z3_collar, -x3_collar],
-        [z4_collar, -x4_collar],
-        [z1_collar, -x1_collar],
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
     ),
     notSource=False,
 )
-
 
 ### Pipe segment downstream of collar 0
 x1 = 146.05e-3 
