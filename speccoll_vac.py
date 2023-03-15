@@ -88,9 +88,7 @@ bellows1_seg1_bottom = polygon(
     notSource=False,
 )
 
-# bellows 1 seg 2
-
-### bellows 1 seg 1
+### bellows 1 seg 2
 x1 = 149.23e-3 
 z1 = -3343.58e-3-tgtpos
 
@@ -359,7 +357,7 @@ z3 = -828.63e-3-tgtpos
 x4 = 149.23e-3 
 z4 = -828.63e-3-tgtpos
 
-flange_USbellows2_top = polygon(
+bellows2_USflange_top = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -368,7 +366,7 @@ flange_USbellows2_top = polygon(
     ),
     notSource=False,
 )
-flange_USbellows2_bottom = polygon(
+bellows2_USflange_bottom = polygon(
     (
         [z2, -x2],
         [z3, -x3],
