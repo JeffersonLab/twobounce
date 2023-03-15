@@ -218,6 +218,71 @@ bellows1_DSflange_bottom = polygon(
     notSource=False,
 )
 
+### Pipe between bellows 1 and 2
+x1 = 146.05e-3 
+z1 = -2941.954e-3-tgtpos
+
+x2 = 152.40e-3  
+z2 = -2941.954e-3-tgtpos
+
+x3 = 152.40e-3 
+z3 = -1357.81e-3-tgtpos  
+
+x4 = 146.05e-3 
+z4 = -1357.81e-3-tgtpos
+
+bellows12_pipe_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows12_pipe_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### Flange after bellows12 pipe
+x1 = 149.23e-3 
+z1 = -1357.81e-3-tgtpos
+
+x2 = 152.40e-3  
+z2 = -1357.81e-3-tgtpos
+
+x3 = 152.40e-3 
+z3 = -1310e-3-tgtpos  
+
+x4 = 149.23e-3 
+z4 = -1310e-3-tgtpos
+
+bellows12_pipe_DSflange_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows12_pipe_DSflange_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+
 ### Pipe after target chamber
 
 x2_tgt_pipe4_5 = 0.127
@@ -2102,6 +2167,12 @@ allpolys.append(bellows1_seg3_top)
 allpolys.append(bellows1_seg3_bottom)
 allpolys.append(bellows1_DSflange_top)
 allpolys.append(bellows1_DSflange_bottom)
+
+allpolys.append(bellows12_pipe_top)
+allpolys.append(bellows12_pipe_bottom)
+
+allpolys.append(bellows12_pipe_DSflange_top)
+allpolys.append(bellows12_pipe_DSflange_bottom)
 
 allpolys.append(tgt_pipe4_5_up)
 allpolys.append(tgt_pipe4_5_lo)
