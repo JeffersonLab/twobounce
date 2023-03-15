@@ -346,43 +346,6 @@ pipe_DScollar0_bottom = polygon(
     notSource=False,
 )
 
-
-
-
-### Pipe after target chamber
-
-x2_tgt_pipe4_5 = 0.127
-z2_tgt_pipe4_5 = 3.500
-
-x1_tgt_pipe4_5 = 0.122225
-z1_tgt_pipe4_5 = 3.500
-
-x4_tgt_pipe4_5 = 0.122225
-z4_tgt_pipe4_5 = 3.41046 + 0.47374
-
-x3_tgt_pipe4_5 = 0.127
-z3_tgt_pipe4_5 = 3.41046 + 0.47374
-
-tgt_pipe4_5_up = polygon(
-    (
-        [z1_tgt_pipe4_5, x1_tgt_pipe4_5],
-        [z4_tgt_pipe4_5, x4_tgt_pipe4_5],
-        [z3_tgt_pipe4_5, x3_tgt_pipe4_5],
-        [z2_tgt_pipe4_5, x2_tgt_pipe4_5],
-    ),
-    notSource=False,
-)
-tgt_pipe4_5_lo = polygon(
-    (
-        [z2_tgt_pipe4_5, -x2_tgt_pipe4_5],
-        [z3_tgt_pipe4_5, -x3_tgt_pipe4_5],
-        [z4_tgt_pipe4_5, -x4_tgt_pipe4_5],
-        [z1_tgt_pipe4_5, -x1_tgt_pipe4_5],
-    ),
-    notSource=False,
-)
-
-
 ####Flange 4
 ###Part1
 ##section1
@@ -2245,9 +2208,6 @@ allpolys.append(pipe_UScollar0_bottom)
 
 allpolys.append(pipe_DScollar0_top)
 allpolys.append(pipe_DScollar0_bottom)
-
-allpolys.append(tgt_pipe4_5_up)
-allpolys.append(tgt_pipe4_5_lo)
 
 allpolys.append(tgt_flange4_1_1_up)
 allpolys.append(tgt_flange4_1_1_lo)
