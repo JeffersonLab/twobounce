@@ -504,6 +504,39 @@ bellows2_DSflange_bottom = polygon(
     notSource=False,
 )
 
+###  Enclosure US pipe
+x1 = 149.23e-3 
+z1 = -371.475e-3-tgtpos
+
+x2 = 155.575e-3  
+z2 = -371.475e-3-tgtpos
+
+x3 = 155.575e-3 
+z3 = -204.597e-3-tgtpos  
+
+x4 = 149.23e-3 
+z4 = -204.597e-3-tgtpos
+
+enclosure_USpipe_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+enclosure_USpipe_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+
 ################################################################
 
 ###### Lead collar (for collimating photons)
@@ -1985,6 +2018,9 @@ allpolys.append(bellows2_seg3_top)
 allpolys.append(bellows2_seg3_bottom)
 allpolys.append(bellows2_DSflange_top)
 allpolys.append(bellows2_DSflange_bottom)
+
+allpolys.append(enclosure_USpipe_top)
+allpolys.append(enclosure_USpipe_bottom)
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
