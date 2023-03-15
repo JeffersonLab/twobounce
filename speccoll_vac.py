@@ -258,10 +258,10 @@ x2 = 184.15e-3
 z2 = -1357.81e-3-tgtpos
 
 x3 = 184.15e-3 
-z3 = -1310e-3-tgtpos  
+z3 = -1300.66e-3-tgtpos  
 
 x4 = 149.23e-3 
-z4 = -1310e-3-tgtpos
+z4 = -1300.66e-3-tgtpos
 
 bellows12_pipe_DSflange_top = polygon(
     (
