@@ -581,6 +581,51 @@ upstream_enclosure_USwall_bottom = polygon(
     notSource=False,
 )
 
+###  Upstream Enclosure DS Wall 
+x1 = 155.575e-3 
+z1 = 3592.703e-3-tgtpos
+
+x2 = 552.45e-3    
+z2 = 3592.703e-3-tgtpos
+
+x3 = 552.45e-3 
+z3 = (3592.703+50.8)*1e-3-tgtpos  
+
+x4 = 155.575e-3 
+z4 = (3592.703+50.8)*1e-3-tgtpos
+
+upstream_enclosure_DSwall_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+x1 = 155.575e-3 
+z1 = 3592.703e-3-tgtpos
+
+x2 = 552.45e-3    
+z2 = 3592.703e-3-tgtpos
+
+x3 = 552.45e-3 
+z3 = (3592.703+50.8)*1e-3-tgtpos  
+
+x4 = 155.575e-3 
+z4 = (3592.703+50.8)*1e-3-tgtpos
+
+upstream_enclosure_DSwall_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
 
 
 
@@ -1926,6 +1971,8 @@ allpolys.append(upstream_enclosure_USpipe_bottom)
 
 allpolys.append(upstream_enclosure_USwall_top)
 allpolys.append(upstream_enclosure_USwall_bottom)
+allpolys.append(upstream_enclosure_DSwall_top)
+allpolys.append(upstream_enclosure_DSwall_bottom)
 
 
 allpolys.append(collar_top1)
