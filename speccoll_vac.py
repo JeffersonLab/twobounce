@@ -540,10 +540,10 @@ upstream_enclosure_USpipe_bottom = polygon(
 x1 = 155.575e-3 
 z1 = (-204.597-50.8)*1e-3-tgtpos
 
-x2 = 517.6e-3    
+x2 = 552.45e-3    
 z2 = (-204.597-50.8)*1e-3-tgtpos
 
-x3 = 517.6e-3 
+x3 = 552.45e-3 
 z3 = -204.597e-3-tgtpos  
 
 x4 = 155.575e-3 
@@ -562,10 +562,10 @@ upstream_enclosure_USwall_top = polygon(
 x1 = 155.575e-3 
 z1 = (-204.597-50.8)*1e-3-tgtpos
 
-x2 = 650.8e-3    
+x2 = 552.45e-3    
 z2 = (-204.597-50.8)*1e-3-tgtpos
 
-x3 = 650.8e-3 
+x3 = 552.45e-3 
 z3 = -204.597e-3-tgtpos 
 
 x4 = 155.575e-3 
