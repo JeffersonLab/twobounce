@@ -839,6 +839,104 @@ collimator1_seg5_bottom = polygon(
     notSource=False,
 )
 
+
+### Collimator 2
+
+# Seg 1
+
+x1 = -0.035
+z1 = 5.25
+
+x2 = -0.0305
+z2 = 5.25
+
+x3 = -0.0305
+z3 = 5.4
+
+x4 = -0.035
+z4 = 5.4
+
+collimator2_seg1 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 2
+x1 = -0.150
+z1 = 5.25
+
+x2 = -0.101
+z2 = 5.25
+
+x3 = -0.101
+z3 = 5.25+0.05
+
+x4 = -0.15
+z4 = 5.25+0.05
+
+collimator2_seg2 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 3
+
+x1 = -0.150
+z1 = 5.25+0.05
+
+x2 = -0.101
+z2 = 5.25+0.05
+
+x3 = -0.101-0.101*np.tan(1.5*np.pi/180)
+z3 = 5.25+0.15
+
+x4 = -0.15
+z4 = 5.25+0.15
+
+collimator2_seg3 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 4
+
+x1 = 0.0305
+z1 = 5.25
+
+x2 = 0.150
+z2 = 5.25
+
+x3 = 0.1500
+z3 = 5.4
+
+x4 = 0.0305
+z4 = 5.4
+
+collimator2_seg4 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
 ################################################################
 
 ###### Lead collar (for collimating photons)
@@ -954,86 +1052,6 @@ collar_bottom2 = polygon(
     ),
     notSource=False,
 )
-
-#################################################################
-
-#########collimator 2,  three segments
-# seg 1
-x1_coll_2_1 = -0.035
-z1_coll_2_1 = 5.25
-
-x2_coll_2_1 = -0.0275
-z2_coll_2_1 = 5.25
-
-x3_coll_2_1 = -0.0275
-z3_coll_2_1 = 5.4
-
-x4_coll_2_1 = -0.035
-z4_coll_2_1 = 5.4
-
-
-coll_2_1 = polygon(
-    (
-        [z1_coll_2_1, x1_coll_2_1],
-        [z4_coll_2_1, x4_coll_2_1],
-        [z3_coll_2_1, x3_coll_2_1],
-        [z2_coll_2_1, x2_coll_2_1],
-    ),
-    notSource=False,
-)
-# coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [z3_coll_2_1, x3_coll_2_1], [z2_coll_2_1, x2_coll_2_1] ), isDetector=True)
-
-
-# seg 2
-
-x1_coll_2_2 = -0.150
-z1_coll_2_2 = 5.25
-
-x2_coll_2_2 = -0.101
-z2_coll_2_2 = 5.25
-
-x3_coll_2_2 = -0.101
-z3_coll_2_2 = 5.4
-
-x4_coll_2_2 = -0.15
-z4_coll_2_2 = 5.4
-
-coll_2_2 = polygon(
-    (
-        [z1_coll_2_2, x1_coll_2_2],
-        [z4_coll_2_2, x4_coll_2_2],
-        [z3_coll_2_2, x3_coll_2_2],
-        [z2_coll_2_2, x2_coll_2_2],
-    ),
-    notSource=False,
-)
-# coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [z3_coll_2_2, x3_coll_2_2], [z2_coll_2_2, x2_coll_2_2] ), isDetector=True)
-
-# seg 3
-
-x1_coll_2_3 = 0.0275
-z1_coll_2_3 = 5.25
-
-x2_coll_2_3 = 0.150
-z2_coll_2_3 = 5.25
-
-x3_coll_2_3 = 0.1500
-z3_coll_2_3 = 5.4
-
-x4_coll_2_3 = 0.0275
-z4_coll_2_3 = 5.4
-
-
-coll_2_3 = polygon(
-    (
-        [z1_coll_2_3, x1_coll_2_3],
-        [z4_coll_2_3, x4_coll_2_3],
-        [z3_coll_2_3, x3_coll_2_3],
-        [z2_coll_2_3, x2_coll_2_3],
-    ),
-    notSource=False,
-)
-# coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [z3_coll_2_3, x3_coll_2_3], [z2_coll_2_3, x2_coll_2_3] ), isDetector=True)
 
 ##############Upstream coil#######################
 
@@ -2022,6 +2040,13 @@ allpolys.append(collimator1_seg4_bottom)
 allpolys.append(collimator1_seg5_top)
 allpolys.append(collimator1_seg5_bottom)
 
+allpolys.append(collimator2_seg1)
+allpolys.append(collimator2_seg2)
+allpolys.append(collimator2_seg3)
+allpolys.append(collimator2_seg4)
+
+
+
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
 
@@ -2030,10 +2055,6 @@ allpolys.append(collar_bottom2)
 
 allpolys.append(collar3_top)
 allpolys.append(collar3_bottom)
-
-allpolys.append(coll_2_1)
-allpolys.append(coll_2_2)
-allpolys.append(coll_2_3)
 
 allpolys.append(US_Coil)
 
