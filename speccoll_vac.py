@@ -504,7 +504,7 @@ bellows2_DSflange_bottom = polygon(
     notSource=False,
 )
 
-###  Enclosure US pipe
+###  Upstream Enclosure US pipe
 x1 = 149.23e-3 
 z1 = -371.475e-3-tgtpos
 
@@ -517,7 +517,7 @@ z3 = -204.597e-3-tgtpos
 x4 = 149.23e-3 
 z4 = -204.597e-3-tgtpos
 
-enclosure_USpipe_top = polygon(
+upstream_enclosure_USpipe_top = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -526,7 +526,7 @@ enclosure_USpipe_top = polygon(
     ),
     notSource=False,
 )
-enclosure_USpipe_bottom = polygon(
+upstream_enclosure_USpipe_bottom = polygon(
     (
         [z2, -x2],
         [z3, -x3],
@@ -535,6 +535,53 @@ enclosure_USpipe_bottom = polygon(
     ),
     notSource=False,
 )
+
+###  Upstream Enclosure US Wall 
+x1 = 155.575e-3 
+z1 = (-204.597-50.8)*1e-3-tgtpos
+
+x2 = 517.6e-3    # Taking the diagonal distance to the upper left corner
+z2 = (-204.597-50.8)*1e-3-tgtpos
+
+x3 = 517.6e-3 
+z3 = -204.597e-3-tgtpos  
+
+x4 = 155.575e-3 
+z4 = -204.597e-3-tgtpos
+
+upstream_enclosure_USwall_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+x1 = 155.575e-3 
+z1 = (-204.597-50.8)*1e-3-tgtpos
+
+x2 = 650.8e-3    # Taking the diagonal distance to the upper left corner
+z2 = (-204.597-50.8)*1e-3-tgtpos
+
+x3 = 650.8e-3 
+z3 = -204.597e-3-tgtpos 
+
+x4 = 155.575e-3 
+z4 = -204.597e-3-tgtpos
+
+upstream_enclosure_USwall_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+
 
 
 ################################################################
@@ -962,151 +1009,6 @@ coll_pipe02 = polygon(
         [z3_pipe0, -x3_pipe0],
         [z4_pipe0, -x4_pipe0],
         [z1_pipe0, -x1_pipe0],
-    ),
-    notSource=False,
-)
-
-##############Upstream vessel###############
-# Fornt Plate upper part
-x1_USCAN_Front_up = 0.127
-z1_USCAN_Front_up = 4.36553
-
-x2_USCAN_Front_up = 0.3302
-z2_USCAN_Front_up = 4.36553
-
-x3_USCAN_Front_up = 0.3302
-z3_USCAN_Front_up = 4.36553 + 0.0508
-
-x4_USCAN_Front_up = 0.127
-z4_USCAN_Front_up = 4.36553 + 0.0508
-
-
-USCAN_Front_up = polygon(
-    (
-        [z1_USCAN_Front_up, x1_USCAN_Front_up],
-        [z4_USCAN_Front_up, x4_USCAN_Front_up],
-        [z3_USCAN_Front_up, x3_USCAN_Front_up],
-        [z2_USCAN_Front_up, x2_USCAN_Front_up],
-    ),
-    notSource=False,
-)
-
-# Fornt Plate lower part
-x1_USCAN_Front_low = -0.4826
-z1_USCAN_Front_low = 4.36553
-
-x2_USCAN_Front_low = -0.127
-z2_USCAN_Front_low = 4.36553
-
-x3_USCAN_Front_low = -0.127
-z3_USCAN_Front_low = 4.36553 + 0.0508
-
-x4_USCAN_Front_low = -0.4826
-z4_USCAN_Front_low = 4.36553 + 0.0508
-
-
-USCAN_Front_low = polygon(
-    (
-        [z1_USCAN_Front_low, x1_USCAN_Front_low],
-        [z4_USCAN_Front_low, x4_USCAN_Front_low],
-        [z3_USCAN_Front_low, x3_USCAN_Front_low],
-        [z2_USCAN_Front_low, x2_USCAN_Front_low],
-    ),
-    notSource=False,
-)
-
-# Base plate
-x1_USCAN_Bot = -0.4826 - 0.09525
-z1_USCAN_Bot = 4.28933
-
-x2_USCAN_Bot = -0.4826
-z2_USCAN_Bot = 4.28933
-
-x3_USCAN_Bot = -0.4826
-z3_USCAN_Bot = 4.28933 + 4.0521
-
-x4_USCAN_Bot = -0.4826 - 0.09525
-z4_USCAN_Bot = 4.28933 + 4.0521
-
-
-USCAN_Bot = polygon(
-    (
-        [z1_USCAN_Bot, x1_USCAN_Bot],
-        [z4_USCAN_Bot, x4_USCAN_Bot],
-        [z3_USCAN_Bot, x3_USCAN_Bot],
-        [z2_USCAN_Bot, x2_USCAN_Bot],
-    ),
-    notSource=False,
-)
-
-# Top plate
-x1_USCAN_Top = 0.33020
-z1_USCAN_Top = 4.39093
-
-x2_USCAN_Top = 0.33020 + 0.0254
-z2_USCAN_Top = 4.39093
-
-x3_USCAN_Top = 0.33020 + 0.0254
-z3_USCAN_Top = 4.39093 + 3.8489
-
-x4_USCAN_Top = 0.33020
-z4_USCAN_Top = 4.39093 + 3.8489
-
-
-USCAN_Top = polygon(
-    (
-        [z1_USCAN_Top, x1_USCAN_Top],
-        [z4_USCAN_Top, x4_USCAN_Top],
-        [z3_USCAN_Top, x3_USCAN_Top],
-        [z2_USCAN_Top, x2_USCAN_Top],
-    ),
-    notSource=False,
-)
-
-# Back Plate upper part
-x1_USCAN_Back_up = 0.23635
-z1_USCAN_Back_up = 8.21443
-
-x2_USCAN_Back_up = 0.3302
-z2_USCAN_Back_up = 8.21443
-
-x3_USCAN_Back_up = 0.3302
-z3_USCAN_Back_up = 8.21443 + 0.0508
-
-x4_USCAN_Back_up = 0.23635
-z4_USCAN_Back_up = 8.21443 + 0.0508
-
-
-USCAN_Back_up = polygon(
-    (
-        [z1_USCAN_Back_up, x1_USCAN_Back_up],
-        [z4_USCAN_Back_up, x4_USCAN_Back_up],
-        [z3_USCAN_Back_up, x3_USCAN_Back_up],
-        [z2_USCAN_Back_up, x2_USCAN_Back_up],
-    ),
-    notSource=False,
-)
-
-# Back Plate lower part
-x1_USCAN_Back_low = -0.4826
-z1_USCAN_Back_low = 8.21443
-
-x2_USCAN_Back_low = -0.23635
-z2_USCAN_Back_low = 8.21443
-
-x3_USCAN_Back_low = -0.23635
-z3_USCAN_Back_low = 8.21443 + 0.0508
-
-x4_USCAN_Back_low = -0.4826
-z4_USCAN_Back_low = 8.21443 + 0.0508
-
-
-USCAN_Back_low = polygon(
-    (
-        [z1_USCAN_Back_low, x1_USCAN_Back_low],
-        [z4_USCAN_Back_low, x4_USCAN_Back_low],
-        [z3_USCAN_Back_low, x3_USCAN_Back_low],
-        [z2_USCAN_Back_low, x2_USCAN_Back_low],
     ),
     notSource=False,
 )
@@ -2019,8 +1921,12 @@ allpolys.append(bellows2_seg3_bottom)
 allpolys.append(bellows2_DSflange_top)
 allpolys.append(bellows2_DSflange_bottom)
 
-allpolys.append(enclosure_USpipe_top)
-allpolys.append(enclosure_USpipe_bottom)
+allpolys.append(upstream_enclosure_USpipe_top)
+allpolys.append(upstream_enclosure_USpipe_bottom)
+
+allpolys.append(upstream_enclosure_USwall_top)
+allpolys.append(upstream_enclosure_USwall_bottom)
+
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
@@ -2050,15 +1956,6 @@ allpolys.append(US_Coil)
 
 allpolys.append(coll_pipe01)
 allpolys.append(coll_pipe02)
-
-allpolys.append(USCAN_Front_up)
-allpolys.append(USCAN_Front_low)
-
-# allpolys.append(USCAN_Bot)
-# allpolys.append(USCAN_Top)
-
-allpolys.append(USCAN_Back_up)
-allpolys.append(USCAN_Back_low)
 
 allpolys.append(US_pipe1_lo)
 allpolys.append(US_pipe1_up)
