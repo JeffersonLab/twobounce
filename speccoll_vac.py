@@ -2,6 +2,7 @@
 from poly import polygon
 from poly import face
 import gi
+import numpy as np
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
