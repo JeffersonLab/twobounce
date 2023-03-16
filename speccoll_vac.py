@@ -671,8 +671,173 @@ upstream_enclosure_DSwall_bottom = polygon(
     notSource=False,
 )
 
+### Collimator 1
+
+# Seg 1
+x1 = 20.3e-3
+z1 = 325e-3-tgtpos
+
+x2 = 16.55e-3
+z2 = 425e-3-tgtpos
+
+x3 = 29.735e-3
+z3 = 425e-3-tgtpos
+
+x4 = 29.5e-3 
+z4 = 325e-3-tgtpos
 
 
+collimator1_seg1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 2
+x1 = 16.55e-3
+z1 = 425e-3-tgtpos
+
+x2 = 15.4e-3
+z2 = 515e-3-tgtpos
+
+x3 = 29.947e-3
+z3 = 515e-3-tgtpos
+
+x4 = 29.735e-3
+z4 = 425e-3-tgtpos
+
+collimator1_seg2_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg2_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 3
+x1 = 15.4e-3
+z1 = 515e-3-tgtpos
+
+x2 = 14.4e-3
+z2 = 635e-3-tgtpos
+
+x3 = 30.229e-3
+z3 = 635e-3-tgtpos
+
+x4 = 29.947e-3
+z4 = 515e-3-tgtpos
+
+collimator1_seg3_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg3_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 4
+x1 = 14.4e-3
+z1 = 635e-3-tgtpos
+
+x2 = 13.9e-3
+z2 = 725e-3-tgtpos
+
+x3 = 30.441e-3
+z3 = 725e-3-tgtpos
+
+x4 = 30.229e-3
+z4 = 635e-3-tgtpos
+
+collimator1_seg4_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg4_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 5
+x1 = 13.9e-3
+z1 = 725e-3-tgtpos
+
+x2 = 14.54e-3
+z2 = 900e-3-tgtpos
+
+x3 = 30.5e-3
+z3 = 900e-3-tgtpos
+
+x4 = 30.5e-3
+z4 = 725e-3-tgtpos
+
+collimator1_seg5_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg5_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
 
 ################################################################
 
@@ -791,181 +956,6 @@ collar_bottom2 = polygon(
 )
 
 #################################################################
-
-######inner photon collimator (Col 1)
-# Updated on Nov 8 2020 with merged extended collimator
-
-x1_inner_photon_1 = 0.020 + 0.0003
-z1_inner_photon_1 = 4.675 + 0.15
-
-x2_inner_photon_1 = 0.0295
-z2_inner_photon_1 = 4.675 + 0.15
-
-x3_inner_photon_1 = 0.02974
-z3_inner_photon_1 = 4.775 + 0.15
-
-x4_inner_photon_1 = 0.01625 + 0.0003
-z4_inner_photon_1 = 4.775 + 0.15
-
-x1_inner_photon_2 = 0.01625 + 0.0003
-z1_inner_photon_2 = 4.775 + 0.15
-
-x2_inner_photon_2 = 0.02974
-z2_inner_photon_2 = 4.775 + 0.15
-
-x3_inner_photon_2 = 0.02995
-z3_inner_photon_2 = 4.865 + 0.15
-
-x4_inner_photon_2 = 0.0151 + 0.0003
-z4_inner_photon_2 = 4.865 + 0.15
-
-x1_inner_photon_3 = 0.0151 + 0.0003
-z1_inner_photon_3 = 4.865 + 0.15
-
-x2_inner_photon_3 = 0.02995
-z2_inner_photon_3 = 4.865 + 0.15
-
-x3_inner_photon_3 = 0.03023
-z3_inner_photon_3 = 4.985 + 0.15
-
-x4_inner_photon_3 = 0.0141 + 0.0003
-z4_inner_photon_3 = 4.985 + 0.15
-
-x1_inner_photon_4 = 0.0141 + 0.0003
-z1_inner_photon_4 = 4.985 + 0.15
-
-x2_inner_photon_4 = 0.03023
-z2_inner_photon_4 = 4.985 + 0.15
-
-x3_inner_photon_4 = 0.0305
-z3_inner_photon_4 = 5.075 + 0.15
-
-x4_inner_photon_4 = 0.0139
-z4_inner_photon_4 = 5.075 + 0.15
-
-x1_inner_photon_5 = 0.0139
-z1_inner_photon_5 = 5.075 + 0.15
-
-x2_inner_photon_5 = 0.0305
-z2_inner_photon_5 = 5.075 + 0.15
-
-x3_inner_photon_5 = 0.0275
-z3_inner_photon_5 = 5.40
-
-x4_inner_photon_5 = 0.014536
-z4_inner_photon_5 = 5.40
-
-x1_inner_photon_6 = 0.0139  # not used now 12/01/2021
-z1_inner_photon_6 = 5.290
-
-x2_inner_photon_6 = 0.0275
-z2_inner_photon_6 = 5.290
-
-x3_inner_photon_6 = 0.0275
-z3_inner_photon_6 = 5.390
-
-x4_inner_photon_6 = 0.013908
-z4_inner_photon_6 = 5.390
-
-# one has to assign the coordinates in anti-clock sequence
-coll_inner_photon_top_1 = polygon(
-    (
-        [z1_inner_photon_1, x1_inner_photon_1],
-        [z4_inner_photon_1, x4_inner_photon_1],
-        [z3_inner_photon_1, x3_inner_photon_1],
-        [z2_inner_photon_1, x2_inner_photon_1],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_1 = polygon(
-    (
-        [z2_inner_photon_1, -x2_inner_photon_1],
-        [z3_inner_photon_1, -x3_inner_photon_1],
-        [z4_inner_photon_1, -x4_inner_photon_1],
-        [z1_inner_photon_1, -x1_inner_photon_1],
-    ),
-    notSource=False,
-)
-
-coll_inner_photon_top_2 = polygon(
-    (
-        [z1_inner_photon_2, x1_inner_photon_2],
-        [z4_inner_photon_2, x4_inner_photon_2],
-        [z3_inner_photon_2, x3_inner_photon_2],
-        [z2_inner_photon_2, x2_inner_photon_2],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_2 = polygon(
-    (
-        [z2_inner_photon_2, -x2_inner_photon_2],
-        [z3_inner_photon_2, -x3_inner_photon_2],
-        [z4_inner_photon_2, -x4_inner_photon_2],
-        [z1_inner_photon_2, -x1_inner_photon_2],
-    ),
-    notSource=False,
-)
-
-coll_inner_photon_top_3 = polygon(
-    (
-        [z1_inner_photon_3, x1_inner_photon_3],
-        [z4_inner_photon_3, x4_inner_photon_3],
-        [z3_inner_photon_3, x3_inner_photon_3],
-        [z2_inner_photon_3, x2_inner_photon_3],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_3 = polygon(
-    (
-        [z2_inner_photon_3, -x2_inner_photon_3],
-        [z3_inner_photon_3, -x3_inner_photon_3],
-        [z4_inner_photon_3, -x4_inner_photon_3],
-        [z1_inner_photon_3, -x1_inner_photon_3],
-    ),
-    notSource=False,
-)
-
-coll_inner_photon_top_4 = polygon(
-    (
-        [z1_inner_photon_4, x1_inner_photon_4],
-        [z4_inner_photon_4, x4_inner_photon_4],
-        [z3_inner_photon_4, x3_inner_photon_4],
-        [z2_inner_photon_4, x2_inner_photon_4],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_4 = polygon(
-    (
-        [z2_inner_photon_4, -x2_inner_photon_4],
-        [z3_inner_photon_4, -x3_inner_photon_4],
-        [z4_inner_photon_4, -x4_inner_photon_4],
-        [z1_inner_photon_4, -x1_inner_photon_4],
-    ),
-    notSource=False,
-)
-
-coll_inner_photon_top_5 = polygon(
-    (
-        [z1_inner_photon_5, x1_inner_photon_5],
-        [z4_inner_photon_5, x4_inner_photon_5],
-        [z3_inner_photon_5, x3_inner_photon_5],
-        [z2_inner_photon_5, x2_inner_photon_5],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_5 = polygon(
-    (
-        [z2_inner_photon_5, -x2_inner_photon_5],
-        [z3_inner_photon_5, -x3_inner_photon_5],
-        [z4_inner_photon_5, -x4_inner_photon_5],
-        [z1_inner_photon_5, -x1_inner_photon_5],
-    ),
-    notSource=False,
-)
-
-# coll_inner_photon_top_6    = polygon( ([z1_inner_photon_6,  x1_inner_photon_6], [z4_inner_photon_6,  x4_inner_photon_6], [z3_inner_photon_6,  x3_inner_photon_6], [z2_inner_photon_6,  x2_inner_photon_6] ), notSource=False)
-# coll_inner_photon_bottom_6 = polygon( ([z2_inner_photon_6, -x2_inner_photon_6], [z3_inner_photon_6, -x3_inner_photon_6], [z4_inner_photon_6, -x4_inner_photon_6], [z1_inner_photon_6, -x1_inner_photon_6] ), notSource=False)
-
 
 #########collimator 2,  three segments
 # seg 1
@@ -2021,6 +2011,16 @@ allpolys.append(upstream_enclosure_sidewall_bottom)
 allpolys.append(upstream_enclosure_DSwall_top)
 allpolys.append(upstream_enclosure_DSwall_bottom)
 
+allpolys.append(collimator1_seg1_top)
+allpolys.append(collimator1_seg1_bottom)
+allpolys.append(collimator1_seg2_top)
+allpolys.append(collimator1_seg2_bottom)
+allpolys.append(collimator1_seg3_top)
+allpolys.append(collimator1_seg3_bottom)
+allpolys.append(collimator1_seg4_top)
+allpolys.append(collimator1_seg4_bottom)
+allpolys.append(collimator1_seg5_top)
+allpolys.append(collimator1_seg5_bottom)
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
@@ -2030,17 +2030,6 @@ allpolys.append(collar_bottom2)
 
 allpolys.append(collar3_top)
 allpolys.append(collar3_bottom)
-
-allpolys.append(coll_inner_photon_top_1)
-allpolys.append(coll_inner_photon_bottom_1)
-allpolys.append(coll_inner_photon_top_2)
-allpolys.append(coll_inner_photon_bottom_2)
-allpolys.append(coll_inner_photon_top_3)
-allpolys.append(coll_inner_photon_bottom_3)
-allpolys.append(coll_inner_photon_top_4)
-allpolys.append(coll_inner_photon_bottom_4)
-allpolys.append(coll_inner_photon_top_5)
-allpolys.append(coll_inner_photon_bottom_5)
 
 allpolys.append(coll_2_1)
 allpolys.append(coll_2_2)
