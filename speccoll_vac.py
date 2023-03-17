@@ -650,7 +650,7 @@ upstream_enclosure_DSwall_top = polygon(
     notSource=False,
 )
 
-x1 = 155.575e-3 
+x1 = 344.488e-3 
 z1 = 3592.703e-3-tgtpos
 
 x2 = 552.45e-3    
@@ -659,7 +659,7 @@ z2 = 3592.703e-3-tgtpos
 x3 = 552.45e-3 
 z3 = (3592.703+50.8)*1e-3-tgtpos  
 
-x4 = 155.575e-3 
+x4 = 344.488e-3 
 z4 = (3592.703+50.8)*1e-3-tgtpos
 
 upstream_enclosure_DSwall_bottom = polygon(
