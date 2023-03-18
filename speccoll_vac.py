@@ -811,13 +811,13 @@ collimator1_seg4_bottom = polygon(
 x1 = 13.9e-3
 z1 = 725e-3-tgtpos
 
-x2 = 14.54e-3
-z2 = 900e-3-tgtpos
+x2 = 13.9e-3+(14.54-13.9)*25/175*1e-3
+z2 = 750e-3-tgtpos
 
 x3 = 30.5e-3
-z3 = 900e-3-tgtpos
+z3 = 750e-3-tgtpos
 
-x4 = 30.5e-3
+x4 = 30.441e-3
 z4 = 725e-3-tgtpos
 
 collimator1_seg5_top = polygon(
@@ -840,22 +840,57 @@ collimator1_seg5_bottom = polygon(
     notSource=False,
 )
 
+# Seg 6
+x1 = 13.9e-3+(14.54-13.9)*25/175*1e-3
+z1 = 750e-3-tgtpos
+
+x2 = 14.54*1e-3
+z2 = 900e-3-tgtpos
+
+x3 = 30.5e-3
+z3 = 900e-3-tgtpos
+
+x4 = 30.5e-3
+z4 = 750e-3-tgtpos
+
+collimator1_seg6_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg6_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+
+
 
 ### Collimator 2
 
 # Seg 1
 
-x1 = -0.035
-z1 = 5.25
+x1 = -35e-3
+z1 = 750e-3-tgtpos
 
-x2 = -0.0305
-z2 = 5.25
+x2 = -30.5e-3
+z2 = 750e-3-tgtpos
 
-x3 = -0.0305
-z3 = 5.4
+x3 = -30.5e-3
+z3 = 900e-3-tgtpos
 
-x4 = -0.035
-z4 = 5.4
+x4 = -35e-3
+z4 = 900e-3-tgtpos
 
 collimator2_seg1 = polygon(
     (
@@ -868,17 +903,17 @@ collimator2_seg1 = polygon(
 )
 
 # Seg 2
-x1 = -0.150
-z1 = 5.25
+x1 = -150e-3
+z1 = 750e-3-tgtpos
 
-x2 = -0.101
-z2 = 5.25
+x2 = -101e-3
+z2 = 750e-3-tgtpos
 
-x3 = -0.101
-z3 = 5.25+0.05
+x3 = -101e-3
+z3 = 800e-3-tgtpos
 
-x4 = -0.15
-z4 = 5.25+0.05
+x4 = -150e-3
+z4 = 800e-3-tgtpos
 
 collimator2_seg2 = polygon(
     (
@@ -892,17 +927,17 @@ collimator2_seg2 = polygon(
 
 # Seg 3
 
-x1 = -0.150
-z1 = 5.25+0.05
+x1 = -150e-3
+z1 = 800e-3-tgtpos
 
-x2 = -0.101
-z2 = 5.25+0.05
+x2 = -101e-3
+z2 = 800e-3-tgtpos
 
-x3 = -0.101-0.101*np.tan(1.5*np.pi/180)
-z3 = 5.25+0.15
+x3 = -101e-3*(1+np.tan(1.5*np.pi/180))
+z3 = 900e-3-tgtpos
 
-x4 = -0.15
-z4 = 5.25+0.15
+x4 = -150e-3
+z4 = 900e-3-tgtpos
 
 collimator2_seg3 = polygon(
     (
@@ -916,17 +951,17 @@ collimator2_seg3 = polygon(
 
 # Seg 4
 
-x1 = 0.0305
-z1 = 5.25
+x1 = 30.5e-3
+z1 = 750e-3-tgtpos
 
-x2 = 0.150
-z2 = 5.25
+x2 = 150e-3
+z2 = 750e-3-tgtpos
 
-x3 = 0.1500
-z3 = 5.4
+x3 = 150e-3
+z3 = 900e-3-tgtpos
 
-x4 = 0.0305
-z4 = 5.4
+x4 = 30.5e-3
+z4 = 900e-3-tgtpos
 
 collimator2_seg4 = polygon(
     (
@@ -2040,6 +2075,8 @@ allpolys.append(collimator1_seg4_top)
 allpolys.append(collimator1_seg4_bottom)
 allpolys.append(collimator1_seg5_top)
 allpolys.append(collimator1_seg5_bottom)
+allpolys.append(collimator1_seg6_top)
+allpolys.append(collimator1_seg6_bottom)
 
 allpolys.append(collimator2_seg1)
 allpolys.append(collimator2_seg2)
