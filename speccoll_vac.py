@@ -978,16 +978,16 @@ collimator2_seg4 = polygon(
 
 # seg 1
 x1 = 33*mm - 1*mm
-z1 = 1108.985*mm-(250.844-33)/2.0*mm-1*mm-tgtpos
+z1 = 1108.84*mm-(250.68-33)/2.0*mm-1*mm-tgtpos
 
 x2 = 33*mm - 1*mm
-z2 = 1626.928*mm-tgtpos
+z2 = 1108.84*mm+465*mm-tgtpos
 
-x3 = 250.844*mm + 1*mm
-z3 = 1626.928*mm-tgtpos
+x3 = 250.68*mm + 1*mm
+z3 = 1108.84*mm+465*mm-tgtpos
 
-x4 = 250.844*mm + 1*mm
-z4 = 1108.985*mm-(250.844-33)/2.0*mm-1*mm-tgtpos
+x4 = 250.68*mm + 1*mm
+z4 = 1108.84*mm-(250.68-33)/2.0*mm-1*mm-tgtpos
 
 uscoil_seg1 = polygon(
     (
@@ -1001,16 +1001,16 @@ uscoil_seg1 = polygon(
 
 # seg 2
 x1 = 33*mm - 1*mm
-z1 = 1626.928*mm-tgtpos
+z1 = 1108.84*mm+465*mm-tgtpos
 
 x2 = 33*mm - 1*mm
-z2 = 1682.003*mm-tgtpos
+z2 = 1108.84*mm+515*mm-tgtpos
 
-x3 = 260.555*mm + 1*mm
-z3 = 1682.003*mm-tgtpos
+x3 = 260.54*mm + 1*mm
+z3 = 1108.84*mm+515*mm-tgtpos
 
-x4 = 250.844*mm + 1*mm
-z4 = 1626.928*mm-tgtpos
+x4 = 250.68*mm + 1*mm
+z4 =  1108.84*mm+465*mm-tgtpos
 
 uscoil_seg2 = polygon(
     (
@@ -1024,16 +1024,16 @@ uscoil_seg2 = polygon(
 
 # seg 3
 x1 = 33*mm - 1*mm
-z1 = 1682.003*mm-tgtpos
+z1 = 1108.84*mm+515*mm-tgtpos
 
 x2 = 33*mm - 1*mm
-z2 = 2886.942*mm+(260.555-33)/2.0*mm+1*mm-tgtpos
+z2 = 2886.93*mm+(260.54-33)/2.0*mm+1*mm-tgtpos
 
 x3 = 260.555*mm + 1*mm
-z3 = 2886.942*mm+(260.555-33)/2.0*mm+1*mm-tgtpos
+z3 = 2886.93*mm+(260.54-33)/2.0*mm+1*mm-tgtpos
 
 x4 = 260.555*mm + 1*mm
-z4 = 1682.003*mm-tgtpos
+z4 = 1108.84*mm+515*mm-tgtpos
 
 uscoil_seg3 = polygon(
     (
