@@ -1091,7 +1091,6 @@ z3 = (936.5+2152.65-12.7)*mm-tgtpos
 
 x4 = -25*mm
 z4 = (936.5+12.7)*mm-tgtpos
-plt.plot([z1,z2,z3,z4,z1],[x1,x2,x3,x4,x1])
 
 twobounce_acceptance = polygon(
     (
