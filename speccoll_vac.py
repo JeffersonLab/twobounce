@@ -1029,10 +1029,10 @@ z1 = 1108.84*mm+515*mm-tgtpos
 x2 = 33*mm - 1*mm
 z2 = 2886.93*mm+(260.54-33)/2.0*mm+1*mm-tgtpos
 
-x3 = 260.555*mm + 1*mm
+x3 = 260.54*mm + 1*mm
 z3 = 2886.93*mm+(260.54-33)/2.0*mm+1*mm-tgtpos
 
-x4 = 260.555*mm + 1*mm
+x4 = 260.54*mm + 1*mm
 z4 = 1108.84*mm+515*mm-tgtpos
 
 uscoil_seg3 = polygon(
@@ -1044,6 +1044,122 @@ uscoil_seg3 = polygon(
     ),
     notSource=False,
 )
+
+### Upstream 2bounce shield
+
+# Front insert
+x1 = -30.875*mm
+z1 = 936.5*mm-tgtpos
+
+x2 = -30.875*mm
+z2 = (936.5+12.7)*mm-tgtpos
+
+x3 = -25*mm
+z3 = (936.5+12.7)*mm-tgtpos
+
+x4 = -25*mm
+z4 = 936.5*mm-tgtpos
+
+2bounce_front_insert_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+2bounce_front_insert_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Main tube (azimuthally aligned with acceptance region)
+x1 = -36*mm
+z1 = (936.5+12.7)*mm-tgtpos
+
+x2 = -36*mm
+z2 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x3 = -25*mm
+z3 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x4 = -25*mm
+z4 = (936.5+12.7)*mm-tgtpos
+plt.plot([z1,z2,z3,z4,z1],[x1,x2,x3,x4,x1])
+
+2bounce_acceptance = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Main tube (azimuthally aligned with coil)
+x1 = 25*mm
+z1 = (936.5+12.7)*mm-tgtpos
+
+x2 = 25*mm
+z2 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x3 = 32*mm
+z3 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x4 = 32*mm
+z4 = (936.5+12.7)*mm-tgtpos
+
+2bounce_coil = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# End insert
+x1 = -30.875*mm
+z1 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x2 = -30.875*mm
+z2 = (936.5+2152.65)*mm-tgtpos
+
+x3 = -25*mm
+z3 = (936.5+2152.65)*mm-tgtpos
+
+x4 = -25*mm
+z4 = (936.5+2152.65-12.7)*mm-tgtpos
+
+2bounce_end_insert_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+2bounce_end_insert_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+
+
 
 ################################################################
 
