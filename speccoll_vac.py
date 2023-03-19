@@ -1277,39 +1277,6 @@ collar_bottom2 = polygon(
     notSource=False,
 )
 
-############# Col2 photon collimating inner_pipe
-##pipe
-x1_pipe0 = 0.027  # 0.0205
-z1_pipe0 = 5.4
-
-x2_pipe0 = 0.030  # 0.0235
-z2_pipe0 = 5.4
-
-x3_pipe0 = 0.030  # 0.0305
-z3_pipe0 = 7.2
-
-x4_pipe0 = 0.027  # 0.0275
-z4_pipe0 = 7.2
-
-
-coll_pipe01 = polygon(
-    (
-        [z1_pipe0, x1_pipe0],
-        [z4_pipe0, x4_pipe0],
-        [z3_pipe0, x3_pipe0],
-        [z2_pipe0, x2_pipe0],
-    ),
-    notSource=False,
-)
-coll_pipe02 = polygon(
-    (
-        [z2_pipe0, -x2_pipe0],
-        [z3_pipe0, -x3_pipe0],
-        [z4_pipe0, -x4_pipe0],
-        [z1_pipe0, -x1_pipe0],
-    ),
-    notSource=False,
-)
 
 ### Pipe after US vessel
 x1_US_pipe1 = 0.230
@@ -2251,6 +2218,13 @@ allpolys.append(uscoil_seg1)
 allpolys.append(uscoil_seg2)
 allpolys.append(uscoil_seg3)
 
+allpolys.append(2bounce_front_insert_top)
+allpolys.append(2bounce_front_insert_bottom)
+allpolys.append(2bounce_acceptance)
+allpolys.append(2bounce_coil)
+allpolys.append(2bounce_end_insert_top)
+allpolys.append(2bounce_end_insert_bottom)
+
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
 
@@ -2259,9 +2233,6 @@ allpolys.append(collar_bottom2)
 
 allpolys.append(collar3_top)
 allpolys.append(collar3_bottom)
-
-allpolys.append(coll_pipe01)
-allpolys.append(coll_pipe02)
 
 allpolys.append(US_pipe1_lo)
 allpolys.append(US_pipe1_up)
