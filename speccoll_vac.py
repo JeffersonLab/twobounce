@@ -13,7 +13,7 @@ sources = []
 allpolys = []
 
 tgtpos = -4.5
-mm = 1*mm
+mm = 1e-3
 cm = 1e-2
 m = 1
 tgtlen = 1.25*m
