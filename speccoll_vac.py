@@ -1060,7 +1060,7 @@ z3 = (936.5+12.7)*mm-tgtpos
 x4 = -25*mm
 z4 = 936.5*mm-tgtpos
 
-2bounce_front_insert_top = polygon(
+twobounce_front_insert_top = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -1069,7 +1069,7 @@ z4 = 936.5*mm-tgtpos
     ),
     notSource=False,
 )
-2bounce_front_insert_bottom = polygon(
+twobounce_front_insert_bottom = polygon(
     (
         [z2, -x2],
         [z3, -x3],
@@ -1093,7 +1093,7 @@ x4 = -25*mm
 z4 = (936.5+12.7)*mm-tgtpos
 plt.plot([z1,z2,z3,z4,z1],[x1,x2,x3,x4,x1])
 
-2bounce_acceptance = polygon(
+twobounce_acceptance = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -1116,7 +1116,7 @@ z3 = (936.5+2152.65-12.7)*mm-tgtpos
 x4 = 32*mm
 z4 = (936.5+12.7)*mm-tgtpos
 
-2bounce_coil = polygon(
+twobounce_coil = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -1139,7 +1139,7 @@ z3 = (936.5+2152.65)*mm-tgtpos
 x4 = -25*mm
 z4 = (936.5+2152.65-12.7)*mm-tgtpos
 
-2bounce_end_insert_top = polygon(
+twobounce_end_insert_top = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -1148,7 +1148,7 @@ z4 = (936.5+2152.65-12.7)*mm-tgtpos
     ),
     notSource=False,
 )
-2bounce_end_insert_bottom = polygon(
+twobounce_end_insert_bottom = polygon(
     (
         [z2, -x2],
         [z3, -x3],
@@ -2218,12 +2218,12 @@ allpolys.append(uscoil_seg1)
 allpolys.append(uscoil_seg2)
 allpolys.append(uscoil_seg3)
 
-allpolys.append(2bounce_front_insert_top)
-allpolys.append(2bounce_front_insert_bottom)
-allpolys.append(2bounce_acceptance)
-allpolys.append(2bounce_coil)
-allpolys.append(2bounce_end_insert_top)
-allpolys.append(2bounce_end_insert_bottom)
+allpolys.append(twobounce_front_insert_top)
+allpolys.append(twobounce_front_insert_bottom)
+allpolys.append(twobounce_acceptance)
+allpolys.append(twobounce_coil)
+allpolys.append(twobounce_end_insert_top)
+allpolys.append(twobounce_end_insert_bottom)
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
