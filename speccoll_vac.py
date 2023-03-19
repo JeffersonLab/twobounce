@@ -876,9 +876,6 @@ collimator1_seg6_bottom = polygon(
     notSource=False,
 )
 
-
-
-
 ### Collimator 2
 
 # Seg 1
@@ -967,6 +964,78 @@ x4 = 30.5*mm
 z4 = 900*mm-tgtpos
 
 collimator2_seg4 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+
+### Upstream Spectrometer Coil (approximated by rectangle extending from beginning of upstream arc to end of downstream arc)
+
+# seg 1
+x1 = 33*mm - 1*mm
+z1 = 1108.985*mm-(250.844-33)/2.0*mm-1*mm-tgtpos
+
+x2 = 33*mm - 1*mm
+z2 = 1626.928*mm-tgtpos
+
+x3 = 250.844*mm + 1*mm
+z3 = 1626.928*mm-tgtpos
+
+x4 = 250.844*mm + 1*mm
+z4 = 1108.985*mm-(250.844-33)/2.0*mm-1*mm-tgtpos
+
+uscoil_seg1 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# seg 2
+x1 = 33*mm - 1*mm
+z1 = 1626.928*mm-tgtpos
+
+x2 = 33*mm - 1*mm
+z2 = 1682.003*mm-tgtpos
+
+x3 = 260.555*mm + 1*mm
+z3 = 1682.003*mm-tgtpos
+
+x4 = 250.844*mm + 1*mm
+z4 = 1626.928*mm-tgtpos
+
+uscoil_seg2 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# seg 3
+x1 = 33*mm - 1*mm
+z1 = 1682.003*mm-tgtpos
+
+x2 = 33*mm - 1*mm
+z2 = 2886.942*mm+(260.555-33)/2.0*mm+1*mm-tgtpos
+
+x3 = 260.555*mm + 1*mm
+z3 = 2886.942*mm+(260.555-33)/2.0*mm+1*mm-tgtpos
+
+x4 = 260.555*mm + 1*mm
+z4 = 1682.003*mm-tgtpos
+
+uscoil_seg3 = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -1088,30 +1157,6 @@ collar_bottom2 = polygon(
         [z3_collar2, -x3_collar2],
         [z4_collar2, -x4_collar2],
         [z1_collar2, -x1_collar2],
-    ),
-    notSource=False,
-)
-
-##############Upstream 3s#######################
-
-x1_US_coil = 0.03016
-z1_US_coil = 5.60882
-
-x2_US_coil = 0.03016 + 0.21793
-z2_US_coil = 5.60882
-
-x3_US_coil = 0.034767 + 0.22758
-z3_US_coil = 7.38632
-
-x4_US_coil = 0.034767
-z4_US_coil = 7.38632
-
-US_Coil = polygon(
-    (
-        [z1_US_coil, x1_US_coil],
-        [z4_US_coil, x4_US_coil],
-        [z3_US_coil, x3_US_coil],
-        [z2_US_coil, x2_US_coil],
     ),
     notSource=False,
 )
@@ -2086,7 +2131,9 @@ allpolys.append(collimator2_seg2)
 allpolys.append(collimator2_seg3)
 allpolys.append(collimator2_seg4)
 
-
+allpolys.append(uscoil_seg1)
+allpolys.append(uscoil_seg2)
+allpolys.append(uscoil_seg3)
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
@@ -2096,8 +2143,6 @@ allpolys.append(collar_bottom2)
 
 allpolys.append(collar3_top)
 allpolys.append(collar3_bottom)
-
-allpolys.append(US_Coil)
 
 allpolys.append(coll_pipe01)
 allpolys.append(coll_pipe02)
