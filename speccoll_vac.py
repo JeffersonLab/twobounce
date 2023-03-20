@@ -1354,57 +1354,6 @@ US_Pbwall_seg3_bottom = polygon(
 )
 
 
-
-
-
-################################################################
-
-###### Lead collar (for collimating photons)
-
-
-
-###### Hybrid upstream Lead collar (for ep scattering)
-
-x1_collar3 = 0.240  # This is including the beampipe
-# x1_collar3=0.23835
-# z1_collar3=4.4305+4.5
-z1_collar3 = 8.066
-
-x2_collar3 = 0.540
-# z2_collar3=4.4305+4.5
-z2_collar3 = 8.066
-
-x3_collar3 = 0.540
-# z3_collar3=4.6805+4.5
-z3_collar3 = 8.216
-
-x4_collar3 = 0.240
-# x4_collar3=0.23835
-# z4_collar3=4.6805+4.5
-z4_collar3 = 8.216
-
-
-collar3_top = polygon(
-    (
-        [z1_collar3, x1_collar3],
-        [z4_collar3, x4_collar3],
-        [z3_collar3, x3_collar3],
-        [z2_collar3, x2_collar3],
-    ),
-    notSource=False,
-)
-collar3_bottom = polygon(
-    (
-        [z2_collar3, -x2_collar3],
-        [z3_collar3, -x3_collar3],
-        [z4_collar3, -x4_collar3],
-        [z1_collar3, -x1_collar3],
-    ),
-    notSource=False,
-)
-
-#################################################################
-
 ###### First downstream Lead collar (for ep scattering)
 
 x1_collar1 = 0.620
@@ -2359,9 +2308,6 @@ allpolys.append(collar_bottom1)
 
 allpolys.append(collar_top2)
 allpolys.append(collar_bottom2)
-
-allpolys.append(collar3_top)
-allpolys.append(collar3_bottom)
 
 allpolys.append(US_flange1_1_1_up)
 allpolys.append(US_flange1_1_1_lo)
