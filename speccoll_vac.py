@@ -1158,6 +1158,107 @@ twobounce_end_insert_bottom = polygon(
 )
 
 
+# Upstream Enclosure Lead Wall
+
+# Seg 1
+
+x1=230*mm
+z1=3541.903*mm-tgtpos
+
+x2=230*mm
+z2=3592.703*mm-tgtpos
+
+x3=406.4*mm
+z3=3592.703*mm-tgtpos
+
+x4=406.4*mm
+z4=3541.903*mm-tgtpos
+
+US_Pbwall_seg1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+US_Pbwall_seg1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+#seg 2
+x1=230*mm
+z1=3592.703*mm-tgtpos
+
+x2=230*mm
+z2=3694.303*mm-tgtpos
+
+x3=330.2*mm
+z3=3694.303*mm-tgtpos
+
+x4=330.2*mm
+z4=3592.703*mm-tgtpos
+
+US_Pbwall_seg2_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+US_Pbwall_seg2_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+#seg 3
+x1=(533.4*2)/2*mm
+z1=(3592.703+50.8+101.6/2-101.6/2)*mm-tgtpos
+
+x2=(533.4*2)/2*mm
+z2=(3592.703+50.8+101.6/2+101.6/2)*mm-tgtpos
+
+x3=344.488*mm
+z3=(3592.703+50.8+101.6/2+101.6/2)*mm-tgtpos
+
+x4=344.488*mm
+z4=(3592.703+50.8+101.6/2-101.6/2)*mm-tgtpos
+
+US_Pbwall_seg3_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+US_Pbwall_seg3_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+
+
 
 
 ################################################################
@@ -2224,6 +2325,13 @@ allpolys.append(twobounce_coil)
 allpolys.append(twobounce_end_insert_top)
 allpolys.append(twobounce_end_insert_bottom)
 
+allpolys.append(US_Pbwall_seg1_top)
+allpolys.append(US_Pbwall_seg1_bottom)
+allpolys.append(US_Pbwall_seg2_top)
+allpolys.append(US_Pbwall_seg2_bottom)
+allpolys.append(US_Pbwall_seg3_top)
+allpolys.append(US_Pbwall_seg3_bottom)
+
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
 
@@ -2232,9 +2340,6 @@ allpolys.append(collar_bottom2)
 
 allpolys.append(collar3_top)
 allpolys.append(collar3_bottom)
-
-allpolys.append(US_pipe1_lo)
-allpolys.append(US_pipe1_up)
 
 allpolys.append(US_flange1_1_1_up)
 allpolys.append(US_flange1_1_1_lo)
