@@ -1353,6 +1353,71 @@ US_Pbwall_seg3_bottom = polygon(
     notSource=False,
 )
 
+### Pipe downstream of upstream enclosure before bellows 3
+x1 = 331.788*mm 
+z1 = 3592.703*mm-tgtpos
+
+x2 = 331.788*mm  
+z2 = 4140.210*mm-tgtpos
+
+x3 = 344.488*mm 
+z3 = 4140.210*mm-tgtpos  
+
+x4 = 344.488*mm 
+z4 = 3592.703*mm-tgtpos
+
+upstream_enclosure_DSpipe_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+upstream_enclosure_DSpipe_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### Upstream enclosure downstream pipe flange
+
+x1 = 331.788*mm 
+z1 = 4140.210*mm-tgtpos
+
+x2 = 331.788*mm  
+z2 = 4191.010*mm-tgtpos
+
+x3 = 406.4*mm 
+z3 = 4191.010*mm-tgtpos  
+
+x4 = 406.4*mm 
+z4 = 4140.210*mm-tgtpos
+
+upstream_enclosure_DSpipe_flange_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+upstream_enclosure_DSpipe_flange_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
 
 ###### First downstream Lead collar (for ep scattering)
 
@@ -1421,269 +1486,6 @@ collar_bottom2 = polygon(
     ),
     notSource=False,
 )
-
-
-### Pipe after US vessel
-x1_US_pipe1 = 0.230
-z1_US_pipe1 = 8.23438
-
-x2_US_pipe1 = 0.23635
-z2_US_pipe1 = 8.23438
-
-x3_US_pipe1 = 0.23635
-z3_US_pipe1 = 8.23438 + 0.44133
-
-x4_US_pipe1 = 0.230
-z4_US_pipe1 = 8.23438 + 0.44133
-
-US_pipe1_up = polygon(
-    (
-        [z1_US_pipe1, x1_US_pipe1],
-        [z4_US_pipe1, x4_US_pipe1],
-        [z3_US_pipe1, x3_US_pipe1],
-        [z2_US_pipe1, x2_US_pipe1],
-    ),
-    notSource=False,
-)
-US_pipe1_lo = polygon(
-    (
-        [z2_US_pipe1, -x2_US_pipe1],
-        [z3_US_pipe1, -x3_US_pipe1],
-        [z4_US_pipe1, -x4_US_pipe1],
-        [z1_US_pipe1, -x1_US_pipe1],
-    ),
-    notSource=False,
-)
-
-####US CAN exit Flange 1
-###Part1
-##section1
-x1_US_flange1_1_1 = 0.23635
-z1_US_flange1_1_1 = 8.65666
-
-x2_US_flange1_1_1 = 0.4191
-z2_US_flange1_1_1 = 8.65666
-
-x3_US_flange1_1_1 = 0.4191
-z3_US_flange1_1_1 = 8.65666 + 0.01905
-
-x4_US_flange1_1_1 = 0.23635
-z4_US_flange1_1_1 = 8.65666 + 0.01905
-
-US_flange1_1_1_up = polygon(
-    (
-        [z1_US_flange1_1_1, x1_US_flange1_1_1],
-        [z4_US_flange1_1_1, x4_US_flange1_1_1],
-        [z3_US_flange1_1_1, x3_US_flange1_1_1],
-        [z2_US_flange1_1_1, x2_US_flange1_1_1],
-    ),
-    notSource=False,
-)
-US_flange1_1_1_lo = polygon(
-    (
-        [z2_US_flange1_1_1, -x2_US_flange1_1_1],
-        [z3_US_flange1_1_1, -x3_US_flange1_1_1],
-        [z4_US_flange1_1_1, -x4_US_flange1_1_1],
-        [z1_US_flange1_1_1, -x1_US_flange1_1_1],
-    ),
-    notSource=False,
-)
-
-##section2
-x2_US_flange1_1_2 = 0.24765
-z2_US_flange1_1_2 = 8.65666 + 0.01905
-
-x1_US_flange1_1_2 = 0.4191
-z1_US_flange1_1_2 = 8.65666 + 0.01905
-
-x4_US_flange1_1_2 = 0.4191
-z4_US_flange1_1_2 = 8.65666 + 0.01905 + 0.01588
-
-x3_US_flange1_1_2 = 0.24765
-z3_US_flange1_1_2 = 8.65666 + 0.01905 + 0.01588
-
-US_flange1_1_2_up = polygon(
-    (
-        [z1_US_flange1_1_2, x1_US_flange1_1_2],
-        [z4_US_flange1_1_2, x4_US_flange1_1_2],
-        [z3_US_flange1_1_2, x3_US_flange1_1_2],
-        [z2_US_flange1_1_2, x2_US_flange1_1_2],
-    ),
-    notSource=False,
-)
-US_flange1_1_2_lo = polygon(
-    (
-        [z2_US_flange1_1_2, -x2_US_flange1_1_2],
-        [z3_US_flange1_1_2, -x3_US_flange1_1_2],
-        [z4_US_flange1_1_2, -x4_US_flange1_1_2],
-        [z1_US_flange1_1_2, -x1_US_flange1_1_2],
-    ),
-    notSource=False,
-)
-
-###Part2
-##section1
-x2_US_flange1_2_1 = 0.3302
-z2_US_flange1_2_1 = 8.69158
-
-x1_US_flange1_2_1 = 0.4191
-z1_US_flange1_2_1 = 8.69158
-
-x4_US_flange1_2_1 = 0.4191
-z4_US_flange1_2_1 = 8.69158 + 0.0254
-
-x3_US_flange1_2_1 = 0.3302
-z3_US_flange1_2_1 = 8.69158 + 0.0254
-
-US_flange1_2_1_up = polygon(
-    (
-        [z1_US_flange1_2_1, x1_US_flange1_2_1],
-        [z4_US_flange1_2_1, x4_US_flange1_2_1],
-        [z3_US_flange1_2_1, x3_US_flange1_2_1],
-        [z2_US_flange1_2_1, x2_US_flange1_2_1],
-    ),
-    notSource=False,
-)
-US_flange1_2_1_lo = polygon(
-    (
-        [z2_US_flange1_2_1, -x2_US_flange1_2_1],
-        [z3_US_flange1_2_1, -x3_US_flange1_2_1],
-        [z4_US_flange1_2_1, -x4_US_flange1_2_1],
-        [z1_US_flange1_2_1, -x1_US_flange1_2_1],
-    ),
-    notSource=False,
-)
-
-##section2
-x2_US_flange1_2_2 = 0.33095
-z2_US_flange1_2_2 = 8.69158 + 0.0254
-
-x1_US_flange1_2_2 = 0.4191
-z1_US_flange1_2_2 = 8.69158 + 0.0254
-
-x4_US_flange1_2_2 = 0.4191
-z4_US_flange1_2_2 = 8.69158 + 0.0254 + 0.01905
-
-x3_US_flange1_2_2 = 0.33095
-z3_US_flange1_2_2 = 8.69158 + 0.0254 + 0.01905
-
-US_flange1_2_2_up = polygon(
-    (
-        [z1_US_flange1_2_2, x1_US_flange1_2_2],
-        [z4_US_flange1_2_2, x4_US_flange1_2_2],
-        [z3_US_flange1_2_2, x3_US_flange1_2_2],
-        [z2_US_flange1_2_2, x2_US_flange1_2_2],
-    ),
-    notSource=False,
-)
-US_flange1_2_2_lo = polygon(
-    (
-        [z2_US_flange1_2_2, -x2_US_flange1_2_2],
-        [z3_US_flange1_2_2, -x3_US_flange1_2_2],
-        [z4_US_flange1_2_2, -x4_US_flange1_2_2],
-        [z1_US_flange1_2_2, -x1_US_flange1_2_2],
-    ),
-    notSource=False,
-)
-
-
-###Next pipe - it has three parts
-##part1
-x2_US_pipe2_1 = 0.3302
-z2_US_pipe2_1 = 8.71698
-
-x1_US_pipe2_1 = 0.33095
-z1_US_pipe2_1 = 8.71698
-
-x4_US_pipe2_1 = 0.33095
-z4_US_pipe2_1 = 8.71698 + 0.06106
-
-x3_US_pipe2_1 = 0.3302
-z3_US_pipe2_1 = 8.71698 + 0.06106
-
-US_pipe2_1_up = polygon(
-    (
-        [z1_US_pipe2_1, x1_US_pipe2_1],
-        [z4_US_pipe2_1, x4_US_pipe2_1],
-        [z3_US_pipe2_1, x3_US_pipe2_1],
-        [z2_US_pipe2_1, x2_US_pipe2_1],
-    ),
-    notSource=False,
-)
-US_pipe2_1_lo = polygon(
-    (
-        [z2_US_pipe2_1, -x2_US_pipe2_1],
-        [z3_US_pipe2_1, -x3_US_pipe2_1],
-        [z4_US_pipe2_1, -x4_US_pipe2_1],
-        [z1_US_pipe2_1, -x1_US_pipe2_1],
-    ),
-    notSource=False,
-)
-
-##part2
-x2_US_pipe2_2 = 0.3302
-z2_US_pipe2_2 = 8.71698 + 0.06106
-
-x1_US_pipe2_2 = 0.361175
-z1_US_pipe2_2 = 8.71698 + 0.06106
-
-x4_US_pipe2_2 = 0.361175
-z4_US_pipe2_2 = 8.71698 + 0.06106 + 0.33222
-
-x3_US_pipe2_2 = 0.3302
-z3_US_pipe2_2 = 8.71698 + 0.06106 + 0.33222
-
-US_pipe2_2_up = polygon(
-    (
-        [z1_US_pipe2_2, x1_US_pipe2_2],
-        [z4_US_pipe2_2, x4_US_pipe2_2],
-        [z3_US_pipe2_2, x3_US_pipe2_2],
-        [z2_US_pipe2_2, x2_US_pipe2_2],
-    ),
-    notSource=False,
-)
-US_pipe2_2_lo = polygon(
-    (
-        [z2_US_pipe2_2, -x2_US_pipe2_2],
-        [z3_US_pipe2_2, -x3_US_pipe2_2],
-        [z4_US_pipe2_2, -x4_US_pipe2_2],
-        [z1_US_pipe2_2, -x1_US_pipe2_2],
-    ),
-    notSource=False,
-)
-
-##part3
-x2_US_pipe2_3 = 0.3302
-z2_US_pipe2_3 = 8.71698 + 0.06106 + 0.33222
-
-x3_US_pipe2_3 = 0.33095
-z3_US_pipe2_3 = 8.71698 + 0.06106 + 0.33222
-
-x4_US_pipe2_3 = 0.33095
-z4_US_pipe2_3 = 8.71698 + 0.06106 + 0.33222 + 0.06146
-
-x1_US_pipe2_3 = 0.3302
-z1_US_pipe2_3 = 8.71698 + 0.06106 + 0.33222 + 0.06146
-
-US_pipe2_3_up = polygon(
-    (
-        [z1_US_pipe2_3, x1_US_pipe2_3],
-        [z4_US_pipe2_3, x4_US_pipe2_3],
-        [z3_US_pipe2_3, x3_US_pipe2_3],
-        [z2_US_pipe2_3, x2_US_pipe2_3],
-    ),
-    notSource=False,
-)
-US_pipe2_3_lo = polygon(
-    (
-        [z2_US_pipe2_3, -x2_US_pipe2_3],
-        [z3_US_pipe2_3, -x3_US_pipe2_3],
-        [z4_US_pipe2_3, -x4_US_pipe2_3],
-        [z1_US_pipe2_3, -x1_US_pipe2_3],
-    ),
-    notSource=False,
-)
-
 
 ##############Downstream vessel###############
 # Fornt Plate upper part
@@ -2303,27 +2105,16 @@ allpolys.append(US_Pbwall_seg2_bottom)
 allpolys.append(US_Pbwall_seg3_top)
 allpolys.append(US_Pbwall_seg3_bottom)
 
+allpolys.append(upstream_enclosure_DSpipe_top)
+allpolys.append(upstream_enclosure_DSpipe_bottom)
+allpolys.append(upstream_enclosure_DSpipe_flange_top)
+allpolys.append(upstream_enclosure_DSpipe_flange_bottom)
+
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
 
 allpolys.append(collar_top2)
 allpolys.append(collar_bottom2)
-
-allpolys.append(US_flange1_1_1_up)
-allpolys.append(US_flange1_1_1_lo)
-allpolys.append(US_flange1_1_2_up)
-allpolys.append(US_flange1_1_2_lo)
-allpolys.append(US_flange1_2_1_up)
-allpolys.append(US_flange1_2_1_lo)
-allpolys.append(US_flange1_2_2_up)
-allpolys.append(US_flange1_2_2_lo)
-
-allpolys.append(US_pipe2_1_up)
-allpolys.append(US_pipe2_1_lo)
-allpolys.append(US_pipe2_2_up)
-allpolys.append(US_pipe2_2_lo)
-allpolys.append(US_pipe2_3_up)
-allpolys.append(US_pipe2_3_lo)
 
 allpolys.append(DSCAN_Front_up)
 allpolys.append(DSCAN_Front_low)
