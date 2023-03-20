@@ -1157,8 +1157,104 @@ twobounce_end_insert_bottom = polygon(
     notSource=False,
 )
 
+### Collimator 4
 
-# Upstream Enclosure Lead Wall
+# Seg 1
+
+x1 = -40*mm
+z1 = 3225*mm-tgtpos
+
+x2 = -51.5*mm
+z2 = 3225*mm-tgtpos
+
+x3 = -51.5*mm
+z3 = 3375*mm-tgtpos
+
+x4 = -40*mm
+z4 = 3375*mm-tgtpos
+
+collimator4_seg1 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 2
+x1 = -185*mm
+z1 = 3225*mm-tgtpos
+
+x2 = -250*mm
+z2 = 3225*mm-tgtpos
+
+x3 = -250*mm
+z3 = 3275*mm-tgtpos
+
+x4 = -185*mm
+z4 = 3275*mm-tgtpos
+
+collimator4_seg2 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 3
+
+x1 = -185*mm
+z1 = 3275*mm-tgtpos
+
+x2 = -250*mm
+z2 = 3275*mm-tgtpos
+
+x3 = -250*mm
+z3 = 3375*mm-tgtpos
+
+x4 = -185*mm*(1+np.tan(7.6*np.pi/180))
+z4 = 3375*mm-tgtpos
+
+collimator4_seg3 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 4
+
+x1 = 40*mm
+z1 = 3375*mm-tgtpos
+
+x2 = 250*mm
+z2 = 3375*mm-tgtpos
+
+x3 = 250*mm
+z3 = 3225*mm-tgtpos
+
+x4 = 40*mm
+z4 = 3225*mm-tgtpos
+
+collimator4_seg4 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+### Upstream Enclosure Lead Wall
 
 # Seg 1
 
@@ -1881,85 +1977,6 @@ Scaper_12 = polygon(
     notSource=False,
 )
 
-################# collimator 4, 3 segmentations
-
-# seg 1
-
-x1_coll_4_1 = -0.250  
-z1_coll_4_1 = 7.725 
-
-x2_coll_4_1 = -0.185
-z2_coll_4_1 = 7.725 
-
-x3_coll_4_1 = -0.1983  # 185+100*tan(7.6 deg)
-z3_coll_4_1 = 7.875 
-
-x4_coll_4_1 = -0.250 
-z4_coll_4_1 = 7.875 
-
-
-coll_4_1 = polygon(
-    (
-        [z1_coll_4_1, x1_coll_4_1],
-        [z4_coll_4_1, x4_coll_4_1],
-        [z3_coll_4_1, x3_coll_4_1],
-        [z2_coll_4_1, x2_coll_4_1],
-    ),
-    notSource=False,
-)
-
-
-# seg 2
-
-x1_coll_4_2 = -0.0515  
-z1_coll_4_2 = 7.775 
-
-x2_coll_4_2 = -0.040
-z2_coll_4_2 = 7.775 
-
-x3_coll_4_2 = -0.040
-z3_coll_4_2 = 7.875 
-
-x4_coll_4_2 = -0.0515  
-z4_coll_4_2 = 7.875 
-
-
-coll_4_2 = polygon(
-    (
-        [z1_coll_4_2, x1_coll_4_2],
-        [z4_coll_4_2, x4_coll_4_2],
-        [z3_coll_4_2, x3_coll_4_2],
-        [z2_coll_4_2, x2_coll_4_2],
-    ),
-    notSource=False,
-)
-
-# seg 3
-
-x1_coll_4_3 = 0.040
-z1_coll_4_3 = 7.775 
-
-x2_coll_4_3 = 0.250  # Was simulation -0.300 # Was CAD -0.254
-z2_coll_4_3 = 7.775 
-
-x3_coll_4_3 = 0.250  # Was simulation -0.300 # Was CAD -0.254
-z3_coll_4_3 = 7.875 
-
-x4_coll_4_3 = 0.040
-z4_coll_4_3 = 7.875 
-
-
-coll_4_3 = polygon(
-    (
-        [z1_coll_4_3, x1_coll_4_3],
-        [z4_coll_4_3, x4_coll_4_3],
-        [z3_coll_4_3, x3_coll_4_3],
-        [z2_coll_4_3, x2_coll_4_3],
-    ),
-    notSource=False,
-)
-
-
 ######### collimator 5 (shaped like a tuning fork), 1 seg
 
 
@@ -2325,6 +2342,11 @@ allpolys.append(twobounce_coil)
 allpolys.append(twobounce_end_insert_top)
 allpolys.append(twobounce_end_insert_bottom)
 
+allpolys.append(collimator4_seg1)
+allpolys.append(collimator4_seg2)
+allpolys.append(collimator4_seg3)
+allpolys.append(collimator4_seg4)
+
 allpolys.append(US_Pbwall_seg1_top)
 allpolys.append(US_Pbwall_seg1_bottom)
 allpolys.append(US_Pbwall_seg2_top)
@@ -2370,11 +2392,6 @@ allpolys.append(DSCAN_Back_low_2)
 
 allpolys.append(Scaper_11)
 allpolys.append(Scaper_12)
-
-allpolys.append(coll_4_1)
-allpolys.append(coll_4_2)
-allpolys.append(coll_4_3)
-
 
 allpolys.append(coll_5)
 allpolys.append(coll_51)
