@@ -25,17 +25,17 @@ target = polygon(
 )
 
 ### bellows 1 USflange
-x1 = 149.23e-3
-z1 = -3427.73e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -3427.73e-3-tgtpos
 
-x2 = 184.15e-3
-z2 = -3427.73e-3 - tgtpos
+x2 = 184.15e-3  
+z2 = -3427.73e-3-tgtpos
 
-x3 = 184.15e-3
-z3 = -3399.15e-3 - tgtpos
+x3 = 184.15e-3 
+z3 = -3399.15e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -3399.15e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -3399.15e-3-tgtpos
 
 bellows1_USflange_top = polygon(
     (
@@ -57,17 +57,17 @@ bellows1_USflange_bottom = polygon(
 )
 
 ### bellows 1 seg 1
-x1 = 149.23e-3
-z1 = -3399.15e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -3399.15e-3-tgtpos
 
-x2 = 152.40e-3
-z2 = -3399.15e-3 - tgtpos
+x2 = 152.40e-3  
+z2 = -3399.15e-3-tgtpos
 
-x3 = 152.40e-3
-z3 = -3343.58e-3 - tgtpos
+x3 = 152.40e-3 
+z3 = -3343.58e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -3343.58e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -3343.58e-3-tgtpos
 
 bellows1_seg1_top = polygon(
     (
@@ -89,17 +89,17 @@ bellows1_seg1_bottom = polygon(
 )
 
 ### bellows 1 seg 2
-x1 = 149.23e-3
-z1 = -3343.58e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -3343.58e-3-tgtpos
 
-x2 = 190.50e-3
-z2 = -3343.58e-3 - tgtpos
+x2 = 190.50e-3  
+z2 = -3343.58e-3-tgtpos
 
-x3 = 190.50e-3
-z3 = -3054.68e-3 - tgtpos
+x3 = 190.50e-3 
+z3 = -3054.68e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -3054.68e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -3054.68e-3-tgtpos
 
 bellows1_seg2_top = polygon(
     (
@@ -121,17 +121,17 @@ bellows1_seg2_bottom = polygon(
 )
 
 ### bellows 1 seg 3
-x1 = 149.23e-3
-z1 = -3054.68e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -3054.68e-3-tgtpos
 
-x2 = 152.4e-3
-z2 = -3054.68e-3 - tgtpos
+x2 = 152.4e-3  
+z2 = -3054.68e-3-tgtpos
 
-x3 = 152.4e-3
-z3 = -2999.10e-3 - tgtpos
+x3 = 152.4e-3 
+z3 = -2999.10e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -2999.10e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -2999.10e-3-tgtpos
 
 bellows1_seg3_top = polygon(
     (
@@ -153,17 +153,17 @@ bellows1_seg3_bottom = polygon(
 )
 
 ### bellows 1 DSflange
-x1 = 149.23e-3
-z1 = -2999.10e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -2999.10e-3-tgtpos
 
-x2 = 184.15e-3
-z2 = -2999.10e-3 - tgtpos
+x2 = 184.15e-3  
+z2 = -2999.10e-3-tgtpos
 
-x3 = 184.15e-3
-z3 = -2941.954e-3 - tgtpos
+x3 = 184.15e-3 
+z3 = -2941.954e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -2941.954e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -2941.954e-3-tgtpos
 
 bellows1_DSflange_top = polygon(
     (
@@ -185,17 +185,17 @@ bellows1_DSflange_bottom = polygon(
 )
 
 ### Pipe between bellows 1 and 2
-x1 = 146.05e-3
-z1 = -2941.954e-3 - tgtpos
+x1 = 146.05e-3 
+z1 = -2941.954e-3-tgtpos
 
-x2 = 152.40e-3
-z2 = -2941.954e-3 - tgtpos
+x2 = 152.40e-3  
+z2 = -2941.954e-3-tgtpos
 
-x3 = 152.40e-3
-z3 = -1357.81e-3 - tgtpos
+x3 = 152.40e-3 
+z3 = -1357.81e-3-tgtpos  
 
-x4 = 146.05e-3
-z4 = -1357.81e-3 - tgtpos
+x4 = 146.05e-3 
+z4 = -1357.81e-3-tgtpos
 
 bellows12_pipe_top = polygon(
     (
@@ -217,17 +217,17 @@ bellows12_pipe_bottom = polygon(
 )
 
 ### Flange after bellows12 pipe
-x1 = 149.23e-3
-z1 = -1357.81e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -1357.81e-3-tgtpos
 
-x2 = 184.15e-3
-z2 = -1357.81e-3 - tgtpos
+x2 = 184.15e-3  
+z2 = -1357.81e-3-tgtpos
 
-x3 = 184.15e-3
-z3 = -1300.66e-3 - tgtpos
+x3 = 184.15e-3 
+z3 = -1300.66e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -1300.66e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -1300.66e-3-tgtpos
 
 bellows12_pipe_DSflange_top = polygon(
     (
@@ -249,17 +249,17 @@ bellows12_pipe_DSflange_bottom = polygon(
 )
 
 ### Pipe segment upstream of collar 0
-x1 = 146.05e-3
-z1 = -1300.66e-3 - tgtpos
+x1 = 146.05e-3 
+z1 = -1300.66e-3-tgtpos
 
-x2 = 152.4e-3
-z2 = -1300.66e-3 - tgtpos
+x2 = 152.4e-3  
+z2 = -1300.66e-3-tgtpos
 
-x3 = 152.4e-3
-z3 = -1200e-3 - tgtpos
+x3 = 152.4e-3 
+z3 = -1200e-3-tgtpos  
 
-x4 = 146.05e-3
-z4 = -1200e-3 - tgtpos
+x4 = 146.05e-3 
+z4 = -1200e-3-tgtpos
 
 pipe_UScollar0_top = polygon(
     (
@@ -281,17 +281,17 @@ pipe_UScollar0_bottom = polygon(
 )
 
 # Collar 0
-x1 = 0.0762
-z1 = -1.2 - tgtpos
+x1 = 0.0762  
+z1 = -1.2-tgtpos
 
-x2 = 0.330
-z2 = -1.2 - tgtpos
+x2 = 0.330   
+z2 = -1.2-tgtpos
 
-x3 = 0.330
-z3 = -1.0 - tgtpos
+x3 = 0.330  
+z3 = -1.0-tgtpos  
 
-x4 = 0.0762
-z4 = -1.0 - tgtpos
+x4 = 0.0762  
+z4 = -1.0-tgtpos  
 
 collar0_top = polygon(
     (
@@ -313,17 +313,17 @@ collar0_bottom = polygon(
 )
 
 ### Pipe segment downstream of collar 0
-x1 = 146.05e-3
-z1 = -1000e-3 - tgtpos
+x1 = 146.05e-3 
+z1 = -1000e-3-tgtpos
 
-x2 = 152.4e-3
-z2 = -1000e-3 - tgtpos
+x2 = 152.4e-3  
+z2 = -1000e-3-tgtpos
 
-x3 = 152.4e-3
-z3 = -885.648e-3 - tgtpos
+x3 = 152.4e-3 
+z3 = -885.648e-3-tgtpos  
 
-x4 = 146.05e-3
-z4 = -885.648e-3 - tgtpos
+x4 = 146.05e-3 
+z4 = -885.648e-3-tgtpos
 
 pipe_DScollar0_top = polygon(
     (
@@ -345,17 +345,17 @@ pipe_DScollar0_bottom = polygon(
 )
 
 ### Flange upstream of bellows 2
-x1 = 149.23e-3
-z1 = -885.648e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -885.648e-3-tgtpos
 
-x2 = 184.15e-3
-z2 = -885.648e-3 - tgtpos
+x2 = 184.15e-3  
+z2 = -885.648e-3-tgtpos
 
-x3 = 184.15e-3
-z3 = -828.63e-3 - tgtpos
+x3 = 184.15e-3 
+z3 = -828.63e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -828.63e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -828.63e-3-tgtpos
 
 bellows2_USflange_top = polygon(
     (
@@ -377,17 +377,17 @@ bellows2_USflange_bottom = polygon(
 )
 
 ### bellows 2 seg 1
-x1 = 149.23e-3
-z1 = -828.63e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -828.63e-3-tgtpos
 
-x2 = 152.40e-3
-z2 = -828.63e-3 - tgtpos
+x2 = 152.40e-3  
+z2 = -828.63e-3-tgtpos
 
-x3 = 152.40e-3
-z3 = -773.05e-3 - tgtpos
+x3 = 152.40e-3 
+z3 = -773.05e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -773.05e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -773.05e-3-tgtpos
 
 bellows2_seg1_top = polygon(
     (
@@ -409,17 +409,17 @@ bellows2_seg1_bottom = polygon(
 )
 
 ### bellows 2 seg 2
-x1 = 149.23e-3
-z1 = -773.05e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -773.05e-3-tgtpos
 
-x2 = 190.50e-3
-z2 = -773.05e-3 - tgtpos
+x2 = 190.50e-3  
+z2 = -773.05e-3-tgtpos
 
-x3 = 190.50e-3
-z3 = -484.15e-3 - tgtpos
+x3 = 190.50e-3 
+z3 = -484.15e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -484.15e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -484.15e-3-tgtpos
 
 bellows2_seg2_top = polygon(
     (
@@ -441,17 +441,17 @@ bellows2_seg2_bottom = polygon(
 )
 
 ### bellows 2 seg 3
-x1 = 149.23e-3
-z1 = -484.15e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -484.15e-3-tgtpos
 
-x2 = 152.4e-3
-z2 = -484.15e-3 - tgtpos
+x2 = 152.4e-3  
+z2 = -484.15e-3-tgtpos
 
-x3 = 152.4e-3
-z3 = -428.58e-3 - tgtpos
+x3 = 152.4e-3 
+z3 = -428.58e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -428.58e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -428.58e-3-tgtpos
 
 bellows2_seg3_top = polygon(
     (
@@ -473,17 +473,17 @@ bellows2_seg3_bottom = polygon(
 )
 
 ### bellows 2 DSflange
-x1 = 149.23e-3
-z1 = -428.58e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -428.58e-3-tgtpos
 
-x2 = 184.15e-3
-z2 = -428.58e-3 - tgtpos
+x2 = 184.15e-3  
+z2 = -428.58e-3-tgtpos
 
-x3 = 184.15e-3
-z3 = -371.475e-3 - tgtpos
+x3 = 184.15e-3 
+z3 = -371.475e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -371.475e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -371.475e-3-tgtpos
 
 bellows2_DSflange_top = polygon(
     (
@@ -505,17 +505,17 @@ bellows2_DSflange_bottom = polygon(
 )
 
 ###  Enclosure US pipe
-x1 = 149.23e-3
-z1 = -371.475e-3 - tgtpos
+x1 = 149.23e-3 
+z1 = -371.475e-3-tgtpos
 
-x2 = 155.575e-3
-z2 = -371.475e-3 - tgtpos
+x2 = 155.575e-3  
+z2 = -371.475e-3-tgtpos
 
-x3 = 155.575e-3
-z3 = -204.597e-3 - tgtpos
+x3 = 155.575e-3 
+z3 = -204.597e-3-tgtpos  
 
-x4 = 149.23e-3
-z4 = -204.597e-3 - tgtpos
+x4 = 149.23e-3 
+z4 = -204.597e-3-tgtpos
 
 enclosure_USpipe_top = polygon(
     (
@@ -540,6 +540,7 @@ enclosure_USpipe_bottom = polygon(
 ################################################################
 
 ###### Lead collar (for collimating photons)
+
 
 
 ###### Hybrid upstream Lead collar (for ep scattering)
@@ -1617,17 +1618,17 @@ Scaper_12 = polygon(
 
 # seg 1
 
-x1_coll_4_1 = -0.250
-z1_coll_4_1 = 7.725
+x1_coll_4_1 = -0.250  
+z1_coll_4_1 = 7.725 
 
 x2_coll_4_1 = -0.185
-z2_coll_4_1 = 7.725
+z2_coll_4_1 = 7.725 
 
 x3_coll_4_1 = -0.1983  # 185+100*tan(7.6 deg)
-z3_coll_4_1 = 7.875
+z3_coll_4_1 = 7.875 
 
-x4_coll_4_1 = -0.250
-z4_coll_4_1 = 7.875
+x4_coll_4_1 = -0.250 
+z4_coll_4_1 = 7.875 
 
 
 coll_4_1 = polygon(
@@ -1643,17 +1644,17 @@ coll_4_1 = polygon(
 
 # seg 2
 
-x1_coll_4_2 = -0.0515
-z1_coll_4_2 = 7.775
+x1_coll_4_2 = -0.0515  
+z1_coll_4_2 = 7.775 
 
 x2_coll_4_2 = -0.040
-z2_coll_4_2 = 7.775
+z2_coll_4_2 = 7.775 
 
 x3_coll_4_2 = -0.040
-z3_coll_4_2 = 7.875
+z3_coll_4_2 = 7.875 
 
-x4_coll_4_2 = -0.0515
-z4_coll_4_2 = 7.875
+x4_coll_4_2 = -0.0515  
+z4_coll_4_2 = 7.875 
 
 
 coll_4_2 = polygon(
@@ -1669,16 +1670,16 @@ coll_4_2 = polygon(
 # seg 3
 
 x1_coll_4_3 = 0.040
-z1_coll_4_3 = 7.775
+z1_coll_4_3 = 7.775 
 
 x2_coll_4_3 = 0.250  # Was simulation -0.300 # Was CAD -0.254
-z2_coll_4_3 = 7.775
+z2_coll_4_3 = 7.775 
 
 x3_coll_4_3 = 0.250  # Was simulation -0.300 # Was CAD -0.254
-z3_coll_4_3 = 7.875
+z3_coll_4_3 = 7.875 
 
 x4_coll_4_3 = 0.040
-z4_coll_4_3 = 7.875
+z4_coll_4_3 = 7.875 
 
 
 coll_4_3 = polygon(
