@@ -2,6 +2,7 @@
 from poly import polygon
 from poly import face
 import gi
+import numpy as np
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
@@ -12,8 +13,11 @@ sources = []
 allpolys = []
 
 tgtpos = -4.5
-tgtlen = 1.25
-tgtrad = 1.4142 * 0.0025
+mm = 1e-3
+cm = 1e-2
+m = 1
+tgtlen = 1.25*m
+tgtrad = 1.4142*0.0025*m
 
 target = polygon(
     (
@@ -25,17 +29,17 @@ target = polygon(
 )
 
 ### bellows 1 USflange
-x1 = 149.23e-3 
-z1 = -3427.73e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -3427.73*mm-tgtpos
 
-x2 = 184.15e-3  
-z2 = -3427.73e-3-tgtpos
+x2 = 184.15*mm  
+z2 = -3427.73*mm-tgtpos
 
-x3 = 184.15e-3 
-z3 = -3399.15e-3-tgtpos  
+x3 = 184.15*mm 
+z3 = -3399.15*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -3399.15e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -3399.15*mm-tgtpos
 
 bellows1_USflange_top = polygon(
     (
@@ -57,17 +61,17 @@ bellows1_USflange_bottom = polygon(
 )
 
 ### bellows 1 seg 1
-x1 = 149.23e-3 
-z1 = -3399.15e-3-tgtpos
+x1 = 149.23*mm
+z1 = -3399.15*mm-tgtpos
 
-x2 = 152.40e-3  
-z2 = -3399.15e-3-tgtpos
+x2 = 152.40*mm
+z2 = -3399.15*mm-tgtpos
 
-x3 = 152.40e-3 
-z3 = -3343.58e-3-tgtpos  
+x3 = 152.40*mm 
+z3 = -3343.58*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -3343.58e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -3343.58*mm-tgtpos
 
 bellows1_seg1_top = polygon(
     (
@@ -89,17 +93,17 @@ bellows1_seg1_bottom = polygon(
 )
 
 ### bellows 1 seg 2
-x1 = 149.23e-3 
-z1 = -3343.58e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -3343.58*mm-tgtpos
 
-x2 = 190.50e-3  
-z2 = -3343.58e-3-tgtpos
+x2 = 190.50*mm  
+z2 = -3343.58*mm-tgtpos
 
-x3 = 190.50e-3 
-z3 = -3054.68e-3-tgtpos  
+x3 = 190.50*mm 
+z3 = -3054.68*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -3054.68e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -3054.68*mm-tgtpos
 
 bellows1_seg2_top = polygon(
     (
@@ -121,17 +125,17 @@ bellows1_seg2_bottom = polygon(
 )
 
 ### bellows 1 seg 3
-x1 = 149.23e-3 
-z1 = -3054.68e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -3054.68*mm-tgtpos
 
-x2 = 152.4e-3  
-z2 = -3054.68e-3-tgtpos
+x2 = 152.4*mm  
+z2 = -3054.68*mm-tgtpos
 
-x3 = 152.4e-3 
-z3 = -2999.10e-3-tgtpos  
+x3 = 152.4*mm 
+z3 = -2999.10*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -2999.10e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -2999.10*mm-tgtpos
 
 bellows1_seg3_top = polygon(
     (
@@ -153,17 +157,17 @@ bellows1_seg3_bottom = polygon(
 )
 
 ### bellows 1 DSflange
-x1 = 149.23e-3 
-z1 = -2999.10e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -2999.10*mm-tgtpos
 
-x2 = 184.15e-3  
-z2 = -2999.10e-3-tgtpos
+x2 = 184.15*mm  
+z2 = -2999.10*mm-tgtpos
 
-x3 = 184.15e-3 
-z3 = -2941.954e-3-tgtpos  
+x3 = 184.15*mm 
+z3 = -2941.954*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -2941.954e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -2941.954*mm-tgtpos
 
 bellows1_DSflange_top = polygon(
     (
@@ -185,17 +189,17 @@ bellows1_DSflange_bottom = polygon(
 )
 
 ### Pipe between bellows 1 and 2
-x1 = 146.05e-3 
-z1 = -2941.954e-3-tgtpos
+x1 = 146.05*mm 
+z1 = -2941.954*mm-tgtpos
 
-x2 = 152.40e-3  
-z2 = -2941.954e-3-tgtpos
+x2 = 152.40*mm  
+z2 = -2941.954*mm-tgtpos
 
-x3 = 152.40e-3 
-z3 = -1357.81e-3-tgtpos  
+x3 = 152.40*mm 
+z3 = -1357.81*mm-tgtpos  
 
-x4 = 146.05e-3 
-z4 = -1357.81e-3-tgtpos
+x4 = 146.05*mm 
+z4 = -1357.81*mm-tgtpos
 
 bellows12_pipe_top = polygon(
     (
@@ -217,17 +221,17 @@ bellows12_pipe_bottom = polygon(
 )
 
 ### Flange after bellows12 pipe
-x1 = 149.23e-3 
-z1 = -1357.81e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -1357.81*mm-tgtpos
 
-x2 = 184.15e-3  
-z2 = -1357.81e-3-tgtpos
+x2 = 184.15*mm  
+z2 = -1357.81*mm-tgtpos
 
-x3 = 184.15e-3 
-z3 = -1300.66e-3-tgtpos  
+x3 = 184.15*mm 
+z3 = -1300.66*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -1300.66e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -1300.66*mm-tgtpos
 
 bellows12_pipe_DSflange_top = polygon(
     (
@@ -249,17 +253,17 @@ bellows12_pipe_DSflange_bottom = polygon(
 )
 
 ### Pipe segment upstream of collar 0
-x1 = 146.05e-3 
-z1 = -1300.66e-3-tgtpos
+x1 = 146.05*mm 
+z1 = -1300.66*mm-tgtpos
 
-x2 = 152.4e-3  
-z2 = -1300.66e-3-tgtpos
+x2 = 152.4*mm  
+z2 = -1300.66*mm-tgtpos
 
-x3 = 152.4e-3 
-z3 = -1200e-3-tgtpos  
+x3 = 152.4*mm 
+z3 = -1200*mm-tgtpos  
 
-x4 = 146.05e-3 
-z4 = -1200e-3-tgtpos
+x4 = 146.05*mm 
+z4 = -1200*mm-tgtpos
 
 pipe_UScollar0_top = polygon(
     (
@@ -313,17 +317,17 @@ collar0_bottom = polygon(
 )
 
 ### Pipe segment downstream of collar 0
-x1 = 146.05e-3 
-z1 = -1000e-3-tgtpos
+x1 = 146.05*mm 
+z1 = -1000*mm-tgtpos
 
-x2 = 152.4e-3  
-z2 = -1000e-3-tgtpos
+x2 = 152.4*mm  
+z2 = -1000*mm-tgtpos
 
-x3 = 152.4e-3 
-z3 = -885.648e-3-tgtpos  
+x3 = 152.4*mm 
+z3 = -885.648*mm-tgtpos  
 
-x4 = 146.05e-3 
-z4 = -885.648e-3-tgtpos
+x4 = 146.05*mm 
+z4 = -885.648*mm-tgtpos
 
 pipe_DScollar0_top = polygon(
     (
@@ -345,17 +349,17 @@ pipe_DScollar0_bottom = polygon(
 )
 
 ### Flange upstream of bellows 2
-x1 = 149.23e-3 
-z1 = -885.648e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -885.648*mm-tgtpos
 
-x2 = 184.15e-3  
-z2 = -885.648e-3-tgtpos
+x2 = 184.15*mm  
+z2 = -885.648*mm-tgtpos
 
-x3 = 184.15e-3 
-z3 = -828.63e-3-tgtpos  
+x3 = 184.15*mm 
+z3 = -828.63*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -828.63e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -828.63*mm-tgtpos
 
 bellows2_USflange_top = polygon(
     (
@@ -377,17 +381,17 @@ bellows2_USflange_bottom = polygon(
 )
 
 ### bellows 2 seg 1
-x1 = 149.23e-3 
-z1 = -828.63e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -828.63*mm-tgtpos
 
-x2 = 152.40e-3  
-z2 = -828.63e-3-tgtpos
+x2 = 152.40*mm  
+z2 = -828.63*mm-tgtpos
 
-x3 = 152.40e-3 
-z3 = -773.05e-3-tgtpos  
+x3 = 152.40*mm 
+z3 = -773.05*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -773.05e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -773.05*mm-tgtpos
 
 bellows2_seg1_top = polygon(
     (
@@ -409,17 +413,17 @@ bellows2_seg1_bottom = polygon(
 )
 
 ### bellows 2 seg 2
-x1 = 149.23e-3 
-z1 = -773.05e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -773.05*mm-tgtpos
 
-x2 = 190.50e-3  
-z2 = -773.05e-3-tgtpos
+x2 = 190.50*mm  
+z2 = -773.05*mm-tgtpos
 
-x3 = 190.50e-3 
-z3 = -484.15e-3-tgtpos  
+x3 = 190.50*mm 
+z3 = -484.15*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -484.15e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -484.15*mm-tgtpos
 
 bellows2_seg2_top = polygon(
     (
@@ -441,17 +445,17 @@ bellows2_seg2_bottom = polygon(
 )
 
 ### bellows 2 seg 3
-x1 = 149.23e-3 
-z1 = -484.15e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -484.15*mm-tgtpos
 
-x2 = 152.4e-3  
-z2 = -484.15e-3-tgtpos
+x2 = 152.4*mm  
+z2 = -484.15*mm-tgtpos
 
-x3 = 152.4e-3 
-z3 = -428.58e-3-tgtpos  
+x3 = 152.4*mm 
+z3 = -428.58*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -428.58e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -428.58*mm-tgtpos
 
 bellows2_seg3_top = polygon(
     (
@@ -473,17 +477,17 @@ bellows2_seg3_bottom = polygon(
 )
 
 ### bellows 2 DSflange
-x1 = 149.23e-3 
-z1 = -428.58e-3-tgtpos
+x1 = 149.23*mm 
+z1 = -428.58*mm-tgtpos
 
-x2 = 184.15e-3  
-z2 = -428.58e-3-tgtpos
+x2 = 184.15*mm  
+z2 = -428.58*mm-tgtpos
 
-x3 = 184.15e-3 
-z3 = -371.475e-3-tgtpos  
+x3 = 184.15*mm 
+z3 = -371.475*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -371.475e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -371.475*mm-tgtpos
 
 bellows2_DSflange_top = polygon(
     (
@@ -504,20 +508,20 @@ bellows2_DSflange_bottom = polygon(
     notSource=False,
 )
 
-###  Enclosure US pipe
-x1 = 149.23e-3 
-z1 = -371.475e-3-tgtpos
+###  Upstream Enclosure US pipe
+x1 = 149.23*mm 
+z1 = -371.475*mm-tgtpos
 
-x2 = 155.575e-3  
-z2 = -371.475e-3-tgtpos
+x2 = 155.575*mm  
+z2 = -371.475*mm-tgtpos
 
-x3 = 155.575e-3 
-z3 = -204.597e-3-tgtpos  
+x3 = 155.575*mm 
+z3 = -204.597*mm-tgtpos  
 
-x4 = 149.23e-3 
-z4 = -204.597e-3-tgtpos
+x4 = 149.23*mm 
+z4 = -204.597*mm-tgtpos
 
-enclosure_USpipe_top = polygon(
+upstream_enclosure_USpipe_top = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -526,7 +530,7 @@ enclosure_USpipe_top = polygon(
     ),
     notSource=False,
 )
-enclosure_USpipe_bottom = polygon(
+upstream_enclosure_USpipe_bottom = polygon(
     (
         [z2, -x2],
         [z3, -x3],
@@ -536,54 +540,884 @@ enclosure_USpipe_bottom = polygon(
     notSource=False,
 )
 
+###  Upstream Enclosure US Wall 
+x1 = 155.575*mm 
+z1 = (-204.597-50.8)*1*mm-tgtpos
 
-################################################################
+x2 = 552.45*mm    
+z2 = (-204.597-50.8)*1*mm-tgtpos
 
-###### Lead collar (for collimating photons)
+x3 = 552.45*mm 
+z3 = -204.597*mm-tgtpos  
 
+x4 = 155.575*mm 
+z4 = -204.597*mm-tgtpos
 
-
-###### Hybrid upstream Lead collar (for ep scattering)
-
-x1_collar3 = 0.240  # This is including the beampipe
-# x1_collar3=0.23835
-# z1_collar3=4.4305+4.5
-z1_collar3 = 8.066
-
-x2_collar3 = 0.540
-# z2_collar3=4.4305+4.5
-z2_collar3 = 8.066
-
-x3_collar3 = 0.540
-# z3_collar3=4.6805+4.5
-z3_collar3 = 8.216
-
-x4_collar3 = 0.240
-# x4_collar3=0.23835
-# z4_collar3=4.6805+4.5
-z4_collar3 = 8.216
-
-
-collar3_top = polygon(
+upstream_enclosure_USwall_top = polygon(
     (
-        [z1_collar3, x1_collar3],
-        [z4_collar3, x4_collar3],
-        [z3_collar3, x3_collar3],
-        [z2_collar3, x2_collar3],
-    ),
-    notSource=False,
-)
-collar3_bottom = polygon(
-    (
-        [z2_collar3, -x2_collar3],
-        [z3_collar3, -x3_collar3],
-        [z4_collar3, -x4_collar3],
-        [z1_collar3, -x1_collar3],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
 
-#################################################################
+x1 = 155.575*mm 
+z1 = (-204.597-50.8)*1*mm-tgtpos
+
+x2 = 552.45*mm    
+z2 = (-204.597-50.8)*1*mm-tgtpos
+
+x3 = 552.45*mm 
+z3 = -204.597*mm-tgtpos 
+
+x4 = 155.575*mm 
+z4 = -204.597*mm-tgtpos
+
+upstream_enclosure_USwall_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+###  Upstream Enclosure Side Wall 
+x1 = (1104.9/2.0-25.4)*1*mm
+z1 = -204.597*mm-tgtpos
+
+x2 = 552.45*mm    
+z2 = -204.597*mm-tgtpos
+
+x3 = 552.45*mm 
+z3 = 3592.703*mm-tgtpos  
+
+x4 = (1104.9/2.0-25.4)*1*mm 
+z4 = 3592.703*mm-tgtpos
+
+upstream_enclosure_sidewall_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+x1 = (1104.9/2.0-25.4)*1*mm
+z1 = -204.597*mm-tgtpos
+
+x2 = 552.45*mm    
+z2 = -204.597*mm-tgtpos
+
+x3 = 552.45*mm 
+z3 = 3592.703*mm-tgtpos  
+
+x4 = (1104.9/2.0-25.4)*1*mm 
+z4 = 3592.703*mm-tgtpos
+
+upstream_enclosure_sidewall_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+###  Upstream Enclosure DS Wall 
+x1 = 344.488*mm 
+z1 = 3592.703*mm-tgtpos
+
+x2 = 552.45*mm    
+z2 = 3592.703*mm-tgtpos
+
+x3 = 552.45*mm 
+z3 = (3592.703+50.8)*1*mm-tgtpos  
+
+x4 = 344.488*mm 
+z4 = (3592.703+50.8)*1*mm-tgtpos
+
+upstream_enclosure_DSwall_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+x1 = 344.488*mm 
+z1 = 3592.703*mm-tgtpos
+
+x2 = 552.45*mm    
+z2 = 3592.703*mm-tgtpos
+
+x3 = 552.45*mm 
+z3 = (3592.703+50.8)*1*mm-tgtpos  
+
+x4 = 344.488*mm 
+z4 = (3592.703+50.8)*1*mm-tgtpos
+
+upstream_enclosure_DSwall_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### Collimator 1
+
+# Seg 1
+x1 = 20.3*mm
+z1 = 325*mm-tgtpos
+
+x2 = 16.55*mm
+z2 = 425*mm-tgtpos
+
+x3 = 29.735*mm
+z3 = 425*mm-tgtpos
+
+x4 = 29.5*mm 
+z4 = 325*mm-tgtpos
+
+
+collimator1_seg1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 2
+x1 = 16.55*mm
+z1 = 425*mm-tgtpos
+
+x2 = 15.4*mm
+z2 = 515*mm-tgtpos
+
+x3 = 29.947*mm
+z3 = 515*mm-tgtpos
+
+x4 = 29.735*mm
+z4 = 425*mm-tgtpos
+
+collimator1_seg2_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg2_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 3
+x1 = 15.4*mm
+z1 = 515*mm-tgtpos
+
+x2 = 14.4*mm
+z2 = 635*mm-tgtpos
+
+x3 = 30.229*mm
+z3 = 635*mm-tgtpos
+
+x4 = 29.947*mm
+z4 = 515*mm-tgtpos
+
+collimator1_seg3_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg3_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 4
+x1 = 14.4*mm
+z1 = 635*mm-tgtpos
+
+x2 = 13.9*mm
+z2 = 725*mm-tgtpos
+
+x3 = 30.441*mm
+z3 = 725*mm-tgtpos
+
+x4 = 30.229*mm
+z4 = 635*mm-tgtpos
+
+collimator1_seg4_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg4_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 5
+x1 = 13.9*mm
+z1 = 725*mm-tgtpos
+
+x2 = 13.9*mm+(14.54-13.9)*25/175*1*mm
+z2 = 750*mm-tgtpos
+
+x3 = 30.5*mm
+z3 = 750*mm-tgtpos
+
+x4 = 30.441*mm
+z4 = 725*mm-tgtpos
+
+collimator1_seg5_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg5_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Seg 6
+x1 = 13.9*mm+(14.54-13.9)*25/175*1*mm
+z1 = 750*mm-tgtpos
+
+x2 = 14.54*1*mm
+z2 = 900*mm-tgtpos
+
+x3 = 30.5*mm
+z3 = 900*mm-tgtpos
+
+x4 = 30.5*mm
+z4 = 750*mm-tgtpos
+
+collimator1_seg6_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+collimator1_seg6_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### Collimator 2
+
+# Seg 1
+
+x1 = -35*mm
+z1 = 750*mm-tgtpos
+
+x2 = -30.5*mm
+z2 = 750*mm-tgtpos
+
+x3 = -30.5*mm
+z3 = 900*mm-tgtpos
+
+x4 = -35*mm
+z4 = 900*mm-tgtpos
+
+collimator2_seg1 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 2
+x1 = -150*mm
+z1 = 750*mm-tgtpos
+
+x2 = -101*mm
+z2 = 750*mm-tgtpos
+
+x3 = -101*mm
+z3 = 800*mm-tgtpos
+
+x4 = -150*mm
+z4 = 800*mm-tgtpos
+
+collimator2_seg2 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 3
+
+x1 = -150*mm
+z1 = 800*mm-tgtpos
+
+x2 = -101*mm
+z2 = 800*mm-tgtpos
+
+x3 = -101*mm*(1+np.tan(1.5*np.pi/180))
+z3 = 900*mm-tgtpos
+
+x4 = -150*mm
+z4 = 900*mm-tgtpos
+
+collimator2_seg3 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 4
+
+x1 = 30.5*mm
+z1 = 750*mm-tgtpos
+
+x2 = 150*mm
+z2 = 750*mm-tgtpos
+
+x3 = 150*mm
+z3 = 900*mm-tgtpos
+
+x4 = 30.5*mm
+z4 = 900*mm-tgtpos
+
+collimator2_seg4 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+
+### Upstream Spectrometer Coil (approximated by rectangle extending from beginning of upstream arc to end of downstream arc)
+
+# seg 1
+x1 = 33*mm - 1*mm
+z1 = 1108.84*mm-(250.68-33)/2.0*mm-1*mm-tgtpos
+
+x2 = 33*mm - 1*mm
+z2 = 1108.84*mm+465*mm-tgtpos
+
+x3 = 250.68*mm + 1*mm
+z3 = 1108.84*mm+465*mm-tgtpos
+
+x4 = 250.68*mm + 1*mm
+z4 = 1108.84*mm-(250.68-33)/2.0*mm-1*mm-tgtpos
+
+uscoil_seg1 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# seg 2
+x1 = 33*mm - 1*mm
+z1 = 1108.84*mm+465*mm-tgtpos
+
+x2 = 33*mm - 1*mm
+z2 = 1108.84*mm+515*mm-tgtpos
+
+x3 = 260.54*mm + 1*mm
+z3 = 1108.84*mm+515*mm-tgtpos
+
+x4 = 250.68*mm + 1*mm
+z4 =  1108.84*mm+465*mm-tgtpos
+
+uscoil_seg2 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# seg 3
+x1 = 33*mm - 1*mm
+z1 = 1108.84*mm+515*mm-tgtpos
+
+x2 = 33*mm - 1*mm
+z2 = 2886.93*mm+(260.54-33)/2.0*mm+1*mm-tgtpos
+
+x3 = 260.54*mm + 1*mm
+z3 = 2886.93*mm+(260.54-33)/2.0*mm+1*mm-tgtpos
+
+x4 = 260.54*mm + 1*mm
+z4 = 1108.84*mm+515*mm-tgtpos
+
+uscoil_seg3 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+### Upstream 2bounce shield
+
+# Front insert
+x1 = -30.875*mm
+z1 = 936.5*mm-tgtpos
+
+x2 = -30.875*mm
+z2 = (936.5+12.7)*mm-tgtpos
+
+x3 = -25*mm
+z3 = (936.5+12.7)*mm-tgtpos
+
+x4 = -25*mm
+z4 = 936.5*mm-tgtpos
+
+twobounce_front_insert_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+twobounce_front_insert_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+# Main tube (azimuthally aligned with acceptance region)
+x1 = -36*mm
+z1 = (936.5+12.7)*mm-tgtpos
+
+x2 = -36*mm
+z2 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x3 = -25*mm
+z3 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x4 = -25*mm
+z4 = (936.5+12.7)*mm-tgtpos
+
+twobounce_acceptance = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Main tube (azimuthally aligned with coil)
+x1 = 25*mm
+z1 = (936.5+12.7)*mm-tgtpos
+
+x2 = 25*mm
+z2 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x3 = 32*mm
+z3 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x4 = 32*mm
+z4 = (936.5+12.7)*mm-tgtpos
+
+twobounce_coil = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# End insert
+x1 = -30.875*mm
+z1 = (936.5+2152.65-12.7)*mm-tgtpos
+
+x2 = -30.875*mm
+z2 = (936.5+2152.65)*mm-tgtpos
+
+x3 = -25*mm
+z3 = (936.5+2152.65)*mm-tgtpos
+
+x4 = -25*mm
+z4 = (936.5+2152.65-12.7)*mm-tgtpos
+
+twobounce_end_insert_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+twobounce_end_insert_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### Collimator 4
+
+# Seg 1
+
+x1 = -40*mm
+z1 = 3225*mm-tgtpos
+
+x2 = -51.5*mm
+z2 = 3225*mm-tgtpos
+
+x3 = -51.5*mm
+z3 = 3375*mm-tgtpos
+
+x4 = -40*mm
+z4 = 3375*mm-tgtpos
+
+collimator4_seg1 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 2
+x1 = -185*mm
+z1 = 3225*mm-tgtpos
+
+x2 = -250*mm
+z2 = 3225*mm-tgtpos
+
+x3 = -250*mm
+z3 = 3275*mm-tgtpos
+
+x4 = -185*mm
+z4 = 3275*mm-tgtpos
+
+collimator4_seg2 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 3
+
+x1 = -185*mm
+z1 = 3275*mm-tgtpos
+
+x2 = -250*mm
+z2 = 3275*mm-tgtpos
+
+x3 = -250*mm
+z3 = 3375*mm-tgtpos
+
+x4 = -185*mm*(1+np.tan(7.6*np.pi/180))
+z4 = 3375*mm-tgtpos
+
+collimator4_seg3 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+# Seg 4
+
+x1 = 40*mm
+z1 = 3375*mm-tgtpos
+
+x2 = 250*mm
+z2 = 3375*mm-tgtpos
+
+x3 = 250*mm
+z3 = 3225*mm-tgtpos
+
+x4 = 40*mm
+z4 = 3225*mm-tgtpos
+
+collimator4_seg4 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+
+### Upstream Enclosure Lead Wall
+
+# Seg 1
+
+x1=230*mm
+z1=3541.903*mm-tgtpos
+
+x2=230*mm
+z2=3592.703*mm-tgtpos
+
+x3=406.4*mm
+z3=3592.703*mm-tgtpos
+
+x4=406.4*mm
+z4=3541.903*mm-tgtpos
+
+US_Pbwall_seg1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+US_Pbwall_seg1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+#seg 2
+x1=230*mm
+z1=3592.703*mm-tgtpos
+
+x2=230*mm
+z2=3694.303*mm-tgtpos
+
+x3=330.2*mm
+z3=3694.303*mm-tgtpos
+
+x4=330.2*mm
+z4=3592.703*mm-tgtpos
+
+US_Pbwall_seg2_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+US_Pbwall_seg2_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+#seg 3
+x1=(533.4*2)/2*mm
+z1=(3592.703+50.8+101.6/2-101.6/2)*mm-tgtpos
+
+x2=(533.4*2)/2*mm
+z2=(3592.703+50.8+101.6/2+101.6/2)*mm-tgtpos
+
+x3=344.488*mm
+z3=(3592.703+50.8+101.6/2+101.6/2)*mm-tgtpos
+
+x4=344.488*mm
+z4=(3592.703+50.8+101.6/2-101.6/2)*mm-tgtpos
+
+US_Pbwall_seg3_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+US_Pbwall_seg3_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### Pipe downstream of upstream enclosure before bellows 3
+x1 = 331.788*mm 
+z1 = 3592.703*mm-tgtpos
+
+x2 = 331.788*mm  
+z2 = 4140.210*mm-tgtpos
+
+x3 = 344.488*mm 
+z3 = 4140.210*mm-tgtpos  
+
+x4 = 344.488*mm 
+z4 = 3592.703*mm-tgtpos
+
+upstream_enclosure_DSpipe_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+upstream_enclosure_DSpipe_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### Upstream enclosure downstream pipe flange
+
+x1 = 331.788*mm 
+z1 = 4140.210*mm-tgtpos
+
+x2 = 331.788*mm  
+z2 = 4191.010*mm-tgtpos
+
+x3 = 406.4*mm 
+z3 = 4191.010*mm-tgtpos  
+
+x4 = 406.4*mm 
+z4 = 4140.210*mm-tgtpos
+
+upstream_enclosure_DSpipe_flange_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+upstream_enclosure_DSpipe_flange_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
 
 ###### First downstream Lead collar (for ep scattering)
 
@@ -652,726 +1486,6 @@ collar_bottom2 = polygon(
     ),
     notSource=False,
 )
-
-#################################################################
-
-######inner photon collimator (Col 1)
-# Updated on Nov 8 2020 with merged extended collimator
-
-x1_inner_photon_1 = 0.020 + 0.0003
-z1_inner_photon_1 = 4.675 + 0.15
-
-x2_inner_photon_1 = 0.0295
-z2_inner_photon_1 = 4.675 + 0.15
-
-x3_inner_photon_1 = 0.02974
-z3_inner_photon_1 = 4.775 + 0.15
-
-x4_inner_photon_1 = 0.01625 + 0.0003
-z4_inner_photon_1 = 4.775 + 0.15
-
-x1_inner_photon_2 = 0.01625 + 0.0003
-z1_inner_photon_2 = 4.775 + 0.15
-
-x2_inner_photon_2 = 0.02974
-z2_inner_photon_2 = 4.775 + 0.15
-
-x3_inner_photon_2 = 0.02995
-z3_inner_photon_2 = 4.865 + 0.15
-
-x4_inner_photon_2 = 0.0151 + 0.0003
-z4_inner_photon_2 = 4.865 + 0.15
-
-x1_inner_photon_3 = 0.0151 + 0.0003
-z1_inner_photon_3 = 4.865 + 0.15
-
-x2_inner_photon_3 = 0.02995
-z2_inner_photon_3 = 4.865 + 0.15
-
-x3_inner_photon_3 = 0.03023
-z3_inner_photon_3 = 4.985 + 0.15
-
-x4_inner_photon_3 = 0.0141 + 0.0003
-z4_inner_photon_3 = 4.985 + 0.15
-
-x1_inner_photon_4 = 0.0141 + 0.0003
-z1_inner_photon_4 = 4.985 + 0.15
-
-x2_inner_photon_4 = 0.03023
-z2_inner_photon_4 = 4.985 + 0.15
-
-x3_inner_photon_4 = 0.0305
-z3_inner_photon_4 = 5.075 + 0.15
-
-x4_inner_photon_4 = 0.0139
-z4_inner_photon_4 = 5.075 + 0.15
-
-x1_inner_photon_5 = 0.0139
-z1_inner_photon_5 = 5.075 + 0.15
-
-x2_inner_photon_5 = 0.0305
-z2_inner_photon_5 = 5.075 + 0.15
-
-x3_inner_photon_5 = 0.0275
-z3_inner_photon_5 = 5.40
-
-x4_inner_photon_5 = 0.014536
-z4_inner_photon_5 = 5.40
-
-x1_inner_photon_6 = 0.0139  # not used now 12/01/2021
-z1_inner_photon_6 = 5.290
-
-x2_inner_photon_6 = 0.0275
-z2_inner_photon_6 = 5.290
-
-x3_inner_photon_6 = 0.0275
-z3_inner_photon_6 = 5.390
-
-x4_inner_photon_6 = 0.013908
-z4_inner_photon_6 = 5.390
-
-# one has to assign the coordinates in anti-clock sequence
-coll_inner_photon_top_1 = polygon(
-    (
-        [z1_inner_photon_1, x1_inner_photon_1],
-        [z4_inner_photon_1, x4_inner_photon_1],
-        [z3_inner_photon_1, x3_inner_photon_1],
-        [z2_inner_photon_1, x2_inner_photon_1],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_1 = polygon(
-    (
-        [z2_inner_photon_1, -x2_inner_photon_1],
-        [z3_inner_photon_1, -x3_inner_photon_1],
-        [z4_inner_photon_1, -x4_inner_photon_1],
-        [z1_inner_photon_1, -x1_inner_photon_1],
-    ),
-    notSource=False,
-)
-
-coll_inner_photon_top_2 = polygon(
-    (
-        [z1_inner_photon_2, x1_inner_photon_2],
-        [z4_inner_photon_2, x4_inner_photon_2],
-        [z3_inner_photon_2, x3_inner_photon_2],
-        [z2_inner_photon_2, x2_inner_photon_2],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_2 = polygon(
-    (
-        [z2_inner_photon_2, -x2_inner_photon_2],
-        [z3_inner_photon_2, -x3_inner_photon_2],
-        [z4_inner_photon_2, -x4_inner_photon_2],
-        [z1_inner_photon_2, -x1_inner_photon_2],
-    ),
-    notSource=False,
-)
-
-coll_inner_photon_top_3 = polygon(
-    (
-        [z1_inner_photon_3, x1_inner_photon_3],
-        [z4_inner_photon_3, x4_inner_photon_3],
-        [z3_inner_photon_3, x3_inner_photon_3],
-        [z2_inner_photon_3, x2_inner_photon_3],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_3 = polygon(
-    (
-        [z2_inner_photon_3, -x2_inner_photon_3],
-        [z3_inner_photon_3, -x3_inner_photon_3],
-        [z4_inner_photon_3, -x4_inner_photon_3],
-        [z1_inner_photon_3, -x1_inner_photon_3],
-    ),
-    notSource=False,
-)
-
-coll_inner_photon_top_4 = polygon(
-    (
-        [z1_inner_photon_4, x1_inner_photon_4],
-        [z4_inner_photon_4, x4_inner_photon_4],
-        [z3_inner_photon_4, x3_inner_photon_4],
-        [z2_inner_photon_4, x2_inner_photon_4],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_4 = polygon(
-    (
-        [z2_inner_photon_4, -x2_inner_photon_4],
-        [z3_inner_photon_4, -x3_inner_photon_4],
-        [z4_inner_photon_4, -x4_inner_photon_4],
-        [z1_inner_photon_4, -x1_inner_photon_4],
-    ),
-    notSource=False,
-)
-
-coll_inner_photon_top_5 = polygon(
-    (
-        [z1_inner_photon_5, x1_inner_photon_5],
-        [z4_inner_photon_5, x4_inner_photon_5],
-        [z3_inner_photon_5, x3_inner_photon_5],
-        [z2_inner_photon_5, x2_inner_photon_5],
-    ),
-    notSource=False,
-)
-coll_inner_photon_bottom_5 = polygon(
-    (
-        [z2_inner_photon_5, -x2_inner_photon_5],
-        [z3_inner_photon_5, -x3_inner_photon_5],
-        [z4_inner_photon_5, -x4_inner_photon_5],
-        [z1_inner_photon_5, -x1_inner_photon_5],
-    ),
-    notSource=False,
-)
-
-# coll_inner_photon_top_6    = polygon( ([z1_inner_photon_6,  x1_inner_photon_6], [z4_inner_photon_6,  x4_inner_photon_6], [z3_inner_photon_6,  x3_inner_photon_6], [z2_inner_photon_6,  x2_inner_photon_6] ), notSource=False)
-# coll_inner_photon_bottom_6 = polygon( ([z2_inner_photon_6, -x2_inner_photon_6], [z3_inner_photon_6, -x3_inner_photon_6], [z4_inner_photon_6, -x4_inner_photon_6], [z1_inner_photon_6, -x1_inner_photon_6] ), notSource=False)
-
-
-#########collimator 2,  three segments
-# seg 1
-x1_coll_2_1 = -0.035
-z1_coll_2_1 = 5.25
-
-x2_coll_2_1 = -0.0275
-z2_coll_2_1 = 5.25
-
-x3_coll_2_1 = -0.0275
-z3_coll_2_1 = 5.4
-
-x4_coll_2_1 = -0.035
-z4_coll_2_1 = 5.4
-
-
-coll_2_1 = polygon(
-    (
-        [z1_coll_2_1, x1_coll_2_1],
-        [z4_coll_2_1, x4_coll_2_1],
-        [z3_coll_2_1, x3_coll_2_1],
-        [z2_coll_2_1, x2_coll_2_1],
-    ),
-    notSource=False,
-)
-# coll_2_1   = polygon( ([z1_coll_2_1, x1_coll_2_1], [z4_coll_2_1, x4_coll_2_1], [z3_coll_2_1, x3_coll_2_1], [z2_coll_2_1, x2_coll_2_1] ), isDetector=True)
-
-
-# seg 2
-
-x1_coll_2_2 = -0.150
-z1_coll_2_2 = 5.25
-
-x2_coll_2_2 = -0.101
-z2_coll_2_2 = 5.25
-
-x3_coll_2_2 = -0.101
-z3_coll_2_2 = 5.4
-
-x4_coll_2_2 = -0.15
-z4_coll_2_2 = 5.4
-
-coll_2_2 = polygon(
-    (
-        [z1_coll_2_2, x1_coll_2_2],
-        [z4_coll_2_2, x4_coll_2_2],
-        [z3_coll_2_2, x3_coll_2_2],
-        [z2_coll_2_2, x2_coll_2_2],
-    ),
-    notSource=False,
-)
-# coll_2_2   = polygon( ([z1_coll_2_2, x1_coll_2_2], [z4_coll_2_2, x4_coll_2_2], [z3_coll_2_2, x3_coll_2_2], [z2_coll_2_2, x2_coll_2_2] ), isDetector=True)
-
-# seg 3
-
-x1_coll_2_3 = 0.0275
-z1_coll_2_3 = 5.25
-
-x2_coll_2_3 = 0.150
-z2_coll_2_3 = 5.25
-
-x3_coll_2_3 = 0.1500
-z3_coll_2_3 = 5.4
-
-x4_coll_2_3 = 0.0275
-z4_coll_2_3 = 5.4
-
-
-coll_2_3 = polygon(
-    (
-        [z1_coll_2_3, x1_coll_2_3],
-        [z4_coll_2_3, x4_coll_2_3],
-        [z3_coll_2_3, x3_coll_2_3],
-        [z2_coll_2_3, x2_coll_2_3],
-    ),
-    notSource=False,
-)
-# coll_2_3   = polygon( ([z1_coll_2_3, x1_coll_2_3], [z4_coll_2_3, x4_coll_2_3], [z3_coll_2_3, x3_coll_2_3], [z2_coll_2_3, x2_coll_2_3] ), isDetector=True)
-
-##############Upstream coil#######################
-
-x1_US_coil = 0.03016
-z1_US_coil = 5.60882
-
-x2_US_coil = 0.03016 + 0.21793
-z2_US_coil = 5.60882
-
-x3_US_coil = 0.034767 + 0.22758
-z3_US_coil = 7.38632
-
-x4_US_coil = 0.034767
-z4_US_coil = 7.38632
-
-US_Coil = polygon(
-    (
-        [z1_US_coil, x1_US_coil],
-        [z4_US_coil, x4_US_coil],
-        [z3_US_coil, x3_US_coil],
-        [z2_US_coil, x2_US_coil],
-    ),
-    notSource=False,
-)
-
-############# Col2 photon collimating inner_pipe
-##pipe
-x1_pipe0 = 0.027  # 0.0205
-z1_pipe0 = 5.4
-
-x2_pipe0 = 0.030  # 0.0235
-z2_pipe0 = 5.4
-
-x3_pipe0 = 0.030  # 0.0305
-z3_pipe0 = 7.2
-
-x4_pipe0 = 0.027  # 0.0275
-z4_pipe0 = 7.2
-
-
-coll_pipe01 = polygon(
-    (
-        [z1_pipe0, x1_pipe0],
-        [z4_pipe0, x4_pipe0],
-        [z3_pipe0, x3_pipe0],
-        [z2_pipe0, x2_pipe0],
-    ),
-    notSource=False,
-)
-coll_pipe02 = polygon(
-    (
-        [z2_pipe0, -x2_pipe0],
-        [z3_pipe0, -x3_pipe0],
-        [z4_pipe0, -x4_pipe0],
-        [z1_pipe0, -x1_pipe0],
-    ),
-    notSource=False,
-)
-
-##############Upstream vessel###############
-# Fornt Plate upper part
-x1_USCAN_Front_up = 0.127
-z1_USCAN_Front_up = 4.36553
-
-x2_USCAN_Front_up = 0.3302
-z2_USCAN_Front_up = 4.36553
-
-x3_USCAN_Front_up = 0.3302
-z3_USCAN_Front_up = 4.36553 + 0.0508
-
-x4_USCAN_Front_up = 0.127
-z4_USCAN_Front_up = 4.36553 + 0.0508
-
-
-USCAN_Front_up = polygon(
-    (
-        [z1_USCAN_Front_up, x1_USCAN_Front_up],
-        [z4_USCAN_Front_up, x4_USCAN_Front_up],
-        [z3_USCAN_Front_up, x3_USCAN_Front_up],
-        [z2_USCAN_Front_up, x2_USCAN_Front_up],
-    ),
-    notSource=False,
-)
-
-# Fornt Plate lower part
-x1_USCAN_Front_low = -0.4826
-z1_USCAN_Front_low = 4.36553
-
-x2_USCAN_Front_low = -0.127
-z2_USCAN_Front_low = 4.36553
-
-x3_USCAN_Front_low = -0.127
-z3_USCAN_Front_low = 4.36553 + 0.0508
-
-x4_USCAN_Front_low = -0.4826
-z4_USCAN_Front_low = 4.36553 + 0.0508
-
-
-USCAN_Front_low = polygon(
-    (
-        [z1_USCAN_Front_low, x1_USCAN_Front_low],
-        [z4_USCAN_Front_low, x4_USCAN_Front_low],
-        [z3_USCAN_Front_low, x3_USCAN_Front_low],
-        [z2_USCAN_Front_low, x2_USCAN_Front_low],
-    ),
-    notSource=False,
-)
-
-# Base plate
-x1_USCAN_Bot = -0.4826 - 0.09525
-z1_USCAN_Bot = 4.28933
-
-x2_USCAN_Bot = -0.4826
-z2_USCAN_Bot = 4.28933
-
-x3_USCAN_Bot = -0.4826
-z3_USCAN_Bot = 4.28933 + 4.0521
-
-x4_USCAN_Bot = -0.4826 - 0.09525
-z4_USCAN_Bot = 4.28933 + 4.0521
-
-
-USCAN_Bot = polygon(
-    (
-        [z1_USCAN_Bot, x1_USCAN_Bot],
-        [z4_USCAN_Bot, x4_USCAN_Bot],
-        [z3_USCAN_Bot, x3_USCAN_Bot],
-        [z2_USCAN_Bot, x2_USCAN_Bot],
-    ),
-    notSource=False,
-)
-
-# Top plate
-x1_USCAN_Top = 0.33020
-z1_USCAN_Top = 4.39093
-
-x2_USCAN_Top = 0.33020 + 0.0254
-z2_USCAN_Top = 4.39093
-
-x3_USCAN_Top = 0.33020 + 0.0254
-z3_USCAN_Top = 4.39093 + 3.8489
-
-x4_USCAN_Top = 0.33020
-z4_USCAN_Top = 4.39093 + 3.8489
-
-
-USCAN_Top = polygon(
-    (
-        [z1_USCAN_Top, x1_USCAN_Top],
-        [z4_USCAN_Top, x4_USCAN_Top],
-        [z3_USCAN_Top, x3_USCAN_Top],
-        [z2_USCAN_Top, x2_USCAN_Top],
-    ),
-    notSource=False,
-)
-
-# Back Plate upper part
-x1_USCAN_Back_up = 0.23635
-z1_USCAN_Back_up = 8.21443
-
-x2_USCAN_Back_up = 0.3302
-z2_USCAN_Back_up = 8.21443
-
-x3_USCAN_Back_up = 0.3302
-z3_USCAN_Back_up = 8.21443 + 0.0508
-
-x4_USCAN_Back_up = 0.23635
-z4_USCAN_Back_up = 8.21443 + 0.0508
-
-
-USCAN_Back_up = polygon(
-    (
-        [z1_USCAN_Back_up, x1_USCAN_Back_up],
-        [z4_USCAN_Back_up, x4_USCAN_Back_up],
-        [z3_USCAN_Back_up, x3_USCAN_Back_up],
-        [z2_USCAN_Back_up, x2_USCAN_Back_up],
-    ),
-    notSource=False,
-)
-
-# Back Plate lower part
-x1_USCAN_Back_low = -0.4826
-z1_USCAN_Back_low = 8.21443
-
-x2_USCAN_Back_low = -0.23635
-z2_USCAN_Back_low = 8.21443
-
-x3_USCAN_Back_low = -0.23635
-z3_USCAN_Back_low = 8.21443 + 0.0508
-
-x4_USCAN_Back_low = -0.4826
-z4_USCAN_Back_low = 8.21443 + 0.0508
-
-
-USCAN_Back_low = polygon(
-    (
-        [z1_USCAN_Back_low, x1_USCAN_Back_low],
-        [z4_USCAN_Back_low, x4_USCAN_Back_low],
-        [z3_USCAN_Back_low, x3_USCAN_Back_low],
-        [z2_USCAN_Back_low, x2_USCAN_Back_low],
-    ),
-    notSource=False,
-)
-
-### Pipe after US vessel
-x1_US_pipe1 = 0.230
-z1_US_pipe1 = 8.23438
-
-x2_US_pipe1 = 0.23635
-z2_US_pipe1 = 8.23438
-
-x3_US_pipe1 = 0.23635
-z3_US_pipe1 = 8.23438 + 0.44133
-
-x4_US_pipe1 = 0.230
-z4_US_pipe1 = 8.23438 + 0.44133
-
-US_pipe1_up = polygon(
-    (
-        [z1_US_pipe1, x1_US_pipe1],
-        [z4_US_pipe1, x4_US_pipe1],
-        [z3_US_pipe1, x3_US_pipe1],
-        [z2_US_pipe1, x2_US_pipe1],
-    ),
-    notSource=False,
-)
-US_pipe1_lo = polygon(
-    (
-        [z2_US_pipe1, -x2_US_pipe1],
-        [z3_US_pipe1, -x3_US_pipe1],
-        [z4_US_pipe1, -x4_US_pipe1],
-        [z1_US_pipe1, -x1_US_pipe1],
-    ),
-    notSource=False,
-)
-
-####US CAN exit Flange 1
-###Part1
-##section1
-x1_US_flange1_1_1 = 0.23635
-z1_US_flange1_1_1 = 8.65666
-
-x2_US_flange1_1_1 = 0.4191
-z2_US_flange1_1_1 = 8.65666
-
-x3_US_flange1_1_1 = 0.4191
-z3_US_flange1_1_1 = 8.65666 + 0.01905
-
-x4_US_flange1_1_1 = 0.23635
-z4_US_flange1_1_1 = 8.65666 + 0.01905
-
-US_flange1_1_1_up = polygon(
-    (
-        [z1_US_flange1_1_1, x1_US_flange1_1_1],
-        [z4_US_flange1_1_1, x4_US_flange1_1_1],
-        [z3_US_flange1_1_1, x3_US_flange1_1_1],
-        [z2_US_flange1_1_1, x2_US_flange1_1_1],
-    ),
-    notSource=False,
-)
-US_flange1_1_1_lo = polygon(
-    (
-        [z2_US_flange1_1_1, -x2_US_flange1_1_1],
-        [z3_US_flange1_1_1, -x3_US_flange1_1_1],
-        [z4_US_flange1_1_1, -x4_US_flange1_1_1],
-        [z1_US_flange1_1_1, -x1_US_flange1_1_1],
-    ),
-    notSource=False,
-)
-
-##section2
-x2_US_flange1_1_2 = 0.24765
-z2_US_flange1_1_2 = 8.65666 + 0.01905
-
-x1_US_flange1_1_2 = 0.4191
-z1_US_flange1_1_2 = 8.65666 + 0.01905
-
-x4_US_flange1_1_2 = 0.4191
-z4_US_flange1_1_2 = 8.65666 + 0.01905 + 0.01588
-
-x3_US_flange1_1_2 = 0.24765
-z3_US_flange1_1_2 = 8.65666 + 0.01905 + 0.01588
-
-US_flange1_1_2_up = polygon(
-    (
-        [z1_US_flange1_1_2, x1_US_flange1_1_2],
-        [z4_US_flange1_1_2, x4_US_flange1_1_2],
-        [z3_US_flange1_1_2, x3_US_flange1_1_2],
-        [z2_US_flange1_1_2, x2_US_flange1_1_2],
-    ),
-    notSource=False,
-)
-US_flange1_1_2_lo = polygon(
-    (
-        [z2_US_flange1_1_2, -x2_US_flange1_1_2],
-        [z3_US_flange1_1_2, -x3_US_flange1_1_2],
-        [z4_US_flange1_1_2, -x4_US_flange1_1_2],
-        [z1_US_flange1_1_2, -x1_US_flange1_1_2],
-    ),
-    notSource=False,
-)
-
-###Part2
-##section1
-x2_US_flange1_2_1 = 0.3302
-z2_US_flange1_2_1 = 8.69158
-
-x1_US_flange1_2_1 = 0.4191
-z1_US_flange1_2_1 = 8.69158
-
-x4_US_flange1_2_1 = 0.4191
-z4_US_flange1_2_1 = 8.69158 + 0.0254
-
-x3_US_flange1_2_1 = 0.3302
-z3_US_flange1_2_1 = 8.69158 + 0.0254
-
-US_flange1_2_1_up = polygon(
-    (
-        [z1_US_flange1_2_1, x1_US_flange1_2_1],
-        [z4_US_flange1_2_1, x4_US_flange1_2_1],
-        [z3_US_flange1_2_1, x3_US_flange1_2_1],
-        [z2_US_flange1_2_1, x2_US_flange1_2_1],
-    ),
-    notSource=False,
-)
-US_flange1_2_1_lo = polygon(
-    (
-        [z2_US_flange1_2_1, -x2_US_flange1_2_1],
-        [z3_US_flange1_2_1, -x3_US_flange1_2_1],
-        [z4_US_flange1_2_1, -x4_US_flange1_2_1],
-        [z1_US_flange1_2_1, -x1_US_flange1_2_1],
-    ),
-    notSource=False,
-)
-
-##section2
-x2_US_flange1_2_2 = 0.33095
-z2_US_flange1_2_2 = 8.69158 + 0.0254
-
-x1_US_flange1_2_2 = 0.4191
-z1_US_flange1_2_2 = 8.69158 + 0.0254
-
-x4_US_flange1_2_2 = 0.4191
-z4_US_flange1_2_2 = 8.69158 + 0.0254 + 0.01905
-
-x3_US_flange1_2_2 = 0.33095
-z3_US_flange1_2_2 = 8.69158 + 0.0254 + 0.01905
-
-US_flange1_2_2_up = polygon(
-    (
-        [z1_US_flange1_2_2, x1_US_flange1_2_2],
-        [z4_US_flange1_2_2, x4_US_flange1_2_2],
-        [z3_US_flange1_2_2, x3_US_flange1_2_2],
-        [z2_US_flange1_2_2, x2_US_flange1_2_2],
-    ),
-    notSource=False,
-)
-US_flange1_2_2_lo = polygon(
-    (
-        [z2_US_flange1_2_2, -x2_US_flange1_2_2],
-        [z3_US_flange1_2_2, -x3_US_flange1_2_2],
-        [z4_US_flange1_2_2, -x4_US_flange1_2_2],
-        [z1_US_flange1_2_2, -x1_US_flange1_2_2],
-    ),
-    notSource=False,
-)
-
-
-###Next pipe - it has three parts
-##part1
-x2_US_pipe2_1 = 0.3302
-z2_US_pipe2_1 = 8.71698
-
-x1_US_pipe2_1 = 0.33095
-z1_US_pipe2_1 = 8.71698
-
-x4_US_pipe2_1 = 0.33095
-z4_US_pipe2_1 = 8.71698 + 0.06106
-
-x3_US_pipe2_1 = 0.3302
-z3_US_pipe2_1 = 8.71698 + 0.06106
-
-US_pipe2_1_up = polygon(
-    (
-        [z1_US_pipe2_1, x1_US_pipe2_1],
-        [z4_US_pipe2_1, x4_US_pipe2_1],
-        [z3_US_pipe2_1, x3_US_pipe2_1],
-        [z2_US_pipe2_1, x2_US_pipe2_1],
-    ),
-    notSource=False,
-)
-US_pipe2_1_lo = polygon(
-    (
-        [z2_US_pipe2_1, -x2_US_pipe2_1],
-        [z3_US_pipe2_1, -x3_US_pipe2_1],
-        [z4_US_pipe2_1, -x4_US_pipe2_1],
-        [z1_US_pipe2_1, -x1_US_pipe2_1],
-    ),
-    notSource=False,
-)
-
-##part2
-x2_US_pipe2_2 = 0.3302
-z2_US_pipe2_2 = 8.71698 + 0.06106
-
-x1_US_pipe2_2 = 0.361175
-z1_US_pipe2_2 = 8.71698 + 0.06106
-
-x4_US_pipe2_2 = 0.361175
-z4_US_pipe2_2 = 8.71698 + 0.06106 + 0.33222
-
-x3_US_pipe2_2 = 0.3302
-z3_US_pipe2_2 = 8.71698 + 0.06106 + 0.33222
-
-US_pipe2_2_up = polygon(
-    (
-        [z1_US_pipe2_2, x1_US_pipe2_2],
-        [z4_US_pipe2_2, x4_US_pipe2_2],
-        [z3_US_pipe2_2, x3_US_pipe2_2],
-        [z2_US_pipe2_2, x2_US_pipe2_2],
-    ),
-    notSource=False,
-)
-US_pipe2_2_lo = polygon(
-    (
-        [z2_US_pipe2_2, -x2_US_pipe2_2],
-        [z3_US_pipe2_2, -x3_US_pipe2_2],
-        [z4_US_pipe2_2, -x4_US_pipe2_2],
-        [z1_US_pipe2_2, -x1_US_pipe2_2],
-    ),
-    notSource=False,
-)
-
-##part3
-x2_US_pipe2_3 = 0.3302
-z2_US_pipe2_3 = 8.71698 + 0.06106 + 0.33222
-
-x3_US_pipe2_3 = 0.33095
-z3_US_pipe2_3 = 8.71698 + 0.06106 + 0.33222
-
-x4_US_pipe2_3 = 0.33095
-z4_US_pipe2_3 = 8.71698 + 0.06106 + 0.33222 + 0.06146
-
-x1_US_pipe2_3 = 0.3302
-z1_US_pipe2_3 = 8.71698 + 0.06106 + 0.33222 + 0.06146
-
-US_pipe2_3_up = polygon(
-    (
-        [z1_US_pipe2_3, x1_US_pipe2_3],
-        [z4_US_pipe2_3, x4_US_pipe2_3],
-        [z3_US_pipe2_3, x3_US_pipe2_3],
-        [z2_US_pipe2_3, x2_US_pipe2_3],
-    ),
-    notSource=False,
-)
-US_pipe2_3_lo = polygon(
-    (
-        [z2_US_pipe2_3, -x2_US_pipe2_3],
-        [z3_US_pipe2_3, -x3_US_pipe2_3],
-        [z4_US_pipe2_3, -x4_US_pipe2_3],
-        [z1_US_pipe2_3, -x1_US_pipe2_3],
-    ),
-    notSource=False,
-)
-
 
 ##############Downstream vessel###############
 # Fornt Plate upper part
@@ -1613,85 +1727,6 @@ Scaper_12 = polygon(
     ),
     notSource=False,
 )
-
-################# collimator 4, 3 segmentations
-
-# seg 1
-
-x1_coll_4_1 = -0.250  
-z1_coll_4_1 = 7.725 
-
-x2_coll_4_1 = -0.185
-z2_coll_4_1 = 7.725 
-
-x3_coll_4_1 = -0.1983  # 185+100*tan(7.6 deg)
-z3_coll_4_1 = 7.875 
-
-x4_coll_4_1 = -0.250 
-z4_coll_4_1 = 7.875 
-
-
-coll_4_1 = polygon(
-    (
-        [z1_coll_4_1, x1_coll_4_1],
-        [z4_coll_4_1, x4_coll_4_1],
-        [z3_coll_4_1, x3_coll_4_1],
-        [z2_coll_4_1, x2_coll_4_1],
-    ),
-    notSource=False,
-)
-
-
-# seg 2
-
-x1_coll_4_2 = -0.0515  
-z1_coll_4_2 = 7.775 
-
-x2_coll_4_2 = -0.040
-z2_coll_4_2 = 7.775 
-
-x3_coll_4_2 = -0.040
-z3_coll_4_2 = 7.875 
-
-x4_coll_4_2 = -0.0515  
-z4_coll_4_2 = 7.875 
-
-
-coll_4_2 = polygon(
-    (
-        [z1_coll_4_2, x1_coll_4_2],
-        [z4_coll_4_2, x4_coll_4_2],
-        [z3_coll_4_2, x3_coll_4_2],
-        [z2_coll_4_2, x2_coll_4_2],
-    ),
-    notSource=False,
-)
-
-# seg 3
-
-x1_coll_4_3 = 0.040
-z1_coll_4_3 = 7.775 
-
-x2_coll_4_3 = 0.250  # Was simulation -0.300 # Was CAD -0.254
-z2_coll_4_3 = 7.775 
-
-x3_coll_4_3 = 0.250  # Was simulation -0.300 # Was CAD -0.254
-z3_coll_4_3 = 7.875 
-
-x4_coll_4_3 = 0.040
-z4_coll_4_3 = 7.875 
-
-
-coll_4_3 = polygon(
-    (
-        [z1_coll_4_3, x1_coll_4_3],
-        [z4_coll_4_3, x4_coll_4_3],
-        [z3_coll_4_3, x3_coll_4_3],
-        [z2_coll_4_3, x2_coll_4_3],
-    ),
-    notSource=False,
-)
-
 
 ######### collimator 5 (shaped like a tuning fork), 1 seg
 
@@ -2019,65 +2054,67 @@ allpolys.append(bellows2_seg3_bottom)
 allpolys.append(bellows2_DSflange_top)
 allpolys.append(bellows2_DSflange_bottom)
 
-allpolys.append(enclosure_USpipe_top)
-allpolys.append(enclosure_USpipe_bottom)
+allpolys.append(upstream_enclosure_USpipe_top)
+allpolys.append(upstream_enclosure_USpipe_bottom)
+
+allpolys.append(upstream_enclosure_USwall_top)
+allpolys.append(upstream_enclosure_USwall_bottom)
+allpolys.append(upstream_enclosure_sidewall_top)
+allpolys.append(upstream_enclosure_sidewall_bottom)
+allpolys.append(upstream_enclosure_DSwall_top)
+allpolys.append(upstream_enclosure_DSwall_bottom)
+
+allpolys.append(collimator1_seg1_top)
+allpolys.append(collimator1_seg1_bottom)
+allpolys.append(collimator1_seg2_top)
+allpolys.append(collimator1_seg2_bottom)
+allpolys.append(collimator1_seg3_top)
+allpolys.append(collimator1_seg3_bottom)
+allpolys.append(collimator1_seg4_top)
+allpolys.append(collimator1_seg4_bottom)
+allpolys.append(collimator1_seg5_top)
+allpolys.append(collimator1_seg5_bottom)
+allpolys.append(collimator1_seg6_top)
+allpolys.append(collimator1_seg6_bottom)
+
+allpolys.append(collimator2_seg1)
+allpolys.append(collimator2_seg2)
+allpolys.append(collimator2_seg3)
+allpolys.append(collimator2_seg4)
+
+allpolys.append(uscoil_seg1)
+allpolys.append(uscoil_seg2)
+allpolys.append(uscoil_seg3)
+
+allpolys.append(twobounce_front_insert_top)
+allpolys.append(twobounce_front_insert_bottom)
+allpolys.append(twobounce_acceptance)
+allpolys.append(twobounce_coil)
+allpolys.append(twobounce_end_insert_top)
+allpolys.append(twobounce_end_insert_bottom)
+
+allpolys.append(collimator4_seg1)
+allpolys.append(collimator4_seg2)
+allpolys.append(collimator4_seg3)
+allpolys.append(collimator4_seg4)
+
+allpolys.append(US_Pbwall_seg1_top)
+allpolys.append(US_Pbwall_seg1_bottom)
+allpolys.append(US_Pbwall_seg2_top)
+allpolys.append(US_Pbwall_seg2_bottom)
+allpolys.append(US_Pbwall_seg3_top)
+allpolys.append(US_Pbwall_seg3_bottom)
+
+allpolys.append(upstream_enclosure_DSpipe_top)
+allpolys.append(upstream_enclosure_DSpipe_bottom)
+allpolys.append(upstream_enclosure_DSpipe_flange_top)
+allpolys.append(upstream_enclosure_DSpipe_flange_bottom)
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
 
 allpolys.append(collar_top2)
 allpolys.append(collar_bottom2)
-
-allpolys.append(collar3_top)
-allpolys.append(collar3_bottom)
-
-allpolys.append(coll_inner_photon_top_1)
-allpolys.append(coll_inner_photon_bottom_1)
-allpolys.append(coll_inner_photon_top_2)
-allpolys.append(coll_inner_photon_bottom_2)
-allpolys.append(coll_inner_photon_top_3)
-allpolys.append(coll_inner_photon_bottom_3)
-allpolys.append(coll_inner_photon_top_4)
-allpolys.append(coll_inner_photon_bottom_4)
-allpolys.append(coll_inner_photon_top_5)
-allpolys.append(coll_inner_photon_bottom_5)
-
-allpolys.append(coll_2_1)
-allpolys.append(coll_2_2)
-allpolys.append(coll_2_3)
-
-allpolys.append(US_Coil)
-
-allpolys.append(coll_pipe01)
-allpolys.append(coll_pipe02)
-
-allpolys.append(USCAN_Front_up)
-allpolys.append(USCAN_Front_low)
-
-# allpolys.append(USCAN_Bot)
-# allpolys.append(USCAN_Top)
-
-allpolys.append(USCAN_Back_up)
-allpolys.append(USCAN_Back_low)
-
-allpolys.append(US_pipe1_lo)
-allpolys.append(US_pipe1_up)
-
-allpolys.append(US_flange1_1_1_up)
-allpolys.append(US_flange1_1_1_lo)
-allpolys.append(US_flange1_1_2_up)
-allpolys.append(US_flange1_1_2_lo)
-allpolys.append(US_flange1_2_1_up)
-allpolys.append(US_flange1_2_1_lo)
-allpolys.append(US_flange1_2_2_up)
-allpolys.append(US_flange1_2_2_lo)
-
-allpolys.append(US_pipe2_1_up)
-allpolys.append(US_pipe2_1_lo)
-allpolys.append(US_pipe2_2_up)
-allpolys.append(US_pipe2_2_lo)
-allpolys.append(US_pipe2_3_up)
-allpolys.append(US_pipe2_3_lo)
 
 allpolys.append(DSCAN_Front_up)
 allpolys.append(DSCAN_Front_low)
@@ -2092,11 +2129,6 @@ allpolys.append(DSCAN_Back_low_2)
 
 allpolys.append(Scaper_11)
 allpolys.append(Scaper_12)
-
-allpolys.append(coll_4_1)
-allpolys.append(coll_4_2)
-allpolys.append(coll_4_3)
-
 
 allpolys.append(coll_5)
 allpolys.append(coll_51)
