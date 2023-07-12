@@ -1161,7 +1161,7 @@ twobounce_end_insert_bottom = polygon(
 
 # Seg 1
 
-x1 = -40*mm
+x1 = -26*mm
 z1 = 3225*mm-tgtpos
 
 x2 = -51.5*mm
@@ -1170,7 +1170,7 @@ z2 = 3225*mm-tgtpos
 x3 = -51.5*mm
 z3 = 3375*mm-tgtpos
 
-x4 = -40*mm
+x4 = -26*mm
 z4 = 3375*mm-tgtpos
 
 collimator4_seg1 = polygon(
@@ -1232,7 +1232,7 @@ collimator4_seg3 = polygon(
 
 # Seg 4
 
-x1 = 40*mm
+x1 = 26*mm
 z1 = 3375*mm-tgtpos
 
 x2 = 250*mm
@@ -1241,7 +1241,7 @@ z2 = 3375*mm-tgtpos
 x3 = 250*mm
 z3 = 3225*mm-tgtpos
 
-x4 = 40*mm
+x4 = 26*mm
 z4 = 3225*mm-tgtpos
 
 collimator4_seg4 = polygon(
@@ -1421,16 +1421,16 @@ upstream_enclosure_DSpipe_flange_bottom = polygon(
 
 ###### First downstream Lead collar (for ep scattering)
 
-x1_collar1 = 0.620
+x1_collar1 = 0.550
 z1_collar1 = 11.767124 + 4.5
 
-x2_collar1 = 0.750
+x2_collar1 = 0.7558659
 z2_collar1 = 11.767124 + 4.5
 
-x3_collar1 = 0.750
+x3_collar1 = 0.7558659
 z3_collar1 = 11.767124 + 4.5 + 0.150
 
-x4_collar1 = 0.630
+x4_collar1 = 0.5631233
 z4_collar1 = 11.767124 + 4.5 + 0.150
 
 
@@ -1728,7 +1728,7 @@ Scaper_12 = polygon(
     notSource=False,
 )
 
-######### collimator 5 (shaped like a tuning fork), 1 seg
+######### Collimator 5 (shaped like a tuning fork), 1 seg
 
 
 x1_coll_5 = -0.100  # use this if you just want the exact y=0 slice
@@ -1935,48 +1935,189 @@ DS_Coil4_3 = polygon(
     notSource=False,
 )
 
-# Col6A
-x1_Col6A = -0.1058  # use this if you just want the exact y=0 slice
-z1_Col6A = 9.555904 + 4.5
+#Tungsten Belly Plates
 
-x2_Col6A = -0.055314  # from GDML
-z2_Col6A = 9.555904 + 4.5
+x1_solid_epoxy_1 = 0.038
+z1_solid_epoxy_1 = 4.93201 + 4.5
 
-x3_Col6A = -0.061143  # from GDML
-z3_Col6A = 9.708304 + 4.5
+x2_solid_epoxy_1 = 0.041
+z2_solid_epoxy_1 = 4.93201 + 4.5
 
-x4_Col6A = -0.1058  # use this if you just want the exact y=0 slice
-z4_Col6A = 9.708304 + 4.5
+x3_solid_epoxy_1 = 0.041
+z3_solid_epoxy_1 = 5.93425 + 4.5
 
-Col6A = polygon(
+x4_solid_epoxy_1 = 0.038
+z4_solid_epoxy_1 = 5.93425 + 4.5
+
+Solid_epoxy_1 = polygon(
     (
-        [z1_Col6A, x1_Col6A],
-        [z4_Col6A, x4_Col6A],
-        [z3_Col6A, x3_Col6A],
-        [z2_Col6A, x2_Col6A],
+        [z1_solid_epoxy_1, x1_solid_epoxy_1],
+        [z4_solid_epoxy_1, x4_solid_epoxy_1],
+        [z3_solid_epoxy_1, x3_solid_epoxy_1],
+        [z2_solid_epoxy_1, x2_solid_epoxy_1],
     ),
     notSource=False,
 )
 
-# Col6B
-x1_Col6B = -0.1224  # use this if you just want the exact y=0 slice
-z1_Col6B = 10.9275 + 4.5
+x1_solid_epoxy_2 = 0.0435
+z1_solid_epoxy_2 = 5.94847 + 4.5
 
-x2_Col6B = -0.070  # from GDML
-z2_Col6B = 10.9275 + 4.5
+x2_solid_epoxy_2 = 0.0465
+z2_solid_epoxy_2 = 5.94847 + 4.5
 
-x3_Col6B = -0.07536  # from GDML
-z3_Col6B = 11.079904 + 4.5
+x3_solid_epoxy_2 = 0.0465
+z3_solid_epoxy_2 = 6.97106 + 4.5
 
-x4_Col6B = -0.1224  # use this if you just want the exact y=0 slice
-z4_Col6B = 11.079904 + 4.5
+x4_solid_epoxy_2 = 0.0435
+z4_solid_epoxy_2 = 6.97106 + 4.5
 
-Col6B = polygon(
+Solid_epoxy_2 = polygon(
     (
-        [z1_Col6B, x1_Col6B],
-        [z4_Col6B, x4_Col6B],
-        [z3_Col6B, x3_Col6B],
-        [z2_Col6B, x2_Col6B],
+        [z1_solid_epoxy_2, x1_solid_epoxy_2],
+        [z4_solid_epoxy_2, x4_solid_epoxy_2],
+        [z3_solid_epoxy_2, x3_solid_epoxy_2],
+        [z2_solid_epoxy_2, x2_solid_epoxy_2],
+    ),
+    notSource=False,
+)
+
+#Solid epoxy 3 & 4 have been merged
+x1_solid_epoxy_3 = 0.046
+z1_solid_epoxy_3 = 6.98802 + 4.5
+
+x2_solid_epoxy_3 = 0.049
+z2_solid_epoxy_3 = 6.98802 + 4.5
+
+x3_solid_epoxy_3 = 0.049
+z3_solid_epoxy_3 = 7.96170 + 4.5
+
+x4_solid_epoxy_3 = 0.046
+z4_solid_epoxy_3 = 7.96170 + 4.5
+
+Solid_epoxy_3 = polygon(
+    (
+        [z1_solid_epoxy_3, x1_solid_epoxy_3],
+        [z4_solid_epoxy_3, x4_solid_epoxy_3],
+        [z3_solid_epoxy_3, x3_solid_epoxy_3],
+        [z2_solid_epoxy_3, x2_solid_epoxy_3],
+    ),
+    notSource=False,
+)
+
+x1_solid_epoxy_5 = 0.05281
+z1_solid_epoxy_5 = 8.03666 + 4.5
+
+x2_solid_epoxy_5 = 0.05581
+z2_solid_epoxy_5 = 8.03666 + 4.5
+
+x3_solid_epoxy_5 = 0.05581 + .02184
+z3_solid_epoxy_5 = 9.70269 + 4.5
+
+x4_solid_epoxy_5 = 0.05281 + .02184
+z4_solid_epoxy_5 = 9.70269 + 4.5
+
+Solid_epoxy_5 = polygon(
+    (
+        [z1_solid_epoxy_5, x1_solid_epoxy_5],
+        [z4_solid_epoxy_5, x4_solid_epoxy_5],
+        [z3_solid_epoxy_5, x3_solid_epoxy_5],
+        [z2_solid_epoxy_5, x2_solid_epoxy_5],
+    ),
+    notSource=False,
+)
+
+# Collimator 6A
+
+#seg 1
+x1_Col6A_1 = -0.08990  # use this if you just want the exact y=0 slice
+z1_Col6A_1 = 9.555904 + 4.5
+
+x2_Col6A_1 = -0.05531  # from GDML
+z2_Col6A_1 = 9.555904 + 4.5
+
+x3_Col6A_1 = -0.05629  # from GDML
+z3_Col6A_1 = 9.625754 + 4.5
+
+x4_Col6A_1 = -0.08990  # use this if you just want the exact y=0 slice
+z4_Col6A_1 = 9.625754 + 4.5
+
+Col6A_1 = polygon(
+    (
+        [z1_Col6A_1, x1_Col6A_1],
+        [z4_Col6A_1, x4_Col6A_1],
+        [z3_Col6A_1, x3_Col6A_1],
+        [z2_Col6A_1, x2_Col6A_1],
+    ),
+    notSource=False,
+)
+
+#seg 2
+x1_Col6A_2 = -0.08990  # use this if you just want the exact y=0 slice
+z1_Col6A_2 = 9.638454 + 4.5
+
+x2_Col6A_2 = -0.05646  # from GDML
+z2_Col6A_2 = 9.638454 + 4.5
+
+x3_Col6A_2 = -0.05744  # from GDML
+z3_Col6A_2 = 9.708304 + 4.5
+
+x4_Col6A_2 = -0.08890  # use this if you just want the exact y=0 slice
+z4_Col6A_2 = 9.708304 + 4.5
+
+Col6A_2 = polygon(
+    (
+        [z1_Col6A_2, x1_Col6A_2],
+        [z4_Col6A_2, x4_Col6A_2],
+        [z3_Col6A_2, x3_Col6A_2],
+        [z2_Col6A_2, x2_Col6A_2],
+    ),
+    notSource=False,
+)
+
+# Collimator 6B
+
+#seg 1
+x1_Col6B_1 = -0.12000  # use this if you just want the exact y=0 slice
+z1_Col6B_1 = 10.92750 + 4.5
+
+x2_Col6B_1 = -0.08000  # from GDML
+z2_Col6B_1 = 10.92750 + 4.5
+
+x3_Col6B_1 = -0.08147  # from GDML
+z3_Col6B_1 = 10.99735 + 4.5
+
+x4_Col6B_1 = -0.12000  # use this if you just want the exact y=0 slice
+z4_Col6B_1 = 10.99735 + 4.5
+
+Col6B_1 = polygon(
+    (
+        [z1_Col6B_1, x1_Col6B_1],
+        [z4_Col6B_1, x4_Col6B_1],
+        [z3_Col6B_1, x3_Col6B_1],
+        [z2_Col6B_1, x2_Col6B_1],
+    ),
+    notSource=False,
+)
+
+#seg 2
+x1_Col6B_2 = -0.12000  # use this if you just want the exact y=0 slice
+z1_Col6B_2 = 11.010054 + 4.5
+
+x2_Col6B_2 = -0.08173  # from GDML
+z2_Col6B_2 = 11.010054 + 4.5
+
+x3_Col6B_2 = -0.08320  # from GDML
+z3_Col6B_2 = 11.079904 + 4.5
+
+x4_Col6B_2 = -0.12000  # use this if you just want the exact y=0 slice
+z4_Col6B_2 = 11.079904 + 4.5
+
+Col6B_2 = polygon(
+    (
+        [z1_Col6B_2, x1_Col6B_2],
+        [z4_Col6B_2, x4_Col6B_2],
+        [z3_Col6B_2, x3_Col6B_2],
+        [z2_Col6B_2, x2_Col6B_2],
     ),
     notSource=False,
 )
@@ -2135,8 +2276,10 @@ allpolys.append(coll_51)
 allpolys.append(lintel)
 
 
-allpolys.append(Col6A)
-allpolys.append(Col6B)
+allpolys.append(Col6A_1)
+allpolys.append(Col6A_2)
+allpolys.append(Col6B_1)
+allpolys.append(Col6B_2)
 
 allpolys.append(DS_Coil1)
 allpolys.append(DS_Coil2)
@@ -2144,6 +2287,11 @@ allpolys.append(DS_Coil3)
 allpolys.append(DS_Coil4_1)
 allpolys.append(DS_Coil4_2)
 allpolys.append(DS_Coil4_3)
+
+allpolys.append(Solid_epoxy_1)
+allpolys.append(Solid_epoxy_2)
+allpolys.append(Solid_epoxy_3)
+allpolys.append(Solid_epoxy_5)
 
 allpolys.append(quartz1)
 allpolys.append(quartz2)
