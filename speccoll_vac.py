@@ -1455,40 +1455,74 @@ collar_bottom1 = polygon(
 
 ###### Second downstream Lead collar (for ep scattering)
 
-x1_collar2 = 1.010
-z1_collar2 = 19.13269 + 4.5
+#Inner Ring
+x1_collar2_in = 1.01000
+z1_collar2_in = 19.08442 + 4.5 -.05
 
-x2_collar2 = 1.315
-z2_collar2 = 19.13269 + 4.5
+x2_collar2_in = 1.14635
+z2_collar2_in = 19.08442 + 4.5 - 0.05
 
-x3_collar2 = 1.315
-z3_collar2 = 19.13269 + 4.5 + 0.150
+x3_collar2_in = 1.14635
+z3_collar2_in = 19.08442 + 4.5 + 0.150 -0.05
 
-x4_collar2 = 1.019
-z4_collar2 = 19.13269 + 4.5 + 0.150
+x4_collar2_in = 1.019
+z4_collar2_in = 19.08442 + 4.5 + 0.150 - 0.05
 
 
-collar_top2 = polygon(
+collar2_inner_top = polygon(
     (
-        [z1_collar2, x1_collar2],
-        [z4_collar2, x4_collar2],
-        [z3_collar2, x3_collar2],
-        [z2_collar2, x2_collar2],
+        [z1_collar2_in, x1_collar2_in],
+        [z4_collar2_in, x4_collar2_in],
+        [z3_collar2_in, x3_collar2_in],
+        [z2_collar2_in, x2_collar2_in],
     ),
     notSource=False,
 )
-collar_bottom2 = polygon(
+collar2_inner_bottom = polygon(
     (
-        [z2_collar2, -x2_collar2],
-        [z3_collar2, -x3_collar2],
-        [z4_collar2, -x4_collar2],
-        [z1_collar2, -x1_collar2],
+        [z2_collar2_in, -x2_collar2_in],
+        [z3_collar2_in, -x3_collar2_in],
+        [z4_collar2_in, -x4_collar2_in],
+        [z1_collar2_in, -x1_collar2_in],
+    ),
+    notSource=False,
+)
+
+#Outer Ring
+x1_collar2_out = 1.12095
+z1_collar2_out = 19.08442 + 4.5 - 0.2 - 0.05
+
+x2_collar2_out = 1.31500
+z2_collar2_out = 19.08442 + 4.5 - 0.2 -0.05
+
+x3_collar2_out = 1.31500
+z3_collar2_out = 19.08442 + 4.5 + 0.150 - 0.2 - 0.05
+
+x4_collar2_out = 1.12095
+z4_collar2_out = 19.08442 + 4.5 + 0.150 - 0.2 - 0.05
+
+
+collar2_outer_top = polygon(
+    (
+        [z1_collar2_out, x1_collar2_out],
+        [z4_collar2_out, x4_collar2_out],
+        [z3_collar2_out, x3_collar2_out],
+        [z2_collar2_out, x2_collar2_out],
+    ),
+    notSource=False,
+)
+collar2_outer_bottom = polygon(
+    (
+        [z2_collar2_out, -x2_collar2_out],
+        [z3_collar2_out, -x3_collar2_out],
+        [z4_collar2_out, -x4_collar2_out],
+        [z1_collar2_out, -x1_collar2_out],
     ),
     notSource=False,
 )
 
 ##############Downstream vessel###############
-# Fornt Plate upper part
+# Front Plate upper part
 x1_DSCAN_Front_up = 0.3302
 z1_DSCAN_Front_up = 9.19671
 
@@ -1512,7 +1546,7 @@ DSCAN_Front_up = polygon(
     notSource=False,
 )
 
-# Fornt Plate lower part
+# Front Plate lower part
 x1_DSCAN_Front_low = -1.4224
 z1_DSCAN_Front_low = 9.19671
 
@@ -1584,18 +1618,18 @@ DSCAN_Top = polygon(
     notSource=False,
 )
 
-# Back Plate upper part - it has two parts
-x1_DSCAN_Back_up_1 = 0.6475
+# Back Plate upper part - it has three parts
+x1_DSCAN_Back_up_1 = 0.74930
 z1_DSCAN_Back_up_1 = 16.52509
 
 x2_DSCAN_Back_up_1 = 1.20015
 z2_DSCAN_Back_up_1 = 16.52509
 
 x3_DSCAN_Back_up_1 = 1.20015
-z3_DSCAN_Back_up_1 = 16.52509 + 0.1016
+z3_DSCAN_Back_up_1 = 16.52509 + 0.08255
 
-x4_DSCAN_Back_up_1 = 0.6475
-z4_DSCAN_Back_up_1 = 16.52509 + 0.1016
+x4_DSCAN_Back_up_1 = 0.74930
+z4_DSCAN_Back_up_1 = 16.52509 + 0.08255
 
 
 DSCAN_Back_up_1 = polygon(
@@ -1608,17 +1642,17 @@ DSCAN_Back_up_1 = polygon(
     notSource=False,
 )
 
-x1_DSCAN_Back_up_2 = 0.6604
-z1_DSCAN_Back_up_2 = 16.52509 + 0.1016
+x1_DSCAN_Back_up_2 = 0.67564
+z1_DSCAN_Back_up_2 = 16.52509 + 0.08255
 
 x2_DSCAN_Back_up_2 = 1.20015
-z2_DSCAN_Back_up_2 = 16.52509 + 0.1016
+z2_DSCAN_Back_up_2 = 16.52509 + 0.08255
 
 x3_DSCAN_Back_up_2 = 1.20015
-z3_DSCAN_Back_up_2 = 16.52509 + 0.1016 + 0.0254
+z3_DSCAN_Back_up_2 = 16.52509 + 0.1016
 
-x4_DSCAN_Back_up_2 = 0.6604
-z4_DSCAN_Back_up_2 = 16.52509 + 0.1016 + 0.0254
+x4_DSCAN_Back_up_2 = 0.67564 
+z4_DSCAN_Back_up_2 = 16.52509 + 0.1016
 
 
 DSCAN_Back_up_2 = polygon(
@@ -1631,18 +1665,41 @@ DSCAN_Back_up_2 = polygon(
     notSource=False,
 )
 
-# Back Plate lower part - lt has two parts
+x1_DSCAN_Back_up_3 = 0.68834
+z1_DSCAN_Back_up_3 = 16.52509 + 0.1016
+
+x2_DSCAN_Back_up_3 = 1.20015
+z2_DSCAN_Back_up_3 = 16.52509 + 0.1016
+
+x3_DSCAN_Back_up_3 = 1.20015
+z3_DSCAN_Back_up_3 = 16.52509 + 0.127
+
+x4_DSCAN_Back_up_3 = 0.68834 
+z4_DSCAN_Back_up_3 = 16.52509 + 0.127
+
+
+DSCAN_Back_up_3 = polygon(
+    (
+        [z1_DSCAN_Back_up_3, x1_DSCAN_Back_up_3],
+        [z4_DSCAN_Back_up_3, x4_DSCAN_Back_up_3],
+        [z3_DSCAN_Back_up_3, x3_DSCAN_Back_up_3],
+        [z2_DSCAN_Back_up_3, x2_DSCAN_Back_up_3],
+    ),
+    notSource=False,
+)
+
+# Back Plate lower part - it has three parts
 x1_DSCAN_Back_low_1 = -1.4224
 z1_DSCAN_Back_low_1 = 16.52509
 
-x2_DSCAN_Back_low_1 = -0.6475
+x2_DSCAN_Back_low_1 = -0.74930
 z2_DSCAN_Back_low_1 = 16.52509
 
-x3_DSCAN_Back_low_1 = -0.6475
-z3_DSCAN_Back_low_1 = 16.52509 + 0.1016
+x3_DSCAN_Back_low_1 = -0.74930
+z3_DSCAN_Back_low_1 = 16.52509 + 0.08255
 
 x4_DSCAN_Back_low_1 = -1.4224
-z4_DSCAN_Back_low_1 = 16.52509 + 0.1016
+z4_DSCAN_Back_low_1 = 16.52509 + 0.08255
 
 
 DSCAN_Back_low_1 = polygon(
@@ -1656,16 +1713,16 @@ DSCAN_Back_low_1 = polygon(
 )
 
 x1_DSCAN_Back_low_2 = -1.4224
-z1_DSCAN_Back_low_2 = 16.52509 + 0.1016
+z1_DSCAN_Back_low_2 = 16.52509 + 0.08255
 
-x2_DSCAN_Back_low_2 = -0.6604
-z2_DSCAN_Back_low_2 = 16.52509 + 0.1016
+x2_DSCAN_Back_low_2 = -0.67564
+z2_DSCAN_Back_low_2 = 16.52509 + 0.08255
 
-x3_DSCAN_Back_low_2 = -0.6604
-z3_DSCAN_Back_low_2 = 16.52509 + 0.1016 + 0.0254
+x3_DSCAN_Back_low_2 = -0.67564
+z3_DSCAN_Back_low_2 = 16.52509 + 0.1016
 
 x4_DSCAN_Back_low_2 = -1.4224
-z4_DSCAN_Back_low_2 = 16.52509 + 0.1016 + 0.0254
+z4_DSCAN_Back_low_2 = 16.52509 + 0.1016
 
 
 DSCAN_Back_low_2 = polygon(
@@ -1678,6 +1735,28 @@ DSCAN_Back_low_2 = polygon(
     notSource=False,
 )
 
+x1_DSCAN_Back_low_3 = -1.4224
+z1_DSCAN_Back_low_3 = 16.52509 + 0.1016
+
+x2_DSCAN_Back_low_3 = -0.68834
+z2_DSCAN_Back_low_3 = 16.52509 + 0.1016
+
+x3_DSCAN_Back_low_3 = -0.68834
+z3_DSCAN_Back_low_3 = 16.52509 + 0.127
+
+x4_DSCAN_Back_low_3 = -1.4224
+z4_DSCAN_Back_low_3 = 16.52509 + 0.127
+
+
+DSCAN_Back_low_3 = polygon(
+    (
+        [z1_DSCAN_Back_low_3, x1_DSCAN_Back_low_3],
+        [z4_DSCAN_Back_low_3, x4_DSCAN_Back_low_3],
+        [z3_DSCAN_Back_low_3, x3_DSCAN_Back_low_3],
+        [z2_DSCAN_Back_low_3, x2_DSCAN_Back_low_3],
+    ),
+    notSource=False,
+)
 
 ##Photon Scaper
 ##+ve y-direction
@@ -2122,6 +2201,108 @@ Col6B_2 = polygon(
     notSource=False,
 )
 
+#Drift chamber
+
+#Driftpipe ~ left wall
+x1_drift_1u = 0.68834  # use this if you just want the exact y=0 slice
+z1_drift_1u = 12.73156 + 4.5
+
+x2_drift_1u = 1.27229  # from GDML
+z2_drift_1u = 12.73156 + 4.5
+
+x3_drift_1u = 1.27229  # from GDML
+z3_drift_1u = 12.73156 + 4.5 + 0.02210
+
+x4_drift_1u = 0.68834  # use this if you just want the exact y=0 slice
+z4_drift_1u = 12.73156 + 4.5 + 0.02210
+
+Drift_wall_top = polygon(
+    (
+        [z1_drift_1u, x1_drift_1u],
+        [z4_drift_1u, x4_drift_1u],
+        [z3_drift_1u, x3_drift_1u],
+        [z2_drift_1u, x2_drift_1u],
+    ),
+    notSource=False,
+)
+
+Drift_wall_bottom = polygon(
+    (
+        [z1_drift_1u, -x1_drift_1u],
+        [z4_drift_1u, -x4_drift_1u],
+        [z3_drift_1u, -x3_drift_1u],
+        [z2_drift_1u, -x2_drift_1u],
+    ),
+    notSource=False,
+)
+
+#Driftpipe ~ main body
+x1_drift_2u = 1.24993  
+z1_drift_2u = 12.73156 + 4.5 + 0.02210
+
+x2_drift_2u = 1.27229  # from GDML
+z2_drift_2u = 12.73156+ 4.5 + 0.02210
+
+x3_drift_2u = 1.27229  # from GDML
+z3_drift_2u = 12.73156 + 4.5 + 5.97408
+
+x4_drift_2u = 1.24993  
+z4_drift_2u = 12.73156 + 4.5 + 5.97408
+
+Drift_body_top = polygon(
+    (
+        [z1_drift_2u, x1_drift_2u],
+        [z4_drift_2u, x4_drift_2u],
+        [z3_drift_2u, x3_drift_2u],
+        [z2_drift_2u, x2_drift_2u],
+    ),
+    notSource=False,
+)
+
+Drift_body_bottom = polygon(
+    (
+        [z1_drift_2u, -x1_drift_2u],
+        [z4_drift_2u, -x4_drift_2u],
+        [z3_drift_2u, -x3_drift_2u],
+        [z2_drift_2u, -x2_drift_2u],
+    ),
+    notSource=False,
+)
+
+#DS window flange
+
+x1_win_flan = 1.01143  
+z1_win_flan = 18.73115 + 4.5
+
+x2_win_flan = 1.39700  
+z2_win_flan = 18.73115+ 4.5
+
+x3_win_flan = 1.39700
+z3_win_flan = 18.73115 + 4.5 + 0.0635
+
+x4_win_flan = 1.06756  
+z4_win_flan = 18.73115 + 4.5 + 0.0635
+
+DS_window_flange_top = polygon(
+    (
+        [z1_win_flan, x1_win_flan],
+        [z4_win_flan, x4_win_flan],
+        [z3_win_flan, x3_win_flan],
+        [z2_win_flan, x2_win_flan],
+    ),
+    notSource=False,
+)
+
+DS_window_flange_bot = polygon(
+    (
+        [z1_win_flan, -x1_win_flan],
+        [z4_win_flan, -x4_win_flan],
+        [z3_win_flan, -x3_win_flan],
+        [z2_win_flan, -x2_win_flan],
+    ),
+    notSource=False,
+)
+
 
 #################################################################
 
@@ -2254,8 +2435,10 @@ allpolys.append(upstream_enclosure_DSpipe_flange_bottom)
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
 
-allpolys.append(collar_top2)
-allpolys.append(collar_bottom2)
+allpolys.append(collar2_inner_top)
+allpolys.append(collar2_inner_bottom)
+allpolys.append(collar2_outer_top)
+allpolys.append(collar2_outer_bottom)
 
 allpolys.append(DSCAN_Front_up)
 allpolys.append(DSCAN_Front_low)
@@ -2265,8 +2448,10 @@ allpolys.append(DSCAN_Bot)
 
 allpolys.append(DSCAN_Back_up_1)
 allpolys.append(DSCAN_Back_up_2)
+allpolys.append(DSCAN_Back_up_3)
 allpolys.append(DSCAN_Back_low_1)
 allpolys.append(DSCAN_Back_low_2)
+allpolys.append(DSCAN_Back_low_3)
 
 allpolys.append(Scaper_11)
 allpolys.append(Scaper_12)
@@ -2292,6 +2477,14 @@ allpolys.append(Solid_epoxy_1)
 allpolys.append(Solid_epoxy_2)
 allpolys.append(Solid_epoxy_3)
 allpolys.append(Solid_epoxy_5)
+
+allpolys.append(Drift_wall_top)
+allpolys.append(Drift_wall_bottom)
+allpolys.append(Drift_body_top)
+allpolys.append(Drift_body_bottom)
+
+allpolys.append(DS_window_flange_top)
+allpolys.append(DS_window_flange_bot)
 
 allpolys.append(quartz1)
 allpolys.append(quartz2)
