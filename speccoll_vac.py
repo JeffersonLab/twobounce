@@ -2626,6 +2626,242 @@ LowCycleBellows_seg3_bot = polygon(
     notSource=False,
 )
 
+#DSpipe (near Barite_Collar2)
+
+#DSpipe_flange (shape highly approximated)
+x1_DSpipeflange = 0.50190
+z1_DSpipeflange = 23.08967 - 0.00025 - 0.07849
+
+x2_DSpipeflange = 0.50191
+z2_DSpipeflange = 23.08967 - 0.00025 - 0.07849
+
+x3_DSpipeflange = 0.50470
+z3_DSpipeflange = 23.08967 - 0.00025
+
+x4_DSpipeflange = 0.50013
+z4_DSpipeflange = 23.08967 - 0.00025
+
+DSpipeflange_top = polygon(
+    (
+        [z1_DSpipeflange, x1_DSpipeflange],
+        [z4_DSpipeflange, x4_DSpipeflange],
+        [z3_DSpipeflange, x3_DSpipeflange],
+        [z2_DSpipeflange, x2_DSpipeflange],
+    ),
+    notSource=False,
+)
+
+DSpipeflange_bot = polygon(
+    (
+        [z1_DSpipeflange, -x1_DSpipeflange],
+        [z4_DSpipeflange, -x4_DSpipeflange],
+        [z3_DSpipeflange, -x3_DSpipeflange],
+        [z2_DSpipeflange, -x2_DSpipeflange],
+    ),
+    notSource=False,
+)
+
+#DSpipe1
+x1_DSpipe1 = 0.50013
+z1_DSpipe1 = 23.08967
+
+x2_DSpipe1 = 0.50470
+z2_DSpipe1 = 23.08967
+
+x3_DSpipe1 = 0.50470
+z3_DSpipe1 = 23.08967 + 0.14910
+
+x4_DSpipe1 = 0.50013
+z4_DSpipe1 = 23.08967 + 0.14910
+
+DSpipe1_top = polygon(
+    (
+        [z1_DSpipe1, x1_DSpipe1],
+        [z4_DSpipe1, x4_DSpipe1],
+        [z3_DSpipe1, x3_DSpipe1],
+        [z2_DSpipe1, x2_DSpipe1],
+    ),
+    notSource=False,
+)
+
+DSpipe1_bot = polygon(
+    (
+        [z1_DSpipe1, -x1_DSpipe1],
+        [z4_DSpipe1, -x4_DSpipe1],
+        [z3_DSpipe1, -x3_DSpipe1],
+        [z2_DSpipe1, -x2_DSpipe1],
+    ),
+    notSource=False,
+)
+
+#DSpipe_vacuumtube_phys
+
+#DSpipe1_bellow
+x1_DSpipe1_bellow = 0.50000
+z1_DSpipe1_bellow = 23.57162
+
+x2_DSpipe1_bellow = 0.52900
+z2_DSpipe1_bellow = 23.57162
+
+x3_DSpipe1_bellow = 0.52976
+z3_DSpipe1_bellow = 23.57162 + 0.18000
+
+x4_DSpipe1_bellow = 0.50076
+z4_DSpipe1_bellow = 23.57162 + 0.18000
+
+DSpipe1_bellow_top = polygon(
+    (
+        [z1_DSpipe1_bellow, x1_DSpipe1_bellow],
+        [z4_DSpipe1_bellow, x4_DSpipe1_bellow],
+        [z3_DSpipe1_bellow, x3_DSpipe1_bellow],
+        [z2_DSpipe1_bellow, x2_DSpipe1_bellow],
+    ),
+    notSource=False,
+)
+
+DSpipe1_bellow_bot = polygon(
+    (
+        [z1_DSpipe1_bellow, -x1_DSpipe1_bellow],
+        [z4_DSpipe1_bellow, -x4_DSpipe1_bellow],
+        [z3_DSpipe1_bellow, -x3_DSpipe1_bellow],
+        [z2_DSpipe1_bellow, -x2_DSpipe1_bellow],
+    ),
+    notSource=False,
+)
+
+#DSpipe1_flange (approximate shape)
+x1_DSpipe1_flange = 0.49700
+z1_DSpipe1_flange = 23.57162 - 0.025
+
+x2_DSpipe1_flange = 0.49950
+z2_DSpipe1_flange = 23.57162 - 0.025
+
+x3_DSpipe1_flange = 0.52900
+z3_DSpipe1_flange = 23.57162
+
+x4_DSpipe1_flange = 0.49700
+z4_DSpipe1_flange = 23.57162
+
+DSpipe1_flange_top = polygon(
+    (
+        [z1_DSpipe1_flange, x1_DSpipe1_flange],
+        [z4_DSpipe1_flange, x4_DSpipe1_flange],
+        [z3_DSpipe1_flange, x3_DSpipe1_flange],
+        [z2_DSpipe1_flange, x2_DSpipe1_flange],
+    ),
+    notSource=False,
+)
+
+DSpipe1_flange_bot = polygon(
+    (
+        [z1_DSpipe1_flange, -x1_DSpipe1_flange],
+        [z4_DSpipe1_flange, -x4_DSpipe1_flange],
+        [z3_DSpipe1_flange, -x3_DSpipe1_flange],
+        [z2_DSpipe1_flange, -x2_DSpipe1_flange],
+    ),
+    notSource=False,
+)
+
+#DSpipe2_USplate (approximate shape)
+x1_DSpipe2_US = 0.50076
+z1_DSpipe2_US = 23.75162
+
+x2_DSpipe2_US = 0.52975
+z2_DSpipe2_US = 23.75162
+
+x3_DSpipe2_US = 0.50493
+z3_DSpipe2_US = 23.75162 + 0.025
+
+x4_DSpipe2_US = 0.50160
+z4_DSpipe2_US = 23.75162 + 0.025
+
+DSpipe2_US_top = polygon(
+    (
+        [z1_DSpipe2_US, x1_DSpipe2_US],
+        [z4_DSpipe2_US, x4_DSpipe2_US],
+        [z3_DSpipe2_US, x3_DSpipe2_US],
+        [z2_DSpipe2_US, x2_DSpipe2_US],
+    ),
+    notSource=False,
+)
+
+DSpipe2_US_bot = polygon(
+    (
+        [z1_DSpipe2_US, -x1_DSpipe2_US],
+        [z4_DSpipe2_US, -x4_DSpipe2_US],
+        [z3_DSpipe2_US, -x3_DSpipe2_US],
+        [z2_DSpipe2_US, -x2_DSpipe2_US],
+    ),
+    notSource=False,
+)
+
+#DSpipe2_DSpipe2_1 (actual name)
+x1_DSpipe2_DS = 0.50478
+z1_DSpipe2_DS = 23.77662
+
+x2_DSpipe2_DS = 0.50954
+z2_DSpipe2_DS = 23.77662
+
+x3_DSpipe2_DS = 0.51088
+z3_DSpipe2_DS = 23.77662 + 0.03093
+
+x4_DSpipe2_DS = 0.50612
+z4_DSpipe2_DS = 23.77662 + 0.03093
+
+DSpipe2_DS_top = polygon(
+    (
+        [z1_DSpipe2_DS, x1_DSpipe2_DS],
+        [z4_DSpipe2_DS, x4_DSpipe2_DS],
+        [z3_DSpipe2_DS, x3_DSpipe2_DS],
+        [z2_DSpipe2_DS, x2_DSpipe2_DS],
+    ),
+    notSource=False,
+)
+
+DSpipe2_DS_bot = polygon(
+    (
+        [z1_DSpipe2_DS, -x1_DSpipe2_DS],
+        [z4_DSpipe2_DS, -x4_DSpipe2_DS],
+        [z3_DSpipe2_DS, -x3_DSpipe2_DS],
+        [z2_DSpipe2_DS, -x2_DSpipe2_DS],
+    ),
+    notSource=False,
+)
+
+#DSpipe3 (just DSpipe3_DSpipe)
+
+x1_DSpipe3 = 0.52170
+z1_DSpipe3 = 23.91538
+
+x2_DSpipe3 = 0.52805
+z2_DSpipe3 = 23.91538
+
+x3_DSpipe3 = 0.69550
+z3_DSpipe3 = 29.97204
+
+x4_DSpipe3 = 0.67645
+z4_DSpipe3 = 29.97204
+
+DSpipe3_top = polygon(
+    (
+        [z1_DSpipe3, x1_DSpipe3],
+        [z4_DSpipe3, x4_DSpipe3],
+        [z3_DSpipe3, x3_DSpipe3],
+        [z2_DSpipe3, x2_DSpipe3],
+    ),
+    notSource=False,
+)
+
+DSpipe3_bot = polygon(
+    (
+        [z1_DSpipe3, -x1_DSpipe3],
+        [z4_DSpipe3, -x4_DSpipe3],
+        [z3_DSpipe3, -x3_DSpipe3],
+        [z2_DSpipe3, -x2_DSpipe3],
+    ),
+    notSource=False,
+)
+
 #################################################################
 
 #### quartz
@@ -2829,6 +3065,21 @@ allpolys.append(Drift_vac_top)
 allpolys.append(Drift_vac_bot)
 allpolys.append(DS_window_flange_top)
 allpolys.append(DS_window_flange_bot)
+allpolys.append(DSpipe1_top)
+allpolys.append(DSpipe1_bot)
+allpolys.append(DSpipeflange_top)
+allpolys.append(DSpipeflange_bot)
+allpolys.append(DSpipe1_flange_top)
+allpolys.append(DSpipe1_flange_bot)
+allpolys.append(DSpipe1_bellow_top)
+allpolys.append(DSpipe1_bellow_bot)
+allpolys.append(DSpipe2_US_top)
+allpolys.append(DSpipe2_DS_bot)
+allpolys.append(DSpipe2_US_top)
+allpolys.append(DSpipe2_DS_bot)
+
+allpolys.append(DSpipe3_top)
+allpolys.append(DSpipe3_bot)
 
 allpolys.append(quartz1)
 allpolys.append(quartz2)
