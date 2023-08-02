@@ -1,9 +1,9 @@
 from math import sqrt, atan2
 import math
 
-# polyres = 0.01
-# polyres = 0.15
-# polyres = 0.05
+#polyres = 0.01
+#polyres = 0.15
+#polyres = 0.05
 polyres = 0.1
 
 ANTICLOCKWISE_WARNING = True  # If warning should be printed over clockwise definition, otherwise exception will be raised
@@ -244,9 +244,18 @@ class face:
 
 
 class polygon:
-    def __init__(self, pts, isDetector=False, isEthereal=False, notSource=False):
+    def __init__(self, pts, isDetector=False, isEthereal=False, notSource=False, isConcave=False ):
+        """Initalize polygon
+
+        Args:
+            pts (list): List of points, list anticlockwise if possible
+            isDetector (bool, optional): _description_. Defaults to False.
+            isEthereal (bool, optional): _description_. Defaults to False.
+            notSource (bool, optional): _description_. Defaults to False.
+            isConcave (bool, optional): If the shape is concave, this must be true. *points must be defined anticlockwise in this case, it will not attempt a fix*. Defaults to False.
+        """
         self.pts = pts
-        self.isAntiClockwise = self.antiClockwise(self.pts)
+        self.isAntiClockwise = isConcave or self.antiClockwise(self.pts)
         self.faces = self.makefaces(self.pts, isDetector, isEthereal, notSource)
         self.ispoly()
 
