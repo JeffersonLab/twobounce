@@ -2628,22 +2628,97 @@ LowCycleBellows_seg3_bot = polygon(
 
 #DSpipe (near Barite_Collar2)
 
-#DSpipe_flange (shape highly approximated)
+#DSpipe_flange (Exact shape)
 x1_DSpipeflange = 0.50190
-z1_DSpipeflange = 23.08967 - 0.00025 - 0.07849
-
+z1_DSpipeflange = 23.01093
 x2_DSpipeflange = 0.50191
-z2_DSpipeflange = 23.08967 - 0.00025 - 0.07849
-
-x3_DSpipeflange = 0.50470
-z3_DSpipeflange = 23.08967 - 0.00025
-
-x4_DSpipeflange = 0.50013
-z4_DSpipeflange = 23.08967 - 0.00025
+z2_DSpipeflange = 23.01093
+x3_DSpipeflange = 0.50854
+z3_DSpipeflange = 23.01093 + 0.00356
+x4_DSpipeflange = 0.51054
+z4_DSpipeflange = 23.01093 + 0.00508
+x5_DSpipeflange = 0.50978
+z5_DSpipeflange = 23.01093 + 0.00686
+x6_DSpipeflange = 0.51029
+z6_DSpipeflange = 23.01093 + 0.00965
+x7_DSpipeflange = 0.50470
+z7_DSpipeflange = 23.01093 + 0.01092
+x8_DSpipeflange = 0.52146
+z8_DSpipeflange = 23.01093 + 0.01600
+x9_DSpipeflange = 0.52375
+z9_DSpipeflange = 23.01093 + 0.02184
+x10_DSpipeflange = 0.52553
+z10_DSpipeflange = 23.01093 + 0.02286
+x11_DSpipeflange = 0.52527
+z11_DSpipeflange = 23.01093 + 0.02464
+x12_DSpipeflange = 0.52553
+z12_DSpipeflange = 23.01093 + 0.04496
+x13_DSpipeflange = 0.52527
+z13_DSpipeflange = 23.01093 + 0.05004
+x14_DSpipeflange = 0.51740
+z14_DSpipeflange = 23.01093 + 0.05309
+x15_DSpipeflange = 0.50470
+z15_DSpipeflange = 23.01093 + 0.05613
+x16_DSpipeflange = 0.50470
+z16_DSpipeflange = 23.01093 + 0.07849
+x17_DSpipeflange = 0.50013
+z17_DSpipeflange = 23.01093 + 0.07849
+x18_DSpipeflange = 0.50013
+z18_DSpipeflange = 23.01093 + 0.05613
+x19_DSpipeflange = 0.51283
+z19_DSpipeflange = 23.01093 + 0.05309
+x20_DSpipeflange = 0.52070
+z20_DSpipeflange = 23.01093 + 0.05004
+x21_DSpipeflange = 0.52095
+z21_DSpipeflange = 23.01093 + 0.04496
+x22_DSpipeflange = 0.52070
+z22_DSpipeflange = 23.01093 + 0.02464
+x23_DSpipeflange = 0.52095
+z23_DSpipeflange = 23.01093 + 0.02286
+x24_DSpipeflange = 0.51918
+z24_DSpipeflange = 23.01093 + 0.02184
+x25_DSpipeflange = 0.51689
+z25_DSpipeflange = 23.01093 + 0.01600
+x26_DSpipeflange = 0.50013
+z26_DSpipeflange = 23.01093 + 0.01092
+x27_DSpipeflange = 0.50571
+z27_DSpipeflange = 23.01093 + 0.00965
+x28_DSpipeflange = 0.50521
+z28_DSpipeflange = 23.01093 + 0.00686
+x29_DSpipeflange = 0.50597
+z29_DSpipeflange = 23.01093 + 0.00508
+x30_DSpipeflange = 0.50013
+z30_DSpipeflange = 23.01093 + 0.00356
 
 DSpipeflange_top = polygon(
     (
         [z1_DSpipeflange, x1_DSpipeflange],
+        [z30_DSpipeflange, x30_DSpipeflange],
+        [z29_DSpipeflange, x29_DSpipeflange],
+        [z28_DSpipeflange, x28_DSpipeflange],
+        [z27_DSpipeflange, x27_DSpipeflange],
+        [z26_DSpipeflange, x26_DSpipeflange],
+        [z25_DSpipeflange, x25_DSpipeflange],
+        [z24_DSpipeflange, x24_DSpipeflange],
+        [z23_DSpipeflange, x23_DSpipeflange],
+        [z22_DSpipeflange, x22_DSpipeflange],
+        [z21_DSpipeflange, x21_DSpipeflange],
+        [z20_DSpipeflange, x20_DSpipeflange],
+        [z19_DSpipeflange, x19_DSpipeflange],
+        [z18_DSpipeflange, x18_DSpipeflange],
+        [z17_DSpipeflange, x17_DSpipeflange],
+        [z16_DSpipeflange, x16_DSpipeflange],
+        [z15_DSpipeflange, x15_DSpipeflange],
+        [z14_DSpipeflange, x14_DSpipeflange],
+        [z13_DSpipeflange, x13_DSpipeflange],
+        [z12_DSpipeflange, x12_DSpipeflange],
+        [z11_DSpipeflange, x11_DSpipeflange],
+        [z10_DSpipeflange, x10_DSpipeflange],
+        [z9_DSpipeflange, x9_DSpipeflange],
+        [z8_DSpipeflange, x8_DSpipeflange],
+        [z7_DSpipeflange, x7_DSpipeflange],
+        [z6_DSpipeflange, x6_DSpipeflange],
+        [z5_DSpipeflange, x5_DSpipeflange],
         [z4_DSpipeflange, x4_DSpipeflange],
         [z3_DSpipeflange, x3_DSpipeflange],
         [z2_DSpipeflange, x2_DSpipeflange],
@@ -2654,6 +2729,32 @@ DSpipeflange_top = polygon(
 DSpipeflange_bot = polygon(
     (
         [z1_DSpipeflange, -x1_DSpipeflange],
+        [z30_DSpipeflange, -x30_DSpipeflange],
+        [z29_DSpipeflange, -x29_DSpipeflange],
+        [z28_DSpipeflange, -x28_DSpipeflange],
+        [z27_DSpipeflange, -x27_DSpipeflange],
+        [z26_DSpipeflange, -x26_DSpipeflange],
+        [z25_DSpipeflange, -x25_DSpipeflange],
+        [z24_DSpipeflange, -x24_DSpipeflange],
+        [z23_DSpipeflange, -x23_DSpipeflange],
+        [z22_DSpipeflange, -x22_DSpipeflange],
+        [z21_DSpipeflange, -x21_DSpipeflange],
+        [z20_DSpipeflange, -x20_DSpipeflange],
+        [z19_DSpipeflange, -x19_DSpipeflange],
+        [z18_DSpipeflange, -x18_DSpipeflange],
+        [z17_DSpipeflange, -x17_DSpipeflange],
+        [z16_DSpipeflange, -x16_DSpipeflange],
+        [z15_DSpipeflange, -x15_DSpipeflange],
+        [z14_DSpipeflange, -x14_DSpipeflange],
+        [z13_DSpipeflange, -x13_DSpipeflange],
+        [z12_DSpipeflange, -x12_DSpipeflange],
+        [z11_DSpipeflange, -x11_DSpipeflange],
+        [z10_DSpipeflange, -x10_DSpipeflange],
+        [z9_DSpipeflange, -x9_DSpipeflange],
+        [z8_DSpipeflange, -x8_DSpipeflange],
+        [z7_DSpipeflange, -x7_DSpipeflange],
+        [z6_DSpipeflange, -x6_DSpipeflange],
+        [z5_DSpipeflange, -x5_DSpipeflange],
         [z4_DSpipeflange, -x4_DSpipeflange],
         [z3_DSpipeflange, -x3_DSpipeflange],
         [z2_DSpipeflange, -x2_DSpipeflange],
@@ -2703,15 +2804,47 @@ z1_DSpipe1_bellow = 23.57162
 x2_DSpipe1_bellow = 0.52900
 z2_DSpipe1_bellow = 23.57162
 
-x3_DSpipe1_bellow = 0.52976
-z3_DSpipe1_bellow = 23.57162 + 0.18000
+x3_DSpipe1_bellow = 0.52900
+z3_DSpipe1_bellow = 23.57162 + 0.00635
 
-x4_DSpipe1_bellow = 0.50076
-z4_DSpipe1_bellow = 23.57162 + 0.18000
+x4_DSpipe1_bellow = 0.50635
+z4_DSpipe1_bellow = 23.57162 + 0.00635
+
+x5_DSpipe1_bellow = 0.50635
+z5_DSpipe1_bellow = 23.57162 + 0.03365
+
+x6_DSpipe1_bellow = 0.52900
+z6_DSpipe1_bellow = 23.57162 + 0.03365
+
+x7_DSpipe1_bellow = 0.52976
+z7_DSpipe1_bellow = 23.57162 + 0.14635
+
+x8_DSpipe1_bellow = 0.50650
+z8_DSpipe1_bellow = 23.57162 + 0.14635
+
+x9_DSpipe1_bellow = 0.50650
+z9_DSpipe1_bellow = 23.57162 + 0.17365
+
+x10_DSpipe1_bellow = 0.52976
+z10_DSpipe1_bellow = 23.57162 + 0.17365
+
+x11_DSpipe1_bellow = 0.52976
+z11_DSpipe1_bellow = 23.57162 + 0.18000
+
+x12_DSpipe1_bellow = 0.50076
+z12_DSpipe1_bellow = 23.57162 + 0.18000
 
 DSpipe1_bellow_top = polygon(
     (
         [z1_DSpipe1_bellow, x1_DSpipe1_bellow],
+        [z12_DSpipe1_bellow, x12_DSpipe1_bellow],
+        [z11_DSpipe1_bellow, x11_DSpipe1_bellow],
+        [z10_DSpipe1_bellow, x10_DSpipe1_bellow],
+        [z9_DSpipe1_bellow, x9_DSpipe1_bellow],
+        [z8_DSpipe1_bellow, x8_DSpipe1_bellow],
+        [z7_DSpipe1_bellow, x7_DSpipe1_bellow],
+        [z6_DSpipe1_bellow, x6_DSpipe1_bellow],
+        [z5_DSpipe1_bellow, x5_DSpipe1_bellow],
         [z4_DSpipe1_bellow, x4_DSpipe1_bellow],
         [z3_DSpipe1_bellow, x3_DSpipe1_bellow],
         [z2_DSpipe1_bellow, x2_DSpipe1_bellow],
@@ -2722,75 +2855,17 @@ DSpipe1_bellow_top = polygon(
 DSpipe1_bellow_bot = polygon(
     (
         [z1_DSpipe1_bellow, -x1_DSpipe1_bellow],
+        [z12_DSpipe1_bellow, -x12_DSpipe1_bellow],
+        [z11_DSpipe1_bellow, -x11_DSpipe1_bellow],
+        [z10_DSpipe1_bellow, -x10_DSpipe1_bellow],
+        [z9_DSpipe1_bellow, -x9_DSpipe1_bellow],
+        [z8_DSpipe1_bellow, -x8_DSpipe1_bellow],
+        [z7_DSpipe1_bellow, -x7_DSpipe1_bellow],
+        [z6_DSpipe1_bellow, -x6_DSpipe1_bellow],
+        [z5_DSpipe1_bellow, -x5_DSpipe1_bellow],
         [z4_DSpipe1_bellow, -x4_DSpipe1_bellow],
         [z3_DSpipe1_bellow, -x3_DSpipe1_bellow],
         [z2_DSpipe1_bellow, -x2_DSpipe1_bellow],
-    ),
-    notSource=False,
-)
-
-#DSpipe1_flange (approximate shape)
-x1_DSpipe1_flange = 0.49700
-z1_DSpipe1_flange = 23.57162 - 0.025
-
-x2_DSpipe1_flange = 0.49950
-z2_DSpipe1_flange = 23.57162 - 0.025
-
-x3_DSpipe1_flange = 0.52900
-z3_DSpipe1_flange = 23.57162
-
-x4_DSpipe1_flange = 0.49700
-z4_DSpipe1_flange = 23.57162
-
-DSpipe1_flange_top = polygon(
-    (
-        [z1_DSpipe1_flange, x1_DSpipe1_flange],
-        [z4_DSpipe1_flange, x4_DSpipe1_flange],
-        [z3_DSpipe1_flange, x3_DSpipe1_flange],
-        [z2_DSpipe1_flange, x2_DSpipe1_flange],
-    ),
-    notSource=False,
-)
-
-DSpipe1_flange_bot = polygon(
-    (
-        [z1_DSpipe1_flange, -x1_DSpipe1_flange],
-        [z4_DSpipe1_flange, -x4_DSpipe1_flange],
-        [z3_DSpipe1_flange, -x3_DSpipe1_flange],
-        [z2_DSpipe1_flange, -x2_DSpipe1_flange],
-    ),
-    notSource=False,
-)
-
-#DSpipe2_USplate (approximate shape)
-x1_DSpipe2_US = 0.50076
-z1_DSpipe2_US = 23.75162
-
-x2_DSpipe2_US = 0.52975
-z2_DSpipe2_US = 23.75162
-
-x3_DSpipe2_US = 0.50493
-z3_DSpipe2_US = 23.75162 + 0.025
-
-x4_DSpipe2_US = 0.50160
-z4_DSpipe2_US = 23.75162 + 0.025
-
-DSpipe2_US_top = polygon(
-    (
-        [z1_DSpipe2_US, x1_DSpipe2_US],
-        [z4_DSpipe2_US, x4_DSpipe2_US],
-        [z3_DSpipe2_US, x3_DSpipe2_US],
-        [z2_DSpipe2_US, x2_DSpipe2_US],
-    ),
-    notSource=False,
-)
-
-DSpipe2_US_bot = polygon(
-    (
-        [z1_DSpipe2_US, -x1_DSpipe2_US],
-        [z4_DSpipe2_US, -x4_DSpipe2_US],
-        [z3_DSpipe2_US, -x3_DSpipe2_US],
-        [z2_DSpipe2_US, -x2_DSpipe2_US],
     ),
     notSource=False,
 )
@@ -2829,7 +2904,6 @@ DSpipe2_DS_bot = polygon(
 )
 
 #DSpipe3 (just DSpipe3_DSpipe)
-
 x1_DSpipe3 = 0.52170
 z1_DSpipe3 = 23.91538
 
@@ -2858,6 +2932,112 @@ DSpipe3_bot = polygon(
         [z4_DSpipe3, -x4_DSpipe3],
         [z3_DSpipe3, -x3_DSpipe3],
         [z2_DSpipe3, -x2_DSpipe3],
+    ),
+    notSource=False,
+)
+
+#DSpipe1_flange (exact shape)
+x1_DSpipe1_flange = 0.49700
+z1_DSpipe1_flange = 23.54662
+
+x2_DSpipe1_flange = 0.49950
+z2_DSpipe1_flange = 23.54662
+
+x3_DSpipe1_flange = 0.49950
+z3_DSpipe1_flange = 23.54662 + 0.005
+
+x4_DSpipe1_flange = 0.50500
+z4_DSpipe1_flange = 23.54662 + 0.005
+
+x5_DSpipe1_flange = 0.50500
+z5_DSpipe1_flange = 23.54662 + 0.013
+
+x6_DSpipe1_flange = 0.52900 
+z6_DSpipe1_flange = 23.54662 + 0.013
+
+x7_DSpipe1_flange = 0.52900
+z7_DSpipe1_flange = 23.54662 + 0.025
+
+x8_DSpipe1_flange = 0.49700
+z8_DSpipe1_flange = 23.54662 + 0.025
+
+DSpipe1_flange_top = polygon(
+    (
+        [z1_DSpipe1_flange, x1_DSpipe1_flange],
+        [z8_DSpipe1_flange, x8_DSpipe1_flange],
+        [z7_DSpipe1_flange, x7_DSpipe1_flange],
+        [z6_DSpipe1_flange, x6_DSpipe1_flange],
+        [z5_DSpipe1_flange, x5_DSpipe1_flange],
+        [z4_DSpipe1_flange, x4_DSpipe1_flange],
+        [z3_DSpipe1_flange, x3_DSpipe1_flange],
+        [z2_DSpipe1_flange, x2_DSpipe1_flange],
+    ),
+    notSource=False,
+)
+
+DSpipe1_flange_bot = polygon(
+    (
+        [z1_DSpipe1_flange, -x1_DSpipe1_flange],
+        [z8_DSpipe1_flange, -x8_DSpipe1_flange],
+        [z7_DSpipe1_flange, -x7_DSpipe1_flange],
+        [z6_DSpipe1_flange, -x6_DSpipe1_flange],
+        [z5_DSpipe1_flange, -x5_DSpipe1_flange],
+        [z4_DSpipe1_flange, -x4_DSpipe1_flange],
+        [z3_DSpipe1_flange, -x3_DSpipe1_flange],
+        [z2_DSpipe1_flange, -x2_DSpipe1_flange],
+    ),
+    notSource=False,
+)
+
+#DSpipe2_USplate (slightly approximated x positions. Should not matter unless resolution of 0.001 or less)
+x1_DSpipe2_US = 0.50076
+z1_DSpipe2_US = 23.75162
+
+x2_DSpipe2_US = 0.52975
+z2_DSpipe2_US = 23.75162
+
+x3_DSpipe2_US = 0.52975
+z3_DSpipe2_US = 23.75162 + 0.012
+
+x4_DSpipe2_US = 0.50557
+z4_DSpipe2_US = 23.75162 + 0.012
+
+x5_DSpipe2_US = 0.50557
+z5_DSpipe2_US = 23.75162 + 0.020
+
+x6_DSpipe2_US = 0.50493
+z6_DSpipe2_US = 23.75162 + 0.020
+
+x7_DSpipe2_US = 0.50493
+z7_DSpipe2_US = 23.75162 + 0.025
+
+x8_DSpipe2_US = 0.50160
+z8_DSpipe2_US = 23.75162 + 0.025
+
+DSpipe2_US_top = polygon(
+    (
+        [z1_DSpipe2_US, x1_DSpipe2_US],
+        [z8_DSpipe2_US, x8_DSpipe2_US],
+        [z7_DSpipe2_US, x7_DSpipe2_US],
+        [z6_DSpipe2_US, x6_DSpipe2_US],
+        [z5_DSpipe2_US, x5_DSpipe2_US],
+        [z4_DSpipe2_US, x4_DSpipe2_US],
+        [z3_DSpipe2_US, x3_DSpipe2_US],
+        [z2_DSpipe2_US, x2_DSpipe2_US],
+    ),
+    notSource=False,
+)
+
+DSpipe2_US_bot = polygon(
+    (
+        [z1_DSpipe2_US, -x1_DSpipe2_US],
+        [z8_DSpipe2_US, -x8_DSpipe2_US],
+        [z7_DSpipe2_US, -x7_DSpipe2_US],
+        [z6_DSpipe2_US, -x6_DSpipe2_US],
+        [z5_DSpipe2_US, -x5_DSpipe2_US],
+        [z4_DSpipe2_US, -x4_DSpipe2_US],
+        [z3_DSpipe2_US, -x3_DSpipe2_US],
+        [z2_DSpipe2_US, -x2_DSpipe2_US],
     ),
     notSource=False,
 )
