@@ -2201,8 +2201,8 @@ Col6B_2 = polygon(
     notSource=False,
 )
 
-#Drift chamber
 #Driftpipe
+
 x1_drift = 0.68834  
 z1_drift = 17.35487
 x2_drift = 1.27229  
@@ -2241,40 +2241,52 @@ Driftpipe_bot= polygon(
         [z2_drift, -x2_drift],
     ),
     notSource=False,
+    isConcave=True,
 )
 
-#Driftpipe vacuum (Driftpipe_vacuum). Approximating as 1 segment (instead of 3)
+#Driftpipe_vacuum
 
-x1_drift_vac = 1.27229
+x1_drift_vac = 1.27329
 z1_drift_vac = 23.18925
-
-x2_drift_vac = 1.39700
+x2_drift_vac = 1.31039
 z2_drift_vac = 23.18925
-
-x3_drift_vac = 1.39700
-z3_drift_vac = 23.18925 + 0.16510
-
-x4_drift_vac = 1.27229 
-z4_drift_vac = 23.18925 + 0.16510
+x3_drift_vac = 1.32232
+z3_drift_vac = 23.28526
+x4_drift_vac = 1.39700
+z4_drift_vac = 23.29085
+x5_drift_vac = 1.39700
+z5_drift_vac = 23.35435
+x6_drift_vac = 1.27229
+z6_drift_vac = 23.35435
+x7_drift_vac = 1.27329
+z7_drift_vac = 23.29085
 
 Drift_vac_top = polygon(
     (
         [z1_drift_vac, x1_drift_vac],
+        [z7_drift_vac, x7_drift_vac],
+        [z6_drift_vac, x6_drift_vac],
+        [z5_drift_vac, x5_drift_vac],
         [z4_drift_vac, x4_drift_vac],
         [z3_drift_vac, x3_drift_vac],
         [z2_drift_vac, x2_drift_vac],
     ),
     notSource=False,
+    isConcave=True,
 )
 
 Drift_vac_bot = polygon(
     (
         [z1_drift_vac, -x1_drift_vac],
+        [z7_drift_vac, -x7_drift_vac],
+        [z6_drift_vac, -x6_drift_vac],
+        [z5_drift_vac, -x5_drift_vac],
         [z4_drift_vac, -x4_drift_vac],
         [z3_drift_vac, -x3_drift_vac],
         [z2_drift_vac, -x2_drift_vac],
     ),
     notSource=False,
+    isConcave=True,
 )
 
 #DS window flange
@@ -2379,7 +2391,7 @@ DSendtube_DS_bot = polygon(
     notSource=False,
 )
 
-#US flange (DSendtube_USflange). Should be 3 segments of varying height, but this is fine
+#US flange (DSendtube_USflange)
 x1_DSendtube_USflange = 0.67247 
 z1_DSendtube_USflange = 16.75827
 x2_DSendtube_USflange = 0.68517
