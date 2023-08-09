@@ -3,8 +3,8 @@ import math
 
 #polyres = 0.01
 #polyres = 0.15
-#polyres = 0.05
-polyres = 0.1
+polyres = 0.005
+#polyres = 0.1
 
 ANTICLOCKWISE_WARNING = True  # If warning should be printed over clockwise definition, otherwise exception will be raised
 
