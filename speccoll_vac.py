@@ -348,164 +348,129 @@ pipe_DScollar0_bottom = polygon(
     notSource=False,
 )
 
-### Flange upstream of bellows 2
+### Flange upstream of bellows 2 (bellows2USflange)
 x1 = 149.23*mm 
-z1 = -885.648*mm-tgtpos
-
+z1 = -856.439*mm-tgtpos
 x2 = 184.15*mm  
-z2 = -885.648*mm-tgtpos
-
+z2 = -856.439*mm-tgtpos
 x3 = 184.15*mm 
 z3 = -828.63*mm-tgtpos  
-
-x4 = 149.23*mm 
+x4 = 152.4*mm 
 z4 = -828.63*mm-tgtpos
+x5 = 152.4*mm 
+z5 = -831.17*mm-tgtpos  
+x6 = 149.23*mm 
+z6 = -831.17*mm-tgtpos
 
 bellows2_USflange_top = polygon(
     (
         [z1, x1],
+        [z6, x6],
+        [z5, x5],
         [z4, x4],
         [z3, x3],
         [z2, x2],
     ),
     notSource=False,
+    isConcave=True,
 )
-bellows2_USflange_bottom = polygon(
+bellows2_USflange_bot = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z6, -x6],
+        [z5, -x5],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
     ),
     notSource=False,
+    isConcave=True,
 )
 
-### bellows 2 seg 1
+### bellows 2 (bellows2)
 x1 = 149.23*mm 
-z1 = -828.63*mm-tgtpos
-
+z1 = -831.17*mm-tgtpos
 x2 = 152.40*mm  
-z2 = -828.63*mm-tgtpos
-
+z2 = -831.17*mm-tgtpos
 x3 = 152.40*mm 
 z3 = -773.05*mm-tgtpos  
-
-x4 = 149.23*mm 
+x4 = 190.5*mm 
 z4 = -773.05*mm-tgtpos
+x5 = 190.5*mm 
+z5 = -484.15*mm-tgtpos
+x6 = 152.40*mm  
+z6 = -484.15*mm-tgtpos
+x7 = 152.40*mm 
+z7 = -424.51*mm-tgtpos  
+x8 = 149.23*mm 
+z8 = -424.51*mm-tgtpos
 
-bellows2_seg1_top = polygon(
+bellows2_top = polygon(
     (
         [z1, x1],
+        [z8, x8],
+        [z7, x7],
+        [z6, x6],
+        [z5, x5],
         [z4, x4],
         [z3, x3],
         [z2, x2],
     ),
     notSource=False,
+    isConcave=True,
 )
-bellows2_seg1_bottom = polygon(
+bellows2_bot = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
-    ),
-    notSource=False,
-)
-
-### bellows 2 seg 2
-x1 = 149.23*mm 
-z1 = -773.05*mm-tgtpos
-
-x2 = 190.50*mm  
-z2 = -773.05*mm-tgtpos
-
-x3 = 190.50*mm 
-z3 = -484.15*mm-tgtpos  
-
-x4 = 149.23*mm 
-z4 = -484.15*mm-tgtpos
-
-bellows2_seg2_top = polygon(
-    (
-        [z1, x1],
-        [z4, x4],
-        [z3, x3],
-        [z2, x2],
-    ),
-    notSource=False,
-)
-bellows2_seg2_bottom = polygon(
-    (
-        [z2, -x2],
-        [z3, -x3],
+        [z8, -x8],
+        [z7, -x7],
+        [z6, -x6],
+        [z5, -x5],
         [z4, -x4],
-        [z1, -x1],
-    ),
-    notSource=False,
-)
-
-### bellows 2 seg 3
-x1 = 149.23*mm 
-z1 = -484.15*mm-tgtpos
-
-x2 = 152.4*mm  
-z2 = -484.15*mm-tgtpos
-
-x3 = 152.4*mm 
-z3 = -428.58*mm-tgtpos  
-
-x4 = 149.23*mm 
-z4 = -428.58*mm-tgtpos
-
-bellows2_seg3_top = polygon(
-    (
-        [z1, x1],
-        [z4, x4],
-        [z3, x3],
-        [z2, x2],
-    ),
-    notSource=False,
-)
-bellows2_seg3_bottom = polygon(
-    (
-        [z2, -x2],
         [z3, -x3],
-        [z4, -x4],
-        [z1, -x1],
+        [z2, -x2],
     ),
     notSource=False,
+    isConcave=True,
 )
 
-### bellows 2 DSflange
-x1 = 149.23*mm 
+### bellows 2 DSflange (bellows2DSflange)
+x1 = 152.4*mm 
 z1 = -428.58*mm-tgtpos
-
 x2 = 184.15*mm  
 z2 = -428.58*mm-tgtpos
-
 x3 = 184.15*mm 
-z3 = -371.475*mm-tgtpos  
-
+z3 = -400.05*mm-tgtpos  
 x4 = 149.23*mm 
-z4 = -371.475*mm-tgtpos
+z4 = -400.05*mm-tgtpos
+x5 = 149.23*mm 
+z5 = -424.51*mm-tgtpos  
+x6 = 152.4*mm 
+z6 = -424.51*mm-tgtpos
 
 bellows2_DSflange_top = polygon(
     (
         [z1, x1],
+        [z6, x6],
+        [z5, x5],
         [z4, x4],
         [z3, x3],
         [z2, x2],
     ),
     notSource=False,
+    isConcave=True,
 )
-bellows2_DSflange_bottom = polygon(
+bellows2_DSflange_bot = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z6, -x6],
+        [z5, -x5],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
     ),
     notSource=False,
+    isConcave=True,
 )
 
 ###  Upstream Enclosure US pipe
@@ -3066,15 +3031,11 @@ allpolys.append(pipe_DScollar0_top)
 allpolys.append(pipe_DScollar0_bottom)
 
 allpolys.append(bellows2_USflange_top)
-allpolys.append(bellows2_USflange_bottom)
-allpolys.append(bellows2_seg1_top)
-allpolys.append(bellows2_seg1_bottom)
-allpolys.append(bellows2_seg2_top)
-allpolys.append(bellows2_seg2_bottom)
-allpolys.append(bellows2_seg3_top)
-allpolys.append(bellows2_seg3_bottom)
+allpolys.append(bellows2_USflange_bot)
+allpolys.append(bellows2_top)
+allpolys.append(bellows2_bot)
 allpolys.append(bellows2_DSflange_top)
-allpolys.append(bellows2_DSflange_bottom)
+allpolys.append(bellows2_DSflange_bot)
 
 allpolys.append(upstream_enclosure_USpipe_top)
 allpolys.append(upstream_enclosure_USpipe_bottom)
