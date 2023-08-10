@@ -474,43 +474,58 @@ bellows2_DSflange_bot = polygon(
 )
 
 ###  Upstream Enclosure US pipe
-x1 = 149.23*mm 
-z1 = -371.475*mm-tgtpos
-
-x2 = 155.575*mm  
-z2 = -371.475*mm-tgtpos
-
-x3 = 155.575*mm 
-z3 = -204.597*mm-tgtpos  
-
-x4 = 149.23*mm 
-z4 = -204.597*mm-tgtpos
+x1 = 149.225*mm 
+z1 = -400.05*mm-tgtpos
+x2 = 184.15*mm  
+z2 = -400.05*mm-tgtpos
+x3 = 184.15*mm 
+z3 = -371.475*mm-tgtpos  
+x4 = 152.4*mm 
+z4 = -371.475*mm-tgtpos
+x5 = 152.4*mm 
+z5 = -367.665*mm-tgtpos
+x6 = 155.575*mm  
+z6 = -367.665*mm-tgtpos
+x7 = 155.575*mm 
+z7 = -204.597*mm-tgtpos  
+x8 = 149.225*mm 
+z8 = -204.597*mm-tgtpos
 
 upstream_enclosure_USpipe_top = polygon(
     (
         [z1, x1],
+        [z8, x8],
+        [z7, x7],
+        [z6, x6],
+        [z5, x5],
         [z4, x4],
         [z3, x3],
         [z2, x2],
     ),
     notSource=False,
+    isConcave=True,
 )
 upstream_enclosure_USpipe_bottom = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z8, -x8],
+        [z7, -x7],
+        [z6, -x6],
+        [z5, -x5],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
     ),
     notSource=False,
+    isConcave=True,
 )
 
-###  Upstream Enclosure US Wall 
+###  Upstream Enclosure US Wall (EnclosureFront_US)
 x1 = 155.575*mm 
-z1 = (-204.597-50.8)*1*mm-tgtpos
+z1 = (-204.597-50.8)*mm-tgtpos
 
 x2 = 552.45*mm    
-z2 = (-204.597-50.8)*1*mm-tgtpos
+z2 = (-204.597-50.8)*mm-tgtpos
 
 x3 = 552.45*mm 
 z3 = -204.597*mm-tgtpos  
@@ -527,31 +542,18 @@ upstream_enclosure_USwall_top = polygon(
     ),
     notSource=False,
 )
-
-x1 = 155.575*mm 
-z1 = (-204.597-50.8)*1*mm-tgtpos
-
-x2 = 552.45*mm    
-z2 = (-204.597-50.8)*1*mm-tgtpos
-
-x3 = 552.45*mm 
-z3 = -204.597*mm-tgtpos 
-
-x4 = 155.575*mm 
-z4 = -204.597*mm-tgtpos
-
 upstream_enclosure_USwall_bottom = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
     ),
     notSource=False,
 )
 
 ###  Upstream Enclosure Side Wall 
-x1 = (1104.9/2.0-25.4)*1*mm
+x1 = (1104.9/2.0-25.4)*mm
 z1 = -204.597*mm-tgtpos
 
 x2 = 552.45*mm    
@@ -560,7 +562,7 @@ z2 = -204.597*mm-tgtpos
 x3 = 552.45*mm 
 z3 = 3592.703*mm-tgtpos  
 
-x4 = (1104.9/2.0-25.4)*1*mm 
+x4 = (1104.9/2.0-25.4)*mm 
 z4 = 3592.703*mm-tgtpos
 
 upstream_enclosure_sidewall_top = polygon(
@@ -603,10 +605,10 @@ x2 = 552.45*mm
 z2 = 3592.703*mm-tgtpos
 
 x3 = 552.45*mm 
-z3 = (3592.703+50.8)*1*mm-tgtpos  
+z3 = (3592.703+50.8)*mm-tgtpos  
 
 x4 = 344.488*mm 
-z4 = (3592.703+50.8)*1*mm-tgtpos
+z4 = (3592.703+50.8)*mm-tgtpos
 
 upstream_enclosure_DSwall_top = polygon(
     (
@@ -618,24 +620,12 @@ upstream_enclosure_DSwall_top = polygon(
     notSource=False,
 )
 
-x1 = 344.488*mm 
-z1 = 3592.703*mm-tgtpos
-
-x2 = 552.45*mm    
-z2 = 3592.703*mm-tgtpos
-
-x3 = 552.45*mm 
-z3 = (3592.703+50.8)*1*mm-tgtpos  
-
-x4 = 344.488*mm 
-z4 = (3592.703+50.8)*1*mm-tgtpos
-
 upstream_enclosure_DSwall_bottom = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
     ),
     notSource=False,
 )
@@ -1246,85 +1236,55 @@ collimator4_seg4 = polygon(
 
 ### Upstream Enclosure Lead Wall
 
-# Seg 1
-
+#PbWall_1
 x1=230*mm
 z1=3541.903*mm-tgtpos
-
-x2=230*mm
-z2=3592.703*mm-tgtpos
-
+x2=406.4*mm
+z2=3541.903*mm-tgtpos
 x3=406.4*mm
 z3=3592.703*mm-tgtpos
-
-x4=406.4*mm
-z4=3541.903*mm-tgtpos
-
-US_Pbwall_seg1_top = polygon(
-    (
-        [z1, x1],
-        [z4, x4],
-        [z3, x3],
-        [z2, x2],
-    ),
-    notSource=False,
-)
-US_Pbwall_seg1_bottom = polygon(
-    (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
-        [z1, -x1],
-    ),
-    notSource=False,
-)
-
-#seg 2
-x1=230*mm
-z1=3592.703*mm-tgtpos
-
-x2=230*mm
-z2=3694.303*mm-tgtpos
-
-x3=330.2*mm
-z3=3694.303*mm-tgtpos
-
 x4=330.2*mm
 z4=3592.703*mm-tgtpos
+x5=330.2*mm
+z5=3694.303*mm-tgtpos
+x6=230*mm
+z6=3694.303*mm-tgtpos
 
-US_Pbwall_seg2_top = polygon(
+US_Pbwall1_top = polygon(
     (
         [z1, x1],
+        [z6, x6],
+        [z5, x5],
         [z4, x4],
         [z3, x3],
         [z2, x2],
     ),
     notSource=False,
+    isConcave=True,
 )
-US_Pbwall_seg2_bottom = polygon(
+US_Pbwall1_bot = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z6, -x6],
+        [z5, -x5],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
     ),
     notSource=False,
 )
 
-#seg 3
-x1=(533.4*2)/2*mm
-z1=(3592.703+50.8+101.6/2-101.6/2)*mm-tgtpos
-
-x2=(533.4*2)/2*mm
-z2=(3592.703+50.8+101.6/2+101.6/2)*mm-tgtpos
-
-x3=344.488*mm
-z3=(3592.703+50.8+101.6/2+101.6/2)*mm-tgtpos
-
+#PbWall_2
+x1=344.388*mm
+z1=(3592.703+50.8)*mm-tgtpos
+x2=533.4*mm
+z2=(3592.703+50.8)*mm-tgtpos
+x3=533.4*mm
+z3=(3592.703+50.8+101.6)*mm-tgtpos
 x4=344.488*mm
-z4=(3592.703+50.8+101.6/2-101.6/2)*mm-tgtpos
+z4=(3592.703+50.8+101.6)*mm-tgtpos
 
-US_Pbwall_seg3_top = polygon(
+US_Pbwall2_top = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -1332,13 +1292,14 @@ US_Pbwall_seg3_top = polygon(
         [z2, x2],
     ),
     notSource=False,
+    isConcave=True,
 )
-US_Pbwall_seg3_bottom = polygon(
+US_Pbwall2_bot = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
     ),
     notSource=False,
 )
@@ -3039,7 +3000,6 @@ allpolys.append(bellows2_DSflange_bot)
 
 allpolys.append(upstream_enclosure_USpipe_top)
 allpolys.append(upstream_enclosure_USpipe_bottom)
-
 allpolys.append(upstream_enclosure_USwall_top)
 allpolys.append(upstream_enclosure_USwall_bottom)
 allpolys.append(upstream_enclosure_sidewall_top)
@@ -3079,12 +3039,10 @@ allpolys.append(collimator4_seg2)
 allpolys.append(collimator4_seg3)
 allpolys.append(collimator4_seg4)
 
-allpolys.append(US_Pbwall_seg1_top)
-allpolys.append(US_Pbwall_seg1_bottom)
-allpolys.append(US_Pbwall_seg2_top)
-allpolys.append(US_Pbwall_seg2_bottom)
-allpolys.append(US_Pbwall_seg3_top)
-allpolys.append(US_Pbwall_seg3_bottom)
+allpolys.append(US_Pbwall1_top)
+allpolys.append(US_Pbwall1_bot)
+allpolys.append(US_Pbwall2_top)
+allpolys.append(US_Pbwall2_bot)
 
 allpolys.append(upstream_enclosure_DSpipe_top)
 allpolys.append(upstream_enclosure_DSpipe_bottom)
