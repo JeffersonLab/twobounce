@@ -1272,6 +1272,7 @@ US_Pbwall1_bot = polygon(
         [z2, -x2],
     ),
     notSource=False,
+    isConcave=True,
 )
 
 #PbWall_2
@@ -1292,7 +1293,6 @@ US_Pbwall2_top = polygon(
         [z2, x2],
     ),
     notSource=False,
-    isConcave=True,
 )
 US_Pbwall2_bot = polygon(
     (
@@ -1304,7 +1304,96 @@ US_Pbwall2_bot = polygon(
     notSource=False,
 )
 
+#Bellows 3 
+#bellows3physical
+x1 = 330.175*mm
+z1 = 4226.3*mm-tgtpos
+x2 = 361.175*mm
+z2 = 4226.3*mm-tgtpos
+x3 = 361.175*mm
+z3 = 4645.7*mm-tgtpos
+x4 = 330.175*mm
+z4 = 4645.7*mm-tgtpos
+
+bellows3_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows3_bot = polygon(
+    (
+        [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    ),
+    notSource=False,
+)
+
+#bellows3flangeUS
+x1 = 330.175*mm
+z1 = 4181.85*mm-tgtpos
+x2 = 418.125*mm
+z2 = 4181.85*mm-tgtpos
+x3 = 418.125*mm
+z3 = 4225.95*mm-tgtpos
+x4 = 330.175*mm
+z4 = 4225.95*mm-tgtpos
+
+bellows3flangeUS_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows3flangeUS_bot = polygon(
+    (
+        [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    ),
+    notSource=False,
+)
+
+#bellows3flangeDS
+x1 = 330.175*mm
+z1 = 4646.05*mm-tgtpos
+x2 = 418.125*mm
+z2 = 4646.05*mm-tgtpos
+x3 = 418.125*mm
+z3 = 4690.15*mm-tgtpos
+x4 = 330.175*mm
+z4 = 4690.15*mm-tgtpos
+
+bellows3flangeDS_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+bellows3flangeDS_bot = polygon(
+    (
+        [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    ),
+    notSource=False,
+)
+
 ### Pipe downstream of upstream enclosure before bellows 3
+#This part seems to not exist in remoll
 x1 = 331.788*mm 
 z1 = 3592.703*mm-tgtpos
 
@@ -1337,7 +1426,7 @@ upstream_enclosure_DSpipe_bottom = polygon(
 )
 
 ### Upstream enclosure downstream pipe flange
-
+#This part seems to not exist in remoll
 x1 = 331.788*mm 
 z1 = 4140.210*mm-tgtpos
 
@@ -3044,10 +3133,16 @@ allpolys.append(US_Pbwall1_bot)
 allpolys.append(US_Pbwall2_top)
 allpolys.append(US_Pbwall2_bot)
 
-allpolys.append(upstream_enclosure_DSpipe_top)
-allpolys.append(upstream_enclosure_DSpipe_bottom)
-allpolys.append(upstream_enclosure_DSpipe_flange_top)
-allpolys.append(upstream_enclosure_DSpipe_flange_bottom)
+#allpolys.append(upstream_enclosure_DSpipe_top)
+#allpolys.append(upstream_enclosure_DSpipe_bottom)
+#allpolys.append(upstream_enclosure_DSpipe_flange_top)
+#allpolys.append(upstream_enclosure_DSpipe_flange_bottom)
+allpolys.append(bellows3_top)
+allpolys.append(bellows3_bot)
+allpolys.append(bellows3flangeUS_top)
+allpolys.append(bellows3flangeUS_bot)
+allpolys.append(bellows3flangeDS_top)
+allpolys.append(bellows3flangeDS_bot)
 
 allpolys.append(collar_top1)
 allpolys.append(collar_bottom1)
