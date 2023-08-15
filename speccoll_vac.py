@@ -1798,9 +1798,56 @@ DSCAN_Back_low_3 = polygon(
     notSource=False,
 )
 
-##Photon Scaper
-##+ve y-direction
-x1_Scaper_1 = 0.040
+#Photon blocker (formerly photon scaper)
+#PhotonBlocker_phys2
+x1 = 40*mm
+z1 = 9207.5*mm
+x2 = 61.968*mm
+z2 = 9207.5*mm
+x3 = 61.968*mm
+z3 = 9309.1*mm
+x4 = 40*mm
+z4 = 9309.1*mm
+
+Blocker_ring_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    )
+)
+Blocker_ring_bot = polygon(
+    (
+        [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    )
+)
+
+#PhotonBlocker_phys1_ & PhotonBlocker_phys2_
+x1 = 61.968*mm
+z1 = 9207.5*mm
+x2 = 140.11*mm
+z2 = 9207.5*mm
+x3 = 140.11*mm
+z3 = 9309.1*mm
+x4 = 61.968*mm
+z4 = 9309.1*mm
+
+Blocker_12 = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    )
+)
+
+##Photon scaper (depricated)
+##+ve y-direction 
+x1_Scaper_1 = 40*mm
 z1_Scaper_1 = 9.2075
 
 x2_Scaper_1 = 0.140
@@ -1823,8 +1870,8 @@ Scaper_11 = polygon(
     notSource=False,
 )
 
-##-ve y-direction
-x1_Scaper_2 = 0.040
+##-ve y-direction (Just a portion of phys2)
+x1_Scaper_2 = 40*mm
 z1_Scaper_2 = 9.2075
 
 x2_Scaper_2 = 0.0608
@@ -3165,8 +3212,11 @@ allpolys.append(DSCAN_Back_low_1)
 allpolys.append(DSCAN_Back_low_2)
 allpolys.append(DSCAN_Back_low_3)
 
-allpolys.append(Scaper_11)
-allpolys.append(Scaper_12)
+#allpolys.append(Scaper_11)
+#allpolys.append(Scaper_12)
+allpolys.append(Blocker_12)
+allpolys.append(Blocker_ring_top)
+allpolys.append(Blocker_ring_bot)
 
 allpolys.append(coll_5)
 allpolys.append(coll_51)
