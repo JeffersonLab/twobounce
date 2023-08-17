@@ -228,10 +228,10 @@ x2 = 184.15*mm
 z2 = -1357.81*mm-tgtpos
 
 x3 = 184.15*mm 
-z3 = -1300.66*mm-tgtpos  
+z3 = -1310*mm-tgtpos  
 
 x4 = 149.23*mm 
-z4 = -1300.66*mm-tgtpos
+z4 = -1310*mm-tgtpos
 
 bellows12_pipe_DSflange_top = polygon(
     (
@@ -253,15 +253,53 @@ bellows12_pipe_DSflange_bottom = polygon(
 )
 
 ### Pipe segment upstream of collar 0
+#flangeUScollar0
+x1 = 149.23*mm 
+z1 = -1310*mm-tgtpos
+x2 = 184.15*mm  
+z2 = -1310*mm-tgtpos
+x3 = 184.15*mm 
+z3 = -1300.66*mm-tgtpos  
+x4 = 152.4*mm 
+z4 = -1300.66*mm-tgtpos
+x5 = 152.4*mm 
+z5 = -1293.67*mm-tgtpos  
+x6 = 149.23*mm 
+z6 = -1293.67*mm-tgtpos
+
+pipeflange_UScollar0_top = polygon(
+    (
+        [z1, x1],
+        [z6, x6],
+        [z5, x5],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+    isConcave=True,
+)
+pipeflange_UScollar0_bottom = polygon(
+    (
+        [z1, -x1],
+        [z6, -x6],
+        [z5, -x5],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+        
+    ),
+    notSource=False,
+    isConcave=True,
+)
+
+#beampipeUScollar0
 x1 = 146.05*mm 
-z1 = -1300.66*mm-tgtpos
-
+z1 = -1293.67*mm-tgtpos
 x2 = 152.4*mm  
-z2 = -1300.66*mm-tgtpos
-
+z2 = -1293.67*mm-tgtpos
 x3 = 152.4*mm 
 z3 = -1200*mm-tgtpos  
-
 x4 = 146.05*mm 
 z4 = -1200*mm-tgtpos
 
@@ -276,10 +314,11 @@ pipe_UScollar0_top = polygon(
 )
 pipe_UScollar0_bottom = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+        
     ),
     notSource=False,
 )
@@ -317,35 +356,44 @@ collar0_bottom = polygon(
 )
 
 ### Pipe segment downstream of collar 0
+#beampipeDScollar0
 x1 = 146.05*mm 
 z1 = -1000*mm-tgtpos
-
 x2 = 152.4*mm  
 z2 = -1000*mm-tgtpos
-
 x3 = 152.4*mm 
 z3 = -885.648*mm-tgtpos  
-
-x4 = 146.05*mm 
+x4 = 184.15*mm 
 z4 = -885.648*mm-tgtpos
+x5 = 184.15*mm 
+z5 = -856.439*mm-tgtpos  
+x6 = 146.05*mm 
+z6 = -856.439*mm-tgtpos
 
 pipe_DScollar0_top = polygon(
     (
         [z1, x1],
+        [z6, x6],
+        [z5, x5],
         [z4, x4],
         [z3, x3],
         [z2, x2],
     ),
     notSource=False,
+    isConcave=True,
 )
 pipe_DScollar0_bottom = polygon(
     (
-        [z2, -x2],
-        [z3, -x3],
-        [z4, -x4],
         [z1, -x1],
+        [z6, -x6],
+        [z5, -x5],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+        
     ),
     notSource=False,
+    isConcave=True,
 )
 
 ### Flange upstream of bellows 2 (bellows2USflange)
@@ -1901,7 +1949,7 @@ x1_coll_5 = -0.100  # use this if you just want the exact y=0 slice
 z1_coll_5 = 12.057824
 
 x2_coll_5 = -0.045  # from GDML
-z2_coll_5 = 12.057824  # thickness of collimator 5 = 35 mm
+z2_coll_5 = 12.057824
 
 x3_coll_5 = -0.045  # from GDML
 z3_coll_5 = 12.157824
@@ -1924,7 +1972,7 @@ x1_coll_51 = -0.1026  # use this if you just want the exact y=0 slice
 z1_coll_51 = 12.170549
 
 x2_coll_51 = -0.046  # from GDML
-z2_coll_51 = 12.170549  # thickness of collimator 5 = 35 mm
+z2_coll_51 = 12.170549
 
 x3_coll_51 = -0.046  # from GDML
 z3_coll_51 = 12.270549
@@ -2196,16 +2244,16 @@ Solid_epoxy_5 = polygon(
 
 #seg 1
 x1_Col6A_1 = -0.08990  
-z1_Col6A_1 = 9.555904 + 4.5 + 0.028122
+z1_Col6A_1 = 9.555904 + 4.5
 
 x2_Col6A_1 = -0.05531
-z2_Col6A_1 = 9.555904 + 4.5 + 0.028122
+z2_Col6A_1 = 9.555904 + 4.5
 
 x3_Col6A_1 = -0.05629 
-z3_Col6A_1 = 9.625754 + 4.5 + 0.028122
+z3_Col6A_1 = 9.625754 + 4.5
 
 x4_Col6A_1 = -0.08990  
-z4_Col6A_1 = 9.625754 + 4.5 + 0.028122
+z4_Col6A_1 = 9.625754 + 4.5
 
 Col6A_1 = polygon(
     (
@@ -2219,16 +2267,16 @@ Col6A_1 = polygon(
 
 #seg 2
 x1_Col6A_2 = -0.08990 
-z1_Col6A_2 = 9.638454 + 4.5 + 0.028122
+z1_Col6A_2 = 9.638454 + 4.5
 
 x2_Col6A_2 = -0.05646
-z2_Col6A_2 = 9.638454 + 4.5 + 0.028122
+z2_Col6A_2 = 9.638454 + 4.5
 
 x3_Col6A_2 = -0.05744
-z3_Col6A_2 = 9.708304 + 4.5 + 0.028122
+z3_Col6A_2 = 9.708304 + 4.5
 
 x4_Col6A_2 = -0.08890 
-z4_Col6A_2 = 9.708304 + 4.5 + 0.028122
+z4_Col6A_2 = 9.708304 + 4.5
 
 Col6A_2 = polygon(
     (
@@ -2244,16 +2292,16 @@ Col6A_2 = polygon(
 
 #seg 1
 x1_Col6B_1 = -0.12000  
-z1_Col6B_1 = 10.92750 + 4.5 + 0.028478
+z1_Col6B_1 = 10.927504 + 4.5
 
 x2_Col6B_1 = -0.08000  
-z2_Col6B_1 = 10.92750 + 4.5 + 0.028478
+z2_Col6B_1 = 10.927504 + 4.5
 
 x3_Col6B_1 = -0.08147  
-z3_Col6B_1 = 10.99735 + 4.5 + 0.028478
+z3_Col6B_1 = 10.997354 + 4.5
 
 x4_Col6B_1 = -0.12000  
-z4_Col6B_1 = 10.99735 + 4.5 + 0.028478
+z4_Col6B_1 = 10.997354 + 4.5
 
 Col6B_1 = polygon(
     (
@@ -2267,16 +2315,16 @@ Col6B_1 = polygon(
 
 #seg 2
 x1_Col6B_2 = -0.12000 
-z1_Col6B_2 = 11.010054 + 4.5 + 0.028478
+z1_Col6B_2 = 11.010054 + 4.5
 
 x2_Col6B_2 = -0.08173
-z2_Col6B_2 = 11.010054 + 4.5 + 0.028478
+z2_Col6B_2 = 11.010054 + 4.5
 
 x3_Col6B_2 = -0.08320
-z3_Col6B_2 = 11.079904 + 4.5 + 0.028478
+z3_Col6B_2 = 11.079904 + 4.5
 
 x4_Col6B_2 = -0.12000
-z4_Col6B_2 = 11.079904 + 4.5 + 0.028478
+z4_Col6B_2 = 11.079904 + 4.5
 
 Col6B_2 = polygon(
     (
@@ -3122,6 +3170,8 @@ allpolys.append(bellows12_pipe_DSflange_bottom)
 
 allpolys.append(pipe_UScollar0_top)
 allpolys.append(pipe_UScollar0_bottom)
+allpolys.append(pipeflange_UScollar0_top)
+allpolys.append(pipeflange_UScollar0_bottom)
 allpolys.append(collar0_top)
 allpolys.append(collar0_bottom)
 allpolys.append(pipe_DScollar0_top)
