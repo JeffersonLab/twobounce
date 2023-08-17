@@ -2243,7 +2243,7 @@ Solid_epoxy_5 = polygon(
 # Collimator 6A
 
 #seg 1
-x1_Col6A_1 = -0.08990  
+x1_Col6A_1 = -0.070787 #For y=0 slice  
 z1_Col6A_1 = 9.555904 + 4.5
 
 x2_Col6A_1 = -0.05531
@@ -2252,7 +2252,7 @@ z2_Col6A_1 = 9.555904 + 4.5
 x3_Col6A_1 = -0.05629 
 z3_Col6A_1 = 9.625754 + 4.5
 
-x4_Col6A_1 = -0.08990  
+x4_Col6A_1 = -0.070787 #For y=0 slice  
 z4_Col6A_1 = 9.625754 + 4.5
 
 Col6A_1 = polygon(
@@ -2266,7 +2266,7 @@ Col6A_1 = polygon(
 )
 
 #seg 2
-x1_Col6A_2 = -0.08990 
+x1_Col6A_2 = -0.070787 #For y=0 slice
 z1_Col6A_2 = 9.638454 + 4.5
 
 x2_Col6A_2 = -0.05646
@@ -2275,7 +2275,7 @@ z2_Col6A_2 = 9.638454 + 4.5
 x3_Col6A_2 = -0.05744
 z3_Col6A_2 = 9.708304 + 4.5
 
-x4_Col6A_2 = -0.08890 
+x4_Col6A_2 = -0.070787  #For y=0 slice
 z4_Col6A_2 = 9.708304 + 4.5
 
 Col6A_2 = polygon(
@@ -2291,7 +2291,7 @@ Col6A_2 = polygon(
 # Collimator 6B
 
 #seg 1
-x1_Col6B_1 = -0.12000  
+x1_Col6B_1 = -0.12000  #For y=0 slice
 z1_Col6B_1 = 10.927504 + 4.5
 
 x2_Col6B_1 = -0.08000  
@@ -2300,7 +2300,7 @@ z2_Col6B_1 = 10.927504 + 4.5
 x3_Col6B_1 = -0.08147  
 z3_Col6B_1 = 10.997354 + 4.5
 
-x4_Col6B_1 = -0.12000  
+x4_Col6B_1 = -0.12000  #For y=0 slice
 z4_Col6B_1 = 10.997354 + 4.5
 
 Col6B_1 = polygon(
@@ -2314,7 +2314,7 @@ Col6B_1 = polygon(
 )
 
 #seg 2
-x1_Col6B_2 = -0.12000 
+x1_Col6B_2 = -0.12000 #For y=0 slice
 z1_Col6B_2 = 11.010054 + 4.5
 
 x2_Col6B_2 = -0.08173
@@ -2323,7 +2323,7 @@ z2_Col6B_2 = 11.010054 + 4.5
 x3_Col6B_2 = -0.08320
 z3_Col6B_2 = 11.079904 + 4.5
 
-x4_Col6B_2 = -0.12000
+x4_Col6B_2 = -0.12000 #For y=0 slice
 z4_Col6B_2 = 11.079904 + 4.5
 
 Col6B_2 = polygon(
