@@ -1609,19 +1609,125 @@ collar2_outer_bottom = polygon(
     notSource=False,
 )
 
+##############Redone downstream vessel########
+#UPendTop (left wall)
+x1 = 330.2*mm
+z1 = 9197.73*mm
+x2 = 1200.15*mm
+z2 = 9197.73*mm
+x3 = 1200.15*mm
+z3 = 9197.73*mm + 127*mm
+x4 = 330.2*mm
+z4 = 9197.73*mm + 127*mm
+
+UPendTop_top = polygon(
+    (
+        [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    ),
+    notSource=False,
+)
+UPendTop_bot = polygon(
+    (
+        [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    ),
+    notSource=False,
+)
+
+#DSendTop (right wall)
+x1 = 749.3*mm
+z1 = 16525.16*mm
+x2 = 1200.15*mm
+z2 = 16525.16*mm
+x3 = 1200.15*mm
+z3 = 16525.16*mm + 127*mm
+x4 = 688.34*mm
+z4 = 16525.16*mm + 127*mm
+x5 = 688.34*mm
+z5 = 16525.16*mm + 101.6*mm
+x6 = 675.64*mm
+z6 = 16525.16*mm + 101.6*mm
+x7 = 675.64*mm
+z7 = 16525.16*mm + 82.55*mm
+x8 = 749.3*mm
+z8 = 16525.16*mm + 82.55*mm
+
+DSendTop_top = polygon(
+    (
+        [z1, x1],
+        [z8, x8],
+        [z7, x7],
+        [z6, x6],
+        [z5, x5],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+    isConcave=True,
+)
+DSendTop_bot = polygon(
+    (
+        [z1, -x1],
+        [z8, -x8],
+        [z7, -x7],
+        [z6, -x6],
+        [z5, -x5],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    ),
+    notSource=False,
+    isConcave=True,
+)
+
+#DSenclosureSideTop (top and bottom walls)
+x1 = 1200.15*mm + 0.8*mm # 0.8 mm from shift at physvol
+z1 = 9325.71*mm
+x2 = 1250.95*mm + 0.8*mm
+z2 = 9325.71*mm
+x3 = 1250.95*mm + 0.8*mm
+z3 = 9325.71*mm + 7198.3*mm
+x4 = 1200.15*mm + 0.8*mm
+z4 = 9325.71*mm + 7198.3*mm
+
+UPendTop_top = polygon(
+    (
+        [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    ),
+    notSource=False,
+)
+UPendTop_bot = polygon(
+    (
+        [z1, -x1],
+        [z4, -x4],
+        [z3, -x3],
+        [z2, -x2],
+    ),
+    notSource=False,
+)
+
 ##############Downstream vessel###############
 # Front Plate upper part
 x1_DSCAN_Front_up = 0.3302
-z1_DSCAN_Front_up = 9.19671
+z1_DSCAN_Front_up = 9.19773
 
 x2_DSCAN_Front_up = 1.20015
-z2_DSCAN_Front_up = 9.19671
+z2_DSCAN_Front_up = 9.19773
 
 x3_DSCAN_Front_up = 1.20015
-z3_DSCAN_Front_up = 9.19671 + 0.127
+z3_DSCAN_Front_up = 9.19773 + 0.127
 
 x4_DSCAN_Front_up = 0.3302
-z4_DSCAN_Front_up = 9.19671 + 0.127
+z4_DSCAN_Front_up = 9.19773 + 0.127
 
 
 DSCAN_Front_up = polygon(
@@ -1636,16 +1742,16 @@ DSCAN_Front_up = polygon(
 
 # Front Plate lower part
 x1_DSCAN_Front_low = -1.4224
-z1_DSCAN_Front_low = 9.19671
+z1_DSCAN_Front_low = 9.19773
 
 x2_DSCAN_Front_low = -0.3302
-z2_DSCAN_Front_low = 9.19671
+z2_DSCAN_Front_low = 9.19773
 
 x3_DSCAN_Front_low = -0.3302
-z3_DSCAN_Front_low = 9.19671 + 0.127
+z3_DSCAN_Front_low = 9.19773 + 0.127
 
 x4_DSCAN_Front_low = -1.4224
-z4_DSCAN_Front_low = 9.19671 + 0.127
+z4_DSCAN_Front_low = 9.19773 + 0.127
 
 
 DSCAN_Front_low = polygon(
@@ -1660,16 +1766,16 @@ DSCAN_Front_low = polygon(
 
 # Base plate
 x1_DSCAN_Bot = -1.3843 - 0.07925
-z1_DSCAN_Bot = 9.19671
+z1_DSCAN_Bot = 9.19773
 
 x2_DSCAN_Bot = -1.3843
-z2_DSCAN_Bot = 9.19671
+z2_DSCAN_Bot = 9.19773
 
 x3_DSCAN_Bot = -1.3843
-z3_DSCAN_Bot = 9.19671 + 7.45537
+z3_DSCAN_Bot = 9.19773 + 7.45537
 
 x4_DSCAN_Bot = -1.3843 - 0.07925
-z4_DSCAN_Bot = 9.19671 + 7.45537
+z4_DSCAN_Bot = 9.19773 + 7.45537
 
 
 DSCAN_Bot = polygon(
