@@ -1622,10 +1622,10 @@ z4 = 9197.73*mm + 127*mm
 
 UPendTop_top = polygon(
     (
-        [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
-        [z2, -x2],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
@@ -1696,16 +1696,16 @@ z3 = 9325.71*mm + 7198.3*mm
 x4 = 1200.15*mm + 0.8*mm
 z4 = 9325.71*mm + 7198.3*mm
 
-UPendTop_top = polygon(
+DSenclosureSide_top = polygon(
     (
-        [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
-        [z2, -x2],
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
     ),
     notSource=False,
 )
-UPendTop_bot = polygon(
+DSenclosureSide_bot = polygon(
     (
         [z1, -x1],
         [z4, -x4],
@@ -3356,18 +3356,22 @@ allpolys.append(collar2_inner_bottom)
 allpolys.append(collar2_outer_top)
 allpolys.append(collar2_outer_bottom)
 
-allpolys.append(DSCAN_Front_up)
-allpolys.append(DSCAN_Front_low)
-
-allpolys.append(DSCAN_Top)
-allpolys.append(DSCAN_Bot)
-
-allpolys.append(DSCAN_Back_up_1)
-allpolys.append(DSCAN_Back_up_2)
-allpolys.append(DSCAN_Back_up_3)
-allpolys.append(DSCAN_Back_low_1)
-allpolys.append(DSCAN_Back_low_2)
-allpolys.append(DSCAN_Back_low_3)
+#allpolys.append(DSCAN_Front_up)
+#allpolys.append(DSCAN_Front_low)
+#allpolys.append(DSCAN_Top)
+#allpolys.append(DSCAN_Bot)
+#allpolys.append(DSCAN_Back_up_1)
+#allpolys.append(DSCAN_Back_up_2)
+#allpolys.append(DSCAN_Back_up_3)
+#allpolys.append(DSCAN_Back_low_1)
+#allpolys.append(DSCAN_Back_low_2)
+#allpolys.append(DSCAN_Back_low_3)
+allpolys.append(UPendTop_top)
+allpolys.append(UPendTop_bot)
+allpolys.append(DSendTop_top)
+allpolys.append(DSendTop_bot)
+allpolys.append(DSenclosureSide_top)
+allpolys.append(DSenclosureSide_bot)
 
 #allpolys.append(Scaper_11)
 #allpolys.append(Scaper_12)
