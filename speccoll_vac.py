@@ -2222,10 +2222,10 @@ Solid_epoxy_3 = polygon(
 x1_solid_epoxy_5 = 0.052808
 z1_solid_epoxy_5 = 8.096987 + 4.5
 
-x2_solid_epoxy_5 = 0.052808
+x2_solid_epoxy_5 = 0.055808
 z2_solid_epoxy_5 = 8.096987 + 4.5
 
-x3_solid_epoxy_5 = 0.052808 + .021844
+x3_solid_epoxy_5 = 0.055808 + .021844
 z3_solid_epoxy_5 = 8.096987 + 1.666033 + 4.5
 
 x4_solid_epoxy_5 = 0.052808 + .021844
