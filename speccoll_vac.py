@@ -1991,18 +1991,19 @@ coll_51 = polygon(
 )
 
 ###### Lintel (for ep scattering)
+#Lintel_s1 and Lintel_s2 can be generalized as one lintel at y=0
 
-x1_lintel = -0.478
-z1_lintel = 9.5573 + 4.5
+x1_lintel = -0.48485
+z1_lintel = 9.64399 + 4.5
 
-x2_lintel = -0.800
-z2_lintel = 9.5573 + 4.5
+x2_lintel = -0.80685
+z2_lintel = 9.64399 + 4.5
 
-x3_lintel = -0.800
-z3_lintel = 9.6573 + 4.5
+x3_lintel = -0.80685
+z3_lintel = 9.74399 + 4.5
 
-x4_lintel = -0.478
-z4_lintel = 9.6573 + 4.5
+x4_lintel = -0.48485
+z4_lintel = 9.74399 + 4.5
 
 
 lintel = polygon(
@@ -2152,16 +2153,16 @@ DS_Coil4_3 = polygon(
 #Tungsten Belly Plates
 
 x1_solid_epoxy_1 = 0.038
-z1_solid_epoxy_1 = 4.93201 + 4.5
+z1_solid_epoxy_1 = 4.933935 + 4.5
 
 x2_solid_epoxy_1 = 0.041
-z2_solid_epoxy_1 = 4.93201 + 4.5
+z2_solid_epoxy_1 = 4.933935 + 4.5
 
 x3_solid_epoxy_1 = 0.041
-z3_solid_epoxy_1 = 5.93425 + 4.5
+z3_solid_epoxy_1 = 4.933935 + 1.002241 + 4.5
 
 x4_solid_epoxy_1 = 0.038
-z4_solid_epoxy_1 = 5.93425 + 4.5
+z4_solid_epoxy_1 = 4.933935 + 1.002241 + 4.5
 
 Solid_epoxy_1 = polygon(
     (
@@ -2174,16 +2175,16 @@ Solid_epoxy_1 = polygon(
 )
 
 x1_solid_epoxy_2 = 0.0435
-z1_solid_epoxy_2 = 5.94847 + 4.5
+z1_solid_epoxy_2 = 5.950606 + 4.5
 
 x2_solid_epoxy_2 = 0.0465
-z2_solid_epoxy_2 = 5.94847 + 4.5
+z2_solid_epoxy_2 = 5.950606 + 4.5
 
 x3_solid_epoxy_2 = 0.0465
-z3_solid_epoxy_2 = 6.97106 + 4.5
+z3_solid_epoxy_2 = 5.950606 + 1.022596 + 4.5
 
 x4_solid_epoxy_2 = 0.0435
-z4_solid_epoxy_2 = 6.97106 + 4.5
+z4_solid_epoxy_2 = 5.950606 + 1.022596 + 4.5
 
 Solid_epoxy_2 = polygon(
     (
@@ -2197,16 +2198,16 @@ Solid_epoxy_2 = polygon(
 
 #Solid epoxy 3 & 4 have been merged
 x1_solid_epoxy_3 = 0.046
-z1_solid_epoxy_3 = 6.98802 + 4.5
+z1_solid_epoxy_3 = 6.98673 + 4.5
 
 x2_solid_epoxy_3 = 0.049
-z2_solid_epoxy_3 = 6.98802 + 4.5
+z2_solid_epoxy_3 = 6.98673 + 4.5
 
 x3_solid_epoxy_3 = 0.049
-z3_solid_epoxy_3 = 7.96170 + 4.5
+z3_solid_epoxy_3 = 6.98673 + 0.51327 + 0.460415 + 4.5
 
 x4_solid_epoxy_3 = 0.046
-z4_solid_epoxy_3 = 7.96170 + 4.5
+z4_solid_epoxy_3 = 6.98673 + 0.51327 + 0.460415 + 4.5
 
 Solid_epoxy_3 = polygon(
     (
@@ -2218,17 +2219,17 @@ Solid_epoxy_3 = polygon(
     notSource=False,
 )
 
-x1_solid_epoxy_5 = 0.05281
-z1_solid_epoxy_5 = 8.03666 + 4.5
+x1_solid_epoxy_5 = 0.052808
+z1_solid_epoxy_5 = 8.096987 + 4.5
 
-x2_solid_epoxy_5 = 0.05581
-z2_solid_epoxy_5 = 8.03666 + 4.5
+x2_solid_epoxy_5 = 0.052808
+z2_solid_epoxy_5 = 8.096987 + 4.5
 
-x3_solid_epoxy_5 = 0.05581 + .02184
-z3_solid_epoxy_5 = 9.70269 + 4.5
+x3_solid_epoxy_5 = 0.052808 + .021844
+z3_solid_epoxy_5 = 8.096987 + 1.666033 + 4.5
 
-x4_solid_epoxy_5 = 0.05281 + .02184
-z4_solid_epoxy_5 = 9.70269 + 4.5
+x4_solid_epoxy_5 = 0.052808 + .021844
+z4_solid_epoxy_5 = 8.096987 + 1.666033 + 4.5
 
 Solid_epoxy_5 = polygon(
     (
@@ -2339,21 +2340,21 @@ Col6B_2 = polygon(
 #Driftpipe_end
 
 x1_driftend = 0.73025
-z1_driftend = 17.26538
+z1_driftend = 17.23691
 x2_driftend = 0.73026
-z2_driftend = 17.26538
+z2_driftend = 17.23691
 x3_driftend = 0.73025 + 0.0254
-z3_driftend = 17.26538 + 0.0254
+z3_driftend = 17.23691 + 0.0254
 x4_driftend = 1.27000
-z4_driftend = 17.26538 + 0.4239 - 0.0762
+z4_driftend = 17.23691 + 0.4239 - 0.0762
 x5_driftend = 1.27000
-z5_driftend = 17.26538 + 0.4239
+z5_driftend = 17.23691 + 0.4239
 x6_driftend = 1.27000 - 0.0254
-z6_driftend = 17.26538 + 0.4239
+z6_driftend = 17.23691 + 0.4239
 x7_driftend = 1.27000 - 0.0254
-z7_driftend = 17.26538 + 0.4239 - 0.0762
+z7_driftend = 17.23691 + 0.4239 - 0.0762
 x8_driftend = 0.73025
-z8_driftend = 17.26538 + 0.0254
+z8_driftend = 17.23691 + 0.0254
 
 Driftpipe_end_top= polygon(
     (
@@ -2388,13 +2389,13 @@ Driftpipe_end_bot= polygon(
 #Driftpipe
 
 x1_drift = 1.24778
-z1_drift = 17.68928
+z1_drift = 17.660806
 x2_drift = 1.27000  
-z2_drift = 17.68928
+z2_drift = 17.660806
 x3_drift = 1.27000
-z3_drift = 17.68928 + 5.6602
+z3_drift = 17.660806 + 5.6602
 x4_drift = 1.24778
-z4_drift = 17.68928 + 5.6602
+z4_drift = 17.660806 + 5.6602
 
 Driftpipe_top= polygon(
     (
@@ -2421,19 +2422,19 @@ Driftpipe_bot= polygon(
 #Driftpipe_vacuum
 
 x1_drift_vac = 1.27329
-z1_drift_vac = 23.18925
+z1_drift_vac = 23.18932
 x2_drift_vac = 1.31039
-z2_drift_vac = 23.18925
+z2_drift_vac = 23.18932
 x3_drift_vac = 1.32232
-z3_drift_vac = 23.28526
+z3_drift_vac = 23.18932 + 96.012*mm
 x4_drift_vac = 1.39700
-z4_drift_vac = 23.29085
+z4_drift_vac = 23.18932 + 101.6*mm
 x5_drift_vac = 1.39700
-z5_drift_vac = 23.35435
+z5_drift_vac = 23.18932 + 165.1*mm
 x6_drift_vac = 1.27229
-z6_drift_vac = 23.35435
+z6_drift_vac = 23.18932 + 165.1*mm
 x7_drift_vac = 1.27329
-z7_drift_vac = 23.29085
+z7_drift_vac = 23.18932 + 101.6*mm
 
 Drift_vac_top = polygon(
     (
@@ -2466,16 +2467,16 @@ Drift_vac_bot = polygon(
 #DS window flange
 
 x1_win_flan = 1.01143  
-z1_win_flan = 23.35435
+z1_win_flan = 23.35442
 
 x2_win_flan = 1.39700  
-z2_win_flan = 23.35435
+z2_win_flan = 23.35442
 
 x3_win_flan = 1.39700
-z3_win_flan = 23.35435 + 0.0635
+z3_win_flan = 23.35442 + 0.0635
 
 x4_win_flan = 1.06756  
-z4_win_flan = 23.35435 + 0.0635
+z4_win_flan = 23.35442 + 0.0635
 
 DS_window_flange_top = polygon(
     (
@@ -2501,16 +2502,16 @@ DS_window_flange_bot = polygon(
 
 #US (DSendtube_phys)
 x1_DSendtube_US = 0.68580 
-z1_DSendtube_US = 16.65209
+z1_DSendtube_US = 16.651814
 
 x2_DSendtube_US = 0.69580  
-z2_DSendtube_US = 16.65209
+z2_DSendtube_US = 16.651814
 
 x3_DSendtube_US = 0.69580
-z3_DSendtube_US = 16.71209
+z3_DSendtube_US = 16.711814
 
 x4_DSendtube_US = 0.68580 
-z4_DSendtube_US = 16.71209
+z4_DSendtube_US = 16.711814
 
 DSendtube_US_top = polygon(
     (
@@ -2534,16 +2535,16 @@ DSendtube_US_bot = polygon(
 
 #DS (DSpipeNeck_phys)
 x1_DSendtube_DS = 0.72390
-z1_DSendtube_DS = 17.17221
+z1_DSendtube_DS = 17.143739
 
 x2_DSendtube_DS = 0.73025
-z2_DSendtube_DS = 17.17221
+z2_DSendtube_DS = 17.143739
 
 x3_DSendtube_DS = 0.73025
-z3_DSendtube_DS = 17.17221 + 0.11857
+z3_DSendtube_DS = 17.143739 + 0.11857
 
 x4_DSendtube_DS = 0.72390
-z4_DSendtube_DS = 17.17221 + 0.11857
+z4_DSendtube_DS = 17.143739 + 0.11857
 
 DSendtube_DS_top = polygon(
     (
@@ -2567,13 +2568,13 @@ DSendtube_DS_bot = polygon(
 
 #US flange (DSendtube_USflange)
 x1_DSendtube_USflange = 0.68580
-z1_DSendtube_USflange = 16.71209
+z1_DSendtube_USflange = 16.711939
 x2_DSendtube_USflange = 0.78740
-z2_DSendtube_USflange = 16.71209
+z2_DSendtube_USflange = 16.711939
 x3_DSendtube_USflange = 0.78740
-z3_DSendtube_USflange = 16.71209 + 0.03175
+z3_DSendtube_USflange = 16.711939 + 0.03175
 x4_DSendtube_USflange = 0.68580 
-z4_DSendtube_USflange = 16.71209 + 0.03175
+z4_DSendtube_USflange = 16.711939 + 0.03175
 
 DSendtube_USflange_top = polygon(
     (
@@ -2599,13 +2600,13 @@ DSendtube_USflange_bot = polygon(
 
 #DS flange (DSendtube_DSflange)
 x1_DSendtube_DSflange = 0.73025
-z1_DSendtube_DSflange = 17.17221
+z1_DSendtube_DSflange = 17.127864
 x2_DSendtube_DSflange = 0.81280
-z2_DSendtube_DSflange = 17.17221
+z2_DSendtube_DSflange = 17.127864
 x3_DSendtube_DSflange = 0.81280
-z3_DSendtube_DSflange = 17.17221 + 0.03175
+z3_DSendtube_DSflange = 17.127864 + 0.03175
 x4_DSendtube_DSflange = 0.73025
-z4_DSendtube_DSflange = 17.17221 + 0.03175
+z4_DSendtube_DSflange = 17.127864 + 0.03175
 
 DSendtube_DSflange_top = polygon(
     (
@@ -2632,16 +2633,16 @@ DSendtube_DSflange_bot = polygon(
 #bellows4_flangeUS/DS (formerly LowCycleBellows_flanges)
 
 x1_lowcyclebellows_flange = 0.68560
-z1_lowcyclebellows_flange = 16.78740
+z1_lowcyclebellows_flange = 16.743689
 
 x2_lowcyclebellows_flange = 0.68560 + 0.10160
-z2_lowcyclebellows_flange = 16.78740
+z2_lowcyclebellows_flange = 16.743689
 
-x3_lowcyclebellows_flange = 0.68560 + .10160
-z3_lowcyclebellows_flange = 16.78740 + 0.01524
+x3_lowcyclebellows_flange = 0.68560 + 0.10160
+z3_lowcyclebellows_flange = 16.743689 + 0.01524
 
 x4_lowcyclebellows_flange = 0.68560 
-z4_lowcyclebellows_flange = 16.78740 + 0.01524
+z4_lowcyclebellows_flange = 16.743689 + 0.01524
 
 LowCycleBellows_flangeUS_top = polygon(
     (
@@ -2665,33 +2666,33 @@ LowCycleBellows_flangeUS_bot = polygon(
 
 LowCycleBellows_flangeDS_top = polygon(
     (
-        [z1_lowcyclebellows_flange+0.36957, x1_lowcyclebellows_flange],
-        [z4_lowcyclebellows_flange+0.36957, x4_lowcyclebellows_flange],
-        [z3_lowcyclebellows_flange+0.36957, x3_lowcyclebellows_flange+0.0256],
-        [z2_lowcyclebellows_flange+0.36957, x2_lowcyclebellows_flange+0.0256],
+        [z1_lowcyclebellows_flange+0.38481, x1_lowcyclebellows_flange],
+        [z4_lowcyclebellows_flange+0.38481, x4_lowcyclebellows_flange],
+        [z3_lowcyclebellows_flange+0.38481, x3_lowcyclebellows_flange+0.0256],
+        [z2_lowcyclebellows_flange+0.38481, x2_lowcyclebellows_flange+0.0256],
     ),
     notSource=False,
 )
 
 LowCycleBellows_flangeDS_bot = polygon(
     (
-        [z1_lowcyclebellows_flange+0.36957, -x1_lowcyclebellows_flange],
-        [z4_lowcyclebellows_flange+0.36957, -x4_lowcyclebellows_flange],
-        [z3_lowcyclebellows_flange+0.36957, -x3_lowcyclebellows_flange-0.0256],
-        [z2_lowcyclebellows_flange+0.36957, -x2_lowcyclebellows_flange-0.0256],
+        [z1_lowcyclebellows_flange+0.38481, -x1_lowcyclebellows_flange],
+        [z4_lowcyclebellows_flange+0.38481, -x4_lowcyclebellows_flange],
+        [z3_lowcyclebellows_flange+0.38481, -x3_lowcyclebellows_flange-0.0256],
+        [z2_lowcyclebellows_flange+0.38481, -x2_lowcyclebellows_flange-0.0256],
     ),
     notSource=False,
 )
 
 #bellows4 (formerly LowCycleBellows)
 x1_lowcyclebellows = 0.68560
-z1_lowcyclebellows = 16.80264
+z1_lowcyclebellows = 16.758929
 x2_lowcyclebellows = 0.74275
-z2_lowcyclebellows = 16.80264 
+z2_lowcyclebellows = 16.758929
 x3_lowcyclebellows = 0.74275
-z3_lowcyclebellows = 16.80264 + 0.36957
+z3_lowcyclebellows = 16.758929 + 0.36957
 x4_lowcyclebellows = 0.68560
-z4_lowcyclebellows = 16.80264 + 0.36957
+z4_lowcyclebellows = 16.758929 + 0.36957
 
 LowCycleBellows_top = polygon(
     (
@@ -2719,65 +2720,65 @@ LowCycleBellows_bot = polygon(
 
 #DSpipe_flange (Exact shape)
 x1_DSpipeflange = 0.50190
-z1_DSpipeflange = 23.01093
+z1_DSpipeflange = 23.01152
 x2_DSpipeflange = 0.50191
-z2_DSpipeflange = 23.01093
+z2_DSpipeflange = 23.01152
 x3_DSpipeflange = 0.50854
-z3_DSpipeflange = 23.01093 + 0.00356
+z3_DSpipeflange = 23.01152 + 0.00356
 x4_DSpipeflange = 0.51054
-z4_DSpipeflange = 23.01093 + 0.00508
+z4_DSpipeflange = 23.01152 + 0.00508
 x5_DSpipeflange = 0.50978
-z5_DSpipeflange = 23.01093 + 0.00686
+z5_DSpipeflange = 23.01152 + 0.00686
 x6_DSpipeflange = 0.51029
-z6_DSpipeflange = 23.01093 + 0.00965
+z6_DSpipeflange = 23.01152 + 0.00965
 x7_DSpipeflange = 0.50470
-z7_DSpipeflange = 23.01093 + 0.01092
+z7_DSpipeflange = 23.01152 + 0.01092
 x8_DSpipeflange = 0.52146
-z8_DSpipeflange = 23.01093 + 0.01600
+z8_DSpipeflange = 23.01152 + 0.01600
 x9_DSpipeflange = 0.52375
-z9_DSpipeflange = 23.01093 + 0.02184
+z9_DSpipeflange = 23.01152 + 0.02184
 x10_DSpipeflange = 0.52553
-z10_DSpipeflange = 23.01093 + 0.02286
+z10_DSpipeflange = 23.01152 + 0.02286
 x11_DSpipeflange = 0.52527
-z11_DSpipeflange = 23.01093 + 0.02464
+z11_DSpipeflange = 23.01152 + 0.02464
 x12_DSpipeflange = 0.52553
-z12_DSpipeflange = 23.01093 + 0.04496
+z12_DSpipeflange = 23.01152 + 0.04496
 x13_DSpipeflange = 0.52527
-z13_DSpipeflange = 23.01093 + 0.05004
+z13_DSpipeflange = 23.01152 + 0.05004
 x14_DSpipeflange = 0.51740
-z14_DSpipeflange = 23.01093 + 0.05309
+z14_DSpipeflange = 23.01152 + 0.05309
 x15_DSpipeflange = 0.50470
-z15_DSpipeflange = 23.01093 + 0.05613
+z15_DSpipeflange = 23.01152 + 0.05613
 x16_DSpipeflange = 0.50470
-z16_DSpipeflange = 23.01093 + 0.07849
+z16_DSpipeflange = 23.01152 + 0.07849
 x17_DSpipeflange = 0.50013
-z17_DSpipeflange = 23.01093 + 0.07849
+z17_DSpipeflange = 23.01152 + 0.07849
 x18_DSpipeflange = 0.50013
-z18_DSpipeflange = 23.01093 + 0.05613
+z18_DSpipeflange = 23.01152 + 0.05613
 x19_DSpipeflange = 0.51283
-z19_DSpipeflange = 23.01093 + 0.05309
+z19_DSpipeflange = 23.01152 + 0.05309
 x20_DSpipeflange = 0.52070
-z20_DSpipeflange = 23.01093 + 0.05004
+z20_DSpipeflange = 23.01152 + 0.05004
 x21_DSpipeflange = 0.52095
-z21_DSpipeflange = 23.01093 + 0.04496
+z21_DSpipeflange = 23.01152 + 0.04496
 x22_DSpipeflange = 0.52070
-z22_DSpipeflange = 23.01093 + 0.02464
+z22_DSpipeflange = 23.01152 + 0.02464
 x23_DSpipeflange = 0.52095
-z23_DSpipeflange = 23.01093 + 0.02286
+z23_DSpipeflange = 23.01152 + 0.02286
 x24_DSpipeflange = 0.51918
-z24_DSpipeflange = 23.01093 + 0.02184
+z24_DSpipeflange = 23.01152 + 0.02184
 x25_DSpipeflange = 0.51689
-z25_DSpipeflange = 23.01093 + 0.01600
+z25_DSpipeflange = 23.01152 + 0.01600
 x26_DSpipeflange = 0.50013
-z26_DSpipeflange = 23.01093 + 0.01092
+z26_DSpipeflange = 23.01152 + 0.01092
 x27_DSpipeflange = 0.50571
-z27_DSpipeflange = 23.01093 + 0.00965
+z27_DSpipeflange = 23.01152 + 0.00965
 x28_DSpipeflange = 0.50521
-z28_DSpipeflange = 23.01093 + 0.00686
+z28_DSpipeflange = 23.01152 + 0.00686
 x29_DSpipeflange = 0.50597
-z29_DSpipeflange = 23.01093 + 0.00508
+z29_DSpipeflange = 23.01152 + 0.00508
 x30_DSpipeflange = 0.50013
-z30_DSpipeflange = 23.01093 + 0.00356
+z30_DSpipeflange = 23.01152 + 0.00356
 
 DSpipeflange_top = polygon(
     (
@@ -2855,16 +2856,16 @@ DSpipeflange_bot = polygon(
 
 #DSpipe1
 x1_DSpipe1 = 0.50013
-z1_DSpipe1 = 23.08967
+z1_DSpipe1 = 23.090256
 
 x2_DSpipe1 = 0.50470
-z2_DSpipe1 = 23.08967
+z2_DSpipe1 = 23.090256
 
 x3_DSpipe1 = 0.50470
-z3_DSpipe1 = 23.08967 + 0.14910
+z3_DSpipe1 = 23.090256 + 0.14910
 
 x4_DSpipe1 = 0.50013
-z4_DSpipe1 = 23.08967 + 0.14910
+z4_DSpipe1 = 23.090256 + 0.14910
 
 DSpipe1_top = polygon(
     (
@@ -2890,29 +2891,29 @@ DSpipe1_bot = polygon(
 
 #DSpipe1_bellow (exact)
 x1_DSpipe1_bellow = 0.50000
-z1_DSpipe1_bellow = 23.57162
+z1_DSpipe1_bellow = 23.59669
 x2_DSpipe1_bellow = 0.52900
-z2_DSpipe1_bellow = 23.57162
+z2_DSpipe1_bellow = 23.59669
 x3_DSpipe1_bellow = 0.52900
-z3_DSpipe1_bellow = 23.57162 + 0.00635
+z3_DSpipe1_bellow = 23.59669 + 0.00635
 x4_DSpipe1_bellow = 0.50635
-z4_DSpipe1_bellow = 23.57162 + 0.00635
+z4_DSpipe1_bellow = 23.59669 + 0.00635
 x5_DSpipe1_bellow = 0.50635
-z5_DSpipe1_bellow = 23.57162 + 0.03365
+z5_DSpipe1_bellow = 23.59669 + 0.03365
 x6_DSpipe1_bellow = 0.52900
-z6_DSpipe1_bellow = 23.57162 + 0.03365
+z6_DSpipe1_bellow = 23.59669 + 0.03365
 x7_DSpipe1_bellow = 0.52976
-z7_DSpipe1_bellow = 23.57162 + 0.14635
+z7_DSpipe1_bellow = 23.59669 + 0.14635
 x8_DSpipe1_bellow = 0.50650
-z8_DSpipe1_bellow = 23.57162 + 0.14635
+z8_DSpipe1_bellow = 23.59669 + 0.14635
 x9_DSpipe1_bellow = 0.50650
-z9_DSpipe1_bellow = 23.57162 + 0.17365
+z9_DSpipe1_bellow = 23.59669 + 0.17365
 x10_DSpipe1_bellow = 0.52976
-z10_DSpipe1_bellow = 23.57162 + 0.17365
+z10_DSpipe1_bellow = 23.59669 + 0.17365
 x11_DSpipe1_bellow = 0.52976
-z11_DSpipe1_bellow = 23.57162 + 0.18000
+z11_DSpipe1_bellow = 23.59669 + 0.18000
 x12_DSpipe1_bellow = 0.50076
-z12_DSpipe1_bellow = 23.57162 + 0.18000
+z12_DSpipe1_bellow = 23.59669 + 0.18000
 
 DSpipe1_bellow_top = polygon(
     (
@@ -2954,16 +2955,16 @@ DSpipe1_bellow_bot = polygon(
 
 #DSpipe2_DSpipe2_1 (actual name)
 x1_DSpipe2_DS = 0.50478
-z1_DSpipe2_DS = 23.77662
+z1_DSpipe2_DS = 23.801765
 
 x2_DSpipe2_DS = 0.50954
-z2_DSpipe2_DS = 23.77662
+z2_DSpipe2_DS = 23.801765
 
 x3_DSpipe2_DS = 0.51088
-z3_DSpipe2_DS = 23.77662 + 0.03093
+z3_DSpipe2_DS = 23.801765 + 0.03093
 
 x4_DSpipe2_DS = 0.50612
-z4_DSpipe2_DS = 23.77662 + 0.03093
+z4_DSpipe2_DS = 23.801765 + 0.03093
 
 DSpipe2_DS_top = polygon(
     (
@@ -2987,16 +2988,16 @@ DSpipe2_DS_bot = polygon(
 
 #DSpipe3 (just DSpipe3_DSpipe)
 x1_DSpipe3 = 0.52170
-z1_DSpipe3 = 23.91538
+z1_DSpipe3 = 23.915451
 
 x2_DSpipe3 = 0.52805
-z2_DSpipe3 = 23.91538
+z2_DSpipe3 = 23.915451
 
 x3_DSpipe3 = 0.69550
-z3_DSpipe3 = 29.97204
+z3_DSpipe3 = 29.972105
 
 x4_DSpipe3 = 0.67645
-z4_DSpipe3 = 29.97204
+z4_DSpipe3 = 29.972105
 
 DSpipe3_top = polygon(
     (
@@ -3020,21 +3021,21 @@ DSpipe3_bot = polygon(
 
 #DSpipe1_flange (exact shape)
 x1_DSpipe1_flange = 0.49700
-z1_DSpipe1_flange = 23.54662
+z1_DSpipe1_flange = 23.57169
 x2_DSpipe1_flange = 0.49950
-z2_DSpipe1_flange = 23.54662
+z2_DSpipe1_flange = 23.57169
 x3_DSpipe1_flange = 0.49950
-z3_DSpipe1_flange = 23.54662 + 0.005
+z3_DSpipe1_flange = 23.57169 + 0.005
 x4_DSpipe1_flange = 0.50500
-z4_DSpipe1_flange = 23.54662 + 0.005
+z4_DSpipe1_flange = 23.57169 + 0.005
 x5_DSpipe1_flange = 0.50500
-z5_DSpipe1_flange = 23.54662 + 0.013
+z5_DSpipe1_flange = 23.57169 + 0.013
 x6_DSpipe1_flange = 0.52900 
-z6_DSpipe1_flange = 23.54662 + 0.013
+z6_DSpipe1_flange = 23.57169 + 0.013
 x7_DSpipe1_flange = 0.52900
-z7_DSpipe1_flange = 23.54662 + 0.025
+z7_DSpipe1_flange = 23.57169 + 0.025
 x8_DSpipe1_flange = 0.49700
-z8_DSpipe1_flange = 23.54662 + 0.025
+z8_DSpipe1_flange = 23.57169 + 0.025
 
 DSpipe1_flange_top = polygon(
     (
@@ -3068,21 +3069,21 @@ DSpipe1_flange_bot = polygon(
 
 #DSpipe2_USplate (slightly approximated x positions. Should not matter unless resolution of 0.001 or less)
 x1_DSpipe2_US = 0.50076
-z1_DSpipe2_US = 23.75162
+z1_DSpipe2_US = 23.77669
 x2_DSpipe2_US = 0.52975
-z2_DSpipe2_US = 23.75162
+z2_DSpipe2_US = 23.77669
 x3_DSpipe2_US = 0.52975
-z3_DSpipe2_US = 23.75162 + 0.012
+z3_DSpipe2_US = 23.77669 + 0.012
 x4_DSpipe2_US = 0.50557
-z4_DSpipe2_US = 23.75162 + 0.012
+z4_DSpipe2_US = 23.77669 + 0.012
 x5_DSpipe2_US = 0.50557
-z5_DSpipe2_US = 23.75162 + 0.020
+z5_DSpipe2_US = 23.77669 + 0.020
 x6_DSpipe2_US = 0.50493
-z6_DSpipe2_US = 23.75162 + 0.020
+z6_DSpipe2_US = 23.77669 + 0.020
 x7_DSpipe2_US = 0.50493
-z7_DSpipe2_US = 23.75162 + 0.025
+z7_DSpipe2_US = 23.77669 + 0.025
 x8_DSpipe2_US = 0.50160
-z8_DSpipe2_US = 23.75162 + 0.025
+z8_DSpipe2_US = 23.77669 + 0.025
 
 DSpipe2_US_top = polygon(
     (
