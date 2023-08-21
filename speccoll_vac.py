@@ -282,11 +282,11 @@ pipeflange_UScollar0_top = polygon(
 pipeflange_UScollar0_bottom = polygon(
     (
         [z1, -x1],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
         
     ),
     notSource=False,
@@ -315,9 +315,9 @@ pipe_UScollar0_top = polygon(
 pipe_UScollar0_bottom = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
         
     ),
     notSource=False,
@@ -385,11 +385,11 @@ pipe_DScollar0_top = polygon(
 pipe_DScollar0_bottom = polygon(
     (
         [z1, -x1],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
         
     ),
     notSource=False,
@@ -425,11 +425,11 @@ bellows2_USflange_top = polygon(
 bellows2_USflange_bot = polygon(
     (
         [z1, -x1],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
     ),
     notSource=False,
     isConcave=True,
@@ -470,13 +470,13 @@ bellows2_top = polygon(
 bellows2_bot = polygon(
     (
         [z1, -x1],
-        [z8, -x8],
-        [z7, -x7],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
+        [z7, -x7],
+        [z8, -x8],
     ),
     notSource=False,
     isConcave=True,
@@ -511,11 +511,11 @@ bellows2_DSflange_top = polygon(
 bellows2_DSflange_bot = polygon(
     (
         [z1, -x1],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
     ),
     notSource=False,
     isConcave=True,
@@ -556,13 +556,13 @@ upstream_enclosure_USpipe_top = polygon(
 upstream_enclosure_USpipe_bottom = polygon(
     (
         [z1, -x1],
-        [z8, -x8],
-        [z7, -x7],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
+        [z7, -x7],
+        [z8, -x8],
     ),
     notSource=False,
     isConcave=True,
@@ -593,9 +593,9 @@ upstream_enclosure_USwall_top = polygon(
 upstream_enclosure_USwall_bottom = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     ),
     notSource=False,
 )
@@ -622,19 +622,6 @@ upstream_enclosure_sidewall_top = polygon(
     ),
     notSource=False,
 )
-
-x1 = (1104.9/2.0-25.4)*1*mm
-z1 = -204.597*mm-tgtpos
-
-x2 = 552.45*mm    
-z2 = -204.597*mm-tgtpos
-
-x3 = 552.45*mm 
-z3 = 3592.703*mm-tgtpos  
-
-x4 = (1104.9/2.0-25.4)*1*mm 
-z4 = 3592.703*mm-tgtpos
-
 upstream_enclosure_sidewall_bottom = polygon(
     (
         [z2, -x2],
@@ -667,13 +654,12 @@ upstream_enclosure_DSwall_top = polygon(
     ),
     notSource=False,
 )
-
 upstream_enclosure_DSwall_bottom = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     ),
     notSource=False,
 )
@@ -743,22 +729,22 @@ col1_top = polygon(
 col1_bot = polygon(
     (
         [z1, -x1],
-        [z17, -x17],
-        [z16, -x16],
-        [z15, -x15],
-        [z14, -x14],
-        [z13, -x13],
-        [z12, -x12],
-        [z11, -x11],
-        [z10, -x10],
-        [z9, -x9],
-        [z8, -x8],
-        [z7, -x7],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
+        [z7, -x7],
+        [z8, -x8],
+        [z9, -x9],
+        [z10, -x10],
+        [z11, -x11],
+        [z12, -x12],
+        [z13, -x13],
+        [z14, -x14],
+        [z15, -x15],
+        [z16, -x16],
+        [z17, -x17],
     ),
     notSource=False,
     isConcave=True,
@@ -787,9 +773,9 @@ col1_h20_1_top = polygon(
 col1_h20_1_bot = polygon(
     (
         [z1_h20_1, -x1_h20_1],
-        [z4_h20_1, -x4_h20_1],
-        [z3_h20_1, -x3_h20_1],
         [z2_h20_1, -x2_h20_1],
+        [z3_h20_1, -x3_h20_1],
+        [z4_h20_1, -x4_h20_1],
     ),
     notSource=False,
 )
@@ -824,11 +810,11 @@ col1_h20_2_top = polygon(
 col1_h20_2_bot = polygon(
     (
         [z1_h20_2, -x1_h20_2],
-        [z6_h20_2, -x6_h20_2],
-        [z5_h20_2, -x5_h20_2],
-        [z4_h20_2, -x4_h20_2],
-        [z3_h20_2, -x3_h20_2],
         [z2_h20_2, -x2_h20_2],
+        [z3_h20_2, -x3_h20_2],
+        [z4_h20_2, -x4_h20_2],
+        [z5_h20_2, -x5_h20_2],
+        [z6_h20_2, -x6_h20_2],
     ),
     notSource=False,
     isConcave=True,
@@ -857,9 +843,9 @@ col1_h20_CW_top = polygon(
 col1_h20_CW_bot = polygon(
     (
         [z1_h20_CW, -x1_h20_CW],
-        [z4_h20_CW, -x4_h20_CW],
-        [z3_h20_CW, -x3_h20_CW],
         [z2_h20_CW, -x2_h20_CW],
+        [z3_h20_CW, -x3_h20_CW],
+        [z4_h20_CW, -x4_h20_CW],
     ),
     notSource=False,
 )
@@ -894,11 +880,11 @@ col1_jacket_top = polygon(
 col1_jacket_bot = polygon(
     (
         [z1_jack, -x1_jack],
-        [z6_jack, -x6_jack],
-        [z5_jack, -x5_jack],
-        [z4_jack, -x4_jack],
-        [z3_jack, -x3_jack],
         [z2_jack, -x2_jack],
+        [z3_jack, -x3_jack],
+        [z4_jack, -x4_jack],
+        [z5_jack, -x5_jack],
+        [z6_jack, -x6_jack],
     ),
     notSource=False,
     isConcave=True,
@@ -1313,11 +1299,11 @@ US_Pbwall1_top = polygon(
 US_Pbwall1_bot = polygon(
     (
         [z1, -x1],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
     ),
     notSource=False,
     isConcave=True,
@@ -1345,9 +1331,9 @@ US_Pbwall2_top = polygon(
 US_Pbwall2_bot = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     ),
     notSource=False,
 )
@@ -1375,9 +1361,9 @@ bellows3_top = polygon(
 bellows3_bot = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     ),
     notSource=False,
 )
@@ -1404,9 +1390,9 @@ bellows3flangeUS_top = polygon(
 bellows3flangeUS_bot = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     ),
     notSource=False,
 )
@@ -1433,9 +1419,9 @@ bellows3flangeDS_top = polygon(
 bellows3flangeDS_bot = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     ),
     notSource=False,
 )
@@ -1632,9 +1618,9 @@ UPendTop_top = polygon(
 UPendTop_bot = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     ),
     notSource=False,
 )
@@ -1674,13 +1660,13 @@ DSendTop_top = polygon(
 DSendTop_bot = polygon(
     (
         [z1, -x1],
-        [z8, -x8],
-        [z7, -x7],
-        [z6, -x6],
-        [z5, -x5],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z5, -x5],
+        [z6, -x6],
+        [z7, -x7],
+        [z8, -x8],
     ),
     notSource=False,
     isConcave=True,
@@ -1708,14 +1694,14 @@ DSenclosureSide_top = polygon(
 DSenclosureSide_bot = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     ),
     notSource=False,
 )
 
-##############Downstream vessel###############
+##############Downstream vessel############### Replaced with above parts
 # Front Plate upper part
 x1_DSCAN_Front_up = 0.3302
 z1_DSCAN_Front_up = 9.19773
@@ -1974,9 +1960,9 @@ Blocker_ring_top = polygon(
 Blocker_ring_bot = polygon(
     (
         [z1, -x1],
-        [z4, -x4],
-        [z3, -x3],
         [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
     )
 )
 
@@ -2049,7 +2035,6 @@ Scaper_12 = polygon(
 )
 
 ######### Collimator 5 (shaped like a tuning fork), 1 seg
-
 
 x1_coll_5 = -0.100  # use this if you just want the exact y=0 slice
 z1_coll_5 = 12.057824
@@ -2480,13 +2465,13 @@ Driftpipe_end_top= polygon(
 Driftpipe_end_bot= polygon(
     (
         [z1_driftend, -x1_driftend],
-        [z8_driftend, -x8_driftend],
-        [z7_driftend, -x7_driftend],
-        [z6_driftend, -x6_driftend],
-        [z5_driftend, -x5_driftend],
-        [z4_driftend, -x4_driftend],
-        [z3_driftend, -x3_driftend],
         [z2_driftend, -x2_driftend],
+        [z3_driftend, -x3_driftend],
+        [z4_driftend, -x4_driftend],
+        [z5_driftend, -x5_driftend],
+        [z6_driftend, -x6_driftend],
+        [z7_driftend, -x7_driftend],
+        [z8_driftend, -x8_driftend],
     ),
     notSource=False,
     isConcave=True,
@@ -2511,18 +2496,16 @@ Driftpipe_top= polygon(
         [z2_drift, x2_drift],
     ),
     notSource=False,
-    isConcave=True,
 )
 
 Driftpipe_bot= polygon(
     (
         [z1_drift, -x1_drift],
-        [z4_drift, -x4_drift],
-        [z3_drift, -x3_drift],
         [z2_drift, -x2_drift],
+        [z3_drift, -x3_drift],
+        [z4_drift, -x4_drift],
     ),
     notSource=False,
-    isConcave=True,
 )
 
 #Driftpipe_vacuum
@@ -2559,12 +2542,12 @@ Drift_vac_top = polygon(
 Drift_vac_bot = polygon(
     (
         [z1_drift_vac, -x1_drift_vac],
-        [z7_drift_vac, -x7_drift_vac],
-        [z6_drift_vac, -x6_drift_vac],
-        [z5_drift_vac, -x5_drift_vac],
-        [z4_drift_vac, -x4_drift_vac],
-        [z3_drift_vac, -x3_drift_vac],
         [z2_drift_vac, -x2_drift_vac],
+        [z3_drift_vac, -x3_drift_vac],
+        [z4_drift_vac, -x4_drift_vac],
+        [z5_drift_vac, -x5_drift_vac],
+        [z6_drift_vac, -x6_drift_vac],
+        [z7_drift_vac, -x7_drift_vac],
     ),
     notSource=False,
     isConcave=True,
@@ -2597,9 +2580,9 @@ DS_window_flange_top = polygon(
 DS_window_flange_bot = polygon(
     (
         [z1_win_flan, -x1_win_flan],
-        [z4_win_flan, -x4_win_flan],
-        [z3_win_flan, -x3_win_flan],
         [z2_win_flan, -x2_win_flan],
+        [z3_win_flan, -x3_win_flan],
+        [z4_win_flan, -x4_win_flan],
     ),
     notSource=False,
 )
@@ -2632,9 +2615,9 @@ DSendtube_US_top = polygon(
 DSendtube_US_bot = polygon(
     (
         [z1_DSendtube_US, -x1_DSendtube_US],
-        [z4_DSendtube_US, -x4_DSendtube_US],
-        [z3_DSendtube_US, -x3_DSendtube_US],
         [z2_DSendtube_US, -x2_DSendtube_US],
+        [z3_DSendtube_US, -x3_DSendtube_US],
+        [z4_DSendtube_US, -x4_DSendtube_US],
     ),
     notSource=False,
 )
@@ -2665,9 +2648,9 @@ DSendtube_DS_top = polygon(
 DSendtube_DS_bot = polygon(
     (
         [z1_DSendtube_DS, -x1_DSendtube_DS],
-        [z4_DSendtube_DS, -x4_DSendtube_DS],
-        [z3_DSendtube_DS, -x3_DSendtube_DS],
         [z2_DSendtube_DS, -x2_DSendtube_DS],
+        [z3_DSendtube_DS, -x3_DSendtube_DS],
+        [z4_DSendtube_DS, -x4_DSendtube_DS],
     ),
     notSource=False,
 )
@@ -2690,18 +2673,16 @@ DSendtube_USflange_top = polygon(
         [z2_DSendtube_USflange, x2_DSendtube_USflange],
     ),
     notSource=False,
-    isConcave=True,
 )
 
 DSendtube_USflange_bot = polygon(
     (
         [z1_DSendtube_USflange, -x1_DSendtube_USflange],
-        [z4_DSendtube_USflange, -x4_DSendtube_USflange],
-        [z3_DSendtube_USflange, -x3_DSendtube_USflange],
         [z2_DSendtube_USflange, -x2_DSendtube_USflange],
+        [z3_DSendtube_USflange, -x3_DSendtube_USflange],
+        [z4_DSendtube_USflange, -x4_DSendtube_USflange],
     ),
     notSource=False,
-    isConcave=True,
 )
 
 #DS flange (DSendtube_DSflange)
@@ -2722,18 +2703,16 @@ DSendtube_DSflange_top = polygon(
         [z2_DSendtube_DSflange, x2_DSendtube_DSflange],
     ),
     notSource=False,
-    isConcave=True,
 )
 
 DSendtube_DSflange_bot = polygon(
     (
         [z1_DSendtube_DSflange, -x1_DSendtube_DSflange],
-        [z4_DSendtube_DSflange, -x4_DSendtube_DSflange],
-        [z3_DSendtube_DSflange, -x3_DSendtube_DSflange],
         [z2_DSendtube_DSflange, -x2_DSendtube_DSflange],
+        [z3_DSendtube_DSflange, -x3_DSendtube_DSflange],
+        [z4_DSendtube_DSflange, -x4_DSendtube_DSflange],
     ),
     notSource=False,
-    isConcave=True,
 )
 
 #bellows4_flangeUS/DS (formerly LowCycleBellows_flanges)
@@ -2763,9 +2742,9 @@ LowCycleBellows_flangeUS_top = polygon(
 LowCycleBellows_flangeUS_bot = polygon(
     (
         [z1_lowcyclebellows_flange, -x1_lowcyclebellows_flange],
-        [z4_lowcyclebellows_flange, -x4_lowcyclebellows_flange],
-        [z3_lowcyclebellows_flange, -x3_lowcyclebellows_flange],
         [z2_lowcyclebellows_flange, -x2_lowcyclebellows_flange],
+        [z3_lowcyclebellows_flange, -x3_lowcyclebellows_flange],
+        [z4_lowcyclebellows_flange, -x4_lowcyclebellows_flange],
     ),
     notSource=False,
 )
@@ -2783,9 +2762,9 @@ LowCycleBellows_flangeDS_top = polygon(
 LowCycleBellows_flangeDS_bot = polygon(
     (
         [z1_lowcyclebellows_flange+0.38481, -x1_lowcyclebellows_flange],
-        [z4_lowcyclebellows_flange+0.38481, -x4_lowcyclebellows_flange],
-        [z3_lowcyclebellows_flange+0.38481, -x3_lowcyclebellows_flange-0.0256],
         [z2_lowcyclebellows_flange+0.38481, -x2_lowcyclebellows_flange-0.0256],
+        [z3_lowcyclebellows_flange+0.38481, -x3_lowcyclebellows_flange-0.0256],
+        [z4_lowcyclebellows_flange+0.38481, -x4_lowcyclebellows_flange],
     ),
     notSource=False,
 )
@@ -2808,18 +2787,16 @@ LowCycleBellows_top = polygon(
         [z2_lowcyclebellows, x2_lowcyclebellows],
     ),
     notSource=False,
-    isConcave=True,
 )
 
 LowCycleBellows_bot = polygon(
     (
         [z1_lowcyclebellows, -x1_lowcyclebellows],
-        [z4_lowcyclebellows, -x4_lowcyclebellows],
-        [z3_lowcyclebellows, -x3_lowcyclebellows],
         [z2_lowcyclebellows, -x2_lowcyclebellows],
+        [z3_lowcyclebellows, -x3_lowcyclebellows],
+        [z4_lowcyclebellows, -x4_lowcyclebellows],
     ),
     notSource=False,
-    isConcave=True,
 )
 
 #DSpipe (near Barite_Collar2)
@@ -2926,35 +2903,35 @@ DSpipeflange_top = polygon(
 DSpipeflange_bot = polygon(
     (
         [z1_DSpipeflange, -x1_DSpipeflange],
-        [z30_DSpipeflange, -x30_DSpipeflange],
-        [z29_DSpipeflange, -x29_DSpipeflange],
-        [z28_DSpipeflange, -x28_DSpipeflange],
-        [z27_DSpipeflange, -x27_DSpipeflange],
-        [z26_DSpipeflange, -x26_DSpipeflange],
-        [z25_DSpipeflange, -x25_DSpipeflange],
-        [z24_DSpipeflange, -x24_DSpipeflange],
-        [z23_DSpipeflange, -x23_DSpipeflange],
-        [z22_DSpipeflange, -x22_DSpipeflange],
-        [z21_DSpipeflange, -x21_DSpipeflange],
-        [z20_DSpipeflange, -x20_DSpipeflange],
-        [z19_DSpipeflange, -x19_DSpipeflange],
-        [z18_DSpipeflange, -x18_DSpipeflange],
-        [z17_DSpipeflange, -x17_DSpipeflange],
-        [z16_DSpipeflange, -x16_DSpipeflange],
-        [z15_DSpipeflange, -x15_DSpipeflange],
-        [z14_DSpipeflange, -x14_DSpipeflange],
-        [z13_DSpipeflange, -x13_DSpipeflange],
-        [z12_DSpipeflange, -x12_DSpipeflange],
-        [z11_DSpipeflange, -x11_DSpipeflange],
-        [z10_DSpipeflange, -x10_DSpipeflange],
-        [z9_DSpipeflange, -x9_DSpipeflange],
-        [z8_DSpipeflange, -x8_DSpipeflange],
-        [z7_DSpipeflange, -x7_DSpipeflange],
-        [z6_DSpipeflange, -x6_DSpipeflange],
-        [z5_DSpipeflange, -x5_DSpipeflange],
-        [z4_DSpipeflange, -x4_DSpipeflange],
-        [z3_DSpipeflange, -x3_DSpipeflange],
         [z2_DSpipeflange, -x2_DSpipeflange],
+        [z3_DSpipeflange, -x3_DSpipeflange],
+        [z4_DSpipeflange, -x4_DSpipeflange],
+        [z5_DSpipeflange, -x5_DSpipeflange],
+        [z6_DSpipeflange, -x6_DSpipeflange],
+        [z7_DSpipeflange, -x7_DSpipeflange],
+        [z8_DSpipeflange, -x8_DSpipeflange],
+        [z9_DSpipeflange, -x9_DSpipeflange],
+        [z10_DSpipeflange, -x10_DSpipeflange],
+        [z11_DSpipeflange, -x11_DSpipeflange],
+        [z12_DSpipeflange, -x12_DSpipeflange],
+        [z13_DSpipeflange, -x13_DSpipeflange],
+        [z14_DSpipeflange, -x14_DSpipeflange],
+        [z15_DSpipeflange, -x15_DSpipeflange],
+        [z16_DSpipeflange, -x16_DSpipeflange],
+        [z17_DSpipeflange, -x17_DSpipeflange],
+        [z18_DSpipeflange, -x18_DSpipeflange],
+        [z19_DSpipeflange, -x19_DSpipeflange],
+        [z20_DSpipeflange, -x20_DSpipeflange],
+        [z21_DSpipeflange, -x21_DSpipeflange],
+        [z22_DSpipeflange, -x22_DSpipeflange],
+        [z23_DSpipeflange, -x23_DSpipeflange],
+        [z24_DSpipeflange, -x24_DSpipeflange],
+        [z25_DSpipeflange, -x25_DSpipeflange],
+        [z26_DSpipeflange, -x26_DSpipeflange],
+        [z27_DSpipeflange, -x27_DSpipeflange],
+        [z28_DSpipeflange, -x28_DSpipeflange],
+        [z29_DSpipeflange, -x29_DSpipeflange],
+        [z30_DSpipeflange, -x30_DSpipeflange],
     ),
     notSource=False,
     isConcave=True,
@@ -2986,9 +2963,9 @@ DSpipe1_top = polygon(
 DSpipe1_bot = polygon(
     (
         [z1_DSpipe1, -x1_DSpipe1],
-        [z4_DSpipe1, -x4_DSpipe1],
-        [z3_DSpipe1, -x3_DSpipe1],
         [z2_DSpipe1, -x2_DSpipe1],
+        [z3_DSpipe1, -x3_DSpipe1],
+        [z4_DSpipe1, -x4_DSpipe1],
     ),
     notSource=False,
 )
@@ -3043,17 +3020,17 @@ DSpipe1_bellow_top = polygon(
 DSpipe1_bellow_bot = polygon(
     (
         [z1_DSpipe1_bellow, -x1_DSpipe1_bellow],
-        [z12_DSpipe1_bellow, -x12_DSpipe1_bellow],
-        [z11_DSpipe1_bellow, -x11_DSpipe1_bellow],
-        [z10_DSpipe1_bellow, -x10_DSpipe1_bellow],
-        [z9_DSpipe1_bellow, -x9_DSpipe1_bellow],
-        [z8_DSpipe1_bellow, -x8_DSpipe1_bellow],
-        [z7_DSpipe1_bellow, -x7_DSpipe1_bellow],
-        [z6_DSpipe1_bellow, -x6_DSpipe1_bellow],
-        [z5_DSpipe1_bellow, -x5_DSpipe1_bellow],
-        [z4_DSpipe1_bellow, -x4_DSpipe1_bellow],
-        [z3_DSpipe1_bellow, -x3_DSpipe1_bellow],
         [z2_DSpipe1_bellow, -x2_DSpipe1_bellow],
+        [z3_DSpipe1_bellow, -x3_DSpipe1_bellow],
+        [z4_DSpipe1_bellow, -x4_DSpipe1_bellow],
+        [z5_DSpipe1_bellow, -x5_DSpipe1_bellow],
+        [z6_DSpipe1_bellow, -x6_DSpipe1_bellow],
+        [z7_DSpipe1_bellow, -x7_DSpipe1_bellow],
+        [z8_DSpipe1_bellow, -x8_DSpipe1_bellow],
+        [z9_DSpipe1_bellow, -x9_DSpipe1_bellow],
+        [z10_DSpipe1_bellow, -x10_DSpipe1_bellow],
+        [z11_DSpipe1_bellow, -x11_DSpipe1_bellow],
+        [z12_DSpipe1_bellow, -x12_DSpipe1_bellow],
     ),
     notSource=False,
     isConcave=True,
@@ -3085,9 +3062,9 @@ DSpipe2_DS_top = polygon(
 DSpipe2_DS_bot = polygon(
     (
         [z1_DSpipe2_DS, -x1_DSpipe2_DS],
-        [z4_DSpipe2_DS, -x4_DSpipe2_DS],
-        [z3_DSpipe2_DS, -x3_DSpipe2_DS],
         [z2_DSpipe2_DS, -x2_DSpipe2_DS],
+        [z3_DSpipe2_DS, -x3_DSpipe2_DS],
+        [z4_DSpipe2_DS, -x4_DSpipe2_DS],
     ),
     notSource=False,
 )
@@ -3118,9 +3095,9 @@ DSpipe3_top = polygon(
 DSpipe3_bot = polygon(
     (
         [z1_DSpipe3, -x1_DSpipe3],
-        [z4_DSpipe3, -x4_DSpipe3],
-        [z3_DSpipe3, -x3_DSpipe3],
         [z2_DSpipe3, -x2_DSpipe3],
+        [z3_DSpipe3, -x3_DSpipe3],
+        [z4_DSpipe3, -x4_DSpipe3],
     ),
     notSource=False,
 )
@@ -3161,13 +3138,13 @@ DSpipe1_flange_top = polygon(
 DSpipe1_flange_bot = polygon(
     (
         [z1_DSpipe1_flange, -x1_DSpipe1_flange],
-        [z8_DSpipe1_flange, -x8_DSpipe1_flange],
-        [z7_DSpipe1_flange, -x7_DSpipe1_flange],
-        [z6_DSpipe1_flange, -x6_DSpipe1_flange],
-        [z5_DSpipe1_flange, -x5_DSpipe1_flange],
-        [z4_DSpipe1_flange, -x4_DSpipe1_flange],
-        [z3_DSpipe1_flange, -x3_DSpipe1_flange],
         [z2_DSpipe1_flange, -x2_DSpipe1_flange],
+        [z3_DSpipe1_flange, -x3_DSpipe1_flange],
+        [z4_DSpipe1_flange, -x4_DSpipe1_flange],
+        [z5_DSpipe1_flange, -x5_DSpipe1_flange],
+        [z6_DSpipe1_flange, -x6_DSpipe1_flange],
+        [z7_DSpipe1_flange, -x7_DSpipe1_flange],
+        [z8_DSpipe1_flange, -x8_DSpipe1_flange],
     ),
     notSource=False,
     isConcave=True,
@@ -3209,13 +3186,13 @@ DSpipe2_US_top = polygon(
 DSpipe2_US_bot = polygon(
     (
         [z1_DSpipe2_US, -x1_DSpipe2_US],
-        [z8_DSpipe2_US, -x8_DSpipe2_US],
-        [z7_DSpipe2_US, -x7_DSpipe2_US],
-        [z6_DSpipe2_US, -x6_DSpipe2_US],
-        [z5_DSpipe2_US, -x5_DSpipe2_US],
-        [z4_DSpipe2_US, -x4_DSpipe2_US],
-        [z3_DSpipe2_US, -x3_DSpipe2_US],
         [z2_DSpipe2_US, -x2_DSpipe2_US],
+        [z3_DSpipe2_US, -x3_DSpipe2_US],
+        [z4_DSpipe2_US, -x4_DSpipe2_US],
+        [z5_DSpipe2_US, -x5_DSpipe2_US],
+        [z6_DSpipe2_US, -x6_DSpipe2_US],
+        [z7_DSpipe2_US, -x7_DSpipe2_US],
+        [z8_DSpipe2_US, -x8_DSpipe2_US],
     ),
     notSource=False,
     isConcave=True,
