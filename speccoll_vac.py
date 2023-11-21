@@ -1530,7 +1530,7 @@ collar_bottom1 = polygon(
 ###### Second downstream Lead collar (for ep scattering)
 
 #Inner Ring
-x1_collar2_in = 1.01000
+x1_collar2_in = 1.02154
 z1_collar2_in = 23.63262
 
 x2_collar2_in = 1.14635
@@ -1539,7 +1539,7 @@ z2_collar2_in = 23.63262
 x3_collar2_in = 1.14635
 z3_collar2_in = 23.63262 + 0.150
 
-x4_collar2_in = 1.019
+x4_collar2_in = 1.02154
 z4_collar2_in = 23.63262 + 0.150
 
 
@@ -2037,6 +2037,7 @@ Scaper_12 = polygon(
 ######### Collimator 5 (shaped like a tuning fork), 1 seg
 
 x1_coll_5 = -0.100  # use this if you just want the exact y=0 slice
+#x1_coll_5 = -0.150 #Increased to test effect on first-bounces at the end of the drift-chamber
 z1_coll_5 = 12.057824
 
 x2_coll_5 = -0.045  # from GDML
@@ -2046,6 +2047,7 @@ x3_coll_5 = -0.045  # from GDML
 z3_coll_5 = 12.157824
 
 x4_coll_5 = -0.100  # use this if you just want the exact y=0 slice
+#x4_coll_5 = -0.150 #Increased to test effect on first-bounces at the end of the drift-chamber
 z4_coll_5 = 12.157824
 
 coll_5 = polygon(
