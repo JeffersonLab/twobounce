@@ -28,6 +28,262 @@ target = polygon(
     )
 )
 
+### TubeVol1 (Target_exit_window_Tube_1) Currently disabled
+x1 = 0*mm 
+z1 = -3623.19*mm-tgtpos
+
+x2 = 7.51*mm  
+z2 = -3623.19*mm-tgtpos
+
+x3 = 7.51*mm 
+z3 = -3622.99*mm-tgtpos  
+
+x4 = 0*mm 
+z4 = -3622.99*mm-tgtpos
+
+tubevol1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+tubevol1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### TubeVol2 (Target_exit_window_Tube_2)
+x1 = 7.51*mm 
+z1 = -3623.99*mm-tgtpos
+
+x2 = 126.62*mm  
+z2 = -3623.99*mm-tgtpos
+
+x3 = 126.62*mm 
+z3 = -3622.36*mm-tgtpos  
+
+x4 = 7.51*mm 
+z4 = -3622.36*mm-tgtpos
+
+tubevol2_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+tubevol2_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### TubeVol3 (Target_exit_window_Tube_3)
+x1 = 38.1*mm 
+z1 = -3622.36*mm-tgtpos
+
+x2 = 126.62*mm  
+z2 = -3622.36*mm-tgtpos
+
+x3 = 126.62*mm 
+z3 = -3616.01*mm-tgtpos  
+
+x4 = 38.1*mm 
+z4 = -3616.01*mm-tgtpos
+
+tubevol3_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+tubevol3_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### TubeVol4 (Target_exit_window_Tube_4)
+x1 = 50.8*mm 
+z1 = -3616.01*mm-tgtpos
+
+x2 = 126.62*mm  
+z2 = -3616.01*mm-tgtpos
+
+x3 = 126.62*mm 
+z3 = -3603.31*mm-tgtpos  
+
+x4 = 50.8*mm 
+z4 = -3603.31*mm-tgtpos
+
+tubevol4_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+tubevol4_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### TubeVol5 (Target_exit_window_Tube_5)
+x1 = 108.59*mm 
+z1 = -3603.31*mm-tgtpos
+
+x2 = 126.62*mm  
+z2 = -3603.31*mm-tgtpos
+
+x3 = 126.62*mm 
+z3 = -3601.78*mm-tgtpos  
+
+x4 = 108.59*mm 
+z4 = -3601.78*mm-tgtpos
+
+tubevol5_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+tubevol5_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### TubeVol6 (Target_exit_window_Tube_6)
+x1 = 50.8*mm 
+z1 = -3633.49*mm-tgtpos
+
+x2 = 126.62*mm  
+z2 = -3633.49*mm-tgtpos
+
+x3 = 126.62*mm 
+z3 = -3623.09*mm-tgtpos  
+
+x4 = 50.8*mm 
+z4 = -3623.09*mm-tgtpos
+
+tubevol6_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+tubevol6_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### connecting_pipe_vol_1 
+x1 = 98.43*mm 
+z1 = -3601.78*mm-tgtpos
+
+x2 = 101.6*mm  
+z2 = -3601.78*mm-tgtpos
+
+x3 = 101.6*mm 
+z3 = -3467.36*mm-tgtpos  
+
+x4 = 98.43*mm 
+z4 = -3467.36*mm-tgtpos
+
+connecting_pipe_1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+connecting_pipe_1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### flange_vol_1 
+x1 = 95.25*mm 
+z1 = -3467.36*mm-tgtpos
+
+x2 = 184.15*mm  
+z2 = -3467.36*mm-tgtpos
+
+x3 = 184.15*mm 
+z3 = -3438.91*mm-tgtpos  
+
+x4 = 95.25*mm 
+z4 = -3438.91*mm-tgtpos
+
+flange_1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+flange_1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
 ### bellows 1 USflange
 x1 = 149.23*mm 
 z1 = -3427.73*mm-tgtpos
@@ -3236,6 +3492,23 @@ quartz2 = polygon(
 ##################################################################################################################################
 
 sources.append(target)
+
+#allpolys.append(tubevol1_top)
+#allpolys.append(tubevol1_bottom)
+allpolys.append(tubevol2_top)
+allpolys.append(tubevol2_bottom)
+allpolys.append(tubevol3_top)
+allpolys.append(tubevol3_bottom)
+allpolys.append(tubevol4_top)
+allpolys.append(tubevol4_bottom)
+allpolys.append(tubevol5_top)
+allpolys.append(tubevol5_bottom)
+allpolys.append(tubevol6_top)
+allpolys.append(tubevol6_bottom)
+allpolys.append(connecting_pipe_1_top)
+allpolys.append(connecting_pipe_1_bottom)
+allpolys.append(flange_1_top)
+allpolys.append(flange_1_bottom)
 
 allpolys.append(bellows1_USflange_top)
 allpolys.append(bellows1_USflange_bottom)
