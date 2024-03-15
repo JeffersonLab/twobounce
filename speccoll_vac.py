@@ -30,16 +30,16 @@ target = polygon(
 
 ### TubeVol1 (Target_exit_window_Tube_1) Currently disabled
 x1 = 0*mm 
-z1 = -3623.19*mm-tgtpos
+z1 = -3604.6*mm-tgtpos
 
 x2 = 7.51*mm  
-z2 = -3623.19*mm-tgtpos
+z2 = -3606.6*mm-tgtpos  #-3623.19
 
 x3 = 7.51*mm 
-z3 = -3622.99*mm-tgtpos  
+z3 = -3606.4*mm-tgtpos  #-3622.99
 
 x4 = 0*mm 
-z4 = -3622.99*mm-tgtpos
+z4 = -3604.4*mm-tgtpos
 
 tubevol1_top = polygon(
     (
@@ -62,16 +62,16 @@ tubevol1_bottom = polygon(
 
 ### TubeVol2 (Target_exit_window_Tube_2)
 x1 = 7.51*mm 
-z1 = -3623.99*mm-tgtpos
+z1 = -3604.4*mm-tgtpos
 
 x2 = 126.62*mm  
-z2 = -3623.99*mm-tgtpos
+z2 = -3604.4*mm-tgtpos
 
 x3 = 126.62*mm 
-z3 = -3622.36*mm-tgtpos  
+z3 = -3603.86*mm-tgtpos  
 
 x4 = 7.51*mm 
-z4 = -3622.36*mm-tgtpos
+z4 = -3603.86*mm-tgtpos
 
 tubevol2_top = polygon(
     (
@@ -94,16 +94,16 @@ tubevol2_bottom = polygon(
 
 ### TubeVol3 (Target_exit_window_Tube_3)
 x1 = 38.1*mm 
-z1 = -3622.36*mm-tgtpos
+z1 = -3603.86*mm-tgtpos
 
 x2 = 126.62*mm  
-z2 = -3622.36*mm-tgtpos
+z2 = -3603.86*mm-tgtpos
 
 x3 = 126.62*mm 
-z3 = -3616.01*mm-tgtpos  
+z3 = -3597.51*mm-tgtpos  
 
 x4 = 38.1*mm 
-z4 = -3616.01*mm-tgtpos
+z4 = -3597.51*mm-tgtpos
 
 tubevol3_top = polygon(
     (
@@ -126,16 +126,16 @@ tubevol3_bottom = polygon(
 
 ### TubeVol4 (Target_exit_window_Tube_4)
 x1 = 50.8*mm 
-z1 = -3616.01*mm-tgtpos
+z1 = -3597.51*mm-tgtpos
 
 x2 = 126.62*mm  
-z2 = -3616.01*mm-tgtpos
+z2 = -3597.51*mm-tgtpos
 
 x3 = 126.62*mm 
-z3 = -3603.31*mm-tgtpos  
+z3 = -3584.81*mm-tgtpos  
 
 x4 = 50.8*mm 
-z4 = -3603.31*mm-tgtpos
+z4 = -3584.81*mm-tgtpos
 
 tubevol4_top = polygon(
     (
@@ -158,16 +158,16 @@ tubevol4_bottom = polygon(
 
 ### TubeVol5 (Target_exit_window_Tube_5)
 x1 = 108.59*mm 
-z1 = -3603.31*mm-tgtpos
+z1 = -3584.81*mm-tgtpos
 
 x2 = 126.62*mm  
-z2 = -3603.31*mm-tgtpos
+z2 = -3584.51*mm-tgtpos
 
 x3 = 126.62*mm 
-z3 = -3601.78*mm-tgtpos  
+z3 = -3583.28*mm-tgtpos  
 
 x4 = 108.59*mm 
-z4 = -3601.78*mm-tgtpos
+z4 = -3583.28*mm-tgtpos
 
 tubevol5_top = polygon(
     (
@@ -190,16 +190,16 @@ tubevol5_bottom = polygon(
 
 ### TubeVol6 (Target_exit_window_Tube_6)
 x1 = 50.8*mm 
-z1 = -3633.49*mm-tgtpos
+z1 = -3614.99*mm-tgtpos
 
 x2 = 126.62*mm  
-z2 = -3633.49*mm-tgtpos
+z2 = -3614.99*mm-tgtpos
 
 x3 = 126.62*mm 
-z3 = -3623.09*mm-tgtpos  
+z3 = -3604.59*mm-tgtpos  
 
 x4 = 50.8*mm 
-z4 = -3623.09*mm-tgtpos
+z4 = -3604.59*mm-tgtpos
 
 tubevol6_top = polygon(
     (
@@ -222,16 +222,16 @@ tubevol6_bottom = polygon(
 
 ### connecting_pipe_vol_1 
 x1 = 98.43*mm 
-z1 = -3601.78*mm-tgtpos
+z1 = -3583.28*mm-tgtpos
 
 x2 = 101.6*mm  
-z2 = -3601.78*mm-tgtpos
+z2 = -3583.28*mm-tgtpos
 
 x3 = 101.6*mm 
-z3 = -3467.36*mm-tgtpos  
+z3 = -3470.15*mm-tgtpos  
 
 x4 = 98.43*mm 
-z4 = -3467.36*mm-tgtpos
+z4 = -3470.15*mm-tgtpos
 
 connecting_pipe_1_top = polygon(
     (
@@ -254,16 +254,16 @@ connecting_pipe_1_bottom = polygon(
 
 ### flange_vol_1 
 x1 = 95.25*mm 
-z1 = -3467.36*mm-tgtpos
+z1 = -3470.15*mm-tgtpos
 
 x2 = 184.15*mm  
-z2 = -3467.36*mm-tgtpos
+z2 = -3470.15*mm-tgtpos
 
 x3 = 184.15*mm 
-z3 = -3438.91*mm-tgtpos  
+z3 = -3441.70*mm-tgtpos  
 
 x4 = 95.25*mm 
-z4 = -3438.91*mm-tgtpos
+z4 = -3441.70*mm-tgtpos
 
 flange_1_top = polygon(
     (
