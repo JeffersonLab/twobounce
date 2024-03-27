@@ -30,13 +30,13 @@ target = polygon(
 
 ### TubeVol1 (Target_exit_window_Tube_1) Currently disabled
 x1 = 0*mm 
-z1 = -3604.6*mm-tgtpos
+z1 = -3604.6*mm-tgtpos  #-3622.99
 
 x2 = 7.51*mm  
 z2 = -3606.6*mm-tgtpos  #-3623.19
 
 x3 = 7.51*mm 
-z3 = -3606.4*mm-tgtpos  #-3622.99
+z3 = -3606.4*mm-tgtpos
 
 x4 = 0*mm 
 z4 = -3604.4*mm-tgtpos
