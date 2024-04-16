@@ -30,7 +30,7 @@ target = polygon(
 
 ### TubeVol1 (Target_exit_window_Tube_1) Currently disabled
 x1 = 0*mm 
-z1 = -3604.6*mm-tgtpos  #-3622.99
+z1 = -3606.6*mm-tgtpos  #-3622.99
 
 x2 = 7.51*mm  
 z2 = -3606.6*mm-tgtpos  #-3623.19
@@ -39,7 +39,7 @@ x3 = 7.51*mm
 z3 = -3606.4*mm-tgtpos
 
 x4 = 0*mm 
-z4 = -3604.4*mm-tgtpos
+z4 = -3606.4*mm-tgtpos
 
 tubevol1_top = polygon(
     (
@@ -232,6 +232,38 @@ z3 = -3470.15*mm-tgtpos
 
 x4 = 98.43*mm 
 z4 = -3470.15*mm-tgtpos
+
+connecting_pipe_1_top = polygon(
+    (
+        [z1, x1],
+        [z4, x4],
+        [z3, x3],
+        [z2, x2],
+    ),
+    notSource=False,
+)
+connecting_pipe_1_bottom = polygon(
+    (
+        [z2, -x2],
+        [z3, -x3],
+        [z4, -x4],
+        [z1, -x1],
+    ),
+    notSource=False,
+)
+
+### connecting_pipe_vol_2 (connects upstream of US target window to target chamber) 
+x1 = 98.43*mm 
+z1 = -3633.49*mm-tgtpos
+
+x2 = 101.6*mm  
+z2 = -3614.99*mm-tgtpos
+
+x3 = 101.6*mm 
+z3 = -3614.99*mm-tgtpos  
+
+x4 = 98.43*mm 
+z4 = -3633.49*mm-tgtpos
 
 connecting_pipe_1_top = polygon(
     (
