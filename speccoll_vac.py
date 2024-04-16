@@ -257,15 +257,15 @@ x1 = 98.43*mm
 z1 = -3633.49*mm-tgtpos
 
 x2 = 101.6*mm  
-z2 = -3614.99*mm-tgtpos
+z2 = -3633.99*mm-tgtpos
 
 x3 = 101.6*mm 
 z3 = -3614.99*mm-tgtpos  
 
 x4 = 98.43*mm 
-z4 = -3633.49*mm-tgtpos
+z4 = -3614.99*mm-tgtpos
 
-connecting_pipe_1_top = polygon(
+connecting_pipe_2_top = polygon(
     (
         [z1, x1],
         [z4, x4],
@@ -274,7 +274,7 @@ connecting_pipe_1_top = polygon(
     ),
     notSource=False,
 )
-connecting_pipe_1_bottom = polygon(
+connecting_pipe_2_bottom = polygon(
     (
         [z2, -x2],
         [z3, -x3],
@@ -3539,6 +3539,8 @@ allpolys.append(tubevol6_top)
 allpolys.append(tubevol6_bottom)
 allpolys.append(connecting_pipe_1_top)
 allpolys.append(connecting_pipe_1_bottom)
+allpolys.append(connecting_pipe_2_top)
+allpolys.append(connecting_pipe_2_bottom)
 allpolys.append(flange_1_top)
 allpolys.append(flange_1_bottom)
 
